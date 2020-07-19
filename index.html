@@ -110,6 +110,9 @@
       //console.log(airlines)
       drawAirlinesChart(airlines)
       drawMap(store.geoJSON)
+
+      let airports = groupByAirport(store.routes);
+      drawAirports(airports)
     }
 
     loadData().then(showData);
@@ -240,6 +243,63 @@
       .attr("d",d => path(d)) //TODO: use the path generator to draw each country )
       .attr("stroke", "#ccc")
       .attr("fill", "#eee")
+    }
+
+    function drawAirports(airports) {
+      let config = getMapConfig(); //get the config
+      let projection = getMapProjection(config) //get the projection
+      let container = config.container; //get the container
+
+      let circles = container.selectAll("circle")
+                          .data(airports)
+                          .enter().append("circle")
+                          .attr("r", 1)
+                          .attr("cx", d => projection([d.Longitude, d.Latitude])[0])
+                          .attr("cy", d => projection([d.Longitude, d.Latitude])[1])
+                          .attr("fill", "#2a5599");
+  //TODO: bind the airports to the circles using the .data method.
+  //TODO: for each new airport (hint: .enter)
+  //      - Set the radius to 1
+  //      - set the x and y position of the circle using the projection to convert longitude and latitude to x and y porision.
+  //      - Set the fill color of the circle to  "#2a5599"
+    }
+
+    function groupByAirport(data) {
+        //We use reduce to transform a list into a object where each key points to an aiport. This way makes it easy to check if is the first time we are seeing the airport.
+        let result = data.reduce((result, d) => {
+            //The || sign in the line below means that in case the first option is anything that Javascript consider false (this insclude undefined, null and 0), the second option will be used. Here if result[d.DestAirportID] is false, it means that this is the first time we are seeing the airport, so we will create a new one (second part after ||)
+
+            let currentDest = result[d.DestAirportID] || {
+                "AirportID": d.DestAirportID,
+                "Airport": d.DestAirport,
+                "Latitude": +d.DestLatitude,
+                "Longitude": +d.DestLongitude,
+                "City": d.DestCity,
+                "Country": d.DestCountry,
+                "Count": 0
+            }
+            currentDest.Count += 1
+            result[d.DestAirportID] = currentDest
+
+            //After doing for the destination airport, we also update the airport the airplane is departing from.
+            let currentSource = result[d.SourceAirportID] || {
+                "AirportID": d.SourceAirportID,
+                "Airport": d.SourceAirport,
+                "Latitude": +d.SourceLatitude,
+                "Longitude": +d.SourceLongitude,
+                "City": d.SourceCity,
+                "Country": d.SourceCountry,
+                "Count": 0
+            }
+            currentSource.Count += 1
+            result[d.SourceAirportID] = currentSource
+
+            return result
+        }, {})
+
+        //We map the keys to the actual ariorts, this is an way to transform the object we got in the previous step into a list.
+        result = Object.keys(result).map(key => result[key])
+        return result
     }
 
  </script>
