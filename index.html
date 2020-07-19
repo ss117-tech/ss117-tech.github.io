@@ -59,6 +59,17 @@
     let store = {}
 
     function loadData() {
+        return Promise.all([
+            d3.csv("routes.csv"),
+            d3.json("countries.geo.json"),
+        ]).then(datasets => {
+            store.routes = datasets[0];
+            store.geoJSON = datasets[1]
+            return store;
+        })
+    }
+/*
+    function loadData() {
     let promise = d3.csv("routes.csv")//TODO 1: Add the code to load the CSV file named "routes.csv" | 1 Line
     return promise.then(routes => {
         store.routes = routes //TODO 2: Save the routes into our store variable;
@@ -66,7 +77,7 @@
         return store;
       })
     }
-
+*/
     function groupByAirline(data) {
       //Iterate over each route, producing a dictionary where the keys is are the ailines ids and the values are the information of the airline.
       let result = data.reduce((result, d) => {
@@ -98,6 +109,7 @@
       let airlines = groupByAirline(store.routes);
       //console.log(airlines)
       drawAirlinesChart(airlines)
+      drawMap(store.geoJSON)
     }
 
     loadData().then(showData);
@@ -196,6 +208,39 @@
         .call(axisY)
     }
 
+    function drawMap(geoJeon) {
+        let config = getMapConfig();
+        let projection = getMapProjection(config);
+        drawBaseMap(config.container, geoJeon.features, projection)
+    }
+
+
+    function getMapConfig(){
+      let width = 600;
+      let height = 400;
+      let container = d3.select("#map");//TODO: select the svg with id Map
+     //TODO: set the width and height of the conatiner to be equal the width and height variables.
+      container.attr("width", width).attr("height", height)
+      return {width, height, container}
+    }
+
+    function getMapProjection(config) {
+      let {width, height} = config;
+      let projection = d3.geoMercator();//TODO: Create a projection of type Mercator.
+      projection.scale(97).translate([width / 2, height / 2 + 20])
+      store.mapProjection = projection;
+      return projection;
+    }
+
+    function drawBaseMap(container, countries, projection){
+      let path = d3.geoPath().projection(projection) //TODO: create a geoPath generator and set its projection to be the projection passed as parameter.
+
+      container.selectAll("path").data(countries)
+      .enter().append("path")
+      .attr("d",d => path(d)) //TODO: use the path generator to draw each country )
+      .attr("stroke", "#ccc")
+      .attr("fill", "#eee")
+    }
 
  </script>
 
