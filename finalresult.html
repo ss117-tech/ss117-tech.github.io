@@ -109,23 +109,28 @@
 		</div>
 	</div>
 	<div class="section" id="background_bw">
-    <div id="content_div">
-      <h1>Airport trips</h1>
-      <div class="mainView">
-          <div>
-              <h2>Airlines</h2>
-              <svg id="AirlinesChart"></svg>
-          </div>
-          <div>
-              <h2>Airports</h2>
-              <svg id="Map"></svg>
-          </div>
-      </div>
-    </div>
+		<div id="bubble_title"><h1>Overview of All Reviewed Restaurants</h1></div>
+		<div id="bubble_content">
+			<div id="bubble_text">
+				<p>​We are able to see that the bulk of the reviews are from NV with a star rating between 2-4.</p>
+			</div>
+			<div id="bubble_container">
+				<div id="toolbar">
+					<a href="#" id="all" class="button active">All Reviews</a>
+					<a href="#" id="state" class="button">Reviews By State</a>
+					<a href="#" id="stars" class="button">Reviews By Average Star Ratings</a>
+				</div>
+				<div id="vis"></div>
+			</div>
+		</div>
 	</div>
 	<div class="section" id="background_bw">
 		<div id="zsb_title"><h1>Top 25 Most Reviewed Restaurants</h1></div>
 		<div id="zsb_content">
+			<div id="zsb_text">
+				<p>​When the categories are consolidated into the Top 24 + Others, we can see that American New is the most reviewed restaurant
+					category. The spread between states do not seem to affect the ranking of restaurant categories either.</p>
+			</div>
 			<div id="zsb_container">
 				<div id="zoomable_sunburst"></div>
 			</div>
