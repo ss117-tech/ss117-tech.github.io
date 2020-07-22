@@ -1,190 +1,363 @@
-<!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>CS498 Data Visualization Final Project - Subramanian Shankar</title>
 	<meta name="author" content="Subramanian Shankar" />
 	<meta name="description" content="fullPage full-screen backgrounds." />
 	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
 	<meta name="Resource-type" content="Document" />
+  
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif
+        }
 
-	<link href='https://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css'>
+        h1 {
+            background-color: #2a5599;
+            /* TODO 1
+            change the text to white and add a padding of 5px
+            2 lines of code
+            */
+            color: white;
+            padding: 5px;
+        }
 
-	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-	<!--link rel="stylesheet" type="text/css" href="css/slides.css" />
-	<link rel="stylesheet" type="text/css" href="css/bubble_chart.css" />
-	<link rel="stylesheet" type="text/css" href="css/reset.css" />
-	<link rel="stylesheet" type="text/css" href="css/zoomable_sunburst.css" />
-	<link rel="stylesheet" type="text/css" href="css/linechart.css" />
-	<link rel="stylesheet" type="text/css" href="css/annotations.css" /-->
+        /* TODO 2
+        Add code to show a black border of 1px around all SVGs elements in the page
+        1-3 lines of code
+        */
+        svg {
+          color: black;
+          border: 1px solid black;
+        }
 
-  <style>
-      body {
-          font-family: Helvetica, Arial, sans-serif
-      }
+        /* TODO 3
+         - Use the "display flex" feature from to show the items from class `mainView` side by side
+         1-3 lines of cide
+          */
+          .mainView{
+              display: flex;
+          }
 
-      h1 {
-          background-color: #2a5599;
-          color: white;
-          padding: 5px;
-      }
-
-      svg {
-        color: black;
-        border: 1px solid black;
-      }
-
-  </style>
-
-
-	<!-- import d3.v3 -->
-	<script type="text/javascript" src="js/d3.v3.js"></script>
-
-	<!-- import fullPage -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-
-	<!-- import d3.v4 -->
-	<script type="text/javascript" src="js/d3.min.js"></script>
-	<script type="text/javascript" src="js/d3-annotation.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				verticalCentered: false,
-				anchors: ['intro', 'vis', 'data', 'reviews', 'top10', 'checks', 'finds', 'ref'],
-				navigation: true,
-				navigationPosition: 'right',
-				navigationTooltips: ['Introduction', '​About the Visualization', 'Yelp Dataset', 'Reviews Overview', 'Top 25 Categories', 'NV Checkins',
-					'Findings', 'References']
-			});});
-	</script>
+    </style>
+    <!-- Add this line <script src="https://d3js.org/d3.v5.min.js"></script>-->
+    <script src="d3.js"></script>
 
 </head>
+
 <body>
-<div id="fullpage">
-	<div class="section" id="title">
-		<div id="title_text">
-			<h1>Diving into the Restaunt Business</h1>
-			<h3>a d3.js data visualization project using the Yelp Academic dataset<br />Stanley Lee - UIUC CS498 Data Visualization</h3>
-		</div>
-	</div>
-	<div class="section" id="about">
-		<div id="content_div">
-			<h1>About the Visualization</h1>
-			<p>This visualization </p>
-			<h2>Recommended Settings</h2>
-			<p>As the visualizations use a preset static canvas of 1024x768 pixels, the viewing size of the interactive visualization is at
-				least 1280x800 pixels to accommodate the surrounding text and scene elements.</p>
-			<h2>Managing the Dataset</h2>
-			<p>With such a large dataset, creating a visualization with the raw data turned out to be very difficult.</p
-		</div>
-	</div>
-	<div class="section" id="survey">
-		<div id="content_div">
-			<h1>The Dataset</h1>
-			<p>​​The restaurant business is an enormous industry where understanding your clients and their behavioural patterns may give prospective
-				new restaurant owners a much needed head start. This interactive slideshow dives into the publicly available Yelp Academic Dataset
-				which includes a large set of reviews client interactions across multiple industries and regions. We will focus on restaurants within
-				the United States in order to better understand client interactions.</p>
-		</div>
-	</div>
-	<div class="section" id="background_bw">
-		<div id="bubble_title"><h1>Overview of All Reviewed Restaurants</h1></div>
-		<div id="bubble_content">
-			<div id="bubble_text">
-				<p>​We are able to see that the bulk of the reviews are from NV with a star rating between 2-4.</p>
-			</div>
-			<div id="bubble_container">
-				<div id="toolbar">
-					<a href="#" id="all" class="button active">All Reviews</a>
-					<a href="#" id="state" class="button">Reviews By State</a>
-					<a href="#" id="stars" class="button">Reviews By Average Star Ratings</a>
-				</div>
-				<div id="vis"></div>
-			</div>
-		</div>
-	</div>
-	<div class="section" id="background_bw">
-		<div id="zsb_title"><h1>Top 25 Most Reviewed Restaurants</h1></div>
-		<div id="zsb_content">
-			<div id="zsb_text">
-				<p>​When the categories are consolidated into the Top 24 + Others, we can see that American New is the most reviewed restaurant
-					category. The spread between states do not seem to affect the ranking of restaurant categories either.</p>
-			</div>
-			<div id="zsb_container">
-				<div id="zoomable_sunburst"></div>
-			</div>
-		</div>
-	</div>
-	<div class="section" id="background_bw">
-		<div id="linechart_title"><h1>Customer Checkins per Hour per Category</h1></div>
-		<div id="linechart_content">
-			<div id="linechart_text">
-				<p>Aggregating the hourly check-ins per restaurant categories for NV reveals a consistent trend. Regardless of the day of the week,
-					there is a cyclic relationship between the number of check-ins and the time of the day. The amount of check-ins peaks out near
-					the end of the day with a general increase over the weekend.</p>
-			</div>
-			<div id="linechart_container">
-				<div id="linechart"></div>
-			</div>
-		</div>
-	</div>
-	<div class="section" id="analytics">
-		<div id="content_div">
-			<h1>Findings</h1>
-			<p>​The initial analysis based on the Yelp Academic Dataset shows that a prospective restaurant owner should choose to open an</p>
-		</div>
-	</div>
-	<div class="section" id="acks">
-		<div id="acks_div">
-			<h1>References and Resources</h1>
-			<h2>Github Project</h2>
-			<ul>
-				<li><a href='https://github.com/stanleykylee/cs498-ddv-final' target='_blank'>CS498 DDV Final Project</a></li>
-			</ul>
-			<h2>Dataset</h2>
-			<ul>
-				<li><a href='https://www.yelp.com/academic_dataset' target='_blank'>Yelp Academic Dataset Round 9</a></li>
-			</ul>
-			<h2>Stock Images</h2>
-			<ul>
-				<li><a href='https://www.pexels.com/photo/analytics-text-185576/' target='_blank'>Pexels - Analytics</a></li>
-				<li><a href='https://www.pexels.com/photo/store-with-red-and-white-stripe-awnings-492803/' target='_blank'
-					>Pexels - Store with Awnings</a></li>
-				<li><a href='https://www.pexels.com/photo/person-answering-test-paper-159353/' target='_blank'>Pexels - Answering Test Paper</a></li>
-				<li><a href='https://www.pexels.com/photo/tea-coffee-restaurant-smartphone-481021/' target='_blank'>Pexels - Tea Coffee Restaunt</a></li>
-				<li><a href='https://www.pexels.com/photo/wood-texture-background-pine-82256/' target='_blank'>Pexels - Wood Texture Background</a></li>
-				<li><a href='https://www.pexels.com/photo/lunch-vegetables-healthy-meal-8844/' target='_blank'>Pexels - Healthy Meal</a></li>
-			</ul>
-			<h2>Bubble Chart</h2>
-			<ul>
-				<li><a href='https://bl.ocks.org/john-guerra/0d81ccfd24578d5d563c55e785b3b40a' target='_blank'>
-					Bubble Chart d3 v4 Github Gist by John Alexis Guerra Gomez</a></li>
-				<li><a href='https://github.com/vlandham/bubble_chart_v4' target='_blank'>Animated Bubble Chart by Jim Vallandingham</a></li>
-				<li><a href='https://github.com/d3/d3-hierarchy/blob/master/README.md#pack' target='_blank'>d3 API documents on d3-hierarchy - packs</a></li>
-			</ul>
-			<h2>Zoomable Sunburst</h2>
-			<ul>
-				<li><a href='https://gist.github.com/mchelen/1481545d38d0304b4d54' target='_blank'>d3.js hierarchical object from csv by Mike Chelen</a></li>
-				<li><a href='https://gist.github.com/mbostock/4348373' target='_blank'>Zoomable Sunburst by Mike Bostock</a></li>
-				<li><a href='https://gist.github.com/denjn5/3b74baf5edc4ac93d5e487136481c601' target='_blank'>
-					Smooth Updates and Sorting by David Richards</a></li>
-			</ul>
-			<h2>Line Chart</h2>
-			<ul>
-				<li><a href='https://gist.github.com/DStruths/9c042e3a6b66048b5bd4' target='_blank'>
-					d3.js Multi-series line chart interactive by DStruths</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-
-<script type="text/javascript" src="js/tooltip.js"></script>
-<script type="text/javascript" src="js/bubble_chart.js"></script>
-<script type="text/javascript" src="js/zoomable_sunburst.js"></script>
-<script type="text/javascript" src="js/linechart.js"></script>
-<script type="text/javascript" src="js/annotations.js"></script>
-
+    <h1>Airlines Routes</h1>
+    <div class="mainView">
+        <div>
+            <h2>Airlines</h2>
+            <svg id="AirlinesChart"></svg>
+        </div>
+        <div>
+            <h2>Airports</h2>
+            <svg id="Map"></svg>
+        </div>
+    </div>
 </body>
+
+
+<script>
+    // All your javascript code will go here
+    let store = {}
+
+    function loadData() {
+        return Promise.all([
+            d3.csv("routes.csv"),
+            d3.json("countries.geo.json"),
+        ]).then(datasets => {
+            store.routes = datasets[0];
+            store.geoJSON = datasets[1]
+            return store;
+        })
+    }
+/*
+    function loadData() {
+    let promise = d3.csv("routes.csv")//TODO 1: Add the code to load the CSV file named "routes.csv" | 1 Line
+    return promise.then(routes => {
+        store.routes = routes //TODO 2: Save the routes into our store variable;
+        //console.log(store.routes)
+        return store;
+      })
+    }
+*/
+    function groupByAirline(data) {
+      //Iterate over each route, producing a dictionary where the keys is are the ailines ids and the values are the information of the airline.
+      let result = data.reduce((result, d) => {
+        let currentData = result[d.AirlineID] || {
+            "AirlineID": d.AirlineID,
+            "AirlineName": d.AirlineName,
+            "Count": 0
+        }
+
+        currentData.Count +=  1 //TODO: Increment the count (number of routes) of ariline.
+
+        result[d.AirlineID] = currentData //TODO: Save the updated information in the dictionary using the airline id as key.
+
+        return result;
+      }, {})
+
+      //We use this to convert the dictionary produced by the code above, into a list, that will make it easier to create the visualization.
+      result = Object.keys(result).map(key => result[key])
+      result = result.sort((x,y) => d3.descending(x.Count, y.Count)) //TODO: Sort the data in descending order of count.
+
+      return result
+    }
+
+    function showData() {
+      //Get the routes from our store variable
+      let routes = store.routes
+      // Compute the number of routes per airline.
+
+      let airlines = groupByAirline(store.routes);
+      //console.log(airlines)
+      drawAirlinesChart(airlines)
+      drawMap(store.geoJSON)
+
+      let airports = groupByAirport(store.routes);
+      drawAirports(airports)
+
+      drawRoutes("24")
+    }
+
+    loadData().then(showData);
+
+
+    function drawAirlinesChart(airlines) {
+        let config = getAirlinesChartConfig();
+        let scales = getAirlinesChartScales(airlines, config);
+        drawBarsAirlinesChart(airlines, scales, config);
+        drawAxesAirlinesChart(airlines, scales, config);
+
+    }
+
+    function getAirlinesChartConfig() {
+    let width = 350;
+    let height = 400;
+    let margin = {
+        top: 10,
+        bottom: 50,
+        left: 130,
+        right: 10
+    }
+    //The body is the are that will be occupied by the bars.
+    let bodyHeight = height - margin.top - margin.bottom;
+    let bodyWidth = width - margin.left - margin.right;//TODO: Compute the width of the body by subtracting the left and right margins from the width.
+
+    //The container is the SVG where we will draw the chart. In our HTML is the svg ta with the id AirlinesChart
+    let container = d3.select("#AirlinesChart"); //TODO: use d3.select to select the element with id AirlinesChart
+    container
+        .attr("width", width)
+        .attr("height", height)
+       //TODO: Set the height of the container
+
+    return { width, height, margin, bodyHeight, bodyWidth, container }
+    }
+
+    function getAirlinesChartScales(airlines, config) {
+        let { bodyWidth, bodyHeight } = config;
+        let maximunCount = d3.max(airlines, d => d.Count) //TODO: Use d3.max to get the highest Count value we have on the airlines list.
+
+        let xScale = d3.scaleLinear()
+            .range([0, bodyWidth])
+            .domain([0, maximunCount])
+            //TODO: Set the range to go from 0 to the width of the body
+            //TODO: Set the domain to go from 0 to the maximun value fount for the field 'Count'
+
+        let yScale = d3.scaleBand()
+            .range([0, bodyHeight])
+            .domain(airlines.map(a => a.AirlineName)) //The domain is the list of ailines names
+            .padding(0.2)
+
+        return { xScale, yScale }
+    }
+
+    function drawBarsAirlinesChart(airlines, scales, config) {
+      let {margin, container} = config; // this is equivalent to 'let margin = config.margin; let container = config.container'
+      let {xScale, yScale} = scales
+      let body = container.append("g")
+          .style("transform",
+            `translate(${margin.left}px,${margin.top}px)`
+          )
+
+      let bars = body.selectAll(".bar").data(airlines)
+          //TODO: Use the .data method to bind the airlines to the bars (elements with class bar)
+
+
+      //Adding a rect tag for each airline
+      bars.enter().append("rect")
+          .attr("height", yScale.bandwidth())
+          .attr("y", (d) => yScale(d.AirlineName))
+          .attr("width", (d) => xScale(d.Count))
+          //TODO: set the width of the bar to be proportional to the airline count using the xScale
+          .attr("fill", "#2a5599")
+          .on("mouseenter", function(d) { // <- this is the new code
+            drawRoutes(d.AirlineID)//TODO: call the drawRoutes function passing the AirlineID id 'd'
+            d3.select(this)
+              .attr("fill", "#992a5b")
+             //TODO: change the fill color of the bar to "#992a5b" as a way to highlight the bar. Hint: use d3.select(this)
+           })
+           .on("mouseleave", function(d) { // <- this is the new code
+             drawRoutes(null)
+             d3.select(this)
+               .attr("fill", "#2a559")
+              //TODO: change the fill color of the bar to "#992a5b" as a way to highlight the bar. Hint: use d3.select(this)
+            })
+           //TODO: Add another listener, this time for mouseleave
+           //TODO: In this listener, call drawRoutes(null), this will cause the function to remove all lines in the chart since there is no airline withe AirlineID == null.
+           //TODO: change the fill color of the bar back to "#2a5599"
+
+    }
+
+    function drawAxesAirlinesChart(airlines, scales, config){
+      let {xScale, yScale} = scales
+      let {container, margin, height} = config;
+      let axisX = d3.axisBottom(xScale)
+                    .ticks(5)
+
+      container.append("g")
+        .style("transform",
+            `translate(${margin.left}px,${height - margin.bottom}px)`
+        )
+        .call(axisX)
+
+      let axisY = d3.axisLeft(yScale)
+                        .ticks(5)
+      //d3.axisLeft(yScale) //TODO: Create an axis on the left for the Y scale
+      //TODO: Append a g tag to the container, translate it based on the margins and call the axisY axis to draw the left axis.
+      container.append("g")
+        .style("transform",
+            `translate(${margin.left}px,${margin.top}px)`
+        )
+        .call(axisY)
+    }
+
+    function drawMap(geoJeon) {
+        let config = getMapConfig();
+        let projection = getMapProjection(config);
+        drawBaseMap(config.container, geoJeon.features, projection)
+    }
+
+
+    function getMapConfig(){
+      let width = 600;
+      let height = 400;
+      let container = d3.select("#map");//TODO: select the svg with id Map
+     //TODO: set the width and height of the conatiner to be equal the width and height variables.
+      container.attr("width", width).attr("height", height)
+      return {width, height, container}
+    }
+
+    function getMapProjection(config) {
+      let {width, height} = config;
+      let projection = d3.geoMercator();//TODO: Create a projection of type Mercator.
+      projection.scale(97).translate([width / 2, height / 2 + 20])
+      store.mapProjection = projection;
+      return projection;
+    }
+
+    function drawBaseMap(container, countries, projection){
+      let path = d3.geoPath().projection(projection) //TODO: create a geoPath generator and set its projection to be the projection passed as parameter.
+
+      container.selectAll("path").data(countries)
+      .enter().append("path")
+      .attr("d",d => path(d)) //TODO: use the path generator to draw each country )
+      .attr("stroke", "#ccc")
+      .attr("fill", "#eee")
+    }
+
+    function drawAirports(airports) {
+      let config = getMapConfig(); //get the config
+      let projection = getMapProjection(config) //get the projection
+      let container = config.container; //get the container
+
+      let circles = container.selectAll("circle")
+                          .data(airports)
+                          .enter().append("circle")
+                          .attr("r", 1)
+                          .attr("cx", d => projection([d.Longitude, d.Latitude])[0])
+                          .attr("cy", d => projection([d.Longitude, d.Latitude])[1])
+                          .attr("fill", "#2a5599");
+  //TODO: bind the airports to the circles using the .data method.
+  //TODO: for each new airport (hint: .enter)
+  //      - Set the radius to 1
+  //      - set the x and y position of the circle using the projection to convert longitude and latitude to x and y porision.
+  //      - Set the fill color of the circle to  "#2a5599"
+    }
+
+    function groupByAirport(data) {
+        //We use reduce to transform a list into a object where each key points to an aiport. This way makes it easy to check if is the first time we are seeing the airport.
+        let result = data.reduce((result, d) => {
+            //The || sign in the line below means that in case the first option is anything that Javascript consider false (this insclude undefined, null and 0), the second option will be used. Here if result[d.DestAirportID] is false, it means that this is the first time we are seeing the airport, so we will create a new one (second part after ||)
+
+            let currentDest = result[d.DestAirportID] || {
+                "AirportID": d.DestAirportID,
+                "Airport": d.DestAirport,
+                "Latitude": +d.DestLatitude,
+                "Longitude": +d.DestLongitude,
+                "City": d.DestCity,
+                "Country": d.DestCountry,
+                "Count": 0
+            }
+            currentDest.Count += 1
+            result[d.DestAirportID] = currentDest
+
+            //After doing for the destination airport, we also update the airport the airplane is departing from.
+            let currentSource = result[d.SourceAirportID] || {
+                "AirportID": d.SourceAirportID,
+                "Airport": d.SourceAirport,
+                "Latitude": +d.SourceLatitude,
+                "Longitude": +d.SourceLongitude,
+                "City": d.SourceCity,
+                "Country": d.SourceCountry,
+                "Count": 0
+            }
+            currentSource.Count += 1
+            result[d.SourceAirportID] = currentSource
+
+            return result
+        }, {})
+
+        //We map the keys to the actual ariorts, this is an way to transform the object we got in the previous step into a list.
+        result = Object.keys(result).map(key => result[key])
+        return result
+    }
+
+    function drawRoutes(airlineID) {
+        let routes = store.routes//TODO: get the routes from store
+        let projection = store.mapProjection//TODO: get the projection from the store
+        let container = d3.select('#Map')//TODO: select the svg with id "Map" (our map container)
+        let selectedRoutes = routes.filter(d => d.AirlineID === airlineID)//TODO: filter the routes to keep only the routes which AirlineID is equal to the parameter airlineID received by the function
+
+        let bindedData = container.selectAll("line")
+            .data(selectedRoutes, d => d.ID) //This seconf parameter tells D3 what to use to identify the routes, this hepls D3 to correctly find which routes have been added or removed.
+
+        //TODO: Use the .enter selector to append a line for each new route.
+        //TODO: for each line set the start of the line (x1 and y1) to be the position of the source airport (SourceLongitude and SourceLatitude) Hint: you can use projection to convert longitude and latitude to x and y.
+        //TODO: for each line set the end of the line (x2 and y2) to be the position of the source airport (DestLongitude and DestLongitude)
+
+        //TODO: set the color of the stroke of the line to "#992a2a"
+        //TODO: set the opacity to 0.1
+
+        //TODO: use exit function over bindedData to remove any routes that does not satisfy the filter.
+
+        bindedData.enter().append("line")
+          .attr("x1", d => projection([d.SourceLongitude, d.SourceLatitude])[0])
+          .attr("y1", d => projection([d.SourceLongitude, d.SourceLatitude])[1])
+          .attr("x2", d => projection([d.DestLongitude, d.DestLatitude])[0])
+          .attr("y2", d => projection([d.DestLongitude, d.DestLatitude])[1])
+          .attr("stroke", "#992a2a")
+          .attr("opacity", 0.1)
+
+        bindedData.exit().remove()
+    }
+
+
+
+ </script>
+
 </html>
