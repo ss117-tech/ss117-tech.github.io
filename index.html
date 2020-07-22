@@ -44,7 +44,18 @@
 
     </style>
     <!-- Add this line <script src="https://d3js.org/d3.v5.min.js"></script>-->
-    <script src="d3.js"></script>
+    <script src="d3.js"-->  </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#fullpage').fullpage({
+          verticalCentered: false,
+          anchors: ['intro', 'vis', 'data', 'reviews', 'top10', 'checks', 'finds', 'ref'],
+          navigation: true,
+          navigationPosition: 'right',
+          navigationTooltips: ['Introduction', '​Visualization', 'Dataset', 'Trips Overview', 'Top 10 Trips', 'CA Trips',
+            'Findings', 'References']
+        });});
+    </script>
 
 </head>
 
