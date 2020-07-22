@@ -45,37 +45,27 @@
     </style>
     <!-- Add this line <script src="https://d3js.org/d3.v5.min.js"></script>-->
     <script src="d3.js"></script>
-    <script src="d3.js"-->  </script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 
-
-    <script type="text/javascript" src="js/d3.min.js"></script>
-    <script type="text/javascript" src="js/d3-annotation.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#fullpage').fullpage({
-          verticalCentered: false,
-          anchors: ['intro', 'vis', 'data','airport'],
-          navigation: true,
-          navigationPosition: 'right',
-          navigationTooltips: ['Introduction', '​Visualization', 'Dataset','Trips']
-        });});
-    </script>
 </head>
 
 <body>
-    <h1>Airlines Routes</h1>
-    <div class="mainView">
-        <div>
-            <h2>Airlines</h2>
-            <svg id="AirlinesChart"></svg>
+  <div id="fullpage">
+    <div class="section" id="airport">
+      <div id="content_div">
+        <h1>Airport trips</h1>
+        <div class="mainView">
+          <div>
+              <h2>Airlines</h2>
+              <svg id="AirlinesChart"></svg>
+          </div>
+          <div>
+              <h2>Airports</h2>
+              <svg id="Map"></svg>
+          </div>
         </div>
-        <div>
-            <h2>Airports</h2>
-            <svg id="Map"></svg>
-        </div>
+      </div>
     </div>
+ </div>    
 </body>
 
 <script type="text/javascript" src="js/tooltip.js"></script>
