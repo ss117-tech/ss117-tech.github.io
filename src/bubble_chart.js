@@ -20,26 +20,28 @@ function bubbleChart() {
 
   var yearCenters = {
     US: { x: width / 2, y: 2* height / 3 },
-    China: { x: 3 * width / 16, y: height / 3 },
+    China: { x: 3 * width / 16, y: height / 3 }
+    /*
     Spain:{ x: width /5, y: 2* height / 3 },
     UK:{ x: 3 * width / 8, y: height / 3 },
     Germany:{ x: 5 * width / 8, y: height / 3 },
     Italy:{ x: 3 * width / 5, y: 2* height / 3 },
     France:{ x: 13 * width / 16, y: height / 3 }
-    Others:{ x: 4 * width / 5, y: 2* height / 3 }
+    Others:{ x: 4 * width / 5, y: 2* height / 3 }*/
   };
 
   // X locations of the year titles.
   var yearsTitleX = {
     UK: 160,
-    France: width / 7,
+    France: width / 7
+    /*
     China: width - 160,
     US: width / 8,
     Spain: width*2/ 8,
     Germany: width*4/ 8,
     Italy: width*5/ 8,
     France: width*6/ 8,
-    Others:width*7/ 8
+    Others:width*7/ 8*/
   };
 
   // @v4 strength to apply to the position forces
@@ -389,7 +391,7 @@ function addCommas(nStr) {
 }
 
 // Load the data.
-d3.csv('test3.csv', display);
+d3.csv('test4.csv', display);
 
 // setup the buttons.
 setupButtons();
