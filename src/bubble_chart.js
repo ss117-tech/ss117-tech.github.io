@@ -20,12 +20,14 @@ function bubbleChart() {
 
   var yearCenters = {
 
-    US: { x: width / 7, y: height / 2 },
-    UK: { x: 2*width / 7, y: height / 2 },
-    China: { x: 3 * width / 7, y: height / 2 },
-    France: { x: 4 * width / 7, y: height / 2 },
-    Spain:{ x:5 * width / 7, y: height / 2 },
-    Others:{ x: 6 * width / 7, y: height / 2 },
+    US: { x: width / 9, y: height / 2 },
+    UK: { x: 2*width / 9, y: height / 2 },
+    China: { x: 3 * width / 9, y: height / 2 },
+    France: { x: 4 * width / 9, y: height / 2 },
+    Spain:{ x:5 * width / 9, y: height / 2 },
+    Germany:{ x:6 * width / 9, y: height / 2 },
+    Italy:{ x:7 * width / 9, y: height / 2 },
+    Others:{ x: 8 * width / 9, y: height / 2 },
     /*
     US: { x: 3 * width / 16, y: height / 3 },
     UK: { x: width / 3, y: 2* height / 3 },
@@ -110,7 +112,7 @@ function bubbleChart() {
   var fillColor = d3.
   //scaleOrdinal()
       scaleOrdinal(d3.schemeCategory20c)
-      .domain(['US','China','UK','France']);
+      .domain(['US','UK','China','France','Spain','Germany', 'Italy','Others']);
     //.domain(['low', 'medium', 'high'])
     //.range(['#d84b2a', '#beccae', '#7aa25c']);
 
@@ -145,7 +147,7 @@ function bubbleChart() {
     var myNodes = rawData.map(function (d) {
       return {
         id: d.id,
-        radius: radiusScale(+d.total_amount/8),
+        radius: radiusScale(+d.total_amount/16),
         value: +d.total_amount,
         //name: d.grant_title,
         //org: d.organization,

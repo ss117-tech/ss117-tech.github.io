@@ -1,6 +1,7 @@
 ﻿id,total_amount,group,start_year
 1,1438,Atlanta,US
 2,1153,London,UK
+3,6,London,Others
 4,840,Chicago,US
 5,806,Paris,France
 6,771,Dallas-Fort Worth,US
@@ -8,119 +9,217 @@
 8,727,Beijing,China
 9,604,Shanghai,China
 10,574,Charlotte,US
+11,550,Istanbul,Others
+12,547,Amsterdam,Others
 13,539,Miami,US
 14,532,Philadelphia,US
 15,497,Los Angeles,US
+16,478,Frankfurt,Germany
 17,446,Phoenix,US
 18,455,Guangzhou,China
+19,448,Rome,Italy
 20,446,Washington,US
+21,404,Munich,Germany
+22,364,Madrid,Spain
+23,365,Barcelona,Spain
 24,360,Detroit,US
 25,353,Chengdu,China
+26,346,Toronto,Others
 27,341,Minneapolis,US
 28,316,Shenzhen,China
 29,290,Kunming,China
+30,290,Berlin,Germany
 31,285,Xi'an,China
 32,281,Orlando,US
 33,270,Las Vegas,US
+34,264,Duesseldorf,Germany
 35,255,Denver,US
+36,260,Palma de Mallorca,Spain
 37,251,Baltimore,US
 38,243,Hangzhou,China
 39,242,Salt Lake City,US
 40,241,Houston,US
 41,220,Wuhan,China
+42,212,Malaga,Spain
+43,202,Dublin,Others
 44,200,Chongqing,China
 45,198,Xiamen,China
 46,196,Boston,US
+47,194,Montreal,Others
 48,194,Nanjing,China
 49,192,Seattle,US
 50,189,Tampa,US
 51,186,Manchester,UK
 52,180,Zhengzhou,China
 53,180,Qingdao,China
+54,178,Tokyo,Others
+55,172,Milano,Italy
 56,168,Changcha,China
 57,165,San Francisco,US
 58,162,Urumqi,China
 59,169,St. Louis,US
+60,161,Brussels,Others
 61,160,New Orleans,US
 62,156,Shenyang,China
+63,154,Alicante,Spain
 64,153,Dalian,China
+65,153,Vancouver,Others
 66,153,Marseille,France
+67,150,Charleroi,Others
 68,148,Newark,US
+69,145,Tenerife,Spain
 70,144,Edinburgh,UK
 71,141,San Diego,US
 72,130,Bristol,UK
 73,10,Bristol,US
 74,119,Portland,US
 75,137,Nashville,US
+76,134,Vienna,Others
 77,133,Raleigh-durham,US
+78,135,Geneva,Others
 79,134,Harbin,China
+80,132,Seoul,Others
 81,130,Fort Lauderdale,US
+82,119,Lisbon,Others
 83,126,Mulhouse,France
 84,126,Nanning,China
 85,131,Kansas City,US
 86,126,Guiyang,China
+87,126,Bergamo,Italy
 88,125,Nice,France
 89,122,Taiyuan,China
 90,122,Pittsburgh,US
 91,122,Jinan,China
+92,121,Hamburg,Germany
 93,120,Cincinnati,US
 94,119,Austin,US
 95,60,Birmingham,UK
 96,59,Birmingham,US
+97,116,Ibiza,Spain
+98,114,Taipei,Others
+99,114,Pisa,Italy
 100,112,Columbus,US
 101,73,San Jose,US
+102,38,San Jose,Others
 103,111,Lyon,France
+104,113,Abu Dhabi,Others
+105,114,Calgary,Others
 106,110,Liverpool,UK
 107,110,Indianapolis,US
 108,112,Milwaukee,US
 109,106,Fuzhou,China
+110,106,Bologna,Italy
 111,104,San Antonio,US
+112,105,Valencia,Spain
+113,104,Hong Kong,Others
+114,102,Venice,Italy
+115,102,Porto,Others
+116,102,Gran Canaria,Spain
 117,100,Tianjin,China
+118,99,Zurich,Others
 119,97,Guilin,China
+120,96,Bangkok,Others
 121,96,Nanchang,China
+122,96,Faro,Others
+123,94,Catania,Italy
+124,92,Stockholm,Others
+125,92,Mexico City,Others
 126,92,Beauvais,France
 127,90,Wenzhou,China
+128,90,Malta,Others
 129,90,Hohhot,China
 130,87,Changchun,China
+131,88,Gerona,Spain
+132,87,Arrecife,Spain
+133,88,Copenhagen,Others
+134,52,Santiago,Spain
+135,28,Santiago,Others
+136,6,Santiago,Others
 137,85,Toulouse,France
+138,86,Hahn,Germany
+139,87,Cancun,Others
 140,84,Wuxi,China
+141,84,Warsaw,Others
 142,84,Sanya,China
 143,87,Memphis,US
 144,81,Windsor Locks,US
+145,83,Sevilla,Spain
 146,80,Fort Myers,US
+147,73,Athens,Others
+148,78,Moscow,Others
+149,78,Krakow,Others
+150,76,Weeze,Germany
 151,73,Oakland,US
 152,76,Lanzhou,China
 153,76,Hefei,China
 154,75,Yinchuan,China
+155,74,Stuttgart,Germany
+156,73,Singapore,Others
 157,74,Ninbo,China
+158,74,Fuerteventura,Spain
 159,74,East Midlands,UK
 160,72,Zhuhai,China
+161,73,Thessaloniki,Others
+162,72,Milan,Italy
 163,72,Haikou,China
 164,65,Charleston,US
+165,70,Rygge,Others
+166,69,San Juan,Others
+167,70,Marrakech,Others
 168,69,Louisville,US
 169,70,Honolulu,US
 170,70,Sacramento,US
 171,68,Yantai,China
+172,68,Naples,Italy
 173,64,Norfolk,US
 174,66,Bordeaux,France
+175,66,Bremen,Germany
 176,62,Santa Ana,US
 177,64,Nantes,France
+178,65,Nairobi,Others
+179,64,Eindhoven,Others
 180,67,Dallas,US
+181,64,Cagliari,Italy
+182,64,Ankara,Others
+183,65,Bilbao,Spain
 184,63,Jacksonville,US
 185,63,Albuquerque,US
+186,62,Bari,Italy
 187,59,Oklahoma City,US
+188,61,Nuernberg,Germany
+189,60,Budapest,Others
+190,58,Treviso,Italy
+191,56,Sydney,Others
+192,4,Sydney,Others
+193,58,Palermo,Italy
+194,58,Alghero,Italy
 195,58,Changzhou,China
+196,57,Tel-aviv,Others
+197,54,Sao Paulo,Others
+198,55,Prague,Others
 199,56,Richmond,US
 200,56,Rochester,US
 201,56,Omaha,US
+202,55,Edmonton,Others
+203,56,Chania,Others
+204,56,Cologne,Germany
 205,57,Buffalo,US
+206,54,Trapani,Italy
 207,54,Dayton,US
 208,52,Yuncheng,China
 209,51,Xining,China
 210,52,Shijiazhuang,China
+211,53,Ottawa,Others
+212,52,Osaka,Others
+213,49,Halifax,Others
+214,52,Gothenborg,Others
 215,52,Leeds,UK
 216,53,Cleveland,US
+217,51,Torino,Italy
+218,50,Kerkyra/corfu,Others
+219,46,Florence,Italy
 220,4,Florence,US
+221,50,Billund,Others
 222,48,West Palm Beach,US
 223,48,Quanzhou,China
 224,48,Little Rock,US
@@ -128,528 +227,237 @@
 226,50,Albany,US
 227,46,Tucson,US
 228,45,Providence,US
-234,47,Lijiang,China
-236,46,Belfast,UK
-237,44,Shantou,China
-240,41,Tulsa,US
-242,14,Panama City,US
-244,42,Prestwick,UK
-245,40,Reno,US
-246,42,Greenville,US
-248,42,Akron,US
-250,40,Newcastle,UK
-251,41,El Paso,US
-254,10,Melbourne,US
-255,36,Ontario,US
-258,38,Knoxville,US
-259,39,Des Moines,US
-260,36,Syracuse,US
-263,36,Manchester NH,US
-267,35,Greensboro,US
-268,36,Grand Rapids,US
-271,36,Columbia,US
-274,34,Baotou,China
-276,32,Yangzhou,China
-284,32,Bournemouth,UK
-286,32,Bentonville,US
-288,30,Savannah,US
-294,30,Jackson,US
-295,30,Ajaccio,France
-296,30,Bastia,France
-302,28,Yiwu,China
-303,28,Wichita,US
-304,28,Kahului,US
-307,28,Jingdezhen,China
-308,28,Lhasa,China
-313,25,Yancheng,China
-314,26,Wilmington,US
-315,26,Southend,UK
-316,26,White Plains,US
-318,26,Myrtle Beach,US
-320,26,Pensacola,US
-323,26,Madison,US
-328,26,Harrisburg,US
-329,27,Islip,US
-331,26,Lexington KY,US
-332,26,Huntsville,US
-333,26,Huangshan,China
-337,26,Chattanooga,US
-338,24,Montpellier,France
-348,24,Charlottesville VA,US
-350,24,Beihai,China
-351,24,Dayong,China
-352,24,Burbank,US
-353,22,Yanji,China
-355,22,Strasbourg,France
-356,22,Spokane,US
-357,22,Tallahassee,US
-363,22,Huangyan,China
-365,21,Key West,US
-366,22,Jiuzhaigou,China
-367,24,Flint,US
-371,20,Zhanjiang,China
-372,19,Valparaiso,US
-374,20,Roanoke VA,US
-377,21,Palm Springs,US
-380,20,Lianyungang,China
-385,20,Carcassonne,France
-389,20,Calvi,France
-391,18,Sarasota,US
-392,16,Springfield,US
-394,18,Zhoushan,China
-395,18,Peoria,US
-397,18,Mianyang,China
-399,18,Moline,US
-402,17,Kona,US
-403,18,Fort Wayne,US
-404,18,Linyi,China
-406,18,Lille,France
-409,18,Jinghonggasa,China
-411,16,Aberdeen,UK
-412,2,Aberdeen,US
-413,18,Beziers,France
-414,18,Brest,France
-415,18,Dazhou,China
-418,19,Boise,US
-419,18,Bloomington,US
-421,18,Cardiff,UK
-422,18,Cedar Rapids,US
-423,17,Burlington,US
-424,16,Yibin,China
-426,15,Scranton,US
-429,16,Southampton,UK
-430,16,Yichang,China
-431,16,Xiangfan,China
-435,16,Liuzhou,China
-436,16,Luzhou,China
-442,16,Evansville,US
-443,16,Kashi,China
-445,16,Hami,China
-450,16,Gulfport,US
-453,16,Fresno,US
-456,16,Guangyuan,China
-457,16,Gainesville,US
-458,16,Lihue,US
-469,16,Biarritz-bayonne,France
-470,16,Dongsheng,China
-471,16,Allentown,US
-472,16,Changzhi,China
-476,14,Tongliao,China
-480,14,Zunyi,China
-481,14,Newport News,US
-482,14,MONTGOMERY,US
-483,13,Midland,US
-485,15,Lubbock,US
-486,14,Nanyang,China
-487,14,Mobile,US
-489,14,Jacksonville NC,US
-490,14,La Rochelle,France
-491,14,Ganzhou,China
-492,13,Harlingen,US
-493,14,Green Bay,US
-494,14,Fargo,US
-495,14,Fayetteville,US
-496,14,Hailar,China
-499,14,Bergerac,France
-500,14,Asheville,US
-501,14,Baton Rouge,US
-503,15,Amarillo,US
-504,14,Bush Field,US
-505,14,Chifeng,China
-506,12,Sioux Falls,US
-507,12,Wuyishan,China
-509,12,Yulin,China
-511,12,Shangri-La,China
-516,12,Luoyang,China
-517,12,Rennes,France
-520,12,Mudanjiang,China
-531,12,Korla,China
-533,12,Limoges,France
-535,12,Datong,China
-536,12,Anchorage,US
-538,12,Bangor,US
-543,12,Clermont-Ferrand,France
-544,10,Alexandria,US
-546,11,Colorado Springs,US
-548,10,South Bend,US
-550,10,Tours,France
-551,10,Wanxian,China
-552,10,Shreveport,US
-557,10,Xilinhot,China
-559,10,Xuzhou,China
-562,10,Monroe,US
-563,10,New Bern,US
-565,10,Long Beach,US
-567,10,Nanchong,China
-568,10,Qiqihar,China
-573,10,Londonderry,UK
-577,10,Fort Smith,US
-580,10,Lafayette,US
-581,10,Jining,China
-583,10,Figari,France
-584,10,Killeen,US
-585,10,Kalamazoo,US
-586,10,Grand Junction,US
-590,10,Daytona Beach,US
-591,10,Dali,China
-595,10,Appleton,US
-598,8,Salisbury,US
-600,8,Ulanhot,China
-603,8,Yichun,China
-604,8,Traverse City,US
-605,4,Waterloo,US
-608,8,Wassau,US
-609,8,Wuhai,China
-610,8,Watertown,US
-611,8,Santa Fe,US
-615,8,Poitiers,France
-616,8,Nimes,France
-618,8,Monterey,US
-622,8,Rapid City,US
-629,8,Quzhou,China
-630,8,Meixian,China
-632,8,Manhattan,US
-636,8,Fuyang,China
-637,8,Hotan,China
-638,8,Jiamusi,China
-640,8,Jiujiang,China
-645,8,Durango,US
-647,8,Ketchikan,US
-648,8,Hilton Head Island,US
-652,8,Corpus Christi,US
-653,8,Champaign,US
-659,6,Xichang,China
-660,6,St-Etienne,France
-661,6,Zhaotong,China
-664,6,Tongren,China
-665,6,Xingyi,China
-666,6,Tarbes,France
-667,5,Yan'an,China
-668,6,Rodez,France
-674,6,Saginaw,US
-675,6,State College Pennsylvania,US
-678,6,Valdosta,US
-680,6,Yining,China
-683,6,Tengchong,China
-688,6,Redmond-Bend,US
-689,6,Pau,France
-697,6,Newburgh,US
-699,7,Eugene,US
-700,6,Enshi,China
-705,6,La Crosse,US
-706,6,Gwinn,US
-707,6,Elmira,US
-708,6,Inverness,UK
-711,6,Jixi,China
-715,6,Erie,US
-717,6,Lansing,US
-721,6,Exeter,UK
-723,6,Dunhuang,China
-724,6,Ithaca,US
-726,6,Handan,China
-730,6,Binghamton,US
-732,6,Dole,France
-733,6,Chaoyang,China
-734,6,Dothan,US
-739,6,Anqing,China
-741,6,Brunswick,US
-746,6,Changde,China
-748,7,Aksu,China
-749,6,Columbus Mississippi,US
-751,6,Bijie,China
-755,4,Toledo,US
-756,4,Zhijiang,China
-764,4,Santa Barbara,US
-767,4,San Luis Obispo,US
-773,4,Yuma,US
-778,4,Waco,US
-780,4,Santa Rosa,US
-782,4,Roswell,US
-790,4,Simao,China
-791,4,Yinchun,China
-792,4,Teesside,UK
-793,4,Yongzhou,China
-794,4,Wichita Falls,US
-796,4,Sioux City,US
-797,4,San Angelo,US
-799,4,Tyler,US
-800,4,Williamsport,US
-804,4,Texarkana,US
-806,4,Mcallen,US
-810,4,Longview,US
-813,4,Rhinelander,US
-817,4,Qingyang,China
-820,4,Pasco,US
-821,4,Nyingchi,China
-824,4,Perpignan,France
-828,4,Luxi,China
-833,4,Qinhuangdao,China
-834,4,Lynchburg,US
-835,4,Norwich,UK
-844,4,New Haven,US
-846,4,Missoula,US
-848,4,Medford,US
-850,4,Rock Springs,US
-852,4,Liping,China
-857,4,Gillette,US
-858,4,Kalispell,US
-859,4,Helena,US
-860,4,Huntington,US
-863,4,Grand Island,US
-864,4,Great Falls,US
-866,4,Laredo,US
-869,4,International Falls,US
-870,4,Jiayuguan,China
-873,4,Iron Mountain,US
-876,4,Lake Charles,US
-880,4,Joplin,US
-882,4,Flagstaff,US
-884,4,Lawton,US
-886,4,Humberside,UK
-888,4,Jinzhou,China
-889,4,Golmud,China
-892,4,Hyeres,France
-897,4,Garden City,US
-898,4,Juneau,US
-902,4,Alpena,US
-903,4,Bakersfield,US
-907,4,Bozeman,US
-908,4,Brownsville,US
-913,4,Chalons,France
-915,4,Dinard,France
-916,4,Brainerd,US
-920,4,Abilene,US
-924,4,College Station,US
-926,4,Beaumont,US
-927,4,Billings,US
-928,4,Bangda,China
-929,4,Anshan,China
-931,4,Bayannur,China
-939,4,Brive,France
-940,4,Dubuque IA,US
-941,4,Anshun,China
-951,2,Shiquanhe,China
-952,2,Tacheng,China
-956,2,Yushu,China
-960,2,Twin Falls,US
-961,2,Xinyuan,China
-972,2,Williston,US
-980,2,Sitka,US
-984,2,Vernal,US
-987,2,Saint George,US
-989,2,Sault Ste Marie,US
-993,2,Pocatello,US
-994,2,Moab,US
-1007,2,Mammoth Lakes,US
-1033,2,Minot,US
-1036,2,Pellston,US
-1040,2,Mohe County,China
-1044,2,Jacksn Hole,US
-1045,2,Duluth,US
-1046,2,Hibbing,US
-1048,2,Hilo,US
-1051,2,Lewiston,US
-1052,2,Heihe,China
-1070,2,Idaho Falls,US
-1074,2,Escanaba,US
-1075,2,Elko,US
-1076,2,Karamay,China
-1077,2,Lincoln,US
-1079,2,Kuqa,China
-1080,2,Grand Forks,US
-1086,2,Dickinson,US
-1089,2,Casper,US
-1097,2,Butte,US
-1107,2,Cedar City,US
-1113,2,Bismarck,US
-1116,2,Bemidji,US
-1117,2,Deauville,France
-1120,2,Cody,US
-3,6,London,Others
-11,550,Istanbul,Others
-12,547,Amsterdam,Others
-22,364,Madrid,Spain
-23,365,Barcelona,Spain
-26,346,Toronto,Others
-36,260,Palma de Mallorca,Spain
-42,212,Malaga,Spain
-43,202,Dublin,Others
-47,194,Montreal,Others
-54,178,Tokyo,Others
-60,161,Brussels,Others
-63,154,Alicante,Spain
-65,153,Vancouver,Others
-67,150,Charleroi,Others
-69,145,Tenerife,Spain
-76,134,Vienna,Others
-78,135,Geneva,Others
-80,132,Seoul,Others
-82,119,Lisbon,Others
-97,116,Ibiza,Spain
-98,114,Taipei,Others
-102,38,San Jose,Others
-104,113,Abu Dhabi,Others
-105,114,Calgary,Others
-112,105,Valencia,Spain
-113,104,Hong Kong,Others
-115,102,Porto,Others
-116,102,Gran Canaria,Spain
-118,99,Zurich,Others
-120,96,Bangkok,Others
-122,96,Faro,Others
-124,92,Stockholm,Others
-125,92,Mexico City,Others
-128,90,Malta,Others
-131,88,Gerona,Spain
-132,87,Arrecife,Spain
-133,88,Copenhagen,Others
-134,52,Santiago,Spain
-135,28,Santiago,Others
-136,6,Santiago,Others
-139,87,Cancun,Others
-141,84,Warsaw,Others
-145,83,Sevilla,Spain
-147,73,Athens,Others
-148,78,Moscow,Others
-149,78,Krakow,Others
-156,73,Singapore,Others
-158,74,Fuerteventura,Spain
-161,73,Thessaloniki,Others
-165,70,Rygge,Others
-166,69,San Juan,Others
-167,70,Marrakech,Others
-178,65,Nairobi,Others
-179,64,Eindhoven,Others
-182,64,Ankara,Others
-183,65,Bilbao,Spain
-189,60,Budapest,Others
-191,56,Sydney,Others
-192,4,Sydney,Others
-196,57,Tel-aviv,Others
-197,54,Sao Paulo,Others
-198,55,Prague,Others
-202,55,Edmonton,Others
-203,56,Chania,Others
-211,53,Ottawa,Others
-212,52,Osaka,Others
-213,49,Halifax,Others
-214,52,Gothenborg,Others
-218,50,Kerkyra/corfu,Others
-221,50,Billund,Others
 229,47,Punta Cana,Others
 230,46,Macau,Others
 231,46,Riga,Others
 232,45,Helsinki,Others
 233,46,Kuala Lumpur,Others
+234,47,Lijiang,China
 235,46,Heraklion,Others
+236,46,Belfast,UK
+237,44,Shantou,China
 238,44,Antalya,Others
 239,43,Bucharest,Others
+240,41,Tulsa,US
 241,28,Panama City,Others
+242,14,Panama City,US
 243,44,Montego Bay,Others
+244,42,Prestwick,UK
+245,40,Reno,US
+246,42,Greenville,US
 247,29,Auckland,Others
+248,42,Akron,US
 249,40,Wroclaw,Others
+250,40,Newcastle,UK
+251,41,El Paso,US
 252,38,Shannon,Others
 253,30,Melbourne,Others
+254,10,Melbourne,US
+255,36,Ontario,US
 256,38,Nassau,Others
 257,38,Kaunas,Others
+258,38,Knoxville,US
+259,39,Des Moines,US
+260,36,Syracuse,US
 261,36,Santander,Spain
 262,36,Vilnius,Others
+263,36,Manchester NH,US
+264,36,Olbia,Italy
 265,34,Nagoya,Others
 266,36,Rhodos,Others
+267,35,Greensboro,US
+268,36,Grand Rapids,US
+269,36,Hannover,Germany
+270,36,Brindisi,Italy
+271,36,Columbia,US
 272,34,Guadalajara,Others
+273,34,Karlsruhe/Baden-Baden,Germany
+274,34,Baotou,China
 275,33,San Jose Del Cabo,Others
+276,32,Yangzhou,China
 277,32,Zadar,Others
 278,31,Kos,Others
+279,32,Lamezia,Italy
 280,32,Lima,Others
 281,31,Johannesburg,Others
 282,32,Amman,Others
 283,32,Brisbane,Others
+284,32,Bournemouth,UK
 285,32,Bratislava,Others
+286,32,Bentonville,US
 287,30,Salzburg,Others
+288,30,Savannah,US
+289,30,Memmingen,Germany
 290,30,Oranjestad,Others
 291,32,Rio De Janeiro,Others
 292,30,Paphos,Others
+293,30,Leipzig,Germany
+294,30,Jackson,US
+295,30,Ajaccio,France
+296,30,Bastia,France
 297,28,Bogota,Others
 298,31,Buenos Aires,Others
 299,28,Winnipeg,Others
 300,27,Santo Domingo,Others
 301,27,Sofia,Others
+302,28,Yiwu,China
+303,28,Wichita,US
+304,28,Kahului,US
 305,28,Fes,Others
 306,29,Gdansk,Others
+307,28,Jingdezhen,China
+308,28,Lhasa,China
 309,31,Addis Ababa,Others
 310,28,Casablanca,Others
 311,28,Cork,Others
 312,29,Dakar,Others
+313,25,Yancheng,China
+314,26,Wilmington,US
+315,26,Southend,UK
+316,26,White Plains,US
 317,26,Murcia,Spain
+318,26,Myrtle Beach,US
 319,26,Reus,Spain
+320,26,Pensacola,US
 321,28,Puerto Vallarta,Others
 322,26,Philipsburg,Others
+323,26,Madison,US
 324,26,Luxemburg,Others
 325,26,Menorca,Spain
 326,25,Oslo,Others
 327,26,Providenciales,Others
+328,26,Harrisburg,US
+329,27,Islip,US
 330,26,Kuwait,Others
+331,26,Lexington KY,US
+332,26,Huntsville,US
+333,26,Huangshan,China
 334,26,Belgrade,Others
 335,26,Douala,Others
 336,26,Dubai,Others
+337,26,Chattanooga,US
+338,24,Montpellier,France
 339,24,Port-au-prince,Others
 340,24,Monterrey,Others
 341,25,Larnaca,Others
+342,24,Genoa,Italy
 343,22,Guatemala City,Others
 344,20,Harare,Others
 345,25,Delhi,Others
 346,24,Connaught,Others
+347,24,Dortmund,Germany
+348,24,Charlottesville VA,US
+349,24,Dresden,Germany
+350,24,Beihai,China
+351,24,Dayong,China
+352,24,Burbank,US
+353,22,Yanji,China
 354,22,St. Petersburg,Others
+355,22,Strasbourg,France
+356,22,Spokane,US
+357,22,Tallahassee,US
 358,23,San Salvador,Others
 359,22,Tirana,Others
+360,22,Ronchi De Legionari,Italy
 361,22,Tallinn-ulemiste International,Others
 362,24,St. Thomas,Others
+363,22,Huangyan,China
 364,22,Kiev,Others
+365,21,Key West,US
+366,22,Jiuzhaigou,China
+367,24,Flint,US
 368,22,Cheju,Others
 369,22,Bermuda,Others
 370,20,St. John's,Others
+371,20,Zhanjiang,China
+372,19,Valparaiso,US
 373,21,Lusaka,Others
+374,20,Roanoke VA,US
 375,20,Poznan,Others
 376,22,Phuket,Others
+377,21,Palm Springs,US
 378,20,Funchal,Others
 379,22,Liberia,Others
+380,20,Lianyungang,China
 381,20,Jersey,Others
 382,21,Kigali,Others
 383,20,Fukuoka,Others
 384,20,Cozumel,Others
+385,20,Carcassonne,France
 386,20,Almeria,Spain
 387,21,Antigua,Others
 388,20,Cairo,Others
+389,20,Calvi,France
+390,18,Villafranca,Italy
+391,18,Sarasota,US
+392,16,Springfield,US
 393,18,Tampere,Others
+394,18,Zhoushan,China
+395,18,Peoria,US
 396,18,Mumbai,Others
+397,18,Mianyang,China
+398,18,Pescara,Italy
+399,18,Moline,US
 400,17,Regina,Others
 401,18,Ouagadougou,Others
+402,17,Kona,US
+403,18,Fort Wayne,US
+404,18,Linyi,China
 405,18,Hanoi,Others
+406,18,Lille,France
 407,19,Jakarta,Others
 408,18,Georgetown,Others
+409,18,Jinghonggasa,China
 410,18,Hurghada,Others
+411,16,Aberdeen,UK
+412,2,Aberdeen,US
+413,18,Beziers,France
+414,18,Brest,France
+415,18,Dazhou,China
 416,18,Bahrain,Others
 417,18,Caracas,Others
+418,19,Boise,US
+419,18,Bloomington,US
 420,18,Dammam,Others
+421,18,Cardiff,UK
+422,18,Cedar Rapids,US
+423,17,Burlington,US
+424,16,Yibin,China
 425,16,Zagreb,Others
+426,15,Scranton,US
 427,16,Rzeszow,Others
 428,16,Sandefjord,Others
+429,16,Southampton,UK
+430,16,Yichang,China
+431,16,Xiangfan,China
 432,16,Tbilisi,Others
 433,15,Quito,Others
 434,16,Manila,Others
+435,16,Liuzhou,China
+436,16,Luzhou,China
 437,16,Quebec,Others
 438,16,Maastricht,Others
 439,16,Rabat,Others
+440,16,Munster,Germany
 441,16,Pointe-a-pitre,Others
+442,16,Evansville,US
+443,16,Kashi,China
 444,16,Guayaquil,Others
+445,16,Hami,China
 446,16,Graz,Others
 447,16,Fort-de-france,Others
 448,17,Jeddah,Others
 449,17,Hewandorra,Others
+450,16,Gulfport,US
 451,16,Ho Chi Minh City,Others
 452,16,Kinshasa,Others
+453,16,Fresno,US
 454,16,Lagos,Others
 455,16,Entebbe,Others
+456,16,Guangyuan,China
+457,16,Gainesville,US
+458,16,Lihue,US
+459,16,Comiso,Italy
 460,16,Belize City,Others
 461,16,Abuja,Others
 462,17,Accra,Others
@@ -659,23 +467,58 @@
 466,16,Algier,Others
 467,16,Bodrum,Others
 468,16,Abidjan,Others
+469,16,Biarritz-bayonne,France
+470,16,Dongsheng,China
+471,16,Allentown,US
+472,16,Changzhi,China
 473,14,Saskatoon,Others
+474,14,Westerland,Germany
 475,14,Split,Others
+476,14,Tongliao,China
 477,14,Stavanger,Others
 478,13,Tunis,Others
 479,14,Vigo,Spain
+480,14,Zunyi,China
+481,14,Newport News,US
+482,14,MONTGOMERY,US
+483,13,Midland,US
 484,14,Niamey,Others
+485,15,Lubbock,US
+486,14,Nanyang,China
+487,14,Mobile,US
 488,13,Riyadh,Others
+489,14,Jacksonville NC,US
+490,14,La Rochelle,France
+491,14,Ganzhou,China
+492,13,Harlingen,US
+493,14,Green Bay,US
+494,14,Fargo,US
+495,14,Fayetteville,US
+496,14,Hailar,China
 497,14,Baku,Others
+498,14,Ancona,Italy
+499,14,Bergerac,France
+500,14,Asheville,US
+501,14,Baton Rouge,US
 502,14,Busan,Others
+503,15,Amarillo,US
+504,14,Bush Field,US
+505,14,Chifeng,China
+506,12,Sioux Falls,US
+507,12,Wuyishan,China
 508,12,Siem-reap,Others
+509,12,Yulin,China
 510,12,Tanger,Others
+511,12,Shangri-La,China
 512,12,Sharm El Sheikh,Others
 513,12,Muscat,Others
 514,13,Perth,Others
 515,13,Luanda,Others
+516,12,Luoyang,China
+517,12,Rennes,France
 518,12,Malabo,Others
 519,11,Pula,Others
+520,12,Mudanjiang,China
 521,12,El Aroui,Others
 522,11,Kingston,Others
 523,0,Kingston,Others
@@ -686,88 +529,165 @@
 528,11,Kilimanjaro,Others
 529,12,Haugesund,Others
 530,11,Fort Mcmurray,Others
+531,12,Korla,China
 532,12,Jerez,Spain
+533,12,Limoges,France
 534,12,Curitiba,Others
+535,12,Datong,China
+536,12,Anchorage,US
 537,12,Bergen,Others
+538,12,Bangor,US
 539,11,Beirut,Others
 540,12,Dalaman,Others
 541,12,Agadir,Others
 542,12,Dar Es Salaam,Others
+543,12,Clermont-Ferrand,France
+544,10,Alexandria,US
 545,0,Alexandria,Others
+546,11,Colorado Springs,US
 547,12,Colombo,Others
+548,10,South Bend,US
 549,10,Zakynthos,Others
+550,10,Tours,France
+551,10,Wanxian,China
+552,10,Shreveport,US
 553,10,Tehran,Others
 554,10,Rotterdam,Others
+555,10,Saarbruecken,Germany
 556,9,Willemstad,Others
+557,10,Xilinhot,China
 558,10,Zaragoza,Spain
+559,10,Xuzhou,China
 560,10,Yangon,Others
 561,9,Yaounde,Others
+562,10,Monroe,US
+563,10,New Bern,US
 564,10,Linz,Others
+565,10,Long Beach,US
 566,9,Point Salines,Others
+567,10,Nanchong,China
+568,10,Qiqihar,China
 569,10,Male,Others
 570,10,Ljubljana,Others
 571,10,Pristina,Others
 572,10,Oran,Others
+573,10,Londonderry,UK
 574,10,Mykonos,Others
 575,10,Roatan,Others
 576,10,Goose Bay,Others
+577,10,Fort Smith,US
 578,10,Granada,Spain
 579,10,Islamabad,Others
+580,10,Lafayette,US
+581,10,Jining,China
 582,10,Kerry,Others
+583,10,Figari,France
+584,10,Killeen,US
+585,10,Kalamazoo,US
+586,10,Grand Junction,US
 587,10,Freeport,Others
 588,10,Kathmandu,Others
 589,10,Keflavik,Others
+590,10,Daytona Beach,US
+591,10,Dali,China
 592,10,Djibouti,Others
 593,9,Bujumbura,Others
 594,10,Alma-ata,Others
+595,10,Appleton,US
 596,10,Aalborg,Others
 597,9,Brasilia,Others
+598,8,Salisbury,US
 599,8,Tselinograd,Others
+600,8,Ulanhot,China
 601,8,Tashkent,Others
 602,8,Samos,Others
+603,8,Yichun,China
+604,8,Traverse City,US
+605,4,Waterloo,US
 606,0,Waterloo,Others
 607,8,Tegucigalpa,Others
+608,8,Wassau,US
+609,8,Wuhai,China
+610,8,Watertown,US
+611,8,Santa Fe,US
 612,8,Victoria,Others
 613,8,Varadero,Others
 614,8,Mazatlan,Others
+615,8,Poitiers,France
+616,8,Nimes,France
 617,8,Moncton,Others
+618,8,Monterey,US
 619,8,Montevideo,Others
+620,8,Perugia,Italy
 621,8,Melilla,Spain
+622,8,Rapid City,US
 623,8,Monrovia,Others
 624,8,Podgorica,Others
 625,8,Papeete,Others
 626,9,Puerto Plata,Others
 627,8,Oujda,Others
 628,8,Port Hartcourt,Others
+629,8,Quzhou,China
+630,8,Meixian,China
+631,8,Parma,Italy
+632,8,Manhattan,US
 633,8,Manaus,Others
+634,8,Paderborn,Germany
 635,8,Great Exuma,Others
+636,8,Fuyang,China
+637,8,Hotan,China
+638,8,Jiamusi,China
 639,8,Lilongwe,Others
+640,8,Jiujiang,China
+641,8,Friedrichshafen,Germany
 642,8,Fredericton,Others
 643,8,Lahore,Others
 644,10,Hermosillo,Others
+645,8,Durango,US
 646,8,Iasi,Others
+647,8,Ketchikan,US
+648,8,Hilton Head Island,US
 649,8,Deer Lake,Others
 650,8,Del Bajio,Others
 651,9,Cape Town,Others
+652,8,Corpus Christi,US
+653,8,Champaign,US
 654,8,Bridgetown,Others
 655,8,Denpasar,Others
 656,8,Bangalore,Others
 657,8,Bishkek,Others
 658,8,Conakry,Others
+659,6,Xichang,China
+660,6,St-Etienne,France
+661,6,Zhaotong,China
 662,6,San Pedro Sula,Others
 663,6,Van,Others
+664,6,Tongren,China
+665,6,Xingyi,China
+666,6,Tarbes,France
+667,5,Yan'an,China
+668,6,Rodez,France
 669,6,Trabzon,Others
 670,6,Yerevan,Others
 671,6,Sapporo,Others
 672,6,St. John,Others
 673,6,Saipan,Others
+674,6,Saginaw,US
+675,6,State College Pennsylvania,US
 676,6,Sept-iles,Others
 677,6,Szczecin,Others
+678,6,Valdosta,US
 679,6,Sarajevo,Others
+680,6,Yining,China
 681,7,Thira,Others
 682,6,Vasteras,Others
+683,6,Tengchong,China
+684,6,Luebeck,Germany
 685,7,Managua,Others
 686,6,Port-of-spain,Others
+687,6,Reggio Calabria,Italy
+688,6,Redmond-Bend,US
+689,6,Pau,France
 690,6,Mardin,Others
 691,6,Nicosia,Others
 692,6,Rio Negro,Others
@@ -775,39 +695,66 @@
 694,6,Plaisance,Others
 695,6,Preveza,Others
 696,7,Nouakschott,Others
+697,6,Newburgh,US
 698,6,Nea Anghialos,Others
+699,7,Eugene,US
+700,6,Enshi,China
 701,6,Gander,Others
 702,6,Innsbruck,Others
 703,6,Erzurum,Others
 704,6,Kalamata,Others
+705,6,La Crosse,US
+706,6,Gwinn,US
+707,6,Elmira,US
+708,6,Inverness,UK
 709,6,Elazig,Others
 710,6,Karachi,Others
+711,6,Jixi,China
 712,6,Kars,Others
 713,6,Erbil,Others
 714,6,Gaziantep,Others
+715,6,Erie,US
 716,6,Havana,Others
+717,6,Lansing,US
 718,6,Kelowna,Others
 719,6,Lappeenranta,Others
 720,6,Hatay,Others
+721,6,Exeter,UK
 722,6,Hiroshima,Others
+723,6,Dunhuang,China
+724,6,Ithaca,US
 725,6,Freetown,Others
+726,6,Handan,China
 727,6,Belo Horizonte,Others
 728,6,Charlottetown,Others
 729,6,Basse Terre,Others
+730,6,Binghamton,US
 731,6,Ashkhabad,Others
+732,6,Dole,France
+733,6,Chaoyang,China
+734,6,Dothan,US
 735,6,Dhaka,Others
 736,6,Baghdad,Others
 737,6,Agana,Others
 738,6,Cotonou,Others
+739,6,Anqing,China
+740,6,Cuneo,Italy
+741,6,Brunswick,US
 742,6,Bydgoszcz,Others
 743,6,Adelaide,Others
 744,6,Aarhus,Others
 745,6,Adana,Others
+746,6,Changde,China
 747,6,Diyabakir,Others
+748,7,Aksu,China
+749,6,Columbus Mississippi,US
 750,6,Canberra,Others
+751,6,Bijie,China
 752,6,Brazzaville,Others
 753,5,Chihuahua,Others
 754,6,Chisinau,Others
+755,4,Toledo,US
+756,4,Zhijiang,China
 757,5,Tripoli,Others
 758,4,Val D'or,Others
 759,4,Thunder Bay,Others
@@ -815,19 +762,25 @@
 761,4,Toyama,Others
 762,4,Valladolid,Spain
 763,4,Zacatecas,Others
+764,4,Santa Barbara,US
 765,4,Skelleftea,Others
 766,5,Santa Clara,Others
+767,4,San Luis Obispo,US
 768,4,Santa Cruz,Others
 769,4,Torreon,Others
 770,4,Santa Cruz De La Palma,Spain
 771,4,San Sebastian,Spain
 772,4,Vientiane,Others
+773,4,Yuma,US
 774,4,Taegu,Others
 775,4,St.-denis,Others
 776,4,Wabush,Others
 777,4,Zihuatanejo,Others
+778,4,Waco,US
 779,4,Skopje,Others
+780,4,Santa Rosa,US
 781,4,Timisoara,Others
+782,4,Roswell,US
 783,4,San Luis Potosi,Others
 784,4,Santarem,Others
 785,4,Rouyn,Others
@@ -835,31 +788,52 @@
 787,4,Yellowknife,Others
 788,4,Salvador,Others
 789,4,St. Croix Island,Others
+790,4,Simao,China
+791,4,Yinchun,China
+792,4,Teesside,UK
+793,4,Yongzhou,China
+794,4,Wichita Falls,US
 795,5,Trondheim,Others
+796,4,Sioux City,US
+797,4,San Angelo,US
 798,4,Williams Lake,Others
+799,4,Tyler,US
+800,4,Williamsport,US
 801,4,Ulan Bator,Others
 802,4,Samana,Others
 803,4,Sivas,Others
+804,4,Texarkana,US
 805,4,North Eleuthera,Others
+806,4,Mcallen,US
 807,4,Odessa,Others
 808,4,Mus,Others
 809,4,Puerto Montt,Others
+810,4,Longview,US
 811,4,Novosibirsk,Others
 812,4,Malatya,Others
+813,4,Rhinelander,US
 814,4,Mytilini,Others
 815,4,Niigata,Others
 816,4,N'djamena,Others
+817,4,Qingyang,China
 818,4,Merida,Others
 819,4,Queretaro,Others
+820,4,Pasco,US
+821,4,Nyingchi,China
 822,4,Penang,Others
 823,4,Okinawa,Others
+824,4,Perpignan,France
 825,4,Madras,Others
 826,4,Malmoe,Others
 827,4,Mombasa,Others
+828,4,Luxi,China
 829,4,Puebla,Others
 830,4,Lome,Others
 831,4,Mont Joli,Others
 832,4,Lvov,Others
+833,4,Qinhuangdao,China
+834,4,Lynchburg,US
+835,4,Norwich,UK
 836,4,Livingstone,Others
 837,4,Quesnel,Others
 838,4,Plovdiv,Others
@@ -868,55 +842,94 @@
 841,4,Marsh Harbor,Others
 842,4,Minsk 2,Others
 843,4,Recife,Others
+844,4,New Haven,US
 845,4,Morelia,Others
+846,4,Missoula,US
 847,4,Moroni,Others
+848,4,Medford,US
 849,4,Muan,Others
+850,4,Rock Springs,US
 851,4,Osh,Others
+852,4,Liping,China
 853,4,Porto Alegre,Others
 854,4,Isle Of Man,Others
 855,4,Kayseri,Others
 856,4,Liege,Others
+857,4,Gillette,US
+858,4,Kalispell,US
+859,4,Helena,US
+860,4,Huntington,US
 861,4,Gibraltar,Others
 862,3,Ganja,Others
+863,4,Grand Island,US
+864,4,Great Falls,US
 865,4,Konya,Others
+866,4,Laredo,US
 867,4,Juba,Others
 868,4,Groningen,Others
+869,4,International Falls,US
+870,4,Jiayuguan,China
 871,4,Krabi,Others
 872,4,Guernsey,Others
+873,4,Iron Mountain,US
 874,4,Erzincan,Others
 875,4,Kralendijk,Others
+876,4,Lake Charles,US
 877,4,Kristiansand,Others
 878,4,Keffallinia,Others
 879,4,Grande Prairie,Others
+880,4,Joplin,US
 881,4,Kuching,Others
+882,4,Flagstaff,US
 883,4,Holguin,Others
+884,4,Lawton,US
 885,4,Dushanbe,Others
+886,4,Humberside,UK
 887,4,Dzaoudzi,Others
+888,4,Jinzhou,China
+889,4,Golmud,China
 890,4,Libreville,Others
 891,4,La Paz,Others
+892,4,Hyeres,France
 893,4,Kavala,Others
 894,4,Khartoum,Others
 895,4,La Romana,Others
 896,4,Gaspe,Others
+897,4,Garden City,US
+898,4,Juneau,US
 899,4,Kahramanmaras,Others
 900,4,Kamloops,Others
 901,4,Arequipa,Others
+902,4,Alpena,US
+903,4,Bakersfield,US
 904,4,Adiyaman,Others
 905,4,Darwin,Others
 906,4,Chiang Rai,Others
+907,4,Bozeman,US
+908,4,Brownsville,US
 909,4,Castlegar,Others
 910,4,Cairns,Others
 911,4,Danang,Others
 912,4,Chongju,Others
+913,4,Chalons,France
 914,4,Christchurch,Others
+915,4,Dinard,France
+916,4,Brainerd,US
 917,4,Donetsk,Others
 918,6,Cali,Others
 919,4,Banjul,Others
+920,4,Abilene,US
 921,4,Agri,Others
 922,4,Cluj-napoca,Others
 923,4,Aguascalientes,Others
+924,4,College Station,US
 925,4,Cayenne,Others
+926,4,Beaumont,US
+927,4,Billings,US
+928,4,Bangda,China
+929,4,Anshan,China
 930,4,Asuncion,Others
+931,4,Bayannur,China
 932,4,Alesund,Others
 933,4,Djerba,Others
 934,4,Cranbrook,Others
@@ -924,6 +937,9 @@
 936,4,Culiacan,Others
 937,4,Batman,Others
 938,3,Cunagua,Others
+939,4,Brive,France
+940,4,Dubuque IA,US
+941,4,Anshun,China
 942,2,Vaxjo,Others
 943,2,Vaasa,Others
 944,2,Zanzibar,Others
@@ -933,12 +949,17 @@
 948,2,Sanaa,Others
 949,2,Sochi,Others
 950,2,Ufa,Others
+951,2,Shiquanhe,China
+952,2,Tacheng,China
 953,2,Timmins,Others
 954,2,Vladivostok,Others
 955,2,Shiraz,Others
+956,2,Yushu,China
 957,2,Rostov,Others
 958,2,Sendai,Others
 959,2,Sudbury,Others
+960,2,Twin Falls,US
+961,2,Xinyuan,China
 962,2,Terrace,Others
 963,2,Samara,Others
 964,#N/A,Ushuaia,Others
@@ -949,6 +970,7 @@
 969,2,Sibiu,Others
 970,2,Tromso,Others
 971,2,Vieques Island,Others
+972,2,Williston,US
 973,2,Tortola,Others
 974,2,Stavropol,Others
 975,2,Satu Mare,Others
@@ -956,15 +978,21 @@
 977,2,Sault Sainte Marie,Others
 978,2,Zandery,Others
 979,2,Yekaterinburg,Others
+980,2,Sitka,US
 981,2,Tabriz,Others
 982,2,Taif,Others
 983,2,Yenbo,Others
+984,2,Vernal,US
 985,2,Townsville,Others
 986,2,St.-pierre,Others
+987,2,Saint George,US
 988,2,Sandspit,Others
+989,2,Sault Ste Marie,US
 990,2,Salamanca,Spain
 991,2,Whitehorse,Others
 992,2,Okayama,Others
+993,2,Pocatello,US
+994,2,Moab,US
 995,2,Nagasaki,Others
 996,2,Pointe-noire,Others
 997,2,Prince George,Others
@@ -977,6 +1005,7 @@
 1004,2,Ponta Delgada,Others
 1005,3,Nandi,Others
 1006,2,Mashhad,Others
+1007,2,Mammoth Lakes,US
 1008,2,Nakhchivan,Others
 1009,2,Lleida,Spain
 1010,2,Rijeka,Others
@@ -1002,20 +1031,30 @@
 1030,2,Luang Prabang,Others
 1031,2,Mandalay,Others
 1032,2,Osijek,Others
+1033,2,Minot,US
 1034,2,Nanaimo,Others
 1035,2,Marsa Alam,Others
+1036,2,Pellston,US
 1037,2,Ostrava,Others
 1038,2,Mogadishu,Others
 1039,2,Medicine Hat,Others
+1040,2,Mohe County,China
 1041,2,Kastamonu,Others
 1042,2,Leon,Spain
 1043,2,Linkoeping,Others
+1044,2,Jacksn Hole,US
+1045,2,Duluth,US
+1046,2,Hibbing,US
 1047,2,Kagoshima,Others
+1048,2,Hilo,US
 1049,2,Kolkata,Others
 1050,2,Kaliningrad,Others
+1051,2,Lewiston,US
+1052,2,Heihe,China
 1053,2,El Calafate,Others
 1054,2,Gassim,Others
 1055,2,Fort Saint John,Others
+1056,2,Laage,Germany
 1057,2,Kazan,Others
 1058,2,Eskissehir,Others
 1059,2,Kutahya,Others
@@ -1029,17 +1068,26 @@
 1067,2,Isparta,Others
 1068,2,Langkawi,Others
 1069,2,Kota Kinabalu,Others
+1070,2,Idaho Falls,US
 1071,3,Juliaca,Others
 1072,2,Iles De La Madeleine,Others
 1073,2,Kabul,Others
+1074,2,Escanaba,US
+1075,2,Elko,US
+1076,2,Karamay,China
+1077,2,Lincoln,US
 1078,2,Kittila,Others
+1079,2,Kuqa,China
+1080,2,Grand Forks,US
 1081,2,Kochi,Others
 1082,2,Alice Springs,Others
 1083,2,Basrah,Others
 1084,2,Cockburn Town,Others
 1085,#N/A,Acapulco,Others
+1086,2,Dickinson,US
 1087,2,Bamako,Others
 1088,2,Brno,Others
+1089,2,Casper,US
 1090,2,Antwerp,Others
 1091,2,Antananarivo,Others
 1092,2,Burgos,Spain
@@ -1047,6 +1095,7 @@
 1094,2,Aqaba,Others
 1095,2,Canakkale,Others
 1096,2,Chita,Others
+1097,2,Butte,US
 1098,2,Bathurst,Others
 1099,3,Babelthuap,Others
 1100,2,Batumi,Others
@@ -1056,14 +1105,20 @@
 1104,2,Bangui,Others
 1105,2,Comox,Others
 1106,2,Baia Mare,Others
+1107,2,Cedar City,US
 1108,2,Çorlu,Others
 1109,1,Alta,Others
 1110,3,Belem,Others
 1111,2,Astrakhan,Others
 1112,2,Dnepropetrovsk,Others
+1113,2,Bismarck,US
 1114,2,Dominica,Others
 1115,2,Constanta,Others
+1116,2,Bemidji,US
+1117,2,Deauville,France
 1118,2,Aden,Others
+1119,2,Bolzano,Italy
+1120,2,Cody,US
 1121,2,Bagotville,Others
 1122,2,Cartagena,Others
 1123,2,Barranquilla,Others
