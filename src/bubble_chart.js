@@ -103,9 +103,12 @@ function bubbleChart() {
 
   // Nice looking colors - no reason to buck the trend
   // @v4 scales now have a flattened naming scheme
-  var fillColor = d3.scaleOrdinal()
-    .domain(['low', 'medium', 'high'])
-    .range(['#d84b2a', '#beccae', '#7aa25c']);
+  var fillColor = d3.
+  //scaleOrdinal()
+      scaleOrdinal(d3.schemeCategory20c)
+      .domain(['US','China','UK','France']);
+    //.domain(['low', 'medium', 'high'])
+    //.range(['#d84b2a', '#beccae', '#7aa25c']);
 
 
   /*
