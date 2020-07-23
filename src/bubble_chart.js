@@ -20,9 +20,10 @@ function bubbleChart() {
 
   var yearCenters = {
 
-    US: { x: width / 3, y: height / 2 },
-    UK: { x: width / 2, y: height / 2 },
-    China: { x: 2 * width / 3, y: height / 2 }
+    US: { x: width / 5, y: height / 2 },
+    UK: { x: 2*width / 5, y: height / 2 },
+    China: { x: 3 * width / 5, y: height / 2 },
+    France: { x: 4 * width / 5, y: height / 2 },
     /*
     US: { x: 3 * width / 16, y: height / 3 },
     UK: { x: width / 3, y: 2* height / 3 },
@@ -41,9 +42,10 @@ function bubbleChart() {
 
   // X locations of the year titles.
   var yearsTitleX = {
-    US: width / 3,
-    UK: width / 2,
-    China: 2 * width / 3
+    US: width / 5,
+    UK: 2*width / 5,
+    China: 3 * width / 5,
+    France: 4 * width / 5
     /*US:  width / 10,
     UK:  9 * width / 40,
     China: 7 * width / 20
