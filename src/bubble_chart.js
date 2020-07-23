@@ -141,7 +141,7 @@ function bubbleChart() {
     var myNodes = rawData.map(function (d) {
       return {
         id: d.id,
-        radius: radiusScale(+d.total_amount/2),
+        radius: radiusScale(+d.total_amount/4),
         value: +d.total_amount,
         //name: d.grant_title,
         //org: d.organization,
