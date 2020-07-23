@@ -465,3 +465,608 @@
 1116,2,Bemidji,US
 1117,2,Deauville,France
 1120,2,Cody,US
+3,6,London,Others
+11,550,Istanbul,Others
+12,547,Amsterdam,Others
+22,364,Madrid,Spain
+23,365,Barcelona,Spain
+26,346,Toronto,Others
+36,260,Palma de Mallorca,Spain
+42,212,Malaga,Spain
+43,202,Dublin,Others
+47,194,Montreal,Others
+54,178,Tokyo,Others
+60,161,Brussels,Others
+63,154,Alicante,Spain
+65,153,Vancouver,Others
+67,150,Charleroi,Others
+69,145,Tenerife,Spain
+76,134,Vienna,Others
+78,135,Geneva,Others
+80,132,Seoul,Others
+82,119,Lisbon,Others
+97,116,Ibiza,Spain
+98,114,Taipei,Others
+102,38,San Jose,Others
+104,113,Abu Dhabi,Others
+105,114,Calgary,Others
+112,105,Valencia,Spain
+113,104,Hong Kong,Others
+115,102,Porto,Others
+116,102,Gran Canaria,Spain
+118,99,Zurich,Others
+120,96,Bangkok,Others
+122,96,Faro,Others
+124,92,Stockholm,Others
+125,92,Mexico City,Others
+128,90,Malta,Others
+131,88,Gerona,Spain
+132,87,Arrecife,Spain
+133,88,Copenhagen,Others
+134,52,Santiago,Spain
+135,28,Santiago,Others
+136,6,Santiago,Others
+139,87,Cancun,Others
+141,84,Warsaw,Others
+145,83,Sevilla,Spain
+147,73,Athens,Others
+148,78,Moscow,Others
+149,78,Krakow,Others
+156,73,Singapore,Others
+158,74,Fuerteventura,Spain
+161,73,Thessaloniki,Others
+165,70,Rygge,Others
+166,69,San Juan,Others
+167,70,Marrakech,Others
+178,65,Nairobi,Others
+179,64,Eindhoven,Others
+182,64,Ankara,Others
+183,65,Bilbao,Spain
+189,60,Budapest,Others
+191,56,Sydney,Others
+192,4,Sydney,Others
+196,57,Tel-aviv,Others
+197,54,Sao Paulo,Others
+198,55,Prague,Others
+202,55,Edmonton,Others
+203,56,Chania,Others
+211,53,Ottawa,Others
+212,52,Osaka,Others
+213,49,Halifax,Others
+214,52,Gothenborg,Others
+218,50,Kerkyra/corfu,Others
+221,50,Billund,Others
+229,47,Punta Cana,Others
+230,46,Macau,Others
+231,46,Riga,Others
+232,45,Helsinki,Others
+233,46,Kuala Lumpur,Others
+235,46,Heraklion,Others
+238,44,Antalya,Others
+239,43,Bucharest,Others
+241,28,Panama City,Others
+243,44,Montego Bay,Others
+247,29,Auckland,Others
+249,40,Wroclaw,Others
+252,38,Shannon,Others
+253,30,Melbourne,Others
+256,38,Nassau,Others
+257,38,Kaunas,Others
+261,36,Santander,Spain
+262,36,Vilnius,Others
+265,34,Nagoya,Others
+266,36,Rhodos,Others
+272,34,Guadalajara,Others
+275,33,San Jose Del Cabo,Others
+277,32,Zadar,Others
+278,31,Kos,Others
+280,32,Lima,Others
+281,31,Johannesburg,Others
+282,32,Amman,Others
+283,32,Brisbane,Others
+285,32,Bratislava,Others
+287,30,Salzburg,Others
+290,30,Oranjestad,Others
+291,32,Rio De Janeiro,Others
+292,30,Paphos,Others
+297,28,Bogota,Others
+298,31,Buenos Aires,Others
+299,28,Winnipeg,Others
+300,27,Santo Domingo,Others
+301,27,Sofia,Others
+305,28,Fes,Others
+306,29,Gdansk,Others
+309,31,Addis Ababa,Others
+310,28,Casablanca,Others
+311,28,Cork,Others
+312,29,Dakar,Others
+317,26,Murcia,Spain
+319,26,Reus,Spain
+321,28,Puerto Vallarta,Others
+322,26,Philipsburg,Others
+324,26,Luxemburg,Others
+325,26,Menorca,Spain
+326,25,Oslo,Others
+327,26,Providenciales,Others
+330,26,Kuwait,Others
+334,26,Belgrade,Others
+335,26,Douala,Others
+336,26,Dubai,Others
+339,24,Port-au-prince,Others
+340,24,Monterrey,Others
+341,25,Larnaca,Others
+343,22,Guatemala City,Others
+344,20,Harare,Others
+345,25,Delhi,Others
+346,24,Connaught,Others
+354,22,St. Petersburg,Others
+358,23,San Salvador,Others
+359,22,Tirana,Others
+361,22,Tallinn-ulemiste International,Others
+362,24,St. Thomas,Others
+364,22,Kiev,Others
+368,22,Cheju,Others
+369,22,Bermuda,Others
+370,20,St. John's,Others
+373,21,Lusaka,Others
+375,20,Poznan,Others
+376,22,Phuket,Others
+378,20,Funchal,Others
+379,22,Liberia,Others
+381,20,Jersey,Others
+382,21,Kigali,Others
+383,20,Fukuoka,Others
+384,20,Cozumel,Others
+386,20,Almeria,Spain
+387,21,Antigua,Others
+388,20,Cairo,Others
+393,18,Tampere,Others
+396,18,Mumbai,Others
+400,17,Regina,Others
+401,18,Ouagadougou,Others
+405,18,Hanoi,Others
+407,19,Jakarta,Others
+408,18,Georgetown,Others
+410,18,Hurghada,Others
+416,18,Bahrain,Others
+417,18,Caracas,Others
+420,18,Dammam,Others
+425,16,Zagreb,Others
+427,16,Rzeszow,Others
+428,16,Sandefjord,Others
+432,16,Tbilisi,Others
+433,15,Quito,Others
+434,16,Manila,Others
+437,16,Quebec,Others
+438,16,Maastricht,Others
+439,16,Rabat,Others
+441,16,Pointe-a-pitre,Others
+444,16,Guayaquil,Others
+446,16,Graz,Others
+447,16,Fort-de-france,Others
+448,17,Jeddah,Others
+449,17,Hewandorra,Others
+451,16,Ho Chi Minh City,Others
+452,16,Kinshasa,Others
+454,16,Lagos,Others
+455,16,Entebbe,Others
+460,16,Belize City,Others
+461,16,Abuja,Others
+462,17,Accra,Others
+463,16,Chiang Mai,Others
+464,16,Aviles,Spain
+465,16,Dubrovnik,Others
+466,16,Algier,Others
+467,16,Bodrum,Others
+468,16,Abidjan,Others
+473,14,Saskatoon,Others
+475,14,Split,Others
+477,14,Stavanger,Others
+478,13,Tunis,Others
+479,14,Vigo,Spain
+484,14,Niamey,Others
+488,13,Riyadh,Others
+497,14,Baku,Others
+502,14,Busan,Others
+508,12,Siem-reap,Others
+510,12,Tanger,Others
+512,12,Sharm El Sheikh,Others
+513,12,Muscat,Others
+514,13,Perth,Others
+515,13,Luanda,Others
+518,12,Malabo,Others
+519,11,Pula,Others
+521,12,El Aroui,Others
+522,11,Kingston,Others
+523,0,Kingston,Others
+524,12,Izmir,Others
+525,12,Katowice,Others
+526,13,Kaohsiung,Others
+527,12,La Coruna,Spain
+528,11,Kilimanjaro,Others
+529,12,Haugesund,Others
+530,11,Fort Mcmurray,Others
+532,12,Jerez,Spain
+534,12,Curitiba,Others
+537,12,Bergen,Others
+539,11,Beirut,Others
+540,12,Dalaman,Others
+541,12,Agadir,Others
+542,12,Dar Es Salaam,Others
+545,0,Alexandria,Others
+547,12,Colombo,Others
+549,10,Zakynthos,Others
+553,10,Tehran,Others
+554,10,Rotterdam,Others
+556,9,Willemstad,Others
+558,10,Zaragoza,Spain
+560,10,Yangon,Others
+561,9,Yaounde,Others
+564,10,Linz,Others
+566,9,Point Salines,Others
+569,10,Male,Others
+570,10,Ljubljana,Others
+571,10,Pristina,Others
+572,10,Oran,Others
+574,10,Mykonos,Others
+575,10,Roatan,Others
+576,10,Goose Bay,Others
+578,10,Granada,Spain
+579,10,Islamabad,Others
+582,10,Kerry,Others
+587,10,Freeport,Others
+588,10,Kathmandu,Others
+589,10,Keflavik,Others
+592,10,Djibouti,Others
+593,9,Bujumbura,Others
+594,10,Alma-ata,Others
+596,10,Aalborg,Others
+597,9,Brasilia,Others
+599,8,Tselinograd,Others
+601,8,Tashkent,Others
+602,8,Samos,Others
+606,0,Waterloo,Others
+607,8,Tegucigalpa,Others
+612,8,Victoria,Others
+613,8,Varadero,Others
+614,8,Mazatlan,Others
+617,8,Moncton,Others
+619,8,Montevideo,Others
+621,8,Melilla,Spain
+623,8,Monrovia,Others
+624,8,Podgorica,Others
+625,8,Papeete,Others
+626,9,Puerto Plata,Others
+627,8,Oujda,Others
+628,8,Port Hartcourt,Others
+633,8,Manaus,Others
+635,8,Great Exuma,Others
+639,8,Lilongwe,Others
+642,8,Fredericton,Others
+643,8,Lahore,Others
+644,10,Hermosillo,Others
+646,8,Iasi,Others
+649,8,Deer Lake,Others
+650,8,Del Bajio,Others
+651,9,Cape Town,Others
+654,8,Bridgetown,Others
+655,8,Denpasar,Others
+656,8,Bangalore,Others
+657,8,Bishkek,Others
+658,8,Conakry,Others
+662,6,San Pedro Sula,Others
+663,6,Van,Others
+669,6,Trabzon,Others
+670,6,Yerevan,Others
+671,6,Sapporo,Others
+672,6,St. John,Others
+673,6,Saipan,Others
+676,6,Sept-iles,Others
+677,6,Szczecin,Others
+679,6,Sarajevo,Others
+681,7,Thira,Others
+682,6,Vasteras,Others
+685,7,Managua,Others
+686,6,Port-of-spain,Others
+690,6,Mardin,Others
+691,6,Nicosia,Others
+692,6,Rio Negro,Others
+693,5,Phnom-penh,Others
+694,6,Plaisance,Others
+695,6,Preveza,Others
+696,7,Nouakschott,Others
+698,6,Nea Anghialos,Others
+701,6,Gander,Others
+702,6,Innsbruck,Others
+703,6,Erzurum,Others
+704,6,Kalamata,Others
+709,6,Elazig,Others
+710,6,Karachi,Others
+712,6,Kars,Others
+713,6,Erbil,Others
+714,6,Gaziantep,Others
+716,6,Havana,Others
+718,6,Kelowna,Others
+719,6,Lappeenranta,Others
+720,6,Hatay,Others
+722,6,Hiroshima,Others
+725,6,Freetown,Others
+727,6,Belo Horizonte,Others
+728,6,Charlottetown,Others
+729,6,Basse Terre,Others
+731,6,Ashkhabad,Others
+735,6,Dhaka,Others
+736,6,Baghdad,Others
+737,6,Agana,Others
+738,6,Cotonou,Others
+742,6,Bydgoszcz,Others
+743,6,Adelaide,Others
+744,6,Aarhus,Others
+745,6,Adana,Others
+747,6,Diyabakir,Others
+750,6,Canberra,Others
+752,6,Brazzaville,Others
+753,5,Chihuahua,Others
+754,6,Chisinau,Others
+757,5,Tripoli,Others
+758,4,Val D'or,Others
+759,4,Thunder Bay,Others
+760,4,Sanliurfa,Others
+761,4,Toyama,Others
+762,4,Valladolid,Spain
+763,4,Zacatecas,Others
+765,4,Skelleftea,Others
+766,5,Santa Clara,Others
+768,4,Santa Cruz,Others
+769,4,Torreon,Others
+770,4,Santa Cruz De La Palma,Spain
+771,4,San Sebastian,Spain
+772,4,Vientiane,Others
+774,4,Taegu,Others
+775,4,St.-denis,Others
+776,4,Wabush,Others
+777,4,Zihuatanejo,Others
+779,4,Skopje,Others
+781,4,Timisoara,Others
+783,4,San Luis Potosi,Others
+784,4,Santarem,Others
+785,4,Rouyn,Others
+786,4,Wellington,Others
+787,4,Yellowknife,Others
+788,4,Salvador,Others
+789,4,St. Croix Island,Others
+795,5,Trondheim,Others
+798,4,Williams Lake,Others
+801,4,Ulan Bator,Others
+802,4,Samana,Others
+803,4,Sivas,Others
+805,4,North Eleuthera,Others
+807,4,Odessa,Others
+808,4,Mus,Others
+809,4,Puerto Montt,Others
+811,4,Novosibirsk,Others
+812,4,Malatya,Others
+814,4,Mytilini,Others
+815,4,Niigata,Others
+816,4,N'djamena,Others
+818,4,Merida,Others
+819,4,Queretaro,Others
+822,4,Penang,Others
+823,4,Okinawa,Others
+825,4,Madras,Others
+826,4,Malmoe,Others
+827,4,Mombasa,Others
+829,4,Puebla,Others
+830,4,Lome,Others
+831,4,Mont Joli,Others
+832,4,Lvov,Others
+836,4,Livingstone,Others
+837,4,Quesnel,Others
+838,4,Plovdiv,Others
+839,4,Lubumashi,Others
+840,4,Ndola,Others
+841,4,Marsh Harbor,Others
+842,4,Minsk 2,Others
+843,4,Recife,Others
+845,4,Morelia,Others
+847,4,Moroni,Others
+849,4,Muan,Others
+851,4,Osh,Others
+853,4,Porto Alegre,Others
+854,4,Isle Of Man,Others
+855,4,Kayseri,Others
+856,4,Liege,Others
+861,4,Gibraltar,Others
+862,3,Ganja,Others
+865,4,Konya,Others
+867,4,Juba,Others
+868,4,Groningen,Others
+871,4,Krabi,Others
+872,4,Guernsey,Others
+874,4,Erzincan,Others
+875,4,Kralendijk,Others
+877,4,Kristiansand,Others
+878,4,Keffallinia,Others
+879,4,Grande Prairie,Others
+881,4,Kuching,Others
+883,4,Holguin,Others
+885,4,Dushanbe,Others
+887,4,Dzaoudzi,Others
+890,4,Libreville,Others
+891,4,La Paz,Others
+893,4,Kavala,Others
+894,4,Khartoum,Others
+895,4,La Romana,Others
+896,4,Gaspe,Others
+899,4,Kahramanmaras,Others
+900,4,Kamloops,Others
+901,4,Arequipa,Others
+904,4,Adiyaman,Others
+905,4,Darwin,Others
+906,4,Chiang Rai,Others
+909,4,Castlegar,Others
+910,4,Cairns,Others
+911,4,Danang,Others
+912,4,Chongju,Others
+914,4,Christchurch,Others
+917,4,Donetsk,Others
+918,6,Cali,Others
+919,4,Banjul,Others
+921,4,Agri,Others
+922,4,Cluj-napoca,Others
+923,4,Aguascalientes,Others
+925,4,Cayenne,Others
+930,4,Asuncion,Others
+932,4,Alesund,Others
+933,4,Djerba,Others
+934,4,Cranbrook,Others
+935,4,Baie Comeau,Others
+936,4,Culiacan,Others
+937,4,Batman,Others
+938,3,Cunagua,Others
+942,2,Vaxjo,Others
+943,2,Vaasa,Others
+944,2,Zanzibar,Others
+945,2,Smithers,Others
+946,#N/A,Scarborough,Others
+947,2,San Cristóbal,Others
+948,2,Sanaa,Others
+949,2,Sochi,Others
+950,2,Ufa,Others
+953,2,Timmins,Others
+954,2,Vladivostok,Others
+955,2,Shiraz,Others
+957,2,Rostov,Others
+958,2,Sendai,Others
+959,2,Sudbury,Others
+962,2,Terrace,Others
+963,2,Samara,Others
+964,#N/A,Ushuaia,Others
+965,2,Sarnia,Others
+966,2,Villahermosa,Others
+967,2,Spanish Town,Others
+968,2,Sulaymaniyah,Others
+969,2,Sibiu,Others
+970,2,Tromso,Others
+971,2,Vieques Island,Others
+973,2,Tortola,Others
+974,2,Stavropol,Others
+975,2,Satu Mare,Others
+976,2,Windsor,Others
+977,2,Sault Sainte Marie,Others
+978,2,Zandery,Others
+979,2,Yekaterinburg,Others
+981,2,Tabriz,Others
+982,2,Taif,Others
+983,2,Yenbo,Others
+985,2,Townsville,Others
+986,2,St.-pierre,Others
+988,2,Sandspit,Others
+990,2,Salamanca,Spain
+991,2,Whitehorse,Others
+992,2,Okayama,Others
+995,2,Nagasaki,Others
+996,2,Pointe-noire,Others
+997,2,Prince George,Others
+998,2,Mazar-i-sharif,Others
+999,2,Prince Pupert,Others
+1000,#N/A,Londrina,Others
+1001,2,Maracaibo,Others
+1002,2,Logroño-Agoncillo,Spain
+1003,2,Mackenzie British Columbia,Others
+1004,2,Ponta Delgada,Others
+1005,3,Nandi,Others
+1006,2,Mashhad,Others
+1008,2,Nakhchivan,Others
+1009,2,Lleida,Spain
+1010,2,Rijeka,Others
+1011,2,Maringa,Others
+1012,2,Mahe,Others
+1013,2,Pamplona,Spain
+1014,2,Naypyidaw,Others
+1015,2,Nizhniy Novgorod,Others
+1016,2,Najaf,Others
+1017,#N/A,Pune,Others
+1018,2,Nevsehir,Others
+1019,2,Punta Arenas,Others
+1020,2,Red Deer Industrial,Others
+1021,2,Madinah,Others
+1022,2,Miri,Others
+1023,2,Pyongyang,Others
+1024,2,Matsuyama,Others
+1025,2,North Bay,Others
+1026,2,Penticton,Others
+1027,2,Patras,Others
+1028,2,Oradea,Others
+1029,2,Merzifon,Others
+1030,2,Luang Prabang,Others
+1031,2,Mandalay,Others
+1032,2,Osijek,Others
+1034,2,Nanaimo,Others
+1035,2,Marsa Alam,Others
+1037,2,Ostrava,Others
+1038,2,Mogadishu,Others
+1039,2,Medicine Hat,Others
+1041,2,Kastamonu,Others
+1042,2,Leon,Spain
+1043,2,Linkoeping,Others
+1047,2,Kagoshima,Others
+1049,2,Kolkata,Others
+1050,2,Kaliningrad,Others
+1053,2,El Calafate,Others
+1054,2,Gassim,Others
+1055,2,Fort Saint John,Others
+1057,2,Kazan,Others
+1058,2,Eskissehir,Others
+1059,2,Kutahya,Others
+1060,2,Kanazawa,Others
+1061,2,Esfahan,Others
+1062,2,Khudzhand,Others
+1063,2,Lethbridge,Others
+1064,2,Essadouira,Others
+1065,#N/A,Karpathos,Others
+1066,2,Kano,Others
+1067,2,Isparta,Others
+1068,2,Langkawi,Others
+1069,2,Kota Kinabalu,Others
+1071,3,Juliaca,Others
+1072,2,Iles De La Madeleine,Others
+1073,2,Kabul,Others
+1078,2,Kittila,Others
+1081,2,Kochi,Others
+1082,2,Alice Springs,Others
+1083,2,Basrah,Others
+1084,2,Cockburn Town,Others
+1085,#N/A,Acapulco,Others
+1087,2,Bamako,Others
+1088,2,Brno,Others
+1090,2,Antwerp,Others
+1091,2,Antananarivo,Others
+1092,2,Burgos,Spain
+1093,2,Campbell River,Others
+1094,2,Aqaba,Others
+1095,2,Canakkale,Others
+1096,2,Chita,Others
+1098,2,Bathurst,Others
+1099,3,Babelthuap,Others
+1100,2,Batumi,Others
+1101,2,Benghazi,Others
+1102,2,Alanya,Others
+1103,3,Avarua,Others
+1104,2,Bangui,Others
+1105,2,Comox,Others
+1106,2,Baia Mare,Others
+1108,2,Çorlu,Others
+1109,1,Alta,Others
+1110,3,Belem,Others
+1111,2,Astrakhan,Others
+1112,2,Dnepropetrovsk,Others
+1114,2,Dominica,Others
+1115,2,Constanta,Others
+1118,2,Aden,Others
+1121,2,Bagotville,Others
+1122,2,Cartagena,Others
+1123,2,Barranquilla,Others
+1124,2,Denizli,Others
+1125,2,Bakhtaran,Others
+1126,2,Cuzco,Others
