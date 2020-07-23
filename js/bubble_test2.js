@@ -110,7 +110,7 @@ function bubbleChart() {
         id: d.id,
         radius: radiusScale(+d.total_amount),
         value: +d.total_amount,
-        name: d.grant_title,
+        //name: d.grant_title,
         org: d.organization,
         group: d.group,
         year: d.start_year,
@@ -274,7 +274,7 @@ function bubbleChart() {
     d3.select(this).attr('stroke', 'black');
 
     var content = '<span class="name">Title: </span><span class="value">' +
-                  d.name +
+                  d.group +
                   '</span><br/>' +
                   '<span class="name">Amount: </span><span class="value">$' +
                   addCommas(d.value) +
