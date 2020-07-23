@@ -20,43 +20,59 @@ function bubbleChart() {
   // on which view mode is selected.
   var center = { x: width / 2, y: height / 2 };
 
-  var stateCenters = {
-    AZ: { x: 3 * width / 16, y: height / 3 },
-    IL: { x: width / 3, y: 2* height / 3 },
-    NC: { x: 3 * width / 8, y: height / 3 },
-    NV: { x: width / 2, y: 2* height / 3 },
-    OH: { x: 5 * width / 8, y: height / 3 },
-    PA: { x: 2 * width / 3, y: 2* height / 3 },
-    WI: { x: 13 * width / 16, y: height / 3 }
+  var countryCenters = {
+    US: { x: width / 2, y: 2* height / 3 },
+    China: { x: 3 * width / 16, y: height / 3 },
+    Spain:{ x: width /5, y: 2* height / 3 },
+    UK:{ x: 3 * width / 8, y: height / 3 },
+    Germany:{ x: 5 * width / 8, y: height / 3 },
+    Italy:{ x: 3 * width / 5, y: 2* height / 3 },
+    France:{ x: 13 * width / 16, y: height / 3 }
+    Others:{ x: 4 * width / 5, y: 2* height / 3 }
+    //AZ: { x: 3 * width / 16, y: height / 3 },
+    //IL: { x: width / 3, y: 2* height / 3 },
+    //NC: { x: 3 * width / 8, y: height / 3 },
+    //NV: { x: width / 2, y: 2* height / 3 },
+    //OH: { x: 5 * width / 8, y: height / 3 },
+    //PA: { x: 2 * width / 3, y: 2* height / 3 },
+    //WI: { x: 13 * width / 16, y: height / 3 }
   }
-
+/*
   var starCenters = {
-    1: { x: width / 3, y: 2* height / 3 },
-    2: { x: 3 * width / 8, y: height / 3 },
-    3: { x: width / 2, y: 2* height / 3 },
-    4: { x: 5 * width / 8, y: height / 3 },
-    5: { x: 2 * width / 3, y: 2* height / 3 }
+    //1: { x: width / 3, y: 2* height / 3 },
+    //2: { x: 3 * width / 8, y: height / 3 },
+    //3: { x: width / 2, y: 2* height / 3 },
+    //4: { x: 5 * width / 8, y: height / 3 },
+    //5: { x: 2 * width / 3, y: 2* height / 3 }
   }
-
+*/
   // X locations of the state titles.
-  var stateTitle = {
-    AZ: { x: width / 10, y: height / 8 },
-    IL: { x: 9 * width / 40, y: 9 * height / 20 },
-    NC: { x: 7 * width / 20, y: height / 8 },
-    NV: { x: width / 2, y: 9 * height / 20 },
-    OH: { x: 13 * width / 20, y: height / 8 },
-    PA: { x: 31 * width / 40, y: 9 * height / 20 },
-    WI: { x: 9 * width / 10, y: height / 8 }
+  var countryTitle = {
+    US: { x: width / 2, y: 2* height / 3 },
+    China: { x: width / 10, y: height / 8 },
+    Spain: { x:  width / 5, y: 9 * height / 20 },
+    UK: { x: 7 * width / 20, y: height / 8 },
+    Germany: { x: 13 * width / 20, y: height / 8 },
+    Italy: { x: 3 * width / 5, y: 9 * height / 20 },
+    France: { x: 9 * width / 10, y: height / 8 },
+    Others: { x: 4 * width / 5, y: 9 * height / 20 }
+    //AZ: { x: width / 10, y: height / 8 },
+    //IL: { x: 9 * width / 40, y: 9 * height / 20 },
+    //NC: { x: 7 * width / 20, y: height / 8 },
+    //NV: { x: width / 2, y: 9 * height / 20 },
+    //OH: { x: 13 * width / 20, y: height / 8 },
+    //PA: { x: 31 * width / 40, y: 9 * height / 20 },
+    //WI: { x: 9 * width / 10, y: height / 8 }
   }
-
+/*
   var starTitle = {
-    1: { x: width / 5, y: 8 * height / 20 },
-    2: { x: 13 * width / 40, y: height / 9 },
-    3: { x: width / 2, y: 8 * height / 20 },
-    4: { x: 27 * width / 40, y: height / 9 },
-    5: { x: 4 * width / 5, y: 8 * height / 20 }
+    //1: { x: width / 5, y: 8 * height / 20 },
+    //2: { x: 13 * width / 40, y: height / 9 },
+    //3: { x: width / 2, y: 8 * height / 20 },
+    //4: { x: 27 * width / 40, y: height / 9 },
+    //5: { x: 4 * width / 5, y: 8 * height / 20 }
   }
-
+*/
   // @v4 strength to apply to the position forces
   var forceStrength = 0.03;
 
@@ -69,14 +85,14 @@ function bubbleChart() {
    * Charge function that is called for each node.
    * As part of the ManyBody force.
    * This is what creates the repulsion between nodes.
-   * 
+   *
    * Charge is proportional to the diameter of the
    * circle (which is stored in the radius attribute
    * of the circle's associated data.
-   * 
+   *
    * This is done to allow for accurate collision
    * detection with nodes of different sizes.
-   * 
+   *
    * Charge is negative because we want nodes to repel.
    * @v4 Before the charge was a stand-alone attribute
    *  of the force layout. Now we can use it as a separate force!
@@ -102,7 +118,8 @@ function bubbleChart() {
   // Nice looking colors - no reason to buck the trend
   // @v4 scales now have a flattened naming scheme
   var fillColor = d3.scaleOrdinal(d3.schemeCategory20c)
-    .domain(['AZ', 'IL', 'NC', 'NV', 'OH', 'PA', 'WI']);
+      .domain(['US','China','Spain',  'UK','Germany','Italy','France','Others']);
+    //.domain(['AZ', 'IL', 'NC', 'NV', 'OH', 'PA', 'WI']);
 
   /*
    * This data manipulation function takes the raw data from
@@ -119,7 +136,7 @@ function bubbleChart() {
   function createNodes(rawData) {
     // Use the max reviews in the data as the max in the scale's domain
     // note we have to ensure the reviews is a number.
-    var maxAmount = d3.max(rawData, function (d) { return +d.reviews; });
+    var maxAmount = d3.max(rawData, function (d) { return +d.flights; });
 
     // Sizes bubbles based on area.
     // @v4: new flattened scale names.
@@ -134,20 +151,22 @@ function bubbleChart() {
     var myNodes = rawData.map(function (d) {
       return {
         id: d.id,
-        radius: radiusScale(+d.reviews),
-        reviews: +d.reviews,
-        price: +d.price,
-        stars: +d.stars,
-        name: d.yelp_category,
-        state: d.state,
+        radius: radiusScale(+d.flights),
+        flights: +d.flights,
+        //price: +d.price,
+        //stars: +d.stars,
+        //name: d.yelp_category,
+        //state: d.state,
+        city: d.city,
+        country: d.country,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
     });
 
     // sort them to prevent occlusion of smaller nodes.
-    myNodes.sort(function (a, b) { return b.reviews - a.reviews; });
-    
+    //myNodes.sort(function (a, b) { return b.reviews - a.reviews; });
+    myNodes.sort(function (a, b) { return b.flights - a.flights; });
     return myNodes;
   }
 
@@ -188,8 +207,8 @@ function bubbleChart() {
     var bubblesE = bubbles.enter().append('circle')
       .classed('bubble', true)
       .attr('r', 0)
-      .attr('fill', function (d) { return fillColor(d.state); })
-      .attr('stroke', function (d) { return d3.rgb(fillColor(d.state)).darker(); })
+      .attr('fill', function (d) { return fillColor(d.country); })
+      .attr('stroke', function (d) { return d3.rgb(fillColor(d.country)).darker(); })
       .attr('stroke-width', 2)
       .on('mouseover', showDetail)
       .on('mouseout', hideDetail);
@@ -228,22 +247,22 @@ function bubbleChart() {
    * Provides a x value for each node to be used with the split by year
    * x force.
    */
-  function nodeStatePosX(d) {
-    return stateCenters[d.state].x;
+  function nodeCountryPosX(d) {
+    return countryCenters[d.country].x;
   }
 
-  function nodeStatePosY(d) {
-    return stateCenters[d.state].y;
-  }  
-
+  function nodeCountryPosY(d) {
+    return countryCenters[d.country].y;
+  }
+/*
   function nodeStarPosX(d) {
-    return starCenters[Math.floor(d.stars)].x;
+    return countryCenters[Math.floor(d.stars)].x;
   }
 
   function nodeStarPosY(d) {
-    return starCenters[Math.floor(d.stars)].y;
-  }  
-
+    return countryCenters[Math.floor(d.stars)].y;
+  }
+*/
   /*
    * Sets visualization in "single group mode".
    * The year labels are hidden and the force layout
@@ -251,11 +270,11 @@ function bubbleChart() {
    * center of the visualization.
    */
   function groupBubbles() {
-    hideTitles('.state');
-    hideTitles('.stars');
+    hideTitles('.country');
+    //hideTitles('.stars');
 
-    d3.selectAll("#bubble_state_annotation").remove()
-    d3.selectAll("#bubble_star_annotation").remove()    
+    d3.selectAll("#bubble_country_annotation").remove()
+    //d3.selectAll("#bubble_star_annotation").remove()
 
     // @v4 Reset the 'x' and 'y' force to draw the bubbles to the center.
     simulation.force('x', d3.forceX().strength(forceStrength).x(center.x));
@@ -271,25 +290,25 @@ function bubbleChart() {
    * tick function is set to move nodes to the
    * yearCenter of their data's year.
    */
-  function splitStateBubbles() {
-    hideTitles('.stars');
-    showTitles(stateTitle, 'state');
+  function splitCountryBubbles() {
+    //hideTitles('.stars');
+    showTitles(countryTitle, 'country');
 
-    d3.selectAll("#bubble_state_annotation").remove()
-    d3.selectAll("#bubble_star_annotation").remove()
+    d3.selectAll("#bubble_country_annotation").remove()
+    //d3.selectAll("#bubble_star_annotation").remove()
     d3.select("#bubble_svg").append("g")
       .attr("class", "annotation-group")
-      .attr("id", "bubble_state_annotation")
-      .call(bubble_state_makeAnnotations)      
+      .attr("id", "bubble_country_annotation")
+      .call(bubble_country_makeAnnotations)
 
     // @v4 Reset the 'x' force to draw the bubbles to their year centers
-    simulation.force('x', d3.forceX().strength(forceStrength).x(nodeStatePosX));
-    simulation.force('y', d3.forceY().strength(forceStrength).y(nodeStatePosY));
+    simulation.force('x', d3.forceX().strength(forceStrength).x(nodeCountryPosX));
+    simulation.force('y', d3.forceY().strength(forceStrength).y(nodeCountryPosY));
 
     // @v4 We can reset the alpha value and restart the simulation
     simulation.alpha(1).restart();
   }
-
+/*
   function splitStarBubbles() {
     hideTitles('.state');
     showTitles(starTitle, 'stars');
@@ -299,8 +318,8 @@ function bubbleChart() {
     d3.select("#bubble_svg").append("g")
       .attr("class", "annotation-group")
       .attr("id", "bubble_star_annotation")
-      .call(bubble_star_makeAnnotations)    
-    
+      .call(bubble_star_makeAnnotations)
+
     // @v4 Reset the 'x' force to draw the bubbles to their year centers
     simulation.force('x', d3.forceX().strength(forceStrength).x(nodeStarPosX));
     simulation.force('y', d3.forceY().strength(forceStrength).y(nodeStarPosY));
@@ -308,7 +327,7 @@ function bubbleChart() {
     // @v4 We can reset the alpha value and restart the simulation
     simulation.alpha(1).restart();
   }
-
+*/
   /*
    * Hides Year title displays.
    */
@@ -331,7 +350,8 @@ function bubbleChart() {
       .attr('x', function (d) { return title[d].x; })
       .attr('y', function (d) { return title[d].y; })
       .attr('text-anchor', 'middle')
-      .text(function (d) { 
+      .text(function (d) {
+        /*
         if (d == 1) {
           return '⭐';
         } else if (d == 2) {
@@ -342,8 +362,8 @@ function bubbleChart() {
           return '⭐⭐⭐⭐';
         } else if (d == 5) {
           return '⭐⭐⭐⭐⭐';
-        } else {
-          return d; 
+        } else {*/
+          return d;
         }
       });
   }
@@ -356,17 +376,14 @@ function bubbleChart() {
     // change outline to indicate hover state.
     d3.select(this).attr('stroke', 'black');
 
-    var content = '<span class="name">Restaurant Category: </span><span class="value">' +
-                  d.name +
+    var content = '<span class="name">Country: </span><span class="value">' +
+                  d.country +
                   '</span><br/>' +
-                  '<span class="name">State: </span><span class="value">' +
-                  d.state +
+                  '<span class="name">City: </span><span class="value">' +
+                  d.city +
                   '</span><br/>' +
-                  '<span class="name">Reviews: </span><span class="value">' +
-                  addCommas(d.reviews) +
-                  '</span><br/>' +
-                  '<span class="name">Average Stars: </span><span class="value">' +
-                  d.stars +
+                  '<span class="name">Flights: </span><span class="value">' +
+                  addCommas(d.flights) +
                   '</span>';
 
     tooltip.showTooltip(content, d3.event);
@@ -378,7 +395,7 @@ function bubbleChart() {
   function hideDetail(d) {
     // reset outline
     d3.select(this)
-      .attr('stroke', d3.rgb(fillColor(d.state)).darker());
+      .attr('stroke', d3.rgb(fillColor(d.country)).darker());
 
     tooltip.hideTooltip();
   }
@@ -391,11 +408,13 @@ function bubbleChart() {
    * displayName is expected to be a string and either 'year' or 'all'.
    */
   chart.toggleDisplay = function (displayName) {
-    if (displayName === 'state') {
-      splitStateBubbles();
-    } else if (displayName === 'stars') {
-      splitStarBubbles();
-    }else {
+    if (displayName === 'country') {
+      splitCountryBubbles();
+    }
+    //else if (displayName === 'stars') {
+    //  splitStarBubbles();
+    //}
+    else {
       groupBubbles();
     }
   };
@@ -466,7 +485,7 @@ function addCommas(nStr) {
 }
 
 // Load the data.
-d3.csv('data/bubble_chart.csv', display);
-
+//d3.csv('data/bubble_chart.csv', display);
+d3.csv('routes_bubbleChart.csv', display);
 // setup the buttons.
 setupButtons();
