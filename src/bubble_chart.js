@@ -19,9 +19,13 @@ function bubbleChart() {
   var center = { x: width / 2, y: height / 2 };
 
   var yearCenters = {
+    2008: { x: width / 3, y: height / 2 },
+    2009: { x: width / 2, y: height / 2 },
+    2010: { x: 2 * width / 3, y: height / 2 }
+    /*
     US: { x: width / 2, y: 2* height / 3 },
     China: { x: 3 * width / 16, y: height / 3 }
-    /*
+
     Spain:{ x: width /5, y: 2* height / 3 },
     UK:{ x: 3 * width / 8, y: height / 3 },
     Germany:{ x: 5 * width / 8, y: height / 3 },
@@ -32,9 +36,11 @@ function bubbleChart() {
 
   // X locations of the year titles.
   var yearsTitleX = {
-    UK: 160,
+    2008: 160,
+    2009: width / 2,
+    2010: width - 160
+    /*UK: 160,
     France: width / 7
-    /*
     China: width - 160,
     US: width / 8,
     Spain: width*2/ 8,
