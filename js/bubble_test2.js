@@ -305,7 +305,7 @@ function bubbleChart() {
    * displayName is expected to be a string and either 'year' or 'all'.
    */
   chart.toggleDisplay = function (displayName) {
-    if (displayName === 'year') {
+    if (displayName === 'city') {
       splitBubbles();
     } else {
       groupBubbles();
