@@ -8,8 +8,8 @@
  */
 function bubbleChart() {
   // Constants for sizing
-  var width = 940;
-  var height = 600;
+  var width = 1024;
+  var height = 768;
 
   // tooltip for mouseover functionality
   var tooltip = floatingTooltip('gates_tooltip', 240);
@@ -111,7 +111,7 @@ function bubbleChart() {
         radius: radiusScale(+d.total_amount),
         value: +d.total_amount,
         //name: d.grant_title,
-        org: d.organization,
+        //org: d.organization,
         group: d.group,
         year: d.start_year,
         x: Math.random() * 900,
