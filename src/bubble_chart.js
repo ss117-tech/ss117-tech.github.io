@@ -378,7 +378,7 @@ function addCommas(nStr) {
 }
 
 // Load the data.
-d3.csv('data/gates_money.csv', display);
+d3.csv('test.csv', display);
 
 // setup the buttons.
 setupButtons();
