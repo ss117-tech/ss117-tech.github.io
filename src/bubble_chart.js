@@ -8,8 +8,8 @@
  */
 function bubbleChart() {
   // Constants for sizing
-  var width = 1600;
-  var height = 1200;
+  var width = 1024;
+  var height = 768;
 
   // tooltip for mouseover functionality
   var tooltip = floatingTooltip('gates_tooltip', 240);
@@ -41,9 +41,9 @@ function bubbleChart() {
 
   // X locations of the year titles.
   var yearsTitleX = {
-    US: 160,
+    US: width / 3,
     UK: width / 2,
-    China: width - 160,
+    China: 2 * width / 3
     /*US:  width / 10,
     UK:  9 * width / 40,
     China: 7 * width / 20
