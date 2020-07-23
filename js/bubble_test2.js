@@ -113,7 +113,7 @@ function bubbleChart() {
         //name: d.grant_title,
         //org: d.organization,
         country: d.country,
-        year: d.city,
+        city: d.city,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
@@ -202,7 +202,7 @@ function bubbleChart() {
    * x force.
    */
   function nodeYearPos(d) {
-    return yearCenters[d.year].x;
+    return yearCenters[d.city].x;
   }
 
 
@@ -280,7 +280,7 @@ function bubbleChart() {
                   addCommas(d.flights) +
                   '</span><br/>' +
                   '<span class="name">Year: </span><span class="value">' +
-                  d.year +
+                  d.city +
                   '</span>';
 
     tooltip.showTooltip(content, d3.event);
