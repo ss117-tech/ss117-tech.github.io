@@ -1,43 +1,40 @@
-#toolbar a, a:visited, a:active {
+a, a:visited, a:active {
   color: #444;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: auto;
 }
 
 .button {
   min-width: 130px;
-  margin: 3px;
-  padding: 10px;
+  padding: 4px 5px;
   cursor: pointer;
   text-align: center;
   font-size: 13px;
-  font-style: bold;
-  color: #fff;
+  border: 1px solid #e0e0e0;
   text-decoration: none;
-  background: #000;
 }
 
 .button.active {
-  background: green;
+  background: #000;
+  color: #fff;
 }
 
 
 #vis {
-  width: 1024px;
-  height: 768px;
+  width: 940px;
+  height: 600px;
   clear: both;
-  /* margin-bottom: 10px; */
-  margin: auto;
+  margin-bottom: 10px;
 }
 
 #toolbar {
   margin-top: 10px;
 }
 
-.state, .stars {
+.year {
   font-size: 21px;
   fill: #aaa;
   cursor: default;

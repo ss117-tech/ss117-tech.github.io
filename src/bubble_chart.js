@@ -108,23 +108,19 @@ function bubbleChart() {
     var myNodes = rawData.map(function (d) {
       return {
         id: d.id,
-        //radius: radiusScale(+d.total_amount),
-        //value: +d.total_amount,
-        radius: radiusScale(+d.flights),
-        flights: +d.flights,
-        //name: d.grant_title,
-        //org: d.organization,
-        //group: d.group,
-        //year: d.start_year,
-        country: d.country,
-        city: d.city,
+        radius: radiusScale(+d.total_amount),
+        value: +d.total_amount,
+        name: d.grant_title,
+        org: d.organization,
+        group: d.group,
+        year: d.start_year,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
     });
 
     // sort them to prevent occlusion of smaller nodes.
-    myNodes.sort(function (a, b) { return b.flights - a.flights; });
+    myNodes.sort(function (a, b) { return b.value - a.value; });
 
     return myNodes;
   }
@@ -165,8 +161,8 @@ function bubbleChart() {
     var bubblesE = bubbles.enter().append('circle')
       .classed('bubble', true)
       .attr('r', 0)
-      .attr('fill', function (d) { return fillColor(d.country); })
-      .attr('stroke', function (d) { return d3.rgb(fillColor(d.country)).darker(); })
+      .attr('fill', function (d) { return fillColor(d.group); })
+      .attr('stroke', function (d) { return d3.rgb(fillColor(d.group)).darker(); })
       .attr('stroke-width', 2)
       .on('mouseover', showDetail)
       .on('mouseout', hideDetail);
@@ -206,7 +202,7 @@ function bubbleChart() {
    * x force.
    */
   function nodeYearPos(d) {
-    return yearCenters[d.city].x;
+    return yearCenters[d.year].x;
   }
 
 
@@ -257,11 +253,11 @@ function bubbleChart() {
     // Another way to do this would be to create
     // the year texts once and then just hide them.
     var yearsData = d3.keys(yearsTitleX);
-    var years = svg.selectAll('.city')
+    var years = svg.selectAll('.year')
       .data(yearsData);
 
     years.enter().append('text')
-      .attr('class', 'city')
+      .attr('class', 'year')
       .attr('x', function (d) { return yearsTitleX[d]; })
       .attr('y', 40)
       .attr('text-anchor', 'middle')
@@ -277,14 +273,14 @@ function bubbleChart() {
     // change outline to indicate hover state.
     d3.select(this).attr('stroke', 'black');
 
-    var content = '<span class="name">Country: </span><span class="value">' +
-                  d.country +
+    var content = '<span class="name">Title: </span><span class="value">' +
+                  d.name +
                   '</span><br/>' +
-                  '<span class="name">Flights: </span><span class="value">$' +
-                  addCommas(d.flights) +
+                  '<span class="name">Amount: </span><span class="value">$' +
+                  addCommas(d.value) +
                   '</span><br/>' +
-                  '<span class="name">City: </span><span class="value">' +
-                  d.city +
+                  '<span class="name">Year: </span><span class="value">' +
+                  d.year +
                   '</span>';
 
     tooltip.showTooltip(content, d3.event);
@@ -296,7 +292,7 @@ function bubbleChart() {
   function hideDetail(d) {
     // reset outline
     d3.select(this)
-      .attr('stroke', d3.rgb(fillColor(d.country)).darker());
+      .attr('stroke', d3.rgb(fillColor(d.group)).darker());
 
     tooltip.hideTooltip();
   }
@@ -309,7 +305,7 @@ function bubbleChart() {
    * displayName is expected to be a string and either 'year' or 'all'.
    */
   chart.toggleDisplay = function (displayName) {
-    if (displayName === 'city') {
+    if (displayName === 'year') {
       splitBubbles();
     } else {
       groupBubbles();
@@ -382,4 +378,7 @@ function addCommas(nStr) {
 }
 
 // Load the data.
-d3.csv('routes_bubbleChart.csv', display);
+d3.csv('data/gates_money.csv', display);
+
+// setup the buttons.
+setupButtons();
