@@ -8,8 +8,8 @@
  */
 function bubbleChart() {
   // Constants for sizing
-  var width = 940;
-  var height = 600;
+  var width = 1600;
+  var height = 1200;
 
   // tooltip for mouseover functionality
   var tooltip = floatingTooltip('gates_tooltip', 240);
@@ -19,11 +19,11 @@ function bubbleChart() {
   var center = { x: width / 2, y: height / 2 };
 
   var yearCenters = {
-    /*
+
     US: { x: width / 3, y: height / 2 },
     UK: { x: width / 2, y: height / 2 },
     China: { x: 2 * width / 3, y: height / 2 }
-    */
+    /*
     US: { x: 3 * width / 16, y: height / 3 },
     UK: { x: width / 3, y: 2* height / 3 },
     China: { x: 3 * width / 8, y: height / 3 }
@@ -41,9 +41,13 @@ function bubbleChart() {
 
   // X locations of the year titles.
   var yearsTitleX = {
-    US:  width / 10,
+    US: 160,
+    UK: width / 2,
+    China: width - 160,
+    /*US:  width / 10,
     UK:  9 * width / 40,
     China: 7 * width / 20
+    */
     /*UK: 160,
     France: width / 7
     China: width - 160,
