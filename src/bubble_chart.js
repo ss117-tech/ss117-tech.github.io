@@ -46,12 +46,14 @@ function bubbleChart() {
 
   // X locations of the year titles.
   var yearsTitleX = {
-    US: width / 7,
-    UK: 2*width / 7,
-    China: 3 * width / 7,
-    France: 4 * width / 7,
-    Spain: 5 * width / 7,
-    Others: 6 * width / 7
+    US: width / 9,
+    UK: 2*width / 9,
+    China: 3 * width / 9,
+    France: 4 * width / 9,
+    Spain: 5 * width / 9,
+    Germany:6 * width / 9,
+    Italy:7 * width / 9,
+    Others: 8 * width / 9,
     /*US:  width / 10,
     UK:  9 * width / 40,
     China: 7 * width / 20
@@ -200,8 +202,8 @@ function bubbleChart() {
     var bubblesE = bubbles.enter().append('circle')
       .classed('bubble', true)
       .attr('r', 0)
-      .attr('fill', function (d) { return fillColor(d.group); })
-      .attr('stroke', function (d) { return d3.rgb(fillColor(d.group)).darker(); })
+      .attr('fill', function (d) { return fillColor(d.year); })
+      .attr('stroke', function (d) { return d3.rgb(fillColor(d.year)).darker(); })
       .attr('stroke-width', 2)
       .on('mouseover', showDetail)
       .on('mouseout', hideDetail);
