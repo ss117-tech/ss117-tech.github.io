@@ -1,1127 +1,1127 @@
 ﻿id,total_amount,group,start_year
-1,1438,Atlanta,United States
-2,1153,London,United Kingdom
+1,1438,Atlanta,Canada
+2,1153,London,Canada
 3,6,London,Canada
-4,840,Chicago,United States
-5,806,Paris,France
-6,771,Dallas-Fort Worth,United States
-7,753,New York,United States
-8,727,Beijing,China
-9,604,Shanghai,China
-10,574,Charlotte,United States
-11,550,Istanbul,Turkey
-12,547,Amsterdam,Netherlands
-13,539,Miami,United States
-14,532,Philadelphia,United States
-15,497,Los Angeles,United States
-16,478,Frankfurt,Germany
-17,446,Phoenix,United States
-18,455,Guangzhou,China
-19,448,Rome,Italy
-20,446,Washington,United States
-21,404,Munich,Germany
-22,364,Madrid,Spain
-23,365,Barcelona,Spain
-24,360,Detroit,United States
-25,353,Chengdu,China
+4,840,Chicago,Canada
+5,806,Paris,Canada
+6,771,Dallas-Fort Worth,Canada
+7,753,New York,Canada
+8,727,Beijing,Canada
+9,604,Shanghai,Canada
+10,574,Charlotte,Canada
+11,550,Istanbul,Canada
+12,547,Amsterdam,Canada
+13,539,Miami,Canada
+14,532,Philadelphia,Canada
+15,497,Los Angeles,Canada
+16,478,Frankfurt,Canada
+17,446,Phoenix,Canada
+18,455,Guangzhou,Canada
+19,448,Rome,Canada
+20,446,Washington,Canada
+21,404,Munich,Canada
+22,364,Madrid,Canada
+23,365,Barcelona,Canada
+24,360,Detroit,Canada
+25,353,Chengdu,Canada
 26,346,Toronto,Canada
-27,341,Minneapolis,United States
-28,316,Shenzhen,China
-29,290,Kunming,China
-30,290,Berlin,Germany
-31,285,Xi'an,China
-32,281,Orlando,United States
-33,270,Las Vegas,United States
-34,264,Duesseldorf,Germany
-35,255,Denver,United States
-36,260,Palma de Mallorca,Spain
-37,251,Baltimore,United States
-38,243,Hangzhou,China
-39,242,Salt Lake City,United States
-40,241,Houston,United States
-41,220,Wuhan,China
-42,212,Malaga,Spain
-43,202,Dublin,Ireland
-44,200,Chongqing,China
-45,198,Xiamen,China
-46,196,Boston,United States
+27,341,Minneapolis,Canada
+28,316,Shenzhen,Canada
+29,290,Kunming,Canada
+30,290,Berlin,Canada
+31,285,Xi'an,Canada
+32,281,Orlando,Canada
+33,270,Las Vegas,Canada
+34,264,Duesseldorf,Canada
+35,255,Denver,Canada
+36,260,Palma de Mallorca,Canada
+37,251,Baltimore,Canada
+38,243,Hangzhou,Canada
+39,242,Salt Lake City,Canada
+40,241,Houston,Canada
+41,220,Wuhan,Canada
+42,212,Malaga,Canada
+43,202,Dublin,Canada
+44,200,Chongqing,Canada
+45,198,Xiamen,Canada
+46,196,Boston,Canada
 47,194,Montreal,Canada
-48,194,Nanjing,China
-49,192,Seattle,United States
-50,189,Tampa,United States
-51,186,Manchester,United Kingdom
-52,180,Zhengzhou,China
-53,180,Qingdao,China
-54,178,Tokyo,Japan
-55,172,Milano,Italy
-56,168,Changcha,China
-57,165,San Francisco,United States
-58,162,Urumqi,China
-59,169,St. Louis,United States
-60,161,Brussels,Belgium
-61,160,New Orleans,United States
-62,156,Shenyang,China
-63,154,Alicante,Spain
-64,153,Dalian,China
+48,194,Nanjing,Canada
+49,192,Seattle,Canada
+50,189,Tampa,Canada
+51,186,Manchester,Canada
+52,180,Zhengzhou,Canada
+53,180,Qingdao,Canada
+54,178,Tokyo,Canada
+55,172,Milano,Canada
+56,168,Changcha,Canada
+57,165,San Francisco,Canada
+58,162,Urumqi,Canada
+59,169,St. Louis,Canada
+60,161,Brussels,Canada
+61,160,New Orleans,Canada
+62,156,Shenyang,Canada
+63,154,Alicante,Canada
+64,153,Dalian,Canada
 65,153,Vancouver,Canada
-66,153,Marseille,France
-67,150,Charleroi,Belgium
-68,148,Newark,United States
-69,145,Tenerife,Spain
-70,144,Edinburgh,United Kingdom
-71,141,San Diego,United States
-72,130,Bristol,United Kingdom
-73,10,Bristol,United States
-74,119,Portland,United States
-75,137,Nashville,United States
-76,134,Vienna,Austria
-77,133,Raleigh-durham,United States
-78,135,Geneva,Switzerland
-79,134,Harbin,China
-80,132,Seoul,South Korea
-81,130,Fort Lauderdale,United States
-82,119,Lisbon,Portugal
-83,126,Mulhouse,France
-84,126,Nanning,China
-85,131,Kansas City,United States
-86,126,Guiyang,China
-87,126,Bergamo,Italy
-88,125,Nice,France
-89,122,Taiyuan,China
-90,122,Pittsburgh,United States
-91,122,Jinan,China
-92,121,Hamburg,Germany
-93,120,Cincinnati,United States
-94,119,Austin,United States
-95,60,Birmingham,United Kingdom
-96,59,Birmingham,United States
-97,116,Ibiza,Spain
-98,114,Taipei,Taiwan
-99,114,Pisa,Italy
-100,112,Columbus,United States
-101,73,San Jose,United States
-102,38,San Jose,Costa Rica
-103,111,Lyon,France
-104,113,Abu Dhabi,United Arab Emirates
+66,153,Marseille,Canada
+67,150,Charleroi,Canada
+68,148,Newark,Canada
+69,145,Tenerife,Canada
+70,144,Edinburgh,Canada
+71,141,San Diego,Canada
+72,130,Bristol,Canada
+73,10,Bristol,Canada
+74,119,Portland,Canada
+75,137,Nashville,Canada
+76,134,Vienna,Canada
+77,133,Raleigh-durham,Canada
+78,135,Geneva,Canada
+79,134,Harbin,Canada
+80,132,Seoul,Canada
+81,130,Fort Lauderdale,Canada
+82,119,Lisbon,Canada
+83,126,Mulhouse,Canada
+84,126,Nanning,Canada
+85,131,Kansas City,Canada
+86,126,Guiyang,Canada
+87,126,Bergamo,Canada
+88,125,Nice,Canada
+89,122,Taiyuan,Canada
+90,122,Pittsburgh,Canada
+91,122,Jinan,Canada
+92,121,Hamburg,Canada
+93,120,Cincinnati,Canada
+94,119,Austin,Canada
+95,60,Birmingham,Canada
+96,59,Birmingham,Canada
+97,116,Ibiza,Canada
+98,114,Taipei,Canada
+99,114,Pisa,Canada
+100,112,Columbus,Canada
+101,73,San Jose,Canada
+102,38,San Jose,Canada
+103,111,Lyon,Canada
+104,113,Abu Dhabi,Canada
 105,114,Calgary,Canada
-106,110,Liverpool,United Kingdom
-107,110,Indianapolis,United States
-108,112,Milwaukee,United States
-109,106,Fuzhou,China
-110,106,Bologna,Italy
-111,104,San Antonio,United States
-112,105,Valencia,Spain
-113,104,Hong Kong,Hong Kong
-114,102,Venice,Italy
-115,102,Porto,Portugal
-116,102,Gran Canaria,Spain
-117,100,Tianjin,China
-118,99,Zurich,Switzerland
-119,97,Guilin,China
-120,96,Bangkok,Thailand
-121,96,Nanchang,China
-122,96,Faro,Portugal
-123,94,Catania,Italy
-124,92,Stockholm,Sweden
-125,92,Mexico City,Mexico
-126,92,Beauvais,France
-127,90,Wenzhou,China
-128,90,Malta,Malta
-129,90,Hohhot,China
-130,87,Changchun,China
-131,88,Gerona,Spain
-132,87,Arrecife,Spain
-133,88,Copenhagen,Denmark
-134,52,Santiago,Spain
-135,28,Santiago,Chile
-136,6,Santiago,Dominican Republic
-137,85,Toulouse,France
-138,86,Hahn,Germany
-139,87,Cancun,Mexico
-140,84,Wuxi,China
-141,84,Warsaw,Poland
-142,84,Sanya,China
-143,87,Memphis,United States
-144,81,Windsor Locks,United States
-145,83,Sevilla,Spain
-146,80,Fort Myers,United States
-147,73,Athens,Greece
-148,78,Moscow,Russia
-149,78,Krakow,Poland
-150,76,Weeze,Germany
-151,73,Oakland,United States
-152,76,Lanzhou,China
-153,76,Hefei,China
-154,75,Yinchuan,China
-155,74,Stuttgart,Germany
-156,73,Singapore,Singapore
-157,74,Ninbo,China
-158,74,Fuerteventura,Spain
-159,74,East Midlands,United Kingdom
-160,72,Zhuhai,China
-161,73,Thessaloniki,Greece
-162,72,Milan,Italy
-163,72,Haikou,China
-164,65,Charleston,United States
-165,70,Rygge,Norway
-166,69,San Juan,Puerto Rico
-167,70,Marrakech,Morocco
-168,69,Louisville,United States
-169,70,Honolulu,United States
-170,70,Sacramento,United States
-171,68,Yantai,China
-172,68,Naples,Italy
-173,64,Norfolk,United States
-174,66,Bordeaux,France
-175,66,Bremen,Germany
-176,62,Santa Ana,United States
-177,64,Nantes,France
-178,65,Nairobi,Kenya
-179,64,Eindhoven,Netherlands
-180,67,Dallas,United States
-181,64,Cagliari,Italy
-182,64,Ankara,Turkey
-183,65,Bilbao,Spain
-184,63,Jacksonville,United States
-185,63,Albuquerque,United States
-186,62,Bari,Italy
-187,59,Oklahoma City,United States
-188,61,Nuernberg,Germany
-189,60,Budapest,Hungary
-190,58,Treviso,Italy
-191,56,Sydney,Australia
+106,110,Liverpool,Canada
+107,110,Indianapolis,Canada
+108,112,Milwaukee,Canada
+109,106,Fuzhou,Canada
+110,106,Bologna,Canada
+111,104,San Antonio,Canada
+112,105,Valencia,Canada
+113,104,Hong Kong,Canada
+114,102,Venice,Canada
+115,102,Porto,Canada
+116,102,Gran Canaria,Canada
+117,100,Tianjin,Canada
+118,99,Zurich,Canada
+119,97,Guilin,Canada
+120,96,Bangkok,Canada
+121,96,Nanchang,Canada
+122,96,Faro,Canada
+123,94,Catania,Canada
+124,92,Stockholm,Canada
+125,92,Mexico City,Canada
+126,92,Beauvais,Canada
+127,90,Wenzhou,Canada
+128,90,Malta,Canada
+129,90,Hohhot,Canada
+130,87,Changchun,Canada
+131,88,Gerona,Canada
+132,87,Arrecife,Canada
+133,88,Copenhagen,Canada
+134,52,Santiago,Canada
+135,28,Santiago,Canada
+136,6,Santiago,Canada
+137,85,Toulouse,Canada
+138,86,Hahn,Canada
+139,87,Cancun,Canada
+140,84,Wuxi,Canada
+141,84,Warsaw,Canada
+142,84,Sanya,Canada
+143,87,Memphis,Canada
+144,81,Windsor Locks,Canada
+145,83,Sevilla,Canada
+146,80,Fort Myers,Canada
+147,73,Athens,Canada
+148,78,Moscow,Canada
+149,78,Krakow,Canada
+150,76,Weeze,Canada
+151,73,Oakland,Canada
+152,76,Lanzhou,Canada
+153,76,Hefei,Canada
+154,75,Yinchuan,Canada
+155,74,Stuttgart,Canada
+156,73,Singapore,Canada
+157,74,Ninbo,Canada
+158,74,Fuerteventura,Canada
+159,74,East Midlands,Canada
+160,72,Zhuhai,Canada
+161,73,Thessaloniki,Canada
+162,72,Milan,Canada
+163,72,Haikou,Canada
+164,65,Charleston,Canada
+165,70,Rygge,Canada
+166,69,San Juan,Canada
+167,70,Marrakech,Canada
+168,69,Louisville,Canada
+169,70,Honolulu,Canada
+170,70,Sacramento,Canada
+171,68,Yantai,Canada
+172,68,Naples,Canada
+173,64,Norfolk,Canada
+174,66,Bordeaux,Canada
+175,66,Bremen,Canada
+176,62,Santa Ana,Canada
+177,64,Nantes,Canada
+178,65,Nairobi,Canada
+179,64,Eindhoven,Canada
+180,67,Dallas,Canada
+181,64,Cagliari,Canada
+182,64,Ankara,Canada
+183,65,Bilbao,Canada
+184,63,Jacksonville,Canada
+185,63,Albuquerque,Canada
+186,62,Bari,Canada
+187,59,Oklahoma City,Canada
+188,61,Nuernberg,Canada
+189,60,Budapest,Canada
+190,58,Treviso,Canada
+191,56,Sydney,Canada
 192,4,Sydney,Canada
-193,58,Palermo,Italy
-194,58,Alghero,Italy
-195,58,Changzhou,China
-196,57,Tel-aviv,Israel
-197,54,Sao Paulo,Brazil
-198,55,Prague,Czech Republic
-199,56,Richmond,United States
-200,56,Rochester,United States
-201,56,Omaha,United States
+193,58,Palermo,Canada
+194,58,Alghero,Canada
+195,58,Changzhou,Canada
+196,57,Tel-aviv,Canada
+197,54,Sao Paulo,Canada
+198,55,Prague,Canada
+199,56,Richmond,Canada
+200,56,Rochester,Canada
+201,56,Omaha,Canada
 202,55,Edmonton,Canada
-203,56,Chania,Greece
-204,56,Cologne,Germany
-205,57,Buffalo,United States
-206,54,Trapani,Italy
-207,54,Dayton,United States
-208,52,Yuncheng,China
-209,51,Xining,China
-210,52,Shijiazhuang,China
+203,56,Chania,Canada
+204,56,Cologne,Canada
+205,57,Buffalo,Canada
+206,54,Trapani,Canada
+207,54,Dayton,Canada
+208,52,Yuncheng,Canada
+209,51,Xining,Canada
+210,52,Shijiazhuang,Canada
 211,53,Ottawa,Canada
-212,52,Osaka,Japan
+212,52,Osaka,Canada
 213,49,Halifax,Canada
-214,52,Gothenborg,Sweden
-215,52,Leeds,United Kingdom
-216,53,Cleveland,United States
-217,51,Torino,Italy
-218,50,Kerkyra/corfu,Greece
-219,46,Florence,Italy
-220,4,Florence,United States
-221,50,Billund,Denmark
-222,48,West Palm Beach,United States
-223,48,Quanzhou,China
-224,48,Little Rock,United States
-225,48,Glasgow,United Kingdom
-226,50,Albany,United States
-227,46,Tucson,United States
-228,45,Providence,United States
-229,47,Punta Cana,Dominican Republic
-230,46,Macau,Macau
-231,46,Riga,Latvia
-232,45,Helsinki,Finland
-233,46,Kuala Lumpur,Malaysia
-234,47,Lijiang,China
-235,46,Heraklion,Greece
-236,46,Belfast,United Kingdom
-237,44,Shantou,China
-238,44,Antalya,Turkey
-239,43,Bucharest,Romania
-240,41,Tulsa,United States
-241,28,Panama City,Panama
-242,14,Panama City,United States
-243,44,Montego Bay,Jamaica
-244,42,Prestwick,United Kingdom
-245,40,Reno,United States
-246,42,Greenville,United States
-247,29,Auckland,New Zealand
-248,42,Akron,United States
-249,40,Wroclaw,Poland
-250,40,Newcastle,United Kingdom
-251,41,El Paso,United States
-252,38,Shannon,Ireland
-253,30,Melbourne,Australia
-254,10,Melbourne,United States
-255,36,Ontario,United States
-256,38,Nassau,Bahamas
-257,38,Kaunas,Lithuania
-258,38,Knoxville,United States
-259,39,Des Moines,United States
-260,36,Syracuse,United States
-261,36,Santander,Spain
-262,36,Vilnius,Lithuania
-263,36,Manchester NH,United States
-264,36,Olbia,Italy
-265,34,Nagoya,Japan
-266,36,Rhodos,Greece
-267,35,Greensboro,United States
-268,36,Grand Rapids,United States
-269,36,Hannover,Germany
-270,36,Brindisi,Italy
-271,36,Columbia,United States
-272,34,Guadalajara,Mexico
-273,34,Karlsruhe/Baden-Baden,Germany
-274,34,Baotou,China
-275,33,San Jose Del Cabo,Mexico
-276,32,Yangzhou,China
-277,32,Zadar,Croatia
-278,31,Kos,Greece
-279,32,Lamezia,Italy
-280,32,Lima,Peru
-281,31,Johannesburg,South Africa
-282,32,Amman,Jordan
-283,32,Brisbane,Australia
-284,32,Bournemouth,United Kingdom
-285,32,Bratislava,Slovakia
-286,32,Bentonville,United States
-287,30,Salzburg,Austria
-288,30,Savannah,United States
-289,30,Memmingen,Germany
-290,30,Oranjestad,Aruba
-291,32,Rio De Janeiro,Brazil
-292,30,Paphos,Cyprus
-293,30,Leipzig,Germany
-294,30,Jackson,United States
-295,30,Ajaccio,France
-296,30,Bastia,France
-297,28,Bogota,Colombia
-298,31,Buenos Aires,Argentina
+214,52,Gothenborg,Canada
+215,52,Leeds,Canada
+216,53,Cleveland,Canada
+217,51,Torino,Canada
+218,50,Kerkyra/corfu,Canada
+219,46,Florence,Canada
+220,4,Florence,Canada
+221,50,Billund,Canada
+222,48,West Palm Beach,Canada
+223,48,Quanzhou,Canada
+224,48,Little Rock,Canada
+225,48,Glasgow,Canada
+226,50,Albany,Canada
+227,46,Tucson,Canada
+228,45,Providence,Canada
+229,47,Punta Cana,Canada
+230,46,Macau,Canada
+231,46,Riga,Canada
+232,45,Helsinki,Canada
+233,46,Kuala Lumpur,Canada
+234,47,Lijiang,Canada
+235,46,Heraklion,Canada
+236,46,Belfast,Canada
+237,44,Shantou,Canada
+238,44,Antalya,Canada
+239,43,Bucharest,Canada
+240,41,Tulsa,Canada
+241,28,Panama City,Canada
+242,14,Panama City,Canada
+243,44,Montego Bay,Canada
+244,42,Prestwick,Canada
+245,40,Reno,Canada
+246,42,Greenville,Canada
+247,29,Auckland,Canada
+248,42,Akron,Canada
+249,40,Wroclaw,Canada
+250,40,Newcastle,Canada
+251,41,El Paso,Canada
+252,38,Shannon,Canada
+253,30,Melbourne,Canada
+254,10,Melbourne,Canada
+255,36,Ontario,Canada
+256,38,Nassau,Canada
+257,38,Kaunas,Canada
+258,38,Knoxville,Canada
+259,39,Des Moines,Canada
+260,36,Syracuse,Canada
+261,36,Santander,Canada
+262,36,Vilnius,Canada
+263,36,Manchester NH,Canada
+264,36,Olbia,Canada
+265,34,Nagoya,Canada
+266,36,Rhodos,Canada
+267,35,Greensboro,Canada
+268,36,Grand Rapids,Canada
+269,36,Hannover,Canada
+270,36,Brindisi,Canada
+271,36,Columbia,Canada
+272,34,Guadalajara,Canada
+273,34,Karlsruhe/Baden-Baden,Canada
+274,34,Baotou,Canada
+275,33,San Jose Del Cabo,Canada
+276,32,Yangzhou,Canada
+277,32,Zadar,Canada
+278,31,Kos,Canada
+279,32,Lamezia,Canada
+280,32,Lima,Canada
+281,31,Johannesburg,Canada
+282,32,Amman,Canada
+283,32,Brisbane,Canada
+284,32,Bournemouth,Canada
+285,32,Bratislava,Canada
+286,32,Bentonville,Canada
+287,30,Salzburg,Canada
+288,30,Savannah,Canada
+289,30,Memmingen,Canada
+290,30,Oranjestad,Canada
+291,32,Rio De Janeiro,Canada
+292,30,Paphos,Canada
+293,30,Leipzig,Canada
+294,30,Jackson,Canada
+295,30,Ajaccio,Canada
+296,30,Bastia,Canada
+297,28,Bogota,Canada
+298,31,Buenos Aires,Canada
 299,28,Winnipeg,Canada
-300,27,Santo Domingo,Dominican Republic
-301,27,Sofia,Bulgaria
-302,28,Yiwu,China
-303,28,Wichita,United States
-304,28,Kahului,United States
-305,28,Fes,Morocco
-306,29,Gdansk,Poland
-307,28,Jingdezhen,China
-308,28,Lhasa,China
-309,31,Addis Ababa,Ethiopia
-310,28,Casablanca,Morocco
-311,28,Cork,Ireland
-312,29,Dakar,Senegal
-313,25,Yancheng,China
-314,26,Wilmington,United States
-315,26,Southend,United Kingdom
-316,26,White Plains,United States
-317,26,Murcia,Spain
-318,26,Myrtle Beach,United States
-319,26,Reus,Spain
-320,26,Pensacola,United States
-321,28,Puerto Vallarta,Mexico
-322,26,Philipsburg,Netherlands Antilles
-323,26,Madison,United States
-324,26,Luxemburg,Luxembourg
-325,26,Menorca,Spain
-326,25,Oslo,Norway
-327,26,Providenciales,Turks and Caicos Islands
-328,26,Harrisburg,United States
-329,27,Islip,United States
-330,26,Kuwait,Kuwait
-331,26,Lexington KY,United States
-332,26,Huntsville,United States
-333,26,Huangshan,China
-334,26,Belgrade,Serbia
-335,26,Douala,Cameroon
-336,26,Dubai,United Arab Emirates
-337,26,Chattanooga,United States
-338,24,Montpellier,France
-339,24,Port-au-prince,Haiti
-340,24,Monterrey,Mexico
-341,25,Larnaca,Cyprus
-342,24,Genoa,Italy
-343,22,Guatemala City,Guatemala
-344,20,Harare,Zimbabwe
-345,25,Delhi,India
-346,24,Connaught,Ireland
-347,24,Dortmund,Germany
-348,24,Charlottesville VA,United States
-349,24,Dresden,Germany
-350,24,Beihai,China
-351,24,Dayong,China
-352,24,Burbank,United States
-353,22,Yanji,China
-354,22,St. Petersburg,Russia
-355,22,Strasbourg,France
-356,22,Spokane,United States
-357,22,Tallahassee,United States
-358,23,San Salvador,El Salvador
-359,22,Tirana,Albania
-360,22,Ronchi De Legionari,Italy
-361,22,Tallinn-ulemiste International,Estonia
-362,24,St. Thomas,Virgin Islands
-363,22,Huangyan,China
-364,22,Kiev,Ukraine
-365,21,Key West,United States
-366,22,Jiuzhaigou,China
-367,24,Flint,United States
-368,22,Cheju,South Korea
-369,22,Bermuda,Bermuda
+300,27,Santo Domingo,Canada
+301,27,Sofia,Canada
+302,28,Yiwu,Canada
+303,28,Wichita,Canada
+304,28,Kahului,Canada
+305,28,Fes,Canada
+306,29,Gdansk,Canada
+307,28,Jingdezhen,Canada
+308,28,Lhasa,Canada
+309,31,Addis Ababa,Canada
+310,28,Casablanca,Canada
+311,28,Cork,Canada
+312,29,Dakar,Canada
+313,25,Yancheng,Canada
+314,26,Wilmington,Canada
+315,26,Southend,Canada
+316,26,White Plains,Canada
+317,26,Murcia,Canada
+318,26,Myrtle Beach,Canada
+319,26,Reus,Canada
+320,26,Pensacola,Canada
+321,28,Puerto Vallarta,Canada
+322,26,Philipsburg,Canada
+323,26,Madison,Canada
+324,26,Luxemburg,Canada
+325,26,Menorca,Canada
+326,25,Oslo,Canada
+327,26,Providenciales,Canada
+328,26,Harrisburg,Canada
+329,27,Islip,Canada
+330,26,Kuwait,Canada
+331,26,Lexington KY,Canada
+332,26,Huntsville,Canada
+333,26,Huangshan,Canada
+334,26,Belgrade,Canada
+335,26,Douala,Canada
+336,26,Dubai,Canada
+337,26,Chattanooga,Canada
+338,24,Montpellier,Canada
+339,24,Port-au-prince,Canada
+340,24,Monterrey,Canada
+341,25,Larnaca,Canada
+342,24,Genoa,Canada
+343,22,Guatemala City,Canada
+344,20,Harare,Canada
+345,25,Delhi,Canada
+346,24,Connaught,Canada
+347,24,Dortmund,Canada
+348,24,Charlottesville VA,Canada
+349,24,Dresden,Canada
+350,24,Beihai,Canada
+351,24,Dayong,Canada
+352,24,Burbank,Canada
+353,22,Yanji,Canada
+354,22,St. Petersburg,Canada
+355,22,Strasbourg,Canada
+356,22,Spokane,Canada
+357,22,Tallahassee,Canada
+358,23,San Salvador,Canada
+359,22,Tirana,Canada
+360,22,Ronchi De Legionari,Canada
+361,22,Tallinn-ulemiste International,Canada
+362,24,St. Thomas,Canada
+363,22,Huangyan,Canada
+364,22,Kiev,Canada
+365,21,Key West,Canada
+366,22,Jiuzhaigou,Canada
+367,24,Flint,Canada
+368,22,Cheju,Canada
+369,22,Bermuda,Canada
 370,20,St. John's,Canada
-371,20,Zhanjiang,China
-372,19,Valparaiso,United States
-373,21,Lusaka,Zambia
-374,20,Roanoke VA,United States
-375,20,Poznan,Poland
-376,22,Phuket,Thailand
-377,21,Palm Springs,United States
-378,20,Funchal,Portugal
-379,22,Liberia,Costa Rica
-380,20,Lianyungang,China
-381,20,Jersey,Jersey
-382,21,Kigali,Rwanda
-383,20,Fukuoka,Japan
-384,20,Cozumel,Mexico
-385,20,Carcassonne,France
-386,20,Almeria,Spain
-387,21,Antigua,Antigua and Barbuda
-388,20,Cairo,Egypt
-389,20,Calvi,France
-390,18,Villafranca,Italy
-391,18,Sarasota,United States
-392,16,Springfield,United States
-393,18,Tampere,Finland
-394,18,Zhoushan,China
-395,18,Peoria,United States
-396,18,Mumbai,India
-397,18,Mianyang,China
-398,18,Pescara,Italy
-399,18,Moline,United States
+371,20,Zhanjiang,Canada
+372,19,Valparaiso,Canada
+373,21,Lusaka,Canada
+374,20,Roanoke VA,Canada
+375,20,Poznan,Canada
+376,22,Phuket,Canada
+377,21,Palm Springs,Canada
+378,20,Funchal,Canada
+379,22,Liberia,Canada
+380,20,Lianyungang,Canada
+381,20,Jersey,Canada
+382,21,Kigali,Canada
+383,20,Fukuoka,Canada
+384,20,Cozumel,Canada
+385,20,Carcassonne,Canada
+386,20,Almeria,Canada
+387,21,Antigua,Canada
+388,20,Cairo,Canada
+389,20,Calvi,Canada
+390,18,Villafranca,Canada
+391,18,Sarasota,Canada
+392,16,Springfield,Canada
+393,18,Tampere,Canada
+394,18,Zhoushan,Canada
+395,18,Peoria,Canada
+396,18,Mumbai,Canada
+397,18,Mianyang,Canada
+398,18,Pescara,Canada
+399,18,Moline,Canada
 400,17,Regina,Canada
-401,18,Ouagadougou,Burkina Faso
-402,17,Kona,United States
-403,18,Fort Wayne,United States
-404,18,Linyi,China
-405,18,Hanoi,Vietnam
-406,18,Lille,France
-407,19,Jakarta,Indonesia
-408,18,Georgetown,Cayman Islands
-409,18,Jinghonggasa,China
-410,18,Hurghada,Egypt
-411,16,Aberdeen,United Kingdom
-412,2,Aberdeen,United States
-413,18,Beziers,France
-414,18,Brest,France
-415,18,Dazhou,China
-416,18,Bahrain,Bahrain
-417,18,Caracas,Venezuela
-418,19,Boise,United States
-419,18,Bloomington,United States
-420,18,Dammam,Saudi Arabia
-421,18,Cardiff,United Kingdom
-422,18,Cedar Rapids,United States
-423,17,Burlington,United States
-424,16,Yibin,China
-425,16,Zagreb,Croatia
-426,15,Scranton,United States
-427,16,Rzeszow,Poland
-428,16,Sandefjord,Norway
-429,16,Southampton,United Kingdom
-430,16,Yichang,China
-431,16,Xiangfan,China
-432,16,Tbilisi,Georgia
-433,15,Quito,Ecuador
-434,16,Manila,Philippines
-435,16,Liuzhou,China
-436,16,Luzhou,China
+401,18,Ouagadougou,Canada
+402,17,Kona,Canada
+403,18,Fort Wayne,Canada
+404,18,Linyi,Canada
+405,18,Hanoi,Canada
+406,18,Lille,Canada
+407,19,Jakarta,Canada
+408,18,Georgetown,Canada
+409,18,Jinghonggasa,Canada
+410,18,Hurghada,Canada
+411,16,Aberdeen,Canada
+412,2,Aberdeen,Canada
+413,18,Beziers,Canada
+414,18,Brest,Canada
+415,18,Dazhou,Canada
+416,18,Bahrain,Canada
+417,18,Caracas,Canada
+418,19,Boise,Canada
+419,18,Bloomington,Canada
+420,18,Dammam,Canada
+421,18,Cardiff,Canada
+422,18,Cedar Rapids,Canada
+423,17,Burlington,Canada
+424,16,Yibin,Canada
+425,16,Zagreb,Canada
+426,15,Scranton,Canada
+427,16,Rzeszow,Canada
+428,16,Sandefjord,Canada
+429,16,Southampton,Canada
+430,16,Yichang,Canada
+431,16,Xiangfan,Canada
+432,16,Tbilisi,Canada
+433,15,Quito,Canada
+434,16,Manila,Canada
+435,16,Liuzhou,Canada
+436,16,Luzhou,Canada
 437,16,Quebec,Canada
-438,16,Maastricht,Netherlands
-439,16,Rabat,Morocco
-440,16,Munster,Germany
-441,16,Pointe-a-pitre,Guadeloupe
-442,16,Evansville,United States
-443,16,Kashi,China
-444,16,Guayaquil,Ecuador
-445,16,Hami,China
-446,16,Graz,Austria
-447,16,Fort-de-france,Martinique
-448,17,Jeddah,Saudi Arabia
-449,17,Hewandorra,Saint Lucia
-450,16,Gulfport,United States
-451,16,Ho Chi Minh City,Vietnam
-452,16,Kinshasa,Congo (Kinshasa)
-453,16,Fresno,United States
-454,16,Lagos,Nigeria
-455,16,Entebbe,Uganda
-456,16,Guangyuan,China
-457,16,Gainesville,United States
-458,16,Lihue,United States
-459,16,Comiso,Italy
-460,16,Belize City,Belize
-461,16,Abuja,Nigeria
-462,17,Accra,Ghana
-463,16,Chiang Mai,Thailand
-464,16,Aviles,Spain
-465,16,Dubrovnik,Croatia
-466,16,Algier,Algeria
-467,16,Bodrum,Turkey
-468,16,Abidjan,Cote d'Ivoire
-469,16,Biarritz-bayonne,France
-470,16,Dongsheng,China
-471,16,Allentown,United States
-472,16,Changzhi,China
+438,16,Maastricht,Canada
+439,16,Rabat,Canada
+440,16,Munster,Canada
+441,16,Pointe-a-pitre,Canada
+442,16,Evansville,Canada
+443,16,Kashi,Canada
+444,16,Guayaquil,Canada
+445,16,Hami,Canada
+446,16,Graz,Canada
+447,16,Fort-de-france,Canada
+448,17,Jeddah,Canada
+449,17,Hewandorra,Canada
+450,16,Gulfport,Canada
+451,16,Ho Chi Minh City,Canada
+452,16,Kinshasa,Canada
+453,16,Fresno,Canada
+454,16,Lagos,Canada
+455,16,Entebbe,Canada
+456,16,Guangyuan,Canada
+457,16,Gainesville,Canada
+458,16,Lihue,Canada
+459,16,Comiso,Canada
+460,16,Belize City,Canada
+461,16,Abuja,Canada
+462,17,Accra,Canada
+463,16,Chiang Mai,Canada
+464,16,Aviles,Canada
+465,16,Dubrovnik,Canada
+466,16,Algier,Canada
+467,16,Bodrum,Canada
+468,16,Abidjan,Canada
+469,16,Biarritz-bayonne,Canada
+470,16,Dongsheng,Canada
+471,16,Allentown,Canada
+472,16,Changzhi,Canada
 473,14,Saskatoon,Canada
-474,14,Westerland,Germany
-475,14,Split,Croatia
-476,14,Tongliao,China
-477,14,Stavanger,Norway
-478,13,Tunis,Tunisia
-479,14,Vigo,Spain
-480,14,Zunyi,China
-481,14,Newport News,United States
-482,14,MONTGOMERY,United States
-483,13,Midland,United States
-484,14,Niamey,Niger
-485,15,Lubbock,United States
-486,14,Nanyang,China
-487,14,Mobile,United States
-488,13,Riyadh,Saudi Arabia
-489,14,Jacksonville NC,United States
-490,14,La Rochelle,France
-491,14,Ganzhou,China
-492,13,Harlingen,United States
-493,14,Green Bay,United States
-494,14,Fargo,United States
-495,14,Fayetteville,United States
-496,14,Hailar,China
-497,14,Baku,Azerbaijan
-498,14,Ancona,Italy
-499,14,Bergerac,France
-500,14,Asheville,United States
-501,14,Baton Rouge,United States
-502,14,Busan,South Korea
-503,15,Amarillo,United States
-504,14,Bush Field,United States
-505,14,Chifeng,China
-506,12,Sioux Falls,United States
-507,12,Wuyishan,China
-508,12,Siem-reap,Cambodia
-509,12,Yulin,China
-510,12,Tanger,Morocco
-511,12,Shangri-La,China
-512,12,Sharm El Sheikh,Egypt
-513,12,Muscat,Oman
-514,13,Perth,Australia
-515,13,Luanda,Angola
-516,12,Luoyang,China
-517,12,Rennes,France
-518,12,Malabo,Equatorial Guinea
-519,11,Pula,Croatia
-520,12,Mudanjiang,China
-521,12,El Aroui,Morocco
-522,11,Kingston,Jamaica
+474,14,Westerland,Canada
+475,14,Split,Canada
+476,14,Tongliao,Canada
+477,14,Stavanger,Canada
+478,13,Tunis,Canada
+479,14,Vigo,Canada
+480,14,Zunyi,Canada
+481,14,Newport News,Canada
+482,14,MONTGOMERY,Canada
+483,13,Midland,Canada
+484,14,Niamey,Canada
+485,15,Lubbock,Canada
+486,14,Nanyang,Canada
+487,14,Mobile,Canada
+488,13,Riyadh,Canada
+489,14,Jacksonville NC,Canada
+490,14,La Rochelle,Canada
+491,14,Ganzhou,Canada
+492,13,Harlingen,Canada
+493,14,Green Bay,Canada
+494,14,Fargo,Canada
+495,14,Fayetteville,Canada
+496,14,Hailar,Canada
+497,14,Baku,Canada
+498,14,Ancona,Canada
+499,14,Bergerac,Canada
+500,14,Asheville,Canada
+501,14,Baton Rouge,Canada
+502,14,Busan,Canada
+503,15,Amarillo,Canada
+504,14,Bush Field,Canada
+505,14,Chifeng,Canada
+506,12,Sioux Falls,Canada
+507,12,Wuyishan,Canada
+508,12,Siem-reap,Canada
+509,12,Yulin,Canada
+510,12,Tanger,Canada
+511,12,Shangri-La,Canada
+512,12,Sharm El Sheikh,Canada
+513,12,Muscat,Canada
+514,13,Perth,Canada
+515,13,Luanda,Canada
+516,12,Luoyang,Canada
+517,12,Rennes,Canada
+518,12,Malabo,Canada
+519,11,Pula,Canada
+520,12,Mudanjiang,Canada
+521,12,El Aroui,Canada
+522,11,Kingston,Canada
 523,0,Kingston,Canada
-524,12,Izmir,Turkey
-525,12,Katowice,Poland
-526,13,Kaohsiung,Taiwan
-527,12,La Coruna,Spain
-528,11,Kilimanjaro,Tanzania
-529,12,Haugesund,Norway
+524,12,Izmir,Canada
+525,12,Katowice,Canada
+526,13,Kaohsiung,Canada
+527,12,La Coruna,Canada
+528,11,Kilimanjaro,Canada
+529,12,Haugesund,Canada
 530,11,Fort Mcmurray,Canada
-531,12,Korla,China
-532,12,Jerez,Spain
-533,12,Limoges,France
-534,12,Curitiba,Brazil
-535,12,Datong,China
-536,12,Anchorage,United States
-537,12,Bergen,Norway
-538,12,Bangor,United States
-539,11,Beirut,Lebanon
-540,12,Dalaman,Turkey
-541,12,Agadir,Morocco
-542,12,Dar Es Salaam,Tanzania
-543,12,Clermont-Ferrand,France
-544,10,Alexandria,United States
-545,0,Alexandria,Egypt
-546,11,Colorado Springs,United States
-547,12,Colombo,Sri Lanka
-548,10,South Bend,United States
-549,10,Zakynthos,Greece
-550,10,Tours,France
-551,10,Wanxian,China
-552,10,Shreveport,United States
-553,10,Tehran,Iran
-554,10,Rotterdam,Netherlands
-555,10,Saarbruecken,Germany
-556,9,Willemstad,Netherlands Antilles
-557,10,Xilinhot,China
-558,10,Zaragoza,Spain
-559,10,Xuzhou,China
-560,10,Yangon,Burma
-561,9,Yaounde,Cameroon
-562,10,Monroe,United States
-563,10,New Bern,United States
-564,10,Linz,Austria
-565,10,Long Beach,United States
-566,9,Point Salines,Grenada
-567,10,Nanchong,China
-568,10,Qiqihar,China
-569,10,Male,Maldives
-570,10,Ljubljana,Slovenia
-571,10,Pristina,Serbia
-572,10,Oran,Algeria
-573,10,Londonderry,United Kingdom
-574,10,Mykonos,Greece
-575,10,Roatan,Honduras
+531,12,Korla,Canada
+532,12,Jerez,Canada
+533,12,Limoges,Canada
+534,12,Curitiba,Canada
+535,12,Datong,Canada
+536,12,Anchorage,Canada
+537,12,Bergen,Canada
+538,12,Bangor,Canada
+539,11,Beirut,Canada
+540,12,Dalaman,Canada
+541,12,Agadir,Canada
+542,12,Dar Es Salaam,Canada
+543,12,Clermont-Ferrand,Canada
+544,10,Alexandria,Canada
+545,0,Alexandria,Canada
+546,11,Colorado Springs,Canada
+547,12,Colombo,Canada
+548,10,South Bend,Canada
+549,10,Zakynthos,Canada
+550,10,Tours,Canada
+551,10,Wanxian,Canada
+552,10,Shreveport,Canada
+553,10,Tehran,Canada
+554,10,Rotterdam,Canada
+555,10,Saarbruecken,Canada
+556,9,Willemstad,Canada
+557,10,Xilinhot,Canada
+558,10,Zaragoza,Canada
+559,10,Xuzhou,Canada
+560,10,Yangon,Canada
+561,9,Yaounde,Canada
+562,10,Monroe,Canada
+563,10,New Bern,Canada
+564,10,Linz,Canada
+565,10,Long Beach,Canada
+566,9,Point Salines,Canada
+567,10,Nanchong,Canada
+568,10,Qiqihar,Canada
+569,10,Male,Canada
+570,10,Ljubljana,Canada
+571,10,Pristina,Canada
+572,10,Oran,Canada
+573,10,Londonderry,Canada
+574,10,Mykonos,Canada
+575,10,Roatan,Canada
 576,10,Goose Bay,Canada
-577,10,Fort Smith,United States
-578,10,Granada,Spain
-579,10,Islamabad,Pakistan
-580,10,Lafayette,United States
-581,10,Jining,China
-582,10,Kerry,Ireland
-583,10,Figari,France
-584,10,Killeen,United States
-585,10,Kalamazoo,United States
-586,10,Grand Junction,United States
-587,10,Freeport,Bahamas
-588,10,Kathmandu,Nepal
-589,10,Keflavik,Iceland
-590,10,Daytona Beach,United States
-591,10,Dali,China
-592,10,Djibouti,Djibouti
-593,9,Bujumbura,Burundi
-594,10,Alma-ata,Kazakhstan
-595,10,Appleton,United States
-596,10,Aalborg,Denmark
-597,9,Brasilia,Brazil
-598,8,Salisbury,United States
-599,8,Tselinograd,Kazakhstan
-600,8,Ulanhot,China
-601,8,Tashkent,Uzbekistan
-602,8,Samos,Greece
-603,8,Yichun,China
-604,8,Traverse City,United States
-605,4,Waterloo,United States
+577,10,Fort Smith,Canada
+578,10,Granada,Canada
+579,10,Islamabad,Canada
+580,10,Lafayette,Canada
+581,10,Jining,Canada
+582,10,Kerry,Canada
+583,10,Figari,Canada
+584,10,Killeen,Canada
+585,10,Kalamazoo,Canada
+586,10,Grand Junction,Canada
+587,10,Freeport,Canada
+588,10,Kathmandu,Canada
+589,10,Keflavik,Canada
+590,10,Daytona Beach,Canada
+591,10,Dali,Canada
+592,10,Djibouti,Canada
+593,9,Bujumbura,Canada
+594,10,Alma-ata,Canada
+595,10,Appleton,Canada
+596,10,Aalborg,Canada
+597,9,Brasilia,Canada
+598,8,Salisbury,Canada
+599,8,Tselinograd,Canada
+600,8,Ulanhot,Canada
+601,8,Tashkent,Canada
+602,8,Samos,Canada
+603,8,Yichun,Canada
+604,8,Traverse City,Canada
+605,4,Waterloo,Canada
 606,0,Waterloo,Canada
-607,8,Tegucigalpa,Honduras
-608,8,Wassau,United States
-609,8,Wuhai,China
-610,8,Watertown,United States
-611,8,Santa Fe,United States
+607,8,Tegucigalpa,Canada
+608,8,Wassau,Canada
+609,8,Wuhai,Canada
+610,8,Watertown,Canada
+611,8,Santa Fe,Canada
 612,8,Victoria,Canada
-613,8,Varadero,Cuba
-614,8,Mazatlan,Mexico
-615,8,Poitiers,France
-616,8,Nimes,France
+613,8,Varadero,Canada
+614,8,Mazatlan,Canada
+615,8,Poitiers,Canada
+616,8,Nimes,Canada
 617,8,Moncton,Canada
-618,8,Monterey,United States
-619,8,Montevideo,Uruguay
-620,8,Perugia,Italy
-621,8,Melilla,Spain
-622,8,Rapid City,United States
-623,8,Monrovia,Liberia
-624,8,Podgorica,Montenegro
-625,8,Papeete,French Polynesia
-626,9,Puerto Plata,Dominican Republic
-627,8,Oujda,Morocco
-628,8,Port Hartcourt,Nigeria
-629,8,Quzhou,China
-630,8,Meixian,China
-631,8,Parma,Italy
-632,8,Manhattan,United States
-633,8,Manaus,Brazil
-634,8,Paderborn,Germany
-635,8,Great Exuma,Bahamas
-636,8,Fuyang,China
-637,8,Hotan,China
-638,8,Jiamusi,China
-639,8,Lilongwe,Malawi
-640,8,Jiujiang,China
-641,8,Friedrichshafen,Germany
+618,8,Monterey,Canada
+619,8,Montevideo,Canada
+620,8,Perugia,Canada
+621,8,Melilla,Canada
+622,8,Rapid City,Canada
+623,8,Monrovia,Canada
+624,8,Podgorica,Canada
+625,8,Papeete,Canada
+626,9,Puerto Plata,Canada
+627,8,Oujda,Canada
+628,8,Port Hartcourt,Canada
+629,8,Quzhou,Canada
+630,8,Meixian,Canada
+631,8,Parma,Canada
+632,8,Manhattan,Canada
+633,8,Manaus,Canada
+634,8,Paderborn,Canada
+635,8,Great Exuma,Canada
+636,8,Fuyang,Canada
+637,8,Hotan,Canada
+638,8,Jiamusi,Canada
+639,8,Lilongwe,Canada
+640,8,Jiujiang,Canada
+641,8,Friedrichshafen,Canada
 642,8,Fredericton,Canada
-643,8,Lahore,Pakistan
-644,10,Hermosillo,Mexico
-645,8,Durango,United States
-646,8,Iasi,Romania
-647,8,Ketchikan,United States
-648,8,Hilton Head Island,United States
+643,8,Lahore,Canada
+644,10,Hermosillo,Canada
+645,8,Durango,Canada
+646,8,Iasi,Canada
+647,8,Ketchikan,Canada
+648,8,Hilton Head Island,Canada
 649,8,Deer Lake,Canada
-650,8,Del Bajio,Mexico
-651,9,Cape Town,South Africa
-652,8,Corpus Christi,United States
-653,8,Champaign,United States
-654,8,Bridgetown,Barbados
-655,8,Denpasar,Indonesia
-656,8,Bangalore,India
-657,8,Bishkek,Kyrgyzstan
-658,8,Conakry,Guinea
-659,6,Xichang,China
-660,6,St-Etienne,France
-661,6,Zhaotong,China
-662,6,San Pedro Sula,Honduras
-663,6,Van,Turkey
-664,6,Tongren,China
-665,6,Xingyi,China
-666,6,Tarbes,France
-667,5,Yan'an,China
-668,6,Rodez,France
-669,6,Trabzon,Turkey
-670,6,Yerevan,Armenia
-671,6,Sapporo,Japan
+650,8,Del Bajio,Canada
+651,9,Cape Town,Canada
+652,8,Corpus Christi,Canada
+653,8,Champaign,Canada
+654,8,Bridgetown,Canada
+655,8,Denpasar,Canada
+656,8,Bangalore,Canada
+657,8,Bishkek,Canada
+658,8,Conakry,Canada
+659,6,Xichang,Canada
+660,6,St-Etienne,Canada
+661,6,Zhaotong,Canada
+662,6,San Pedro Sula,Canada
+663,6,Van,Canada
+664,6,Tongren,Canada
+665,6,Xingyi,Canada
+666,6,Tarbes,Canada
+667,5,Yan'an,Canada
+668,6,Rodez,Canada
+669,6,Trabzon,Canada
+670,6,Yerevan,Canada
+671,6,Sapporo,Canada
 672,6,St. John,Canada
-673,6,Saipan,Northern Mariana Islands
-674,6,Saginaw,United States
-675,6,State College Pennsylvania,United States
+673,6,Saipan,Canada
+674,6,Saginaw,Canada
+675,6,State College Pennsylvania,Canada
 676,6,Sept-iles,Canada
-677,6,Szczecin,Poland
-678,6,Valdosta,United States
-679,6,Sarajevo,Bosnia and Herzegovina
-680,6,Yining,China
-681,7,Thira,Greece
-682,6,Vasteras,Sweden
-683,6,Tengchong,China
-684,6,Luebeck,Germany
-685,7,Managua,Nicaragua
-686,6,Port-of-spain,Trinidad and Tobago
-687,6,Reggio Calabria,Italy
-688,6,Redmond-Bend,United States
-689,6,Pau,France
-690,6,Mardin,Turkey
-691,6,Nicosia,Cyprus
-692,6,Rio Negro,Colombia
-693,5,Phnom-penh,Cambodia
-694,6,Plaisance,Mauritius
-695,6,Preveza,Greece
-696,7,Nouakschott,Mauritania
-697,6,Newburgh,United States
-698,6,Nea Anghialos,Greece
-699,7,Eugene,United States
+677,6,Szczecin,Canada
+678,6,Valdosta,Canada
+679,6,Sarajevo,Canada
+680,6,Yining,Canada
+681,7,Thira,Canada
+682,6,Vasteras,Canada
+683,6,Tengchong,Canada
+684,6,Luebeck,Canada
+685,7,Managua,Canada
+686,6,Port-of-spain,Canada
+687,6,Reggio Calabria,Canada
+688,6,Redmond-Bend,Canada
+689,6,Pau,Canada
+690,6,Mardin,Canada
+691,6,Nicosia,Canada
+692,6,Rio Negro,Canada
+693,5,Phnom-penh,Canada
+694,6,Plaisance,Canada
+695,6,Preveza,Canada
+696,7,Nouakschott,Canada
+697,6,Newburgh,Canada
+698,6,Nea Anghialos,Canada
+699,7,Eugene,Canada
 700,6,Enshi,China
-701,6,Gander,Canada
-702,6,Innsbruck,Austria
-703,6,Erzurum,Turkey
-704,6,Kalamata,Greece
-705,6,La Crosse,United States
-706,6,Gwinn,United States
-707,6,Elmira,United States
-708,6,Inverness,United Kingdom
-709,6,Elazig,Turkey
-710,6,Karachi,Pakistan
+701,6,Gander,China
+702,6,Innsbruck,China
+703,6,Erzurum,China
+704,6,Kalamata,China
+705,6,La Crosse,China
+706,6,Gwinn,China
+707,6,Elmira,China
+708,6,Inverness,China
+709,6,Elazig,China
+710,6,Karachi,China
 711,6,Jixi,China
-712,6,Kars,Turkey
-713,6,Erbil,Iraq
-714,6,Gaziantep,Turkey
-715,6,Erie,United States
-716,6,Havana,Cuba
-717,6,Lansing,United States
-718,6,Kelowna,Canada
-719,6,Lappeenranta,Finland
-720,6,Hatay,Turkey
-721,6,Exeter,United Kingdom
-722,6,Hiroshima,Japan
+712,6,Kars,China
+713,6,Erbil,China
+714,6,Gaziantep,China
+715,6,Erie,China
+716,6,Havana,China
+717,6,Lansing,China
+718,6,Kelowna,China
+719,6,Lappeenranta,China
+720,6,Hatay,China
+721,6,Exeter,China
+722,6,Hiroshima,China
 723,6,Dunhuang,China
-724,6,Ithaca,United States
-725,6,Freetown,Sierra Leone
+724,6,Ithaca,China
+725,6,Freetown,China
 726,6,Handan,China
-727,6,Belo Horizonte,Brazil
-728,6,Charlottetown,Canada
-729,6,Basse Terre,Saint Kitts and Nevis
-730,6,Binghamton,United States
-731,6,Ashkhabad,Turkmenistan
-732,6,Dole,France
+727,6,Belo Horizonte,China
+728,6,Charlottetown,China
+729,6,Basse Terre,China
+730,6,Binghamton,China
+731,6,Ashkhabad,China
+732,6,Dole,China
 733,6,Chaoyang,China
-734,6,Dothan,United States
-735,6,Dhaka,Bangladesh
-736,6,Baghdad,Iraq
-737,6,Agana,Guam
-738,6,Cotonou,Benin
+734,6,Dothan,China
+735,6,Dhaka,China
+736,6,Baghdad,China
+737,6,Agana,China
+738,6,Cotonou,China
 739,6,Anqing,China
-740,6,Cuneo,Italy
-741,6,Brunswick,United States
-742,6,Bydgoszcz,Poland
-743,6,Adelaide,Australia
-744,6,Aarhus,Denmark
-745,6,Adana,Turkey
+740,6,Cuneo,China
+741,6,Brunswick,China
+742,6,Bydgoszcz,China
+743,6,Adelaide,China
+744,6,Aarhus,China
+745,6,Adana,China
 746,6,Changde,China
-747,6,Diyabakir,Turkey
+747,6,Diyabakir,China
 748,7,Aksu,China
-749,6,Columbus Mississippi,United States
-750,6,Canberra,Australia
+749,6,Columbus Mississippi,China
+750,6,Canberra,China
 751,6,Bijie,China
-752,6,Brazzaville,Congo (Brazzaville)
-753,5,Chihuahua,Mexico
-754,6,Chisinau,Moldova
-755,4,Toledo,United States
+752,6,Brazzaville,China
+753,5,Chihuahua,China
+754,6,Chisinau,China
+755,4,Toledo,China
 756,4,Zhijiang,China
-757,5,Tripoli,Libya
-758,4,Val D'or,Canada
-759,4,Thunder Bay,Canada
-760,4,Sanliurfa,Turkey
-761,4,Toyama,Japan
-762,4,Valladolid,Spain
-763,4,Zacatecas,Mexico
-764,4,Santa Barbara,United States
-765,4,Skelleftea,Sweden
-766,5,Santa Clara,Cuba
-767,4,San Luis Obispo,United States
-768,4,Santa Cruz,Bolivia
-769,4,Torreon,Mexico
-770,4,Santa Cruz De La Palma,Spain
-771,4,San Sebastian,Spain
-772,4,Vientiane,Laos
-773,4,Yuma,United States
-774,4,Taegu,South Korea
-775,4,St.-denis,Reunion
-776,4,Wabush,Canada
-777,4,Zihuatanejo,Mexico
-778,4,Waco,United States
-779,4,Skopje,Macedonia
-780,4,Santa Rosa,United States
-781,4,Timisoara,Romania
-782,4,Roswell,United States
-783,4,San Luis Potosi,Mexico
-784,4,Santarem,Brazil
-785,4,Rouyn,Canada
-786,4,Wellington,New Zealand
-787,4,Yellowknife,Canada
-788,4,Salvador,Brazil
-789,4,St. Croix Island,Virgin Islands
+757,5,Tripoli,China
+758,4,Val D'or,China
+759,4,Thunder Bay,China
+760,4,Sanliurfa,China
+761,4,Toyama,China
+762,4,Valladolid,China
+763,4,Zacatecas,China
+764,4,Santa Barbara,China
+765,4,Skelleftea,China
+766,5,Santa Clara,China
+767,4,San Luis Obispo,China
+768,4,Santa Cruz,China
+769,4,Torreon,China
+770,4,Santa Cruz De La Palma,China
+771,4,San Sebastian,China
+772,4,Vientiane,China
+773,4,Yuma,China
+774,4,Taegu,China
+775,4,St.-denis,China
+776,4,Wabush,China
+777,4,Zihuatanejo,China
+778,4,Waco,China
+779,4,Skopje,China
+780,4,Santa Rosa,China
+781,4,Timisoara,China
+782,4,Roswell,China
+783,4,San Luis Potosi,China
+784,4,Santarem,China
+785,4,Rouyn,China
+786,4,Wellington,China
+787,4,Yellowknife,China
+788,4,Salvador,China
+789,4,St. Croix Island,China
 790,4,Simao,China
 791,4,Yinchun,China
-792,4,Teesside,United Kingdom
+792,4,Teesside,China
 793,4,Yongzhou,China
-794,4,Wichita Falls,United States
-795,5,Trondheim,Norway
-796,4,Sioux City,United States
-797,4,San Angelo,United States
-798,4,Williams Lake,Canada
-799,4,Tyler,United States
-800,4,Williamsport,United States
-801,4,Ulan Bator,Mongolia
-802,4,Samana,Dominican Republic
-803,4,Sivas,Turkey
-804,4,Texarkana,United States
-805,4,North Eleuthera,Bahamas
-806,4,Mcallen,United States
-807,4,Odessa,Ukraine
-808,4,Mus,Turkey
-809,4,Puerto Montt,Chile
-810,4,Longview,United States
-811,4,Novosibirsk,Russia
-812,4,Malatya,Turkey
-813,4,Rhinelander,United States
-814,4,Mytilini,Greece
-815,4,Niigata,Japan
-816,4,N'djamena,Chad
+794,4,Wichita Falls,China
+795,5,Trondheim,China
+796,4,Sioux City,China
+797,4,San Angelo,China
+798,4,Williams Lake,China
+799,4,Tyler,China
+800,4,Williamsport,China
+801,4,Ulan Bator,China
+802,4,Samana,China
+803,4,Sivas,China
+804,4,Texarkana,China
+805,4,North Eleuthera,China
+806,4,Mcallen,China
+807,4,Odessa,China
+808,4,Mus,China
+809,4,Puerto Montt,China
+810,4,Longview,China
+811,4,Novosibirsk,China
+812,4,Malatya,China
+813,4,Rhinelander,China
+814,4,Mytilini,China
+815,4,Niigata,China
+816,4,N'djamena,China
 817,4,Qingyang,China
-818,4,Merida,Mexico
-819,4,Queretaro,Mexico
-820,4,Pasco,United States
+818,4,Merida,China
+819,4,Queretaro,China
+820,4,Pasco,China
 821,4,Nyingchi,China
-822,4,Penang,Malaysia
-823,4,Okinawa,Japan
-824,4,Perpignan,France
-825,4,Madras,India
-826,4,Malmoe,Sweden
-827,4,Mombasa,Kenya
+822,4,Penang,China
+823,4,Okinawa,China
+824,4,Perpignan,China
+825,4,Madras,China
+826,4,Malmoe,China
+827,4,Mombasa,China
 828,4,Luxi,China
-829,4,Puebla,Mexico
-830,4,Lome,Togo
-831,4,Mont Joli,Canada
-832,4,Lvov,Ukraine
+829,4,Puebla,China
+830,4,Lome,China
+831,4,Mont Joli,China
+832,4,Lvov,China
 833,4,Qinhuangdao,China
-834,4,Lynchburg,United States
-835,4,Norwich,United Kingdom
-836,4,Livingstone,Zambia
-837,4,Quesnel,Canada
-838,4,Plovdiv,Bulgaria
-839,4,Lubumashi,Congo (Kinshasa)
-840,4,Ndola,Zambia
-841,4,Marsh Harbor,Bahamas
-842,4,Minsk 2,Belarus
-843,4,Recife,Brazil
-844,4,New Haven,United States
-845,4,Morelia,Mexico
-846,4,Missoula,United States
-847,4,Moroni,Comoros
-848,4,Medford,United States
-849,4,Muan,South Korea
-850,4,Rock Springs,United States
-851,4,Osh,Kyrgyzstan
+834,4,Lynchburg,China
+835,4,Norwich,China
+836,4,Livingstone,China
+837,4,Quesnel,China
+838,4,Plovdiv,China
+839,4,Lubumashi,China
+840,4,Ndola,China
+841,4,Marsh Harbor,China
+842,4,Minsk 2,China
+843,4,Recife,China
+844,4,New Haven,China
+845,4,Morelia,China
+846,4,Missoula,China
+847,4,Moroni,China
+848,4,Medford,China
+849,4,Muan,China
+850,4,Rock Springs,China
+851,4,Osh,China
 852,4,Liping,China
-853,4,Porto Alegre,Brazil
-854,4,Isle Of Man,Isle of Man
-855,4,Kayseri,Turkey
-856,4,Liege,Belgium
-857,4,Gillette,United States
-858,4,Kalispell,United States
-859,4,Helena,United States
-860,4,Huntington,United States
-861,4,Gibraltar,Gibraltar
-862,3,Ganja,Azerbaijan
-863,4,Grand Island,United States
-864,4,Great Falls,United States
-865,4,Konya,Turkey
-866,4,Laredo,United States
-867,4,Juba,South Sudan
-868,4,Groningen,Netherlands
-869,4,International Falls,United States
+853,4,Porto Alegre,China
+854,4,Isle Of Man,China
+855,4,Kayseri,China
+856,4,Liege,China
+857,4,Gillette,China
+858,4,Kalispell,China
+859,4,Helena,China
+860,4,Huntington,China
+861,4,Gibraltar,China
+862,3,Ganja,China
+863,4,Grand Island,China
+864,4,Great Falls,China
+865,4,Konya,China
+866,4,Laredo,China
+867,4,Juba,China
+868,4,Groningen,China
+869,4,International Falls,China
 870,4,Jiayuguan,China
-871,4,Krabi,Thailand
-872,4,Guernsey,Guernsey
-873,4,Iron Mountain,United States
-874,4,Erzincan,Turkey
-875,4,Kralendijk,Netherlands Antilles
-876,4,Lake Charles,United States
-877,4,Kristiansand,Norway
-878,4,Keffallinia,Greece
-879,4,Grande Prairie,Canada
-880,4,Joplin,United States
-881,4,Kuching,Malaysia
-882,4,Flagstaff,United States
-883,4,Holguin,Cuba
-884,4,Lawton,United States
-885,4,Dushanbe,Tajikistan
-886,4,Humberside,United Kingdom
-887,4,Dzaoudzi,Mayotte
+871,4,Krabi,China
+872,4,Guernsey,China
+873,4,Iron Mountain,China
+874,4,Erzincan,China
+875,4,Kralendijk,China
+876,4,Lake Charles,China
+877,4,Kristiansand,China
+878,4,Keffallinia,China
+879,4,Grande Prairie,China
+880,4,Joplin,China
+881,4,Kuching,China
+882,4,Flagstaff,China
+883,4,Holguin,China
+884,4,Lawton,China
+885,4,Dushanbe,China
+886,4,Humberside,China
+887,4,Dzaoudzi,China
 888,4,Jinzhou,China
 889,4,Golmud,China
-890,4,Libreville,Gabon
-891,4,La Paz,Bolivia
-892,4,Hyeres,France
-893,4,Kavala,Greece
-894,4,Khartoum,Sudan
-895,4,La Romana,Dominican Republic
-896,4,Gaspe,Canada
-897,4,Garden City,United States
-898,4,Juneau,United States
-899,4,Kahramanmaras,Turkey
-900,4,Kamloops,Canada
-901,4,Arequipa,Peru
-902,4,Alpena,United States
-903,4,Bakersfield,United States
-904,4,Adiyaman,Turkey
-905,4,Darwin,Australia
-906,4,Chiang Rai,Thailand
-907,4,Bozeman,United States
-908,4,Brownsville,United States
-909,4,Castlegar,Canada
-910,4,Cairns,Australia
-911,4,Danang,Vietnam
-912,4,Chongju,South Korea
-913,4,Chalons,France
-914,4,Christchurch,New Zealand
-915,4,Dinard,France
-916,4,Brainerd,United States
-917,4,Donetsk,Ukraine
-918,6,Cali,Colombia
-919,4,Banjul,Gambia
-920,4,Abilene,United States
-921,4,Agri,Turkey
-922,4,Cluj-napoca,Romania
-923,4,Aguascalientes,Mexico
-924,4,College Station,United States
-925,4,Cayenne,French Guiana
-926,4,Beaumont,United States
-927,4,Billings,United States
+890,4,Libreville,China
+891,4,La Paz,China
+892,4,Hyeres,China
+893,4,Kavala,China
+894,4,Khartoum,China
+895,4,La Romana,China
+896,4,Gaspe,China
+897,4,Garden City,China
+898,4,Juneau,China
+899,4,Kahramanmaras,China
+900,4,Kamloops,China
+901,4,Arequipa,China
+902,4,Alpena,China
+903,4,Bakersfield,China
+904,4,Adiyaman,China
+905,4,Darwin,China
+906,4,Chiang Rai,China
+907,4,Bozeman,China
+908,4,Brownsville,China
+909,4,Castlegar,China
+910,4,Cairns,China
+911,4,Danang,China
+912,4,Chongju,China
+913,4,Chalons,China
+914,4,Christchurch,China
+915,4,Dinard,China
+916,4,Brainerd,China
+917,4,Donetsk,China
+918,6,Cali,China
+919,4,Banjul,China
+920,4,Abilene,China
+921,4,Agri,China
+922,4,Cluj-napoca,China
+923,4,Aguascalientes,China
+924,4,College Station,China
+925,4,Cayenne,China
+926,4,Beaumont,China
+927,4,Billings,China
 928,4,Bangda,China
 929,4,Anshan,China
-930,4,Asuncion,Paraguay
+930,4,Asuncion,China
 931,4,Bayannur,China
-932,4,Alesund,Norway
-933,4,Djerba,Tunisia
-934,4,Cranbrook,Canada
-935,4,Baie Comeau,Canada
-936,4,Culiacan,Mexico
-937,4,Batman,Turkey
-938,3,Cunagua,Cuba
-939,4,Brive,France
-940,4,Dubuque IA,United States
+932,4,Alesund,China
+933,4,Djerba,China
+934,4,Cranbrook,China
+935,4,Baie Comeau,China
+936,4,Culiacan,China
+937,4,Batman,China
+938,3,Cunagua,China
+939,4,Brive,China
+940,4,Dubuque IA,China
 941,4,Anshun,China
-942,2,Vaxjo,Sweden
-943,2,Vaasa,Finland
-944,2,Zanzibar,Tanzania
-945,2,Smithers,Canada
-946,#N/A,Scarborough,Trinidad and Tobago
-947,2,San Cristóbal,Ecuador
-948,2,Sanaa,Yemen
-949,2,Sochi,Russia
-950,2,Ufa,Russia
+942,2,Vaxjo,China
+943,2,Vaasa,China
+944,2,Zanzibar,China
+945,2,Smithers,China
+946,#N/A,Scarborough,China
+947,2,San Cristóbal,China
+948,2,Sanaa,China
+949,2,Sochi,China
+950,2,Ufa,China
 951,2,Shiquanhe,China
 952,2,Tacheng,China
-953,2,Timmins,Canada
-954,2,Vladivostok,Russia
-955,2,Shiraz,Iran
+953,2,Timmins,China
+954,2,Vladivostok,China
+955,2,Shiraz,China
 956,2,Yushu,China
-957,2,Rostov,Russia
-958,2,Sendai,Japan
-959,2,Sudbury,Canada
-960,2,Twin Falls,United States
+957,2,Rostov,China
+958,2,Sendai,China
+959,2,Sudbury,China
+960,2,Twin Falls,China
 961,2,Xinyuan,China
-962,2,Terrace,Canada
-963,2,Samara,Russia
-964,#N/A,Ushuaia,Argentina
-965,2,Sarnia,Canada
-966,2,Villahermosa,Mexico
-967,2,Spanish Town,British Virgin Islands
-968,2,Sulaymaniyah,Iraq
-969,2,Sibiu,Romania
-970,2,Tromso,Norway
-971,2,Vieques Island,Puerto Rico
-972,2,Williston,United States
-973,2,Tortola,British Virgin Islands
-974,2,Stavropol,Russia
-975,2,Satu Mare,Romania
-976,2,Windsor,Canada
-977,2,Sault Sainte Marie,Canada
-978,2,Zandery,Suriname
-979,2,Yekaterinburg,Russia
-980,2,Sitka,United States
-981,2,Tabriz,Iran
-982,2,Taif,Saudi Arabia
-983,2,Yenbo,Saudi Arabia
-984,2,Vernal,United States
-985,2,Townsville,Australia
-986,2,St.-pierre,Reunion
-987,2,Saint George,United States
-988,2,Sandspit,Canada
-989,2,Sault Ste Marie,United States
-990,2,Salamanca,Spain
-991,2,Whitehorse,Canada
-992,2,Okayama,Japan
-993,2,Pocatello,United States
-994,2,Moab,United States
-995,2,Nagasaki,Japan
-996,2,Pointe-noire,Congo (Brazzaville)
-997,2,Prince George,Canada
-998,2,Mazar-i-sharif,Afghanistan
-999,2,Prince Pupert,Canada
-1000,#N/A,Londrina,Brazil
-1001,2,Maracaibo,Venezuela
-1002,2,Logroño-Agoncillo,Spain
-1003,2,Mackenzie British Columbia,Canada
-1004,2,Ponta Delgada,Portugal
-1005,3,Nandi,Fiji
-1006,2,Mashhad,Iran
-1007,2,Mammoth Lakes,United States
-1008,2,Nakhchivan,Azerbaijan
-1009,2,Lleida,Spain
-1010,2,Rijeka,Croatia
-1011,2,Maringa,Brazil
-1012,2,Mahe,Seychelles
-1013,2,Pamplona,Spain
-1014,2,Naypyidaw,Burma
-1015,2,Nizhniy Novgorod,Russia
-1016,2,Najaf,Iraq
-1017,#N/A,Pune,India
-1018,2,Nevsehir,Turkey
-1019,2,Punta Arenas,Chile
-1020,2,Red Deer Industrial,Canada
-1021,2,Madinah,Saudi Arabia
-1022,2,Miri,Malaysia
-1023,2,Pyongyang,North Korea
-1024,2,Matsuyama,Japan
-1025,2,North Bay,Canada
-1026,2,Penticton,Canada
-1027,2,Patras,Greece
-1028,2,Oradea,Romania
-1029,2,Merzifon,Turkey
-1030,2,Luang Prabang,Laos
-1031,2,Mandalay,Burma
-1032,2,Osijek,Croatia
-1033,2,Minot,United States
-1034,2,Nanaimo,Canada
-1035,2,Marsa Alam,Egypt
-1036,2,Pellston,United States
-1037,2,Ostrava,Czech Republic
-1038,2,Mogadishu,Somalia
-1039,2,Medicine Hat,Canada
+962,2,Terrace,China
+963,2,Samara,China
+964,#N/A,Ushuaia,China
+965,2,Sarnia,China
+966,2,Villahermosa,China
+967,2,Spanish Town,China
+968,2,Sulaymaniyah,China
+969,2,Sibiu,China
+970,2,Tromso,China
+971,2,Vieques Island,China
+972,2,Williston,China
+973,2,Tortola,China
+974,2,Stavropol,China
+975,2,Satu Mare,China
+976,2,Windsor,China
+977,2,Sault Sainte Marie,China
+978,2,Zandery,China
+979,2,Yekaterinburg,China
+980,2,Sitka,China
+981,2,Tabriz,China
+982,2,Taif,China
+983,2,Yenbo,China
+984,2,Vernal,China
+985,2,Townsville,China
+986,2,St.-pierre,China
+987,2,Saint George,China
+988,2,Sandspit,China
+989,2,Sault Ste Marie,China
+990,2,Salamanca,China
+991,2,Whitehorse,China
+992,2,Okayama,China
+993,2,Pocatello,China
+994,2,Moab,China
+995,2,Nagasaki,China
+996,2,Pointe-noire,China
+997,2,Prince George,China
+998,2,Mazar-i-sharif,China
+999,2,Prince Pupert,China
+1000,#N/A,Londrina,China
+1001,2,Maracaibo,China
+1002,2,Logroño-Agoncillo,China
+1003,2,Mackenzie British Columbia,China
+1004,2,Ponta Delgada,China
+1005,3,Nandi,China
+1006,2,Mashhad,China
+1007,2,Mammoth Lakes,China
+1008,2,Nakhchivan,China
+1009,2,Lleida,China
+1010,2,Rijeka,China
+1011,2,Maringa,China
+1012,2,Mahe,China
+1013,2,Pamplona,China
+1014,2,Naypyidaw,China
+1015,2,Nizhniy Novgorod,China
+1016,2,Najaf,China
+1017,#N/A,Pune,China
+1018,2,Nevsehir,China
+1019,2,Punta Arenas,China
+1020,2,Red Deer Industrial,China
+1021,2,Madinah,China
+1022,2,Miri,China
+1023,2,Pyongyang,China
+1024,2,Matsuyama,China
+1025,2,North Bay,China
+1026,2,Penticton,China
+1027,2,Patras,China
+1028,2,Oradea,China
+1029,2,Merzifon,China
+1030,2,Luang Prabang,China
+1031,2,Mandalay,China
+1032,2,Osijek,China
+1033,2,Minot,China
+1034,2,Nanaimo,China
+1035,2,Marsa Alam,China
+1036,2,Pellston,China
+1037,2,Ostrava,China
+1038,2,Mogadishu,China
+1039,2,Medicine Hat,China
 1040,2,Mohe County,China
-1041,2,Kastamonu,Turkey
-1042,2,Leon,Spain
-1043,2,Linkoeping,Sweden
-1044,2,Jacksn Hole,United States
-1045,2,Duluth,United States
-1046,2,Hibbing,United States
-1047,2,Kagoshima,Japan
-1048,2,Hilo,United States
-1049,2,Kolkata,India
-1050,2,Kaliningrad,Russia
-1051,2,Lewiston,United States
+1041,2,Kastamonu,China
+1042,2,Leon,China
+1043,2,Linkoeping,China
+1044,2,Jacksn Hole,China
+1045,2,Duluth,China
+1046,2,Hibbing,China
+1047,2,Kagoshima,China
+1048,2,Hilo,China
+1049,2,Kolkata,China
+1050,2,Kaliningrad,China
+1051,2,Lewiston,China
 1052,2,Heihe,China
-1053,2,El Calafate,Argentina
-1054,2,Gassim,Saudi Arabia
-1055,2,Fort Saint John,Canada
-1056,2,Laage,Germany
-1057,2,Kazan,Russia
-1058,2,Eskissehir,Turkey
-1059,2,Kutahya,Turkey
-1060,2,Kanazawa,Japan
-1061,2,Esfahan,Iran
-1062,2,Khudzhand,Tajikistan
-1063,2,Lethbridge,Canada
-1064,2,Essadouira,Morocco
-1065,#N/A,Karpathos,Greece
-1066,2,Kano,Nigeria
-1067,2,Isparta,Turkey
-1068,2,Langkawi,Malaysia
-1069,2,Kota Kinabalu,Malaysia
-1070,2,Idaho Falls,United States
-1071,3,Juliaca,Peru
-1072,2,Iles De La Madeleine,Canada
-1073,2,Kabul,Afghanistan
-1074,2,Escanaba,United States
-1075,2,Elko,United States
+1053,2,El Calafate,China
+1054,2,Gassim,China
+1055,2,Fort Saint John,China
+1056,2,Laage,China
+1057,2,Kazan,China
+1058,2,Eskissehir,China
+1059,2,Kutahya,China
+1060,2,Kanazawa,China
+1061,2,Esfahan,China
+1062,2,Khudzhand,China
+1063,2,Lethbridge,China
+1064,2,Essadouira,China
+1065,#N/A,Karpathos,China
+1066,2,Kano,China
+1067,2,Isparta,China
+1068,2,Langkawi,China
+1069,2,Kota Kinabalu,China
+1070,2,Idaho Falls,China
+1071,3,Juliaca,China
+1072,2,Iles De La Madeleine,China
+1073,2,Kabul,China
+1074,2,Escanaba,China
+1075,2,Elko,China
 1076,2,Karamay,China
-1077,2,Lincoln,United States
-1078,2,Kittila,Finland
+1077,2,Lincoln,China
+1078,2,Kittila,China
 1079,2,Kuqa,China
-1080,2,Grand Forks,United States
-1081,2,Kochi,India
-1082,2,Alice Springs,Australia
-1083,2,Basrah,Iraq
-1084,2,Cockburn Town,Bahamas
-1085,#N/A,Acapulco,Mexico
-1086,2,Dickinson,United States
-1087,2,Bamako,Mali
-1088,2,Brno,Czech Republic
-1089,2,Casper,United States
-1090,2,Antwerp,Belgium
-1091,2,Antananarivo,Madagascar
-1092,2,Burgos,Spain
-1093,2,Campbell River,Canada
-1094,2,Aqaba,Jordan
-1095,2,Canakkale,Turkey
-1096,2,Chita,Russia
-1097,2,Butte,United States
-1098,2,Bathurst,Canada
-1099,3,Babelthuap,Palau
-1100,2,Batumi,Georgia
-1101,2,Benghazi,Libya
-1102,2,Alanya,Turkey
-1103,3,Avarua,Cook Islands
-1104,2,Bangui,Central African Republic
-1105,2,Comox,Canada
-1106,2,Baia Mare,Romania
-1107,2,Cedar City,United States
-1108,2,Çorlu,Turkey
-1109,1,Alta,Norway
-1110,3,Belem,Brazil
-1111,2,Astrakhan,Russia
-1112,2,Dnepropetrovsk,Ukraine
-1113,2,Bismarck,United States
-1114,2,Dominica,Dominica
-1115,2,Constanta,Romania
-1116,2,Bemidji,United States
+1080,2,Grand Forks,China
+1081,2,Kochi,China
+1082,2,Alice Springs,China
+1083,2,Basrah,China
+1084,2,Cockburn Town,China
+1085,#N/A,Acapulco,China
+1086,2,Dickinson,China
+1087,2,Bamako,China
+1088,2,Brno,China
+1089,2,Casper,China
+1090,2,Antwerp,China
+1091,2,Antananarivo,China
+1092,2,Burgos,China
+1093,2,Campbell River,China
+1094,2,Aqaba,China
+1095,2,Canakkale,China
+1096,2,Chita,China
+1097,2,Butte,China
+1098,2,Bathurst,China
+1099,3,Babelthuap,China
+1100,2,Batumi,China
+1101,2,Benghazi,China
+1102,2,Alanya,China
+1103,3,Avarua,China
+1104,2,Bangui,China
+1105,2,Comox,China
+1106,2,Baia Mare,China
+1107,2,Cedar City,China
+1108,2,Çorlu,China
+1109,1,Alta,China
+1110,3,Belem,France
+1111,2,Astrakhan,France
+1112,2,Dnepropetrovsk,France
+1113,2,Bismarck,France
+1114,2,Dominica,France
+1115,2,Constanta,France
+1116,2,Bemidji,France
 1117,2,Deauville,France
-1118,2,Aden,Yemen
-1119,2,Bolzano,Italy
-1120,2,Cody,United States
-1121,2,Bagotville,Canada
-1122,2,Cartagena,Colombia
-1123,2,Barranquilla,Colombia
-1124,2,Denizli,Turkey
-1125,2,Bakhtaran,Iran
-1126,2,Cuzco,Peru
+1118,2,Aden,France
+1119,2,Bolzano,France
+1120,2,Cody,France
+1121,2,Bagotville,France
+1122,2,Cartagena,France
+1123,2,Barranquilla,France
+1124,2,Denizli,France
+1125,2,Bakhtaran,France
+1126,2,Cuzco,France
