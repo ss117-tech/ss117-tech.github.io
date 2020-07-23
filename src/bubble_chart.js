@@ -19,16 +19,26 @@ function bubbleChart() {
   var center = { x: width / 2, y: height / 2 };
 
   var yearCenters = {
-    Canada: { x: width / 3, y: height / 2 },
-    France: { x: width / 2, y: height / 2 },
-    China: { x: 2 * width / 3, y: height / 2 }
+    US: { x: width / 2, y: 2* height / 3 },
+    China: { x: 3 * width / 16, y: height / 3 },
+    Spain:{ x: width /5, y: 2* height / 3 },
+    UK:{ x: 3 * width / 8, y: height / 3 },
+    Germany:{ x: 5 * width / 8, y: height / 3 },
+    Italy:{ x: 3 * width / 5, y: 2* height / 3 },
+    France:{ x: 13 * width / 16, y: height / 3 }
+    Others:{ x: 4 * width / 5, y: 2* height / 3 }
   };
 
   // X locations of the year titles.
   var yearsTitleX = {
-    Canada: 160,
-    France: width / 2,
-    China: width - 160
+    US: { x: width / 2, y: 2* height / 3 },
+    China: { x: width / 10, y: height / 8 },
+    Spain: { x:  width / 5, y: 9 * height / 20 },
+    UK: { x: 7 * width / 20, y: height / 8 },
+    Germany: { x: 13 * width / 20, y: height / 8 },
+    Italy: { x: 3 * width / 5, y: 9 * height / 20 },
+    France: { x: 9 * width / 10, y: height / 8 },
+    Others: { x: 4 * width / 5, y: 9 * height / 20 }
   };
 
   // @v4 strength to apply to the position forces
@@ -110,8 +120,8 @@ function bubbleChart() {
         id: d.id,
         radius: radiusScale(+d.total_amount),
         value: +d.total_amount,
-        name: d.grant_title,
-        org: d.organization,
+        //name: d.grant_title,
+        //org: d.organization,
         group: d.group,
         year: d.start_year,
         x: Math.random() * 900,
@@ -274,7 +284,7 @@ function bubbleChart() {
     d3.select(this).attr('stroke', 'black');
 
     var content = '<span class="name">Title: </span><span class="value">' +
-                  d.name +
+                  d.group +
                   '</span><br/>' +
                   '<span class="name">Amount: </span><span class="value">$' +
                   addCommas(d.value) +
@@ -378,7 +388,7 @@ function addCommas(nStr) {
 }
 
 // Load the data.
-d3.csv('test.csv', display);
+d3.csv('test3.csv', display);
 
 // setup the buttons.
 setupButtons();
