@@ -1,207 +1,467 @@
 ﻿id,total_amount,group,start_year
-2,1153,London,US
-8,727,Beijing,US
-9,604,Shanghai,US
-18,455,Guangzhou,US
-25,353,Chengdu,US
-28,316,Shenzhen,US
-29,290,Kunming,US
-31,285,Xi'an,US
-38,243,Hangzhou,US
-41,220,Wuhan,US
-44,200,Chongqing,US
-45,198,Xiamen,US
-48,194,Nanjing,US
-51,186,Manchester,US
-52,180,Zhengzhou,US
-53,180,Qingdao,US
-56,168,Changcha,US
-58,162,Urumqi,US
-62,156,Shenyang,US
-64,153,Dalian,US
-70,144,Edinburgh,US
-72,130,Bristol,US
-79,134,Harbin,US
-84,126,Nanning,US
-86,126,Guiyang,US
-89,122,Taiyuan,US
-91,122,Jinan,US
-95,60,Birmingham,US
+1,1438,Atlanta,US
+2,1153,London,UK
+4,840,Chicago,US
+5,806,Paris,France
+6,771,Dallas-Fort Worth,US
+7,753,New York,US
+8,727,Beijing,China
+9,604,Shanghai,China
+10,574,Charlotte,US
+13,539,Miami,US
+14,532,Philadelphia,US
+15,497,Los Angeles,US
+17,446,Phoenix,US
+18,455,Guangzhou,China
+20,446,Washington,US
+24,360,Detroit,US
+25,353,Chengdu,China
+27,341,Minneapolis,US
+28,316,Shenzhen,China
+29,290,Kunming,China
+31,285,Xi'an,China
+32,281,Orlando,US
+33,270,Las Vegas,US
+35,255,Denver,US
+37,251,Baltimore,US
+38,243,Hangzhou,China
+39,242,Salt Lake City,US
+40,241,Houston,US
+41,220,Wuhan,China
+44,200,Chongqing,China
+45,198,Xiamen,China
+46,196,Boston,US
+48,194,Nanjing,China
+49,192,Seattle,US
+50,189,Tampa,US
+51,186,Manchester,UK
+52,180,Zhengzhou,China
+53,180,Qingdao,China
+56,168,Changcha,China
+57,165,San Francisco,US
+58,162,Urumqi,China
+59,169,St. Louis,US
+61,160,New Orleans,US
+62,156,Shenyang,China
+64,153,Dalian,China
+66,153,Marseille,France
+68,148,Newark,US
+70,144,Edinburgh,UK
+71,141,San Diego,US
+72,130,Bristol,UK
+73,10,Bristol,US
+74,119,Portland,US
+75,137,Nashville,US
+77,133,Raleigh-durham,US
+79,134,Harbin,China
+81,130,Fort Lauderdale,US
+83,126,Mulhouse,France
+84,126,Nanning,China
+85,131,Kansas City,US
+86,126,Guiyang,China
+88,125,Nice,France
+89,122,Taiyuan,China
+90,122,Pittsburgh,US
+91,122,Jinan,China
+93,120,Cincinnati,US
+94,119,Austin,US
+95,60,Birmingham,UK
+96,59,Birmingham,US
+100,112,Columbus,US
+101,73,San Jose,US
+103,111,Lyon,France
 106,110,Liverpool,UK
-109,106,Fuzhou,UK
-117,100,Tianjin,UK
-119,97,Guilin,UK
-121,96,Nanchang,UK
-127,90,Wenzhou,UK
-129,90,Hohhot,UK
-130,87,Changchun,UK
-140,84,Wuxi,UK
-142,84,Sanya,UK
-152,76,Lanzhou,UK
-153,76,Hefei,UK
-154,75,Yinchuan,UK
-157,74,Ninbo,UK
+107,110,Indianapolis,US
+108,112,Milwaukee,US
+109,106,Fuzhou,China
+111,104,San Antonio,US
+117,100,Tianjin,China
+119,97,Guilin,China
+121,96,Nanchang,China
+126,92,Beauvais,France
+127,90,Wenzhou,China
+129,90,Hohhot,China
+130,87,Changchun,China
+137,85,Toulouse,France
+140,84,Wuxi,China
+142,84,Sanya,China
+143,87,Memphis,US
+144,81,Windsor Locks,US
+146,80,Fort Myers,US
+151,73,Oakland,US
+152,76,Lanzhou,China
+153,76,Hefei,China
+154,75,Yinchuan,China
+157,74,Ninbo,China
 159,74,East Midlands,UK
-160,72,Zhuhai,UK
-163,72,Haikou,UK
-171,68,Yantai,UK
-195,58,Changzhou,UK
-208,52,Yuncheng,UK
-209,51,Xining,UK
-210,52,Shijiazhuang,UK
+160,72,Zhuhai,China
+163,72,Haikou,China
+164,65,Charleston,US
+168,69,Louisville,US
+169,70,Honolulu,US
+170,70,Sacramento,US
+171,68,Yantai,China
+173,64,Norfolk,US
+174,66,Bordeaux,France
+176,62,Santa Ana,US
+177,64,Nantes,France
+180,67,Dallas,US
+184,63,Jacksonville,US
+185,63,Albuquerque,US
+187,59,Oklahoma City,US
+195,58,Changzhou,China
+199,56,Richmond,US
+200,56,Rochester,US
+201,56,Omaha,US
+205,57,Buffalo,US
+207,54,Dayton,US
+208,52,Yuncheng,China
+209,51,Xining,China
+210,52,Shijiazhuang,China
 215,52,Leeds,UK
-223,48,Quanzhou,UK
+216,53,Cleveland,US
+220,4,Florence,US
+222,48,West Palm Beach,US
+223,48,Quanzhou,China
+224,48,Little Rock,US
 225,48,Glasgow,UK
+226,50,Albany,US
+227,46,Tucson,US
+228,45,Providence,US
 234,47,Lijiang,China
-236,46,Belfast,China
+236,46,Belfast,UK
 237,44,Shantou,China
-244,42,Prestwick,China
-250,40,Newcastle,China
+240,41,Tulsa,US
+242,14,Panama City,US
+244,42,Prestwick,UK
+245,40,Reno,US
+246,42,Greenville,US
+248,42,Akron,US
+250,40,Newcastle,UK
+251,41,El Paso,US
+254,10,Melbourne,US
+255,36,Ontario,US
+258,38,Knoxville,US
+259,39,Des Moines,US
+260,36,Syracuse,US
+263,36,Manchester NH,US
+267,35,Greensboro,US
+268,36,Grand Rapids,US
+271,36,Columbia,US
 274,34,Baotou,China
 276,32,Yangzhou,China
-284,32,Bournemouth,China
+284,32,Bournemouth,UK
+286,32,Bentonville,US
+288,30,Savannah,US
+294,30,Jackson,US
+295,30,Ajaccio,France
+296,30,Bastia,France
 302,28,Yiwu,China
+303,28,Wichita,US
+304,28,Kahului,US
 307,28,Jingdezhen,China
 308,28,Lhasa,China
 313,25,Yancheng,China
-315,26,Southend,China
+314,26,Wilmington,US
+315,26,Southend,UK
+316,26,White Plains,US
+318,26,Myrtle Beach,US
+320,26,Pensacola,US
+323,26,Madison,US
+328,26,Harrisburg,US
+329,27,Islip,US
+331,26,Lexington KY,US
+332,26,Huntsville,US
 333,26,Huangshan,China
+337,26,Chattanooga,US
+338,24,Montpellier,France
+348,24,Charlottesville VA,US
 350,24,Beihai,China
 351,24,Dayong,China
+352,24,Burbank,US
 353,22,Yanji,China
+355,22,Strasbourg,France
+356,22,Spokane,US
+357,22,Tallahassee,US
 363,22,Huangyan,China
+365,21,Key West,US
 366,22,Jiuzhaigou,China
+367,24,Flint,US
 371,20,Zhanjiang,China
+372,19,Valparaiso,US
+374,20,Roanoke VA,US
+377,21,Palm Springs,US
 380,20,Lianyungang,China
+385,20,Carcassonne,France
+389,20,Calvi,France
+391,18,Sarasota,US
+392,16,Springfield,US
 394,18,Zhoushan,China
+395,18,Peoria,US
 397,18,Mianyang,China
+399,18,Moline,US
+402,17,Kona,US
+403,18,Fort Wayne,US
 404,18,Linyi,China
+406,18,Lille,France
 409,18,Jinghonggasa,China
-411,16,Aberdeen,China
+411,16,Aberdeen,UK
+412,2,Aberdeen,US
+413,18,Beziers,France
+414,18,Brest,France
 415,18,Dazhou,China
-421,18,Cardiff,China
+418,19,Boise,US
+419,18,Bloomington,US
+421,18,Cardiff,UK
+422,18,Cedar Rapids,US
+423,17,Burlington,US
 424,16,Yibin,China
-429,16,Southampton,China
+426,15,Scranton,US
+429,16,Southampton,UK
 430,16,Yichang,China
 431,16,Xiangfan,China
 435,16,Liuzhou,China
 436,16,Luzhou,China
+442,16,Evansville,US
 443,16,Kashi,China
 445,16,Hami,China
+450,16,Gulfport,US
+453,16,Fresno,US
 456,16,Guangyuan,China
+457,16,Gainesville,US
+458,16,Lihue,US
+469,16,Biarritz-bayonne,France
 470,16,Dongsheng,China
+471,16,Allentown,US
 472,16,Changzhi,China
 476,14,Tongliao,China
 480,14,Zunyi,China
+481,14,Newport News,US
+482,14,MONTGOMERY,US
+483,13,Midland,US
+485,15,Lubbock,US
 486,14,Nanyang,China
+487,14,Mobile,US
+489,14,Jacksonville NC,US
+490,14,La Rochelle,France
 491,14,Ganzhou,China
+492,13,Harlingen,US
+493,14,Green Bay,US
+494,14,Fargo,US
+495,14,Fayetteville,US
 496,14,Hailar,China
+499,14,Bergerac,France
+500,14,Asheville,US
+501,14,Baton Rouge,US
+503,15,Amarillo,US
+504,14,Bush Field,US
 505,14,Chifeng,China
+506,12,Sioux Falls,US
 507,12,Wuyishan,China
 509,12,Yulin,China
 511,12,Shangri-La,China
 516,12,Luoyang,China
+517,12,Rennes,France
 520,12,Mudanjiang,China
 531,12,Korla,China
+533,12,Limoges,France
 535,12,Datong,China
+536,12,Anchorage,US
+538,12,Bangor,US
+543,12,Clermont-Ferrand,France
+544,10,Alexandria,US
+546,11,Colorado Springs,US
+548,10,South Bend,US
+550,10,Tours,France
 551,10,Wanxian,China
+552,10,Shreveport,US
 557,10,Xilinhot,China
 559,10,Xuzhou,China
+562,10,Monroe,US
+563,10,New Bern,US
+565,10,Long Beach,US
 567,10,Nanchong,China
 568,10,Qiqihar,China
-573,10,Londonderry,China
+573,10,Londonderry,UK
+577,10,Fort Smith,US
+580,10,Lafayette,US
 581,10,Jining,China
+583,10,Figari,France
+584,10,Killeen,US
+585,10,Kalamazoo,US
+586,10,Grand Junction,US
+590,10,Daytona Beach,US
 591,10,Dali,China
+595,10,Appleton,US
+598,8,Salisbury,US
 600,8,Ulanhot,China
 603,8,Yichun,China
+604,8,Traverse City,US
+605,4,Waterloo,US
+608,8,Wassau,US
 609,8,Wuhai,China
+610,8,Watertown,US
+611,8,Santa Fe,US
+615,8,Poitiers,France
+616,8,Nimes,France
+618,8,Monterey,US
+622,8,Rapid City,US
 629,8,Quzhou,China
 630,8,Meixian,China
+632,8,Manhattan,US
 636,8,Fuyang,China
 637,8,Hotan,China
 638,8,Jiamusi,China
 640,8,Jiujiang,China
+645,8,Durango,US
+647,8,Ketchikan,US
+648,8,Hilton Head Island,US
+652,8,Corpus Christi,US
+653,8,Champaign,US
 659,6,Xichang,China
+660,6,St-Etienne,France
 661,6,Zhaotong,China
 664,6,Tongren,China
 665,6,Xingyi,China
+666,6,Tarbes,France
 667,5,Yan'an,China
+668,6,Rodez,France
+674,6,Saginaw,US
+675,6,State College Pennsylvania,US
+678,6,Valdosta,US
 680,6,Yining,China
 683,6,Tengchong,China
+688,6,Redmond-Bend,US
+689,6,Pau,France
+697,6,Newburgh,US
+699,7,Eugene,US
 700,6,Enshi,China
-708,6,Inverness,China
+705,6,La Crosse,US
+706,6,Gwinn,US
+707,6,Elmira,US
+708,6,Inverness,UK
 711,6,Jixi,China
-721,6,Exeter,China
+715,6,Erie,US
+717,6,Lansing,US
+721,6,Exeter,UK
 723,6,Dunhuang,China
+724,6,Ithaca,US
 726,6,Handan,China
+730,6,Binghamton,US
+732,6,Dole,France
 733,6,Chaoyang,China
+734,6,Dothan,US
 739,6,Anqing,China
+741,6,Brunswick,US
 746,6,Changde,China
 748,7,Aksu,China
+749,6,Columbus Mississippi,US
 751,6,Bijie,China
+755,4,Toledo,US
 756,4,Zhijiang,China
+764,4,Santa Barbara,US
+767,4,San Luis Obispo,US
+773,4,Yuma,US
+778,4,Waco,US
+780,4,Santa Rosa,US
+782,4,Roswell,US
 790,4,Simao,China
 791,4,Yinchun,China
-792,4,Teesside,China
+792,4,Teesside,UK
 793,4,Yongzhou,China
+794,4,Wichita Falls,US
+796,4,Sioux City,US
+797,4,San Angelo,US
+799,4,Tyler,US
+800,4,Williamsport,US
+804,4,Texarkana,US
+806,4,Mcallen,US
+810,4,Longview,US
+813,4,Rhinelander,US
 817,4,Qingyang,China
+820,4,Pasco,US
 821,4,Nyingchi,China
+824,4,Perpignan,France
 828,4,Luxi,China
 833,4,Qinhuangdao,China
-835,4,Norwich,China
+834,4,Lynchburg,US
+835,4,Norwich,UK
+844,4,New Haven,US
+846,4,Missoula,US
+848,4,Medford,US
+850,4,Rock Springs,US
 852,4,Liping,China
+857,4,Gillette,US
+858,4,Kalispell,US
+859,4,Helena,US
+860,4,Huntington,US
+863,4,Grand Island,US
+864,4,Great Falls,US
+866,4,Laredo,US
+869,4,International Falls,US
 870,4,Jiayuguan,China
-886,4,Humberside,China
+873,4,Iron Mountain,US
+876,4,Lake Charles,US
+880,4,Joplin,US
+882,4,Flagstaff,US
+884,4,Lawton,US
+886,4,Humberside,UK
 888,4,Jinzhou,China
 889,4,Golmud,China
+892,4,Hyeres,France
+897,4,Garden City,US
+898,4,Juneau,US
+902,4,Alpena,US
+903,4,Bakersfield,US
+907,4,Bozeman,US
+908,4,Brownsville,US
+913,4,Chalons,France
+915,4,Dinard,France
+916,4,Brainerd,US
+920,4,Abilene,US
+924,4,College Station,US
+926,4,Beaumont,US
+927,4,Billings,US
 928,4,Bangda,China
 929,4,Anshan,China
 931,4,Bayannur,China
+939,4,Brive,France
+940,4,Dubuque IA,US
 941,4,Anshun,China
 951,2,Shiquanhe,China
 952,2,Tacheng,China
 956,2,Yushu,China
+960,2,Twin Falls,US
 961,2,Xinyuan,China
+972,2,Williston,US
+980,2,Sitka,US
+984,2,Vernal,US
+987,2,Saint George,US
+989,2,Sault Ste Marie,US
+993,2,Pocatello,US
+994,2,Moab,US
+1007,2,Mammoth Lakes,US
+1033,2,Minot,US
+1036,2,Pellston,US
 1040,2,Mohe County,China
+1044,2,Jacksn Hole,US
+1045,2,Duluth,US
+1046,2,Hibbing,US
+1048,2,Hilo,US
+1051,2,Lewiston,US
 1052,2,Heihe,China
+1070,2,Idaho Falls,US
+1074,2,Escanaba,US
+1075,2,Elko,US
 1076,2,Karamay,China
+1077,2,Lincoln,US
 1079,2,Kuqa,China
-5,806,Paris,France
-66,153,Marseille,France
-83,126,Mulhouse,France
-88,125,Nice,France
-103,111,Lyon,France
-126,92,Beauvais,France
-137,85,Toulouse,France
-174,66,Bordeaux,France
-177,64,Nantes,France
-295,30,Ajaccio,France
-296,30,Bastia,France
-338,24,Montpellier,France
-355,22,Strasbourg,France
-385,20,Carcassonne,France
-389,20,Calvi,France
-406,18,Lille,France
-413,18,Beziers,France
-414,18,Brest,France
-469,16,Biarritz-bayonne,France
-490,14,La Rochelle,France
-499,14,Bergerac,France
-517,12,Rennes,France
-533,12,Limoges,France
-543,12,Clermont-Ferrand,France
-550,10,Tours,France
-583,10,Figari,France
-615,8,Poitiers,France
-616,8,Nimes,France
-660,6,St-Etienne,France
-666,6,Tarbes,France
-668,6,Rodez,France
-689,6,Pau,France
-732,6,Dole,France
-824,4,Perpignan,France
-892,4,Hyeres,France
-913,4,Chalons,France
-915,4,Dinard,France
-939,4,Brive,France
+1080,2,Grand Forks,US
+1086,2,Dickinson,US
+1089,2,Casper,US
+1097,2,Butte,US
+1107,2,Cedar City,US
+1113,2,Bismarck,US
+1116,2,Bemidji,US
 1117,2,Deauville,France
+1120,2,Cody,US
