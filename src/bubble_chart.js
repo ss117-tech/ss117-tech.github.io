@@ -19,26 +19,16 @@ function bubbleChart() {
   var center = { x: width / 2, y: height / 2 };
 
   var yearCenters = {
-    US: { x: width / 2, y: 2* height / 3 },
-    China: { x: 3 * width / 16, y: height / 3 },
-    Spain:{ x: width /5, y: 2* height / 3 },
-    UK:{ x: 3 * width / 8, y: height / 3 },
-    Germany:{ x: 5 * width / 8, y: height / 3 },
-    Italy:{ x: 3 * width / 5, y: 2* height / 3 },
-    France:{ x: 13 * width / 16, y: height / 3 }
-    Others:{ x: 4 * width / 5, y: 2* height / 3 }
+    Canada: { x: width / 3, y: height / 2 },
+    France: { x: width / 2, y: height / 2 },
+    China: { x: 2 * width / 3, y: height / 2 }
   };
 
   // X locations of the year titles.
   var yearsTitleX = {
-    US: { x: width / 2, y: 2* height / 3 },
-    China: { x: width / 10, y: height / 8 },
-    Spain: { x:  width / 5, y: 9 * height / 20 },
-    UK: { x: 7 * width / 20, y: height / 8 },
-    Germany: { x: 13 * width / 20, y: height / 8 },
-    Italy: { x: 3 * width / 5, y: 9 * height / 20 },
-    France: { x: 9 * width / 10, y: height / 8 },
-    Others: { x: 4 * width / 5, y: 9 * height / 20 }
+    Canada: 160,
+    France: width / 2,
+    China: width - 160
   };
 
   // @v4 strength to apply to the position forces
