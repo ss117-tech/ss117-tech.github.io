@@ -3,10 +3,10 @@ function bubbleChart() {
   var height = 768;
 
   // location to centre the bubbles
-  const centre = { x: width/2, y: height/2 };
+  var centre = { x: width/2, y: height/2 };
 
   // strength to apply to the position forces
-  const forceStrength = 0.03;
+  var forceStrength = 0.03;
 
   // these will be set in createNodes and chart functions
   let svg = null;
@@ -16,7 +16,7 @@ function bubbleChart() {
 
   // charge is dependent on size of the bubble, so bigger towards the middle
   function charge(d) {
-    return Math.pow(d.radius, 2.0) * 0.01
+    return -Math.pow(d.radius, 2.0) * forceStrength;
   }
 
   // create a force simulation and add forces to it
