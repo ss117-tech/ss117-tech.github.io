@@ -142,6 +142,7 @@ function bubbleChart() {
      var mouseover = function(d) {
             tooltip
               .style("opacity", 1)
+
             d3.select(this)
               .style("stroke", "black")
               .style("opacity", 1)
@@ -153,7 +154,7 @@ function bubbleChart() {
                               '</span><br/>' +
                               '<span class="name">Country: </span><span class="value">' +
                               d.country +
-                              '</span>';)
+                              '</span>')
           }
 
     bubbles = elements
