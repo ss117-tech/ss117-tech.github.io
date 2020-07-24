@@ -266,19 +266,6 @@ function bubbleChart() {
     groupBubbles();
   }
 
-  function groupBubbles() {
-    hideCountryTitles();
-
-    // @v4 Reset the 'x' force to draw the bubbles to the center.
-    simulation.force('x', d3.forceX().strength(forceStrength).x(centre.x));
-
-    // @v4 We can reset the alpha value and restart the simulation
-    simulation.alpha(1).restart();
-  }
-
-  function hideCountryTitles() {
-    svg.selectAll('.country').remove();
-  }
 
   // callback function called after every tick of the force simulation
   // here we do the actual repositioning of the circles based on current x and y value of their bound node data
@@ -295,6 +282,45 @@ function bubbleChart() {
 
   function nodeCountryPos(d) {
     return countryCenters[d.country].x;
+  }
+
+  function groupBubbles() {
+    hideCountryTitles();
+
+    // @v4 Reset the 'x' force to draw the bubbles to the center.
+    simulation.force('x', d3.forceX().strength(forceStrength).x(centre.x));
+
+    // @v4 We can reset the alpha value and restart the simulation
+    simulation.alpha(1).restart();
+  }
+
+  function hideCountryTitles() {
+    svg.selectAll('.country').remove();
+  }
+
+  function splitBubbles() {
+    showCountryTitles();
+
+    // @v4 Reset the 'x' force to draw the bubbles to their year centers
+    simulation.force('x', d3.forceX().strength(forceStrength).x(nodeCountryPos));
+
+    // @v4 We can reset the alpha value and restart the simulation
+    simulation.alpha(1).restart();
+  }
+
+  function showCountryTitles() {
+    // Another way to do this would be to create
+    // the year texts once and then just hide them.
+    var countryData = d3.keys(countryTitleX);
+    var country = svg.selectAll('.country')
+      .data(countryData);
+
+    country.enter().append('text')
+      .attr('class', 'country')
+      .attr('x', function (d) { return countryTitleX[d]; })
+      .attr('y', 40)
+      .attr('text-anchor', 'middle')
+      .text(function (d) { return d; });
   }
 
 
