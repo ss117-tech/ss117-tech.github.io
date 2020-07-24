@@ -126,7 +126,7 @@ function bubbleChart() {
       //.enter()
       //.append('g')
 
-      var tt = d3.select('body')
+      var tooltip = d3.select('body')
         .append('div')
         .attr('class', 'tooltip')
         .style('pointer-events', 'none')
@@ -145,7 +145,10 @@ function bubbleChart() {
       .classed('bubble', true)
       .attr('r', d => d.radius)
       .attr('fill', d => fillColour(d.country))
-      .attr('stroke', d =>  d3.rgb(fillColor(d.country)).darker());
+      .on('mouseover', showDetail);
+
+
+
 
     //bubbles = elements.enter().append('circle')
     //    .classed('bubble', true)
@@ -188,6 +191,23 @@ function bubbleChart() {
 
   // return chart function from closure
   return chart;
+}
+
+function showDetail(d) {
+  // change outline to indicate hover state.
+  d3.select(this).attr('stroke', 'black');
+
+  var content = '<span class="name">City: </span><span class="value">' +
+                d.city +
+                '</span><br/>' +
+                '<span class="name">Flights: </span><span class="value">$' +
+                addCommas(d.flights) +
+                '</span><br/>' +
+                '<span class="name">Country: </span><span class="value">' +
+                d.country +
+                '</span>';
+
+  tooltip.showTooltip(content, d3.event);
 }
 
 // new bubble chart instance
