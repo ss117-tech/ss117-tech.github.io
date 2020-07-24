@@ -133,20 +133,15 @@ function bubbleChart() {
     //  .attr('r', d => d.radius)
     //   .attr('fill', d => fillColour(d.country));
 
-    bubblesE = elements.enter().append('circle')
+    bubbles = elements.enter().append('circle')
         .classed('bubble', true)
-        .attr('r', 0)
+        .attr('r', d => d.radius)
         .attr('fill', function (d) { return fillColor(d.country); })
         .attr('stroke', function (d) { return d3.rgb(fillColor(d.country)).darker(); })
-        .attr('stroke-width', 2)
-        .on('mouseover', showDetail)
-        .on('mouseout', hideDetail);
+        .attr('stroke-width', 2);
+        //.on('mouseover', showDetail)
+        //.on('mouseout', hideDetail);
 
-    bubbles = bubbles.merge(bubblesE);
-
-    bubbles.transition()
-      .duration(2000)
-      .attr('r', function (d) { return d.radius; });
 
     // labels
     //labels = elements
