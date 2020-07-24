@@ -102,33 +102,34 @@ function bubbleChart() {
 
     // bind nodes data to circle elements
 
-    bubbles = svg.selectAll('.bubble')
-      .data(nodes, function (d) { return d.id; });
+    //bubbles = svg.selectAll('.bubble')
+    //  .data(nodes, function (d) { return d.id; });
 
-    var bubblesE = bubbles.enter().append('circle')
-        .classed('bubble', true)
-        .attr('r', 0)
-        .attr('fill', function (d) { return fillColor(d.country); })
-        .attr('stroke', function (d) { return d3.rgb(fillColor(d.country)).darker(); })
-        .attr('stroke-width', 2)
-        .on('mouseover', showDetail)
-        .on('mouseout', hideDetail);
+    //var bubblesE = bubbles.enter().append('circle')
+    //    .classed('bubble', true)
+    //    .attr('r', 0)
+    //    .attr('fill', function (d) { return fillColor(d.country); })
+    //    .attr('stroke', function (d) { return d3.rgb(fillColor(d.country)).darker(); })
+    //    .attr('stroke-width', 2)
+    //    .on('mouseover', showDetail)
+    //    .on('mouseout', hideDetail);
 
-    bubbles = bubbles.merge(bubblesE);
+    //bubbles = bubbles.merge(bubblesE);
 
-    bubbles.transition()
-      .duration(2000)
-      .attr('r', function (d) { return d.radius; });
-    //const elements = svg.selectAll('.bubble')
-    //  .data(nodes, d => d.country)
-    //  .enter()
-    //  .append('g')
+    //bubbles.transition()
+    //  .duration(2000)
+    //  .attr('r', function (d) { return d.radius; });
 
-    //bubbles = elements
-    //  .append('circle')
-    //  .classed('bubble', true)
-   //    .attr('r', d => d.radius)
-   //    .attr('fill', d => fillColour(d.country))
+    elements = svg.selectAll('.bubble')
+      .data(nodes, d => d.country)
+      .enter()
+      .append('g')
+
+    bubbles = elements
+      .append('circle')
+      .classed('bubble', true)
+      .attr('r', d => d.radius)
+       .attr('fill', d => fillColour(d.country))
 
     // labels
     //labels = elements
