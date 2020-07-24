@@ -2,8 +2,60 @@ function bubbleChart() {
   var width = 1024;
   var height = 768;
 
+
   // location to centre the bubbles
   var centre = { x: width/2, y: height/2 };
+
+  var countryCenters = {
+
+    US: { x: width / 9, y: height / 2 },
+    UK: { x: 2*width / 9, y: height / 2 },
+    China: { x: 3 * width / 9, y: height / 2 },
+    France: { x: 4 * width / 9, y: height / 2 },
+    Spain:{ x:5 * width / 9, y: height / 2 },
+    Germany:{ x:6 * width / 9, y: height / 2 },
+    Italy:{ x:7 * width / 9, y: height / 2 },
+    Others:{ x: 8 * width / 9, y: height / 2 },
+    /*
+    US: { x: 3 * width / 16, y: height / 3 },
+    UK: { x: width / 3, y: 2* height / 3 },
+    China: { x: 3 * width / 8, y: height / 3 }
+    /*
+    US: { x: width / 2, y: 2* height / 3 },
+    China: { x: 3 * width / 16, y: height / 3 }
+
+    Spain:{ x: width /5, y: 2* height / 3 },
+    UK:{ x: 3 * width / 8, y: height / 3 },
+    Germany:{ x: 5 * width / 8, y: height / 3 },
+    Italy:{ x: 3 * width / 5, y: 2* height / 3 },
+    France:{ x: 13 * width / 16, y: height / 3 }
+    Others:{ x: 4 * width / 5, y: 2* height / 3 }*/
+  };
+
+  // X locations of the year titles.
+  var countryTitleX = {
+    US: width / 9,
+    UK: 2*width / 9,
+    China: 3 * width / 9,
+    France: 4 * width / 9,
+    Spain: 5 * width / 9,
+    Germany:6 * width / 9,
+    Italy:7 * width / 9,
+    Others: 8 * width / 9,
+    /*US:  width / 10,
+    UK:  9 * width / 40,
+    China: 7 * width / 20
+    */
+    /*UK: 160,
+    France: width / 7
+    China: width - 160,
+    US: width / 8,
+    Spain: width*2/ 8,
+    Germany: width*4/ 8,
+    Italy: width*5/ 8,
+    France: width*6/ 8,
+    Others:width*7/ 8*/
+  };
 
   // strength to apply to the position forces
   var forceStrength = 0.03;
@@ -240,6 +292,11 @@ function bubbleChart() {
     //  .attr('x', d => d.x)
     //  .attr('y', d => d.y)
   }
+
+  function nodeCountryPos(d) {
+    return countryCenters[d.country].x;
+  }
+
 
   chart.toggleDisplay = function (displayName) {
     //if (displayName === 'country') {
