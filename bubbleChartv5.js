@@ -144,7 +144,8 @@ function bubbleChart() {
       .append('circle')
       .classed('bubble', true)
       .attr('r', d => d.radius)
-      .attr('fill', d => fillColour(d.country));
+      .attr('fill', d => fillColour(d.country))
+      .attr('stroke', d =>  d3.rgb(fillColor(d.country)).darker());
 
     //bubbles = elements.enter().append('circle')
     //    .classed('bubble', true)
