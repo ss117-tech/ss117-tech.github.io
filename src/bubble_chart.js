@@ -18,7 +18,7 @@ function bubbleChart() {
   // on which view mode is selected.
   var center = { x: width / 2, y: height / 2 };
 
-  var yearCenters = {
+  var countryCenters = {
 
     US: { x: width / 9, y: height / 2 },
     UK: { x: 2*width / 9, y: height / 2 },
@@ -45,7 +45,7 @@ function bubbleChart() {
   };
 
   // X locations of the year titles.
-  var yearsTitleX = {
+  var countryTitleX = {
     US: width / 9,
     UK: 2*width / 9,
     China: 3 * width / 9,
@@ -242,8 +242,8 @@ function bubbleChart() {
    * Provides a x value for each node to be used with the split by year
    * x force.
    */
-  function nodeYearPos(d) {
-    return yearCenters[d.country].x;
+  function nodeCountryPos(d) {
+    return countryCenters[d.country].x;
   }
 
 
@@ -254,7 +254,7 @@ function bubbleChart() {
    * center of the visualization.
    */
   function groupBubbles() {
-    hideYearTitles();
+    hideCountryTitles();
 
     // @v4 Reset the 'x' force to draw the bubbles to the center.
     simulation.force('x', d3.forceX().strength(forceStrength).x(center.x));
@@ -271,10 +271,10 @@ function bubbleChart() {
    * yearCenter of their data's year.
    */
   function splitBubbles() {
-    showYearTitles();
+    showCountryTitles();
 
     // @v4 Reset the 'x' force to draw the bubbles to their year centers
-    simulation.force('x', d3.forceX().strength(forceStrength).x(nodeYearPos));
+    simulation.force('x', d3.forceX().strength(forceStrength).x(nodeCountryPos));
 
     // @v4 We can reset the alpha value and restart the simulation
     simulation.alpha(1).restart();
@@ -283,23 +283,23 @@ function bubbleChart() {
   /*
    * Hides Year title displays.
    */
-  function hideYearTitles() {
-    svg.selectAll('.year').remove();
+  function hideCountryTitles() {
+    svg.selectAll('.country').remove();
   }
 
   /*
    * Shows Year title displays.
    */
-  function showYearTitles() {
+  function showCountryTitles() {
     // Another way to do this would be to create
     // the year texts once and then just hide them.
-    var yearsData = d3.keys(yearsTitleX);
-    var years = svg.selectAll('.country')
-      .data(yearsData);
+    var countryData = d3.keys(countryTitleX);
+    var country = svg.selectAll('.country')
+      .data(countryData);
 
-    years.enter().append('text')
+    country.enter().append('text')
       .attr('class', 'country')
-      .attr('x', function (d) { return yearsTitleX[d]; })
+      .attr('x', function (d) { return countryTitleX[d]; })
       .attr('y', 40)
       .attr('text-anchor', 'middle')
       .text(function (d) { return d; });
