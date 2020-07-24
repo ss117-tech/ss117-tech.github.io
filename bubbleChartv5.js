@@ -210,11 +210,11 @@ function bubbleChart() {
     simulation.nodes(nodes);
       //.on('tick', ticked)
       //.restart();
-      groupBubbles();
+    //groupBubbles();
   }
 
   function groupBubbles() {
-    hideCountryTitles();
+    //hideCountryTitles();
 
     // @v4 Reset the 'x' force to draw the bubbles to the center.
     simulation.force('x', d3.forceX().strength(forceStrength).x(center.x));
@@ -224,7 +224,7 @@ function bubbleChart() {
   }
 
   function hideCountryTitles() {
-    svg.selectAll('.country').remove();
+    //svg.selectAll('.country').remove();
   }
 
   // callback function called after every tick of the force simulation
