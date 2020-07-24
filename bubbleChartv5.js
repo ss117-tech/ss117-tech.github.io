@@ -156,13 +156,30 @@ function bubbleChart() {
                                 '</span>');
           }
 
+    var mousemove = function(d) {
+          tooltip
+            .html("The exact value of<br>this cell is: " + d.flights)
+            .style("left", (d3.mouse(this)[0]+70) + "px")
+            .style("top", (d3.mouse(this)[1]) + "px")
+        }
+
+    var mouseleave = function(d) {
+          d3.select(this)
+            .style("stroke", "none")
+            .style("opacity", 0.8);
+          tooltip
+              .style("opacity", 0)
+        }
+
     bubbles = elements
       .enter()
       .append('circle')
       .classed('bubble', true)
       .attr('r', d => d.radius)
       .attr('fill', d => fillColour(d.country))
-      .on('mouseover', mouseover);
+      .on('mouseover', mouseover)
+      .on("mousemove", mousemove)
+      .on("mouseleave", mouseleave);
 
 
 
