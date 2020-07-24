@@ -60,13 +60,27 @@ function bubbleChart() {
       .domain([0, maxAmount]);
 
     // use map() to convert raw data into node data
-    const myNodes = rawData.map(d => ({
-      ...d,
-      radius: radiusScale(+d.flights/16),
-      size: +d.flights,
-      x: Math.random() * 900,
-      y: Math.random() * 800
-    }))
+    //const myNodes = rawData.map(d => ({
+    //  ...d,
+    //  radius: radiusScale(+d.flights/16),
+    //  size: +d.flights,
+    //  x: Math.random() * 900,
+    //  y: Math.random() * 800
+    //}))
+
+    var myNodes = rawData.map(function (d) {
+      return {
+        id: d.id,
+        radius: radiusScale(+d.flights/16),
+        flights: +d.flights,
+        //name: d.grant_title,
+        //org: d.organization,
+        city: d.city,
+        country: d.country,
+        x: Math.random() * 900,
+        y: Math.random() * 800
+      };
+    });
 
     return myNodes;
   }
