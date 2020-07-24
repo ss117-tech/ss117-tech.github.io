@@ -208,8 +208,8 @@ function bubbleChart() {
     // set simulation's nodes to our newly created nodes array
     // simulation starts running automatically once nodes are set
     simulation.nodes(nodes)
-      .on('tick', ticked);
-      //.restart();
+      .on('tick', ticked)
+      .restart();
 
     groupBubbles();
   }
