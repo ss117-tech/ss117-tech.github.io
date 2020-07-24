@@ -126,6 +126,19 @@ function bubbleChart() {
       //.enter()
       //.append('g')
 
+      var tt = d3.select('body')
+        .append('div')
+        .attr('class', 'tooltip')
+        .style('pointer-events', 'none')
+        style('width', 240)
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "2px")
+        .style("border-radius", "5px")
+        .style("padding", "5px");
+
+
+
     bubbles = elements
       .enter()
       .append('circle')
