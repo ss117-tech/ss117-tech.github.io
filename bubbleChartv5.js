@@ -35,7 +35,7 @@ function bubbleChart() {
   // set up colour scale
   const fillColour = d3
   //.scaleOrdinal()
-  .scaleOrdinal(d3.schemeCategory20c)
+  .scaleOrdinal(d3.schemeCategory10)
   .domain(['US','UK','China','France','Spain','Germany', 'Italy','Others']);
   	//.domain(["1", "2", "3", "5", "99"])
   	//.range(["#0074D9", "#7FDBFF", "#39CCCC", "#3D9970", "#AAAAAA"]);
