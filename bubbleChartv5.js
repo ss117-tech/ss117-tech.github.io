@@ -292,4 +292,4 @@ function setupButtons() {
 // load data
 d3.csv('test4.csv').then(display);
 
-setupButtons();
+//setupButtons();
