@@ -1,12 +1,12 @@
 function bubbleChart() {
-  var width = 1024;
-  var height = 768;
+  const width = 1024;
+  const height = 768;
 
   // location to centre the bubbles
-  var center = { x: width / 2, y: height / 2 };
+  const center = { x: width / 2, y: height / 2 };
 
   // strength to apply to the position forces
-  var forceStrength = 0.03;
+  const forceStrength = 0.03;
 
   // these will be set in createNodes and chart functions
   let svg = null;
