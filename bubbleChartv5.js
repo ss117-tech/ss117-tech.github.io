@@ -20,12 +20,14 @@ function bubbleChart() {
   }
 
   // create a force simulation and add forces to it
-  const simulation = d3.forceSimulation()
+  var simulation = d3.forceSimulation()
+    .velocityDecay(0.2)
     .force('charge', d3.forceManyBody().strength(charge))
     // .force('center', d3.forceCenter(centre.x, centre.y))
     .force('x', d3.forceX().strength(forceStrength).x(centre.x))
     .force('y', d3.forceY().strength(forceStrength).y(centre.y))
-    .force('collision', d3.forceCollide().radius(d => d.radius + 1));
+    .on('tick', ticked);
+    //.force('collision', d3.forceCollide().radius(d => d.radius + 1));
 
   // force simulation starts up automatically, which we don't want as there aren't any nodes yet
   simulation.stop();
