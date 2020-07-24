@@ -145,7 +145,8 @@ function bubbleChart() {
               .style("opacity", 1);
             tooltip
                 .style("opacity", 1)
-                .html('<span class="name">City: </span><span class="value">' +
+                .html("The exact value of<br>this cell is: " + d.flights);
+                  /*'<span class="name">City: </span><span class="value">' +
                                 d.city +
                                 '</span><br/>' +
                                 '<span class="name">Flights: </span><span class="value">$' +
@@ -153,7 +154,7 @@ function bubbleChart() {
                                 '</span><br/>' +
                                 '<span class="name">Country: </span><span class="value">' +
                                 d.country +
-                                '</span>');
+                                '</span>');*/
           }
 
     var mousemove = function(d) {
