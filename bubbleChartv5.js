@@ -136,9 +136,9 @@ function bubbleChart() {
     bubbles = elements.enter().append('circle')
         .classed('bubble', true)
         .attr('r', d => d.radius)
-        .attr('fill', function (d) { return fillColor(d.country); })
-        .attr('stroke', function (d) { return d3.rgb(fillColor(d.country)).darker(); })
-        .attr('stroke-width', 2);
+        .attr('fill', function (d) { return fillColor(d.country); });
+        //.attr('stroke', function (d) { return d3.rgb(fillColor(d.country)).darker(); })
+        //.attr('stroke-width', 2);
         //.on('mouseover', showDetail)
         //.on('mouseout', hideDetail);
 
