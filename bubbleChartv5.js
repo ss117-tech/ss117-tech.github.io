@@ -33,9 +33,12 @@ function bubbleChart() {
   simulation.stop();
 
   // set up colour scale
-  const fillColour = d3.scaleOrdinal()
-  	.domain(["1", "2", "3", "5", "99"])
-  	.range(["#0074D9", "#7FDBFF", "#39CCCC", "#3D9970", "#AAAAAA"]);
+  const fillColour = d3
+  //.scaleOrdinal()
+  .scaleOrdinal(d3.schemeCategory20c)
+  .domain(['US','UK','China','France','Spain','Germany', 'Italy','Others']);
+  	//.domain(["1", "2", "3", "5", "99"])
+  	//.range(["#0074D9", "#7FDBFF", "#39CCCC", "#3D9970", "#AAAAAA"]);
 
   // data manipulation function takes raw data from csv and converts it into an array of node objects
   // each node will store data and visualisation values to draw a bubble
