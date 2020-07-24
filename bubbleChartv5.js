@@ -218,7 +218,7 @@ function bubbleChart() {
     hideCountryTitles();
 
     // @v4 Reset the 'x' force to draw the bubbles to the center.
-    simulation.force('x', d3.forceX().strength(forceStrength).x(center.x));
+    simulation.force('x', d3.forceX().strength(forceStrength).x(centre.x));
 
     // @v4 We can reset the alpha value and restart the simulation
     simulation.alpha(1).restart();
@@ -289,4 +289,4 @@ function setupButtons() {
 // load data
 d3.csv('test4.csv').then(display);
 
-//setupButtons();
+setupButtons();
