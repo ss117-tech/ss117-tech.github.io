@@ -154,7 +154,7 @@ function bubbleChart() {
         //name: d.grant_title,
         //org: d.organization,
         city: d.city,
-        year: d.country,
+        country: d.country,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
@@ -202,8 +202,8 @@ function bubbleChart() {
     var bubblesE = bubbles.enter().append('circle')
       .classed('bubble', true)
       .attr('r', 0)
-      .attr('fill', function (d) { return fillColor(d.year); })
-      .attr('stroke', function (d) { return d3.rgb(fillColor(d.year)).darker(); })
+      .attr('fill', function (d) { return fillColor(d.country); })
+      .attr('stroke', function (d) { return d3.rgb(fillColor(d.country)).darker(); })
       .attr('stroke-width', 2)
       .on('mouseover', showDetail)
       .on('mouseout', hideDetail);
@@ -243,7 +243,7 @@ function bubbleChart() {
    * x force.
    */
   function nodeYearPos(d) {
-    return yearCenters[d.year].x;
+    return yearCenters[d.country].x;
   }
 
 
@@ -294,11 +294,11 @@ function bubbleChart() {
     // Another way to do this would be to create
     // the year texts once and then just hide them.
     var yearsData = d3.keys(yearsTitleX);
-    var years = svg.selectAll('.year')
+    var years = svg.selectAll('.country')
       .data(yearsData);
 
     years.enter().append('text')
-      .attr('class', 'year')
+      .attr('class', 'country')
       .attr('x', function (d) { return yearsTitleX[d]; })
       .attr('y', 40)
       .attr('text-anchor', 'middle')
@@ -321,7 +321,7 @@ function bubbleChart() {
                   addCommas(d.flights) +
                   '</span><br/>' +
                   '<span class="name">Country: </span><span class="value">' +
-                  d.year +
+                  d.country +
                   '</span>';
 
     tooltip.showTooltip(content, d3.event);
@@ -333,7 +333,7 @@ function bubbleChart() {
   function hideDetail(d) {
     // reset outline
     d3.select(this)
-      .attr('stroke', d3.rgb(fillColor(d.year)).darker());
+      .attr('stroke', d3.rgb(fillColor(d.country)).darker());
 
     tooltip.hideTooltip();
   }
@@ -346,7 +346,7 @@ function bubbleChart() {
    * displayName is expected to be a string and either 'year' or 'all'.
    */
   chart.toggleDisplay = function (displayName) {
-    if (displayName === 'year') {
+    if (displayName === 'country') {
       splitBubbles();
     } else {
       groupBubbles();
