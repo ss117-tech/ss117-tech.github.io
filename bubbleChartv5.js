@@ -325,11 +325,11 @@ function bubbleChart() {
 
 
   chart.toggleDisplay = function (displayName) {
-    //if (displayName === 'country') {
-    //  splitBubbles();
-    //} else {
+    if (displayName === 'country') {
+      splitBubbles();
+    } else {
       groupBubbles();
-    //}
+    }
   };
   // return chart function from closure
   return chart;
