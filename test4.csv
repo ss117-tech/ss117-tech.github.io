@@ -1,4 +1,4 @@
-﻿id,flights,city,country
+﻿id,flights,group,start_year
 1,1438,Atlanta,US
 2,1153,London,UK
 3,6,London,Others

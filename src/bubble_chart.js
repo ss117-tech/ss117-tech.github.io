@@ -153,8 +153,8 @@ function bubbleChart() {
         value: +d.flights,
         //name: d.grant_title,
         //org: d.organization,
-        group: d.city,
-        year: d.country,
+        group: d.group,
+        year: d.start_year,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
