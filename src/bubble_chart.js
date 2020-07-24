@@ -154,7 +154,7 @@ function bubbleChart() {
         //name: d.grant_title,
         //org: d.organization,
         city: d.city,
-        year: d.start_year,
+        year: d.country,
         x: Math.random() * 900,
         y: Math.random() * 800
       };
