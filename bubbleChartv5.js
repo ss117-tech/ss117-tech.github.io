@@ -90,7 +90,7 @@ function bubbleChart() {
 
   // main entry point to bubble chart, returned by parent closure
   // prepares rawData for visualisation and adds an svg element to the provided selector and starts the visualisation process
-  let chart = function chart(selector, rawData) {
+  var chart = function chart(selector, rawData) {
     // convert raw data into nodes data
     nodes = createNodes(rawData);
 
@@ -241,64 +241,16 @@ function bubbleChart() {
     //  .attr('y', d => d.y)
   }
 
+  chart.toggleDisplay = function (displayName) {
+    //if (displayName === 'country') {
+    //  splitBubbles();
+    //} else {
+      groupBubbles();
+    //}
+  };
   // return chart function from closure
   return chart;
 }
-/*
-function showDetail(d) {
-  // change outline to indicate hover state.
-  d3.select(this).attr('stroke', 'black');
-
-  var content = '<span class="name">City: </span><span class="value">' +
-                d.city +
-                '</span><br/>' +
-                '<span class="name">Flights: </span><span class="value">$' +
-                addCommas(d.flights) +
-                '</span><br/>' +
-                '<span class="name">Country: </span><span class="value">' +
-                d.country +
-                '</span>';
-
-  //tooltip.showTooltip(content, d3.event);
-
-  tooltip.style('opacity', 1.0).html(content);
-
-  updatePosition(d3.event);
-}
-
-function updatePosition(event) {
-  var xOffset = 20;
-  var yOffset = 10;
-
-  var ttw = tt.style('width');
-  var tth = tt.style('height');
-
-  var wscrY = window.scrollY;
-  var wscrX = window.scrollX;
-
-  var curX = (document.all) ? event.clientX + wscrX : event.pageX;
-  var curY = (document.all) ? event.clientY + wscrY : event.pageY;
-  var ttleft = ((curX - wscrX + xOffset * 2 + ttw) > window.innerWidth) ?
-               curX - ttw - xOffset * 2 : curX + xOffset;
-
-  if (ttleft < wscrX + xOffset) {
-    ttleft = wscrX + xOffset;
-  }
-
-  var tttop = ((curY - wscrY + yOffset * 2 + tth) > window.innerHeight) ?
-              curY - tth - yOffset * 2 : curY + yOffset;
-
-  if (tttop < wscrY + yOffset) {
-    tttop = curY + yOffset;
-  }
-
-  tt
-    .style('top', tttop + 'px')
-    .style('left', ttleft + 'px');
-}
-*/
-
-
 
 // new bubble chart instance
 var myBubbleChart = bubbleChart();
@@ -332,7 +284,7 @@ function setupButtons() {
       // Toggle the bubble chart based on
       // the currently clicked button.
 
-      //myBubbleChart.toggleDisplay(buttonId);
+      myBubbleChart.toggleDisplay(buttonId);
     });
 }
 
