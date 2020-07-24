@@ -139,13 +139,30 @@ function bubbleChart() {
 
 
 
+     var mouseover = function(d) {
+            tooltip
+              .style("opacity", 1)
+            d3.select(this)
+              .style("stroke", "black")
+              .style("opacity", 1)
+              .html('<span class="name">City: </span><span class="value">' +
+                              d.city +
+                              '</span><br/>' +
+                              '<span class="name">Flights: </span><span class="value">$' +
+                              addCommas(d.flights) +
+                              '</span><br/>' +
+                              '<span class="name">Country: </span><span class="value">' +
+                              d.country +
+                              '</span>';)
+          }
+
     bubbles = elements
       .enter()
       .append('circle')
       .classed('bubble', true)
       .attr('r', d => d.radius)
       .attr('fill', d => fillColour(d.country))
-      .on('mouseover', showDetail);
+      .on('mouseover', mouseover);
 
 
 
@@ -192,7 +209,7 @@ function bubbleChart() {
   // return chart function from closure
   return chart;
 }
-
+/*
 function showDetail(d) {
   // change outline to indicate hover state.
   d3.select(this).attr('stroke', 'black');
@@ -244,6 +261,7 @@ function updatePosition(event) {
     .style('top', tttop + 'px')
     .style('left', ttleft + 'px');
 }
+*/
 
 // new bubble chart instance
 let myBubbleChart = bubbleChart();
