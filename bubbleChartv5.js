@@ -142,7 +142,7 @@ function bubbleChart() {
         //.on('mouseover', showDetail)
         //.on('mouseout', hideDetail);
 
-    var tooltip = floatingTooltip('gates_tooltip', 240);
+    //var tooltip = floatingTooltip('gates_tooltip', 240);
 
     // labels
     //labels = elements
