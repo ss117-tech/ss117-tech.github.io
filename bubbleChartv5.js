@@ -82,6 +82,9 @@ function bubbleChart() {
       };
     });
 
+    // sort them to prevent occlusion of smaller nodes.
+    myNodes.sort(function (a, b) { return b.flights - a.flights; });
+
     return myNodes;
   }
 
