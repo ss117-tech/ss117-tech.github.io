@@ -56,18 +56,35 @@
         <h3>a d3.js data visualization project using the Yelp Academic dataset<br />Stanley Lee - UIUC CS498 Data Visualization</h3>
       </div>
     </div>
-    <div class="section" id="bubble">
-      <div class="container">
-      <h1>Gates Foundation Educational Spending</h1>
-      <div id="toolbar">
-        <a href="#" id="all" class="button active">All Grants</a>
-        <a href="#" id="country" class="button">Grants By Year</a>
-      </div>
-      <div id="vis"></div>
 
+    <div class="section" id="airport">
+      <div id="content_div">
+        <h1>Airport trips</h1>
+        <div class="mainView">
+          <div>
+              <h2>Airlines</h2>
+              <svg id="AirlinesChart"></svg>
+          </div>
+          <div>
+              <h2>Airports</h2>
+              <svg id="Map"></svg>
+          </div>
+        </div>
       </div>
     </div>
-  </div>    
+
+    <div class="section" id="bubble">
+      <div class="container">
+        <h1>Gates Foundation Educational Spending</h1>
+        <div id="toolbar">
+          <a href="#" id="all" class="button active">All Grants</a>
+          <a href="#" id="country" class="button">Grants By Year</a>
+        </div>
+        <div id="vis"></div>
+      </div>
+    </div>
+    
+  </div>
   <script src="//d3js.org/d3.v4.min.js"></script>
   <script src="js/tooltip.js"></script>
   <script src="js/bubble_chart_test.js"></script>
