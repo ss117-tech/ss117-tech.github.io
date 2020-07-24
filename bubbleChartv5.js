@@ -258,9 +258,6 @@ var myBubbleChart = bubbleChart();
 // function called once promise is resolved and data is loaded from csv
 // calls bubble chart function to display inside #vis div
 function display(data) {
-  if (error) {
-    console.log(error);
-  }
 
   myBubbleChart('#vis', data);
 }
