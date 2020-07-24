@@ -207,7 +207,42 @@ function showDetail(d) {
                 d.country +
                 '</span>';
 
-  tooltip.showTooltip(content, d3.event);
+  //tooltip.showTooltip(content, d3.event);
+
+  tooltip.style('opacity', 1.0).html(content);
+
+  updatePosition(d3.event);
+}
+
+function updatePosition(event) {
+  var xOffset = 20;
+  var yOffset = 10;
+
+  var ttw = tt.style('width');
+  var tth = tt.style('height');
+
+  var wscrY = window.scrollY;
+  var wscrX = window.scrollX;
+
+  var curX = (document.all) ? event.clientX + wscrX : event.pageX;
+  var curY = (document.all) ? event.clientY + wscrY : event.pageY;
+  var ttleft = ((curX - wscrX + xOffset * 2 + ttw) > window.innerWidth) ?
+               curX - ttw - xOffset * 2 : curX + xOffset;
+
+  if (ttleft < wscrX + xOffset) {
+    ttleft = wscrX + xOffset;
+  }
+
+  var tttop = ((curY - wscrY + yOffset * 2 + tth) > window.innerHeight) ?
+              curY - tth - yOffset * 2 : curY + yOffset;
+
+  if (tttop < wscrY + yOffset) {
+    tttop = curY + yOffset;
+  }
+
+  tt
+    .style('top', tttop + 'px')
+    .style('left', ttleft + 'px');
 }
 
 // new bubble chart instance
