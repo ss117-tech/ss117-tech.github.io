@@ -331,7 +331,8 @@ function setupButtons() {
 
       // Toggle the bubble chart based on
       // the currently clicked button.
-      myBubbleChart.toggleDisplay(buttonId);
+
+      //myBubbleChart.toggleDisplay(buttonId);
     });
 }
 
