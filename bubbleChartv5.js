@@ -47,17 +47,22 @@ function bubbleChart() {
   function createNodes(rawData) {
     // use max size in the data as the max in the scale's domain
     // note we have to ensure that size is a number
-    const maxSize = d3.max(rawData, d => +d.flights);
+    //const maxSize = d3.max(rawData, d => +d.flights);
+    var maxAmount = d3.max(rawData, function (d) { return +d.flights; });
 
     // size bubbles based on area
-    const radiusScale = d3.scaleSqrt()
-      .domain([0, maxSize])
-      .range([0, 80])
+    //const radiusScale = d3.scaleSqrt()
+    //  .domain([0, maxSize])
+    //  .range([0, 80])
+    var radiusScale = d3.scalePow()
+      .exponent(0.5)
+      .range([2, 85])
+      .domain([0, maxAmount]);
 
     // use map() to convert raw data into node data
     const myNodes = rawData.map(d => ({
       ...d,
-      radius: radiusScale(+d.flights),
+      radius: radiusScale(+d.flights/16),
       size: +d.flights,
       x: Math.random() * 900,
       y: Math.random() * 800
