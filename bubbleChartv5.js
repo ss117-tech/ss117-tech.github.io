@@ -130,7 +130,7 @@ function bubbleChart() {
         .append('div')
         .attr('class', 'tooltip')
         .style('pointer-events', 'none')
-        style('width', 240)
+        .style('width', 240)
         .style("background-color", "white")
         .style("border", "solid")
         .style("border-width", "2px")
