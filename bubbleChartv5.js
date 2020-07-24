@@ -140,21 +140,20 @@ function bubbleChart() {
 
 
      var mouseover = function(d) {
-            tooltip
-              .style("opacity", 1)
-
             d3.select(this)
               .style("stroke", "black")
-              .style("opacity", 1)
-              .html('<span class="name">City: </span><span class="value">' +
-                              d.city +
-                              '</span><br/>' +
-                              '<span class="name">Flights: </span><span class="value">$' +
-                              addCommas(d.flights) +
-                              '</span><br/>' +
-                              '<span class="name">Country: </span><span class="value">' +
-                              d.country +
-                              '</span>')
+              .style("opacity", 1);
+            tooltip
+                .style("opacity", 1)
+                .html('<span class="name">City: </span><span class="value">' +
+                                d.city +
+                                '</span><br/>' +
+                                '<span class="name">Flights: </span><span class="value">$' +
+                                addCommas(d.flights) +
+                                '</span><br/>' +
+                                '<span class="name">Country: </span><span class="value">' +
+                                d.country +
+                                '</span>');
           }
 
     bubbles = elements
