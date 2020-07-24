@@ -298,13 +298,45 @@ function updatePosition(event) {
 }
 */
 
+
+
 // new bubble chart instance
-let myBubbleChart = bubbleChart();
+var myBubbleChart = bubbleChart();
 
 // function called once promise is resolved and data is loaded from csv
 // calls bubble chart function to display inside #vis div
 function display(data) {
+  if (error) {
+    console.log(error);
+  }
+
   myBubbleChart('#vis', data);
 }
+
+
+function setupButtons() {
+  d3.select('#toolbar')
+    .selectAll('.button')
+    .on('click', function () {
+      // Remove active class from all buttons
+      d3.selectAll('.button').classed('active', false);
+      // Find the button just clicked
+      var button = d3.select(this);
+
+      // Set it as the active button
+      button.classed('active', true);
+
+      // Get the id of the button
+      var buttonId = button.attr('id');
+
+      // Toggle the bubble chart based on
+      // the currently clicked button.
+      myBubbleChart.toggleDisplay(buttonId);
+    });
+}
+
+
 // load data
 d3.csv('test4.csv').then(display);
+
+setupButtons();
