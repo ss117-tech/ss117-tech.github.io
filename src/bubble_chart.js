@@ -153,7 +153,7 @@ function bubbleChart() {
         flights: +d.flights,
         //name: d.grant_title,
         //org: d.organization,
-        group: d.group,
+        city: d.city,
         year: d.start_year,
         x: Math.random() * 900,
         y: Math.random() * 800
@@ -314,13 +314,13 @@ function bubbleChart() {
     // change outline to indicate hover state.
     d3.select(this).attr('stroke', 'black');
 
-    var content = '<span class="name">Title: </span><span class="value">' +
-                  d.group +
+    var content = '<span class="name">City: </span><span class="value">' +
+                  d.city +
                   '</span><br/>' +
-                  '<span class="name">Amount: </span><span class="value">$' +
+                  '<span class="name">Flights: </span><span class="value">$' +
                   addCommas(d.flights) +
                   '</span><br/>' +
-                  '<span class="name">Year: </span><span class="value">' +
+                  '<span class="name">Country: </span><span class="value">' +
                   d.year +
                   '</span>';
 
@@ -333,7 +333,7 @@ function bubbleChart() {
   function hideDetail(d) {
     // reset outline
     d3.select(this)
-      .attr('stroke', d3.rgb(fillColor(d.group)).darker());
+      .attr('stroke', d3.rgb(fillColor(d.year)).darker());
 
     tooltip.hideTooltip();
   }
