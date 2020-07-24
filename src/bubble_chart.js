@@ -150,7 +150,7 @@ function bubbleChart() {
       return {
         id: d.id,
         radius: radiusScale(+d.flights/16),
-        value: +d.flights,
+        flights: +d.flights,
         //name: d.grant_title,
         //org: d.organization,
         group: d.group,
@@ -161,7 +161,7 @@ function bubbleChart() {
     });
 
     // sort them to prevent occlusion of smaller nodes.
-    myNodes.sort(function (a, b) { return b.value - a.value; });
+    myNodes.sort(function (a, b) { return b.flights - a.flights; });
 
     return myNodes;
   }
@@ -318,7 +318,7 @@ function bubbleChart() {
                   d.group +
                   '</span><br/>' +
                   '<span class="name">Amount: </span><span class="value">$' +
-                  addCommas(d.value) +
+                  addCommas(d.flights) +
                   '</span><br/>' +
                   '<span class="name">Year: </span><span class="value">' +
                   d.year +
