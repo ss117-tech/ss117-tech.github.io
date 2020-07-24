@@ -140,12 +140,9 @@ function bubbleChart() {
 
 
      var mouseover = function(d) {
-            d3.select(this)
-              .style("stroke", "black")
-              .style("opacity", 1);
             tooltip
                 .style("opacity", 1)
-                .html("The exact value of<br>this cell is: " + d.flights);
+                .html("The exact value of<br>this cell is 1 ")
                   /*'<span class="name">City: </span><span class="value">' +
                                 d.city +
                                 '</span><br/>' +
@@ -155,6 +152,10 @@ function bubbleChart() {
                                 '<span class="name">Country: </span><span class="value">' +
                                 d.country +
                                 '</span>');*/
+
+                                d3.select(this)
+                                  .style("stroke", "black")
+                                  .style("opacity", 1)
           }
 
     var mousemove = function(d) {
@@ -167,7 +168,7 @@ function bubbleChart() {
     var mouseleave = function(d) {
           d3.select(this)
             .style("stroke", "none")
-            .style("opacity", 0.8);
+            .style("opacity", 0.8)
           tooltip
               .style("opacity", 0)
         }
