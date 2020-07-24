@@ -207,9 +207,24 @@ function bubbleChart() {
 
     // set simulation's nodes to our newly created nodes array
     // simulation starts running automatically once nodes are set
-    simulation.nodes(nodes)
-      .on('tick', ticked)
-      .restart();
+    simulation.nodes(nodes);
+      //.on('tick', ticked)
+      //.restart();
+      groupBubbles();
+  }
+
+  function groupBubbles() {
+    hideCountryTitles();
+
+    // @v4 Reset the 'x' force to draw the bubbles to the center.
+    simulation.force('x', d3.forceX().strength(forceStrength).x(center.x));
+
+    // @v4 We can reset the alpha value and restart the simulation
+    simulation.alpha(1).restart();
+  }
+
+  function hideCountryTitles() {
+    svg.selectAll('.country').remove();
   }
 
   // callback function called after every tick of the force simulation
