@@ -1,104 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>CS498 Data Visualization Final Project - Subramanian Shankar</title>
-  <meta name="author" content="Subramanian Shankar" />
-  <meta name="description" content="fullPage full-screen backgrounds." />
-  <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
-  <meta name="Resource-type" content="Document" />
-
-  <link href='https://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-
-  <!--script type="text/javascript" src="js/d3.v3.js"></script-->
-  <script type="text/javascript" src="d3-test.min.js"></script>
-  <!-- import fullPage -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-
-  <!-- import d3.v4 -->
-  <!--script type="text/javascript" src="js/d3-annotation.min.js"></script-->
-
-  <style>
-      body {
-          font-family: Helvetica, Arial, sans-serif
-      }
-
-      h1 {
-          background-color: #2a5599;
-          /* TODO 1
-          change the text to white and add a padding of 5px
-          2 lines of code
-          */
-          color: white;
-          padding: 5px;
-      }
-
-      /* TODO 2
-      Add code to show a black border of 1px around all SVGs elements in the page
-      1-3 lines of code
-      */
-      svg {
-        color: black;
-        border: 1px solid black;
-      }
-
-      /* TODO 3
-       - Use the "display flex" feature from to show the items from class `mainView` side by side
-       1-3 lines of cide
-        */
-        .mainView{
-            display: flex;
-        }
-
-  </style>
-
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/bubble_chart.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bubble chart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
-  <div id="fullpage">
-    <div class="section" id="title">
-      <div id="title_text">
-        <h1>Diving into the Airport Business</h1>
-      </div>
+    <div id="chart">
+
     </div>
 
-    <div class="section" id="airport">
-      <div id="content_div">
-        <h1>Airport trips</h1>
-        <div class="mainView">
-          <div>
-              <h2>Airlines</h2>
-              <svg id="AirlinesChart"></svg>
-          </div>
-          <div>
-              <h2>Airports</h2>
-              <svg id="Map"></svg>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--script type="text/javascript" src="js/d3.min.js"></script-->
-    <!--div class="section" id="bubble">
-      <div class="container">
-        <h1>Gates Foundation Educational Spending</h1>
-        <div id="toolbar">
-          <a href="#" id="all" class="button active">All Grants</a>
-          <a href="#" id="country" class="button">Grants By Year</a>
-        </div>
-        <div id="vis"></div>
-      </div>
-    </div-->
-
-  </div>
-  <script src="airports.js"></script>
-  <!--script src="js/tooltip.js"></script>
-  <script src="js/bubble_chart_test.js"></script-->
-
-
-
+    <script src="main.js"></script>
 </body>
 </html>
