@@ -101,24 +101,42 @@ function bubbleChart() {
       .attr('height', height)
 
     // bind nodes data to circle elements
-    const elements = svg.selectAll('.bubble')
-      .data(nodes, d => d.country)
-      .enter()
-      .append('g')
 
-    bubbles = elements
-      .append('circle')
-      .classed('bubble', true)
-      .attr('r', d => d.radius)
-      .attr('fill', d => fillColour(d.country))
+    bubbles = svg.selectAll('.bubble')
+      .data(nodes, function (d) { return d.id; });
+
+    var bubblesE = bubbles.enter().append('circle')
+        .classed('bubble', true)
+        .attr('r', 0)
+        .attr('fill', function (d) { return fillColor(d.country); })
+        .attr('stroke', function (d) { return d3.rgb(fillColor(d.country)).darker(); })
+        .attr('stroke-width', 2)
+        .on('mouseover', showDetail)
+        .on('mouseout', hideDetail);
+
+    bubbles = bubbles.merge(bubblesE);
+
+    bubbles.transition()
+      .duration(2000)
+      .attr('r', function (d) { return d.radius; });
+    //const elements = svg.selectAll('.bubble')
+    //  .data(nodes, d => d.country)
+    //  .enter()
+    //  .append('g')
+
+    //bubbles = elements
+    //  .append('circle')
+    //  .classed('bubble', true)
+   //    .attr('r', d => d.radius)
+   //    .attr('fill', d => fillColour(d.country))
 
     // labels
-    labels = elements
-      .append('text')
-      .attr('dy', '.3em')
-      .style('text-anchor', 'middle')
-      .style('font-size', 10)
-      .text(d => d.country)
+    //labels = elements
+    //  .append('text')
+    //  .attr('dy', '.3em')
+    //  .style('text-anchor', 'middle')
+    //  .style('font-size', 10)
+    //  .text(d => d.country)
 
     // set simulation's nodes to our newly created nodes array
     // simulation starts running automatically once nodes are set
@@ -135,9 +153,9 @@ function bubbleChart() {
       .attr('cx', d => d.x)
       .attr('cy', d => d.y)
 
-    labels
-      .attr('x', d => d.x)
-      .attr('y', d => d.y)
+    //labels
+    //  .attr('x', d => d.x)
+    //  .attr('y', d => d.y)
   }
 
   // return chart function from closure
