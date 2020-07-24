@@ -121,15 +121,17 @@ function bubbleChart() {
     //  .attr('r', function (d) { return d.radius; });
 
     elements = svg.selectAll('.bubble')
-      .data(nodes, d => d.country)
-      .enter()
-      .append('g')
+      //.data(nodes, d => d.country)
+      .data(nodes, function (d) { return d.id; });
+      //.enter()
+      //.append('g')
 
     bubbles = elements
+      .enter()
       .append('circle')
       .classed('bubble', true)
       .attr('r', d => d.radius)
-       .attr('fill', d => fillColour(d.country))
+       .attr('fill', d => fillColour(d.country));
 
     // labels
     //labels = elements
