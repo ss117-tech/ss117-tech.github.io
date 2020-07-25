@@ -282,7 +282,9 @@ function bubbleChart() {
                 .style("visibility", "visible")
                 .html
                 //("The exact value of<br>this cell is 1 ")
-                ("<p>I'm a tooltip written in HTML</p>");
+                ("<p>I'm a tooltip written in HTML</p>")
+                .style("left", (d3.event.pageX) + "px")
+                         .style("top", (d3.event.pageY - 28) + "px");;
 
           d3.select(this)
                                   .style("stroke", "black")
