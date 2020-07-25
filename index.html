@@ -19,7 +19,7 @@ div.tooltip {
   border: 0px;
   border-radius: 8px;
 }
-
+*/
 </style>
 <body>
 
@@ -90,10 +90,11 @@ d3.csv("data.csv").then(function(data) {
          .duration(200)
          .style("opacity", .9);
        tooltip.html(
-         '<a href= "http://google.com">' + // The first <a> tag
+         /*'<a href= "http://google.com">' + // The first <a> tag
          formatTime(d.date) +
          "</a>" +                          // closing </a> tag
-         "<br/>"  + d.close)
+         "<br/>"  + d.close*/
+          '<p>Check</p>'+d.close)
          .style("left", (d3.event.pageX) + "px")
          .style("top", (d3.event.pageY - 28) + "px");
        });
