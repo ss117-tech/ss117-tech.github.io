@@ -194,11 +194,10 @@ function bubbleChart() {
      var mouseover = function(d) {
             tooltip
                 .style("opacity", 1)
+                .style("visibility", "visible")
                 .html
                 //("The exact value of<br>this cell is 1 ")
-                ('<span class="name">City: </span><span class="value">' +
-                                d.city +
-                                '</span>');
+                ("<p>I'm a tooltip written in HTML</p>");
 
           d3.select(this)
                                   .style("stroke", "black")
