@@ -1,117 +1,246 @@
-<html>
+<!DOCTYPE html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>CS498 Data Visualization Final Project - Subramanian Shankar</title>
-  <meta name="author" content="Subramanian Shankar" />
-  <meta name="description" content="fullPage full-screen backgrounds." />
-  <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
-  <meta name="Resource-type" content="Document" />
-
-  <link href='https://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-
-  <!--script type="text/javascript" src="js/d3.v3.js"></script-->
-  <script type="text/javascript" src="d3.js"></script>
-  <!-- import fullPage -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-
-  <!-- import d3.v4 -->
-  <!--script type="text/javascript" src="js/d3-annotation.min.js"></script-->
-
+  <meta charset="utf-8">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="d3-tip.js"></script>
   <style>
-      body {
-          font-family: Helvetica, Arial, sans-serif
-      }
-
-      h1 {
-          background-color: #2a5599;
-          /* TODO 1
-          change the text to white and add a padding of 5px
-          2 lines of code
-          */
-          color: white;
-          padding: 5px;
-      }
-
-      /* TODO 2
-      Add code to show a black border of 1px around all SVGs elements in the page
-      1-3 lines of code
-      */
-      svg {
-        color: black;
-        border: 1px solid black;
-      }
-
-      /* TODO 3
-       - Use the "display flex" feature from to show the items from class `mainView` side by side
-       1-3 lines of cide
-        */
-        .mainView{
-            display: flex;
+    :root { --var-color-grey: #898989; }
+    body {
+        margin:0;
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        font-family: Helvetica; ;
         }
+    text {
+		font-family: Helvetica;
+        color: var(--var-color-grey);
+        font-size: 1.2em;
+	}
+	.y.axis path,
+	.y.axis line {
+		fill: none;
+        stroke: var(--var-color-grey);
+		shape-rendering: crispEdges;
+	}
+    .x.axis path,
+    .x.axis line,
+    .grid path { stroke-width: 0; }
+    .tick line {
+        stroke: lightgrey;
+        opacity: 0.6;
+        stroke-dasharray: 2,1;
+        stroke-width: 1;
+        shape-rendering: crispEdges;
+    }
+    .d3-tip {
+      line-height: 1;
+      padding: 6px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      border-radius: 4px;
+      font-size: 12px;
+    }
 
   </style>
-
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/bubble_chart.css">
-
 </head>
 <body>
-  <div id="fullpage">
-    <div class="section" id="title">
-      <div id="title_text">
-        <h1>Diving into the Airport Business</h1>
-      </div>
-    </div>
+<div id="data"></div>
+  <script>
+    // Size and color settings for the chart
+    var totalWidth = 800;
+    var totalheight = 500;
+    var margin = {top: 40, right: 30, bottom: 30, left: 50},
+        width = totalWidth - margin.left - margin.right,
+        height = totalheight - margin.top - margin.bottom;
+    var barWidth = 40;
+    var boxPlotColor = "#898989";
+    var medianLineColor = "#ffffff";
+    var axisColor = "#898989";
 
-    <div class="section" id="airport">
-      <div id="content_div">
-        <h1>Airport trips</h1>
-        <div class="mainView">
-          <div>
-              <h2>Airlines</h2>
-              <svg id="AirlinesChart"></svg>
-          </div>
-          <div>
-              <h2>Airports</h2>
-              <svg id="Map"></svg>
-          </div>
-        </div>
-      </div>
-    </div>
+    // Setup the svg and group we will draw the box plot in
+    var svg = d3.select("body").append("svg")
+    .attr("width", totalWidth)
+    .attr("height", totalheight)
+    .append("g")
+    .attr("transform", "translate(" + (margin.left - barWidth) + "," + margin.top + ")");
 
-    <div class="section" id="bubble">
-      <div class="container">
-        <h1>Gates Foundation Educational Spending</h1>
-        <div id="toolbar">
-          <a href="#" id="all" class="button active">All Grants</a>
-          <a href="#" id="country" class="button">Grants By Year</a>
-        </div>
-        <div id="vis"></div>
-      </div>
-    </div>
+    // Move axis to center align the bars with the xAxis ticks
+    var yAxisBox = svg.append("g").attr("transform", "translate(40,0)");
+    var xAxisBox = svg.append("g").attr("transform", "translate(40,0)");
 
-    <!--script type="text/javascript" src="js/d3.min.js"></script-->
-    <!--div class="section" id="bubble">
-      <div class="container">
-        <h1>Gates Foundation Educational Spending</h1>
-        <div id="toolbar">
-          <a href="#" id="all" class="button active">All Grants</a>
-          <a href="#" id="country" class="button">Grants By Year</a>
-        </div>
-        <div id="vis"></div>
-      </div>
-    </div-->
+    // Load and process data
+    d3.json("data.json").then(groupCounts => {
+        // Select all values into one Array for axis scaling (min/ max)
+        // and sort group counts so quantile methods work
+        var globalCounts = [];
+        for (var key in groupCounts) {
+            var groupCount = groupCounts[key]
+            groupCounts[key] = groupCount.sort(sortNumber);
+            groupCounts[key].forEach(element => {
+                globalCounts.push(element);
+            });
+        }
 
-  </div>
-  <script src="airports.js"></script>
-  <script src="bubbleChartv5.js"></script>
+        // Prepare the data for the box plots
+        var plotData = [];
+        var colorIndex = 0.1;
+        var colorIndexStepSize = 0.08;
+        for (var [key, groupCount] of Object.entries(groupCounts)) {
+            var record = {};
+            var localMin = d3.min(groupCount);
+            var localMax = d3.max(groupCount);
 
-  <!--script src="js/tooltip.js"></script>
-  <script src="js/bubble_chart_test.js"></script-->
+            record["key"] = key;
+            record["counts"] = groupCount;
+            record["quartile"] = boxQuartiles(groupCount);
+            record["whiskers"] = [localMax, localMin];
+            record["color"] = d3.interpolateInferno(colorIndex);
 
+            plotData.push(record);
+            colorIndex += colorIndexStepSize;
+        }
 
+        // Create Tooltips
+        var tip = d3.tip().attr('class', 'd3-tip').direction('e').offset([0,5])
+            .html(function(d) {
+                var content = "<span style='margin-left: 2.5px;'><b>" + d.key + "</b></span><br>";
+                content +=`
+                    <table style="margin-top: 2.5px;">
+                            <tr><td>Max: </td><td style="text-align: right">` + d3.format(".2f")(d.whiskers[0]) + `</td></tr>
+                            <tr><td>Q3: </td><td style="text-align: right">` + d3.format(".2f")(d.quartile[0]) + `</td></tr>
+                            <tr><td>Median: </td><td style="text-align: right">` + d3.format(".2f")(d.quartile[1]) + `</td></tr>
+                            <tr><td>Q1: </td><td style="text-align: right">` + d3.format(".2f")(d.quartile[2]) + `</td></tr>
+                            <tr><td>Min: </td><td style="text-align: right">` + d3.format(".2f")(d.whiskers[1]) + `</td></tr>
+                    </table>
+                    `;
+                return content;
+            });
+        svg.call(tip);
 
+        // Compute an ordinal xScale for the keys in plotData
+        var xScale = d3.scalePoint()
+        .domain(Object.keys(groupCounts))
+        .rangeRound([0, width])
+        .padding([0.5]);
+
+        // Compute a global y scale based on the global counts
+        var min = d3.min(globalCounts);
+        var max = d3.max(globalCounts);
+        var yScale = d3.scaleLinear()
+            .range([height, 0])
+            .domain([min, max])
+            .nice();
+
+        // Setup the group the box plot elements will render in
+        var g = svg.append("g")
+        .attr("transform", "translate(20,0)");
+
+        // Draw the box plot vertical lines
+        var verticalLines = g.selectAll(".verticalLines")
+        .data(plotData)
+        .enter()
+        .append("line")
+        .attr("x1", d => { return xScale(d.key) + barWidth/2; })
+        .attr("y1", d =>  { return yScale(d.whiskers[0]); })
+        .attr("x2", d =>  { return xScale(d.key) + barWidth/2; })
+        .attr("y2", d => { return yScale(d.whiskers[1]); })
+        .attr("stroke", boxPlotColor)
+        .attr("stroke-width", 1)
+        .attr("stroke-dasharray", "5,5")
+        .attr("fill", "none");
+
+        // Draw the boxes of the box plot, filled in white and on top of vertical lines
+        var rects = g.selectAll("rect")
+        .data(plotData)
+        .enter()
+        .append("rect")
+        .attr("width", barWidth)
+        .attr("height", d => { return yScale(d.quartile[2]) - yScale(d.quartile[0]); })
+        .attr("x", d => { return xScale(d.key); })
+        .attr("y", d => { return yScale(d.quartile[0]); })
+        .attr("fill", d => { return d.color; })
+        .attr("stroke", boxPlotColor)
+        .attr("stroke-width", 1)
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide);
+
+        // Config for whiskers and median
+        var horizontalLineConfigs = [
+        {   // Top whisker
+            x1: d => { return xScale(d.key) },
+            y1: d => { return yScale(d.whiskers[0]) },
+            x2: d => { return xScale(d.key) + barWidth },
+            y2: d => { return yScale(d.whiskers[0]) },
+            color: boxPlotColor
+        },
+        {   // Median
+            x1: d => { return xScale(d.key) },
+            y1: d => { return yScale(d.quartile[1]) },
+            x2: d => { return xScale(d.key) + barWidth },
+            y2: d => { return yScale(d.quartile[1]) },
+            color: medianLineColor
+        },
+        {   // Bottom whisker
+            x1: d => { return xScale(d.key) },
+            y1: d => { return yScale(d.whiskers[1]) },
+            x2: d => { return xScale(d.key) + barWidth },
+            y2: d => { return yScale(d.whiskers[1]) },
+            color: boxPlotColor
+        }
+        ];
+
+        // Draw the whiskers and median line
+        for(var i=0; i < horizontalLineConfigs.length; i++) {
+            var lineConfig = horizontalLineConfigs[i];
+            var horizontalLine = g.selectAll(".whiskers")
+                .data(plotData)
+                .enter()
+                .append("line")
+                .attr("x1", lineConfig.x1)
+                .attr("y1", lineConfig.y1)
+                .attr("x2", lineConfig.x2)
+                .attr("y2", lineConfig.y2)
+                .attr("stroke", lineConfig.color)
+                .attr("stroke-width", 1)
+                .attr("fill", "none");
+        }
+
+        // add the Y gridlines
+        svg.append("g")
+            .attr("transform", "translate(40,0)")
+            .attr("class", "grid")
+            .call(d3.axisLeft(yScale)
+                .tickSize(-width)
+                .tickFormat("")
+            )
+
+        // Setup a scale on the left
+        var yAxis = d3.axisLeft(yScale).ticks(6)
+        yAxisBox.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+
+        // Setup a series axis on the bottom
+        var xAxis = d3.axisBottom(xScale);
+        xAxisBox.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+    });
+
+    // Quartile definition
+    function boxQuartiles(d) {
+        return [
+            d3.quantile(d, .75),
+            d3.quantile(d, .5),
+            d3.quantile(d, .25),
+        ];
+    }
+
+    // Perform a numeric sort on an array
+    function sortNumber(a,b) { return a - b; }
+  </script>
 </body>
-</html>
