@@ -274,15 +274,7 @@ function bubbleChart() {
         .style("border-radius", "5px")
         .style("padding", "5px");
 
-      var content = '<span class="name">City: </span><span class="value">' +
-                      d.city +
-                      '</span><br/>' +
-                      '<span class="name">Flights: </span><span class="value">$' +
-                      d.flights +
-                      '</span><br/>' +
-                      '<span class="name">Country: </span><span class="value">' +
-                      d.country +
-                      '</span>';
+
 
 
      var mouseover = function(d) {
@@ -291,7 +283,15 @@ function bubbleChart() {
                 .style("visibility", "visible")
                 .html
                 //("The exact value of<br>this cell is 1 ")
-                (content)
+                ('<span class="name">City: </span><span class="value">' +
+                                d.city +
+                                '</span><br/>' +
+                                '<span class="name">Flights: </span><span class="value">$' +
+                                d.flights +
+                                '</span><br/>' +
+                                '<span class="name">Country: </span><span class="value">' +
+                                d.country +
+                                '</span>')
                 .style("left", (d3.event.pageX) + "px")
                          .style("top", (d3.event.pageY - 28) + "px");;
 
