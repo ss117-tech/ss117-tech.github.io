@@ -194,15 +194,10 @@ function bubbleChart() {
      var mouseover = function(d) {
             tooltip
                 .style("opacity", 1)
-                .html("The exact value of<br>this cell is 1 ")
-                  /*'<span class="name">City: </span><span class="value">' +
+                .html
+                //("The exact value of<br>this cell is 1 ")
+                ('<span class="name">City: </span><span class="value">' +
                                 d.city +
-                                '</span><br/>' +
-                                '<span class="name">Flights: </span><span class="value">$' +
-                                addCommas(d.flights) +
-                                '</span><br/>' +
-                                '<span class="name">Country: </span><span class="value">' +
-                                d.country +
                                 '</span>');*/
 
                                 d3.select(this)
@@ -231,6 +226,7 @@ function bubbleChart() {
       .classed('bubble', true)
       .attr('r', d => d.radius)
       .attr('fill', d => fillColour(d.country))
+      .attr('stroke-width', 2)
       .on('mouseover', mouseover)
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave);
