@@ -198,9 +198,9 @@ function bubbleChart() {
                 //("The exact value of<br>this cell is 1 ")
                 ('<span class="name">City: </span><span class="value">' +
                                 d.city +
-                                '</span>');*/
+                                '</span>');
 
-                                d3.select(this)
+          d3.select(this)
                                   .style("stroke", "black")
                                   .style("opacity", 1)
           }
