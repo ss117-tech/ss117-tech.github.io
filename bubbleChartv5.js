@@ -226,7 +226,17 @@ function bubbleChart() {
       .attr('r', d => d.radius)
       .attr('fill', d => fillColour(d.country))
       .attr('stroke-width', 2)
-      .on('mouseover', mouseover)
+      .on('mouseover', function(d) {
+        tooltip.transition()
+          .duration(200)
+          .style("opacity", .9);
+        tooltip.html(
+          /*'<a href= "http://google.com">' + // The first <a> tag
+          formatTime(d.date) +
+          "</a>" +                          // closing </a> tag
+          "<br/>"  + d.close*/
+           '<p>Check</p>');
+        })
       .on("mousemove", mousemove)
       .on("mouseleave", mouseleave);
 
