@@ -6,7 +6,7 @@ var x = d3.scaleLinear()
     .range([0, 2 * Math.PI]);
 var y = d3.scaleSqrt()
     .range([0, radius]);
-var zsb_color = d3.scaleOrdinal(d3.schemeCategory20c);
+var zsb_color = d3.scaleOrdinal(d3.schemeCategory10);
 var partition = d3.partition();
 var arc = d3.arc()
     .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x0))); })
@@ -21,10 +21,10 @@ var zsb_svg = d3.select("#zoomable_sunburst").append("svg")
     .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
 var yelp_tree = { "name":"Yelp Database","children":[] };
 // tooltip for mouseover functionality
-var zsb_tooltip = floatingTooltip('zsb_tooltip', 240);
+//var zsb_tooltip = floatingTooltip('zsb_tooltip', 240);
 
 d3.csv("data/zoomable_sunburst.csv", function(error, data) {
-    if (error) throw error;
+    //if (error) throw error;
 
     data.forEach(function(d) {
         // iterate through each row of csv data
@@ -77,14 +77,14 @@ function showZSBDetail(d) {
                     d.value +
                     '</span>';
 
-    zsb_tooltip.showTooltip(content, d3.event);
+    //zsb_tooltip.showTooltip(content, d3.event);
 }
 
 /*
 * Hides tooltip
 */
 function hideZSBDetail(d) {
-    zsb_tooltip.hideTooltip();
+    //zsb_tooltip.hideTooltip();
 }
 
 function click(d) {
