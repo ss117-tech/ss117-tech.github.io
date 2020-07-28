@@ -141,9 +141,9 @@ d3.csv("data/zoomable_sunburst.csv").then(function(data) {
         .data(partition(root).descendants())
         .enter().append("path")
         .attr("d", arc)
-        .style("fill", function(d) { return zsb_color((d.children ? d : d.parent).data.name); });
-        // .append("title")
-        // .text(function(d) { return d.data.name + "\n" + formatNumber(d.value); });
+        .style("fill", function(d) { return zsb_color((d.children ? d : d.parent).data.name); })
+        .append("title")
+        .text(function(d) { return d.data.name + "\n" + formatNumber(d.value); });
 });
 
 
