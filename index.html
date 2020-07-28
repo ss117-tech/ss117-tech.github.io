@@ -107,7 +107,7 @@ var yelp_tree = { "name":"Yelp Database","children":[] };
 // tooltip for mouseover functionality
 //var zsb_tooltip = floatingTooltip('zsb_tooltip', 240);
 
-d3.csv("data/zoomable_sunburst.csv", function(error, data) {
+d3.csv("data/zoomable_sunburst.csv".then(function(data) {
     //if (error) throw error;
 
     data.forEach(function(d) {
@@ -144,7 +144,11 @@ d3.csv("data/zoomable_sunburst.csv", function(error, data) {
         .style("fill", function(d) { return zsb_color((d.children ? d : d.parent).data.name); });
         // .append("title")
         // .text(function(d) { return d.data.name + "\n" + formatNumber(d.value); });
-});
+})
+.catch(function(error){
+     // handle error
+     throw error;
+  });
 
 
 
