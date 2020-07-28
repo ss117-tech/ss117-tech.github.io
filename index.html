@@ -29,17 +29,33 @@
 	<!-- import d3.v4 -->
 	<script type="text/javascript" src="js/d3.min.js"></script>
 	<script type="text/javascript" src="js/d3-annotation.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				verticalCentered: false,
-				anchors: ['intro', 'datavis', 'yelpdata', 'reviews', 'top25', 'checkins', 'findings', 'ref'],
-				navigation: true,
-				navigationPosition: 'right',
-				navigationTooltips: ['Introduction', '​About the Visualization', 'Yelp Dataset', 'Reviews Overview', 'Top 25 Categories', 'NV Checkins',
-					'Findings', 'References']
-			});});
-	</script>
+
+  <style>
+      body {
+          font-family: Helvetica, Arial, sans-serif
+      }
+
+      h1 {
+          background-color: #2a5599;
+          /* TODO 1
+          change the text to white and add a padding of 5px
+          2 lines of code
+          */
+          color: white;
+          padding: 5px;
+      }
+
+
+      svg {
+        color: black;
+        border: 1px solid black;
+      }
+
+        .mainView{
+            display: flex;
+        }
+
+  </style>
 
 </head>
 <body>
