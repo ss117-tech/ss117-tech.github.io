@@ -144,11 +144,7 @@ d3.csv("data/zoomable_sunburst.csv".then(function(data) {
         .style("fill", function(d) { return zsb_color((d.children ? d : d.parent).data.name); });
         // .append("title")
         // .text(function(d) { return d.data.name + "\n" + formatNumber(d.value); });
-})
-.catch(function(error){
-     // handle error
-     throw error;
-  });
+});
 
 
 
