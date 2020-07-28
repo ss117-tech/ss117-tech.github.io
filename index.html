@@ -149,7 +149,8 @@ d3.csv("data/zoomable_sunburst.csv").then(function(data) {
 
 
 function click(d) {
-    d.parent == null ? d3v3.select("#zoom_annotation").classed("hidden", false) : d3v3.select("#zoom_annotation").classed("hidden", true);
+    //d.parent == null ? d3v3.select("#zoom_annotation").classed("hidden", false) :
+    //d3v3.select("#zoom_annotation").classed("hidden", true);
     zsb_svg.transition()
         .duration(750)
         .tween("scale", function() {
