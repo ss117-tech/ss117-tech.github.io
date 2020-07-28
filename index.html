@@ -144,7 +144,18 @@ d3.csv("data/zoomable_sunburst.csv").then(function(data) {
         .style("fill", function(d) { return zsb_color((d.children ? d : d.parent).data.name); })
         .append("title")
         .text(function(d) { return d.data.name + "\n" + formatNumber(d.value); })
-        .on("click", click);
+        .on("click", ()=>{
+          zsb_svg.transition()
+              .duration(750)
+              .tween("scale", function() {
+                  var xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
+                      yd = d3.interpolate(y.domain(), [d.y0, 1]),
+                      yr = d3.interpolate(y.range(), [d.y0 ? 20 : 0, radius]);
+                  return function(t) { x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); };
+              })
+              .selectAll("path")
+              .attrTween("d", function(d) { return function() { return arc(d); }; });
+        });
 });
 
 
