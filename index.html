@@ -1,172 +1,137 @@
+<html>
 <head>
-    <style>
-        body {
-            font-family: Sans-serif;
-            font-size: 11px;
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>CS498 Data Visualization Final Project - Subramanian Shankar</title>
+  <meta name="author" content="Subramanian Shankar" />
+  <meta name="description" content="fullPage full-screen backgrounds." />
+  <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+  <meta name="Resource-type" content="Document" />
+
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="jquery.fullPage.css" />
+
+  <!--script  src="js/d3.v3.js"></script-->
+  <script  src="d3.js"></script>
+  <!-- import fullPage -->
+  <script  src="js/jquery.min.js"></script>
+  <script  src="js/jquery.fullPage.js"></script>
+
+  <!-- import d3.v4 -->
+  <!--script  src="js/d3-annotation.min.js"></script-->
+
+  <style>
+      body {
+          font-family: Helvetica, Arial, sans-serif
+      }
+
+      h1 {
+          background-color: #2a5599;
+          /* TODO 1
+          change the text to white and add a padding of 5px
+          2 lines of code
+          */
+          color: white;
+          padding: 5px;
+      }
+
+      /* TODO 2
+      Add code to show a black border of 1px around all SVGs elements in the page
+      1-3 lines of code
+      */
+      svg {
+        color: black;
+        border: 1px solid black;
+      }
+
+      .slice {
+          cursor: pointer;
+      }
+
+      .slice .main-arc {
+          stroke: #fff;
+          stroke-width: 1px;
+      }
+
+      .slice .hidden-arc {
+          fill: none;
+      }
+
+      .slice text {
+          pointer-events: none;
+          dominant-baseline: middle;
+          text-anchor: middle;
+      }
+
+      /* TODO 3
+       - Use the "display flex" feature from to show the items from class `mainView` side by side
+       1-3 lines of cide
+        */
+        .mainView{
+            display: flex;
         }
 
-        .slice {
-            cursor: pointer;
-        }
+  </style>
 
-        .slice .main-arc {
-            stroke: #fff;
-            stroke-width: 1px;
-        }
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bubble_chart.css">
 
-        .slice .hidden-arc {
-            fill: none;
-        }
-
-        .slice text {
-            pointer-events: none;
-            dominant-baseline: middle;
-            text-anchor: middle;
-        }
-    </style>
-
-    <script src='https://d3js.org/d3.v5.min.js'></script>
 </head>
 <body>
-    <script>
-        const width = window.innerWidth,
-            height = window.innerHeight,
-            maxRadius = (Math.min(width, height) / 2) - 5;
 
-        const formatNumber = d3.format(',d');
+  <div id="fullpage">
+    <div class="section" id="title">
+      <div id="title_text">
+        <h1>Diving into the Airport Business</h1>
+      </div>
+    </div>
 
-        const x = d3.scaleLinear()
-            .range([0, 2 * Math.PI])
-            .clamp(true);
+    <div class="section" id="airport">
+      <div id="content_div">
+        <h1>Airport trips</h1>
+        <div class="mainView">
+          <div>
+              <h2>Airlines</h2>
+              <svg id="AirlinesChart"></svg>
+          </div>
+          <div>
+              <h2>Airports</h2>
+              <svg id="Map"></svg>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        const y = d3.scaleSqrt()
-            .range([maxRadius*.1, maxRadius]);
+    <div class="section" id="bubble">
+      <div class="container">
+        <h1>Gates Foundation Educational Spending</h1>
+        <div id="toolbar">
+          <a href="#" id="all" class="button active">All Grants</a>
+          <a href="#" id="country" class="button">Grants By Year</a>
+        </div>
+        <div id="vis"></div>
+      </div>
+    </div>
 
-        const color = d3.scaleOrdinal(d3.schemeCategory10);
+    <!--script  src="js/d3.min.js"></script-->
+    <!--div class="section" id="bubble">
+      <div class="container">
+        <h1>Gates Foundation Educational Spending</h1>
+        <div id="toolbar">
+          <a href="#" id="all" class="button active">All Grants</a>
+          <a href="#" id="country" class="button">Grants By Year</a>
+        </div>
+        <div id="vis"></div>
+      </div>
+    </div-->
 
-        const partition = d3.partition();
-
-        const arc = d3.arc()
-            .startAngle(d => x(d.x0))
-            .endAngle(d => x(d.x1))
-            .innerRadius(d => Math.max(0, y(d.y0)))
-            .outerRadius(d => Math.max(0, y(d.y1)));
-
-        const middleArcLine = d => {
-            const halfPi = Math.PI/2;
-            const angles = [x(d.x0) - halfPi, x(d.x1) - halfPi];
-            const r = Math.max(0, (y(d.y0) + y(d.y1)) / 2);
-
-            const middleAngle = (angles[1] + angles[0]) / 2;
-            const invertDirection = middleAngle > 0 && middleAngle < Math.PI; // On lower quadrants write text ccw
-            if (invertDirection) { angles.reverse(); }
-
-            const path = d3.path();
-            path.arc(0, 0, r, angles[0], angles[1], invertDirection);
-            return path.toString();
-        };
-
-        const textFits = d => {
-            const CHAR_SPACE = 6;
-
-            const deltaAngle = x(d.x1) - x(d.x0);
-            const r = Math.max(0, (y(d.y0) + y(d.y1)) / 2);
-            const perimeter = r * deltaAngle;
-
-            return d.data.name.length * CHAR_SPACE < perimeter;
-        };
-
-        const svg = d3.select('body').append('svg')
-            .style('width', '100vw')
-            .style('height', '100vh')
-            .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
-            .on('click', () => focusOn()); // Reset zoom on canvas click
-
-        d3.json
-        ('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa5529b32156aa6e71cf985263f/flare.json')
-        .then(function(root)
-        //(error, root) =>
-        {
+  </div>
+  <script src="airports.js"></script>
+  <script src="bubbleChartv5_working.js"></script>
+  <script src="sunburstv5_working.js"></script>
+  <!--script src="js/tooltip.js"></script>
+  <script src="js/bubble_chart_test.js"></script-->
 
 
-            root = d3.hierarchy(root);
-            root.sum(d => d.size);
 
-            const slice = svg.selectAll('g.slice')
-                .data(partition(root).descendants());
-
-            slice.exit().remove();
-
-            const newSlice = slice.enter()
-                .append('g').attr('class', 'slice')
-                .on('click', d => {
-                    d3.event.stopPropagation();
-                    focusOn(d);
-                });
-
-            newSlice.append('title')
-                .text(d => d.data.name + '\n' + formatNumber(d.value));
-
-            newSlice.append('path')
-                .attr('class', 'main-arc')
-                .style('fill', d => color((d.children ? d : d.parent).data.name))
-                .attr('d', arc);
-
-            newSlice.append('path')
-                .attr('class', 'hidden-arc')
-                .attr('id', (_, i) => `hiddenArc${i}`)
-                .attr('d', middleArcLine);
-
-            const text = newSlice.append('text')
-                .attr('display', d => textFits(d) ? null : 'none');
-
-            // Add white contour
-            text.append('textPath')
-                .attr('startOffset','50%')
-                .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
-                .text(d => d.data.name)
-                .style('fill', 'none')
-                .style('stroke', '#fff')
-                .style('stroke-width', 5)
-                .style('stroke-linejoin', 'round');
-
-            text.append('textPath')
-                .attr('startOffset','50%')
-                .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
-                .text(d => d.data.name);
-        });
-
-        function focusOn(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
-            // Reset to top-level if no data point specified
-
-            const transition = svg.transition()
-                .duration(750)
-                .tween('scale', () => {
-                    const xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
-                        yd = d3.interpolate(y.domain(), [d.y0, 1]);
-                    return t => { x.domain(xd(t)); y.domain(yd(t)); };
-                });
-
-            transition.selectAll('path.main-arc')
-                .attrTween('d', d => () => arc(d));
-
-            transition.selectAll('path.hidden-arc')
-                .attrTween('d', d => () => middleArcLine(d));
-
-            transition.selectAll('text')
-                .attrTween('display', d => () => textFits(d) ? null : 'none');
-
-            moveStackToFront(d);
-
-            //
-
-            function moveStackToFront(elD) {
-                svg.selectAll('.slice').filter(d => d === elD)
-                    .each(function(d) {
-                        this.parentNode.appendChild(this);
-                        if (d.parent) { moveStackToFront(d.parent); }
-                    })
-            }
-        }
-    </script>
 </body>
+</html>
