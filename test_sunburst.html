@@ -137,25 +137,47 @@ d3.csv("data/zoomable_sunburst.csv").then(function(data) {
         .sort(function(a, b) { return b.value - a.value; });
 
     root.sum(function(d) { return d.reviews; });
-    var path =
-        zsb_svg.selectAll("path")
+    zsb_svg.selectAll("path")
         .data(partition(root).descendants())
         .enter().append("path")
         .attr("d", arc)
         .style("fill", function(d) { return zsb_color((d.children ? d : d.parent).data.name); })
         .append("title")
-        .text(function(d) { return d.data.name + "\n" + formatNumber(d.value); });
-
-    path.filter(d => d.children)
-                .style("cursor", "pointer");
+        .text(function(d) { return d.data.name + "\n" + formatNumber(d.value); })
+        .on("click", clickTest(d))
 
 
 
 });
 
+function clickTest(d){
+    //var a = d.parent;
 
+    //if a == null
+    d.parent == null ?
+    d3.select(this).classed("hidden", false):
+    d3.select(this).classed("hidden", true);
 
+    zsb_svg.transition()
+        .duration(750)
+        .
 
+}
+
+function click(d) {
+    //d.parent == null ? d3v3.select("#zoom_annotation").classed("hidden", false) :
+    //d3v3.select("#zoom_annotation").classed("hidden", true);
+    zsb_svg.transition()
+        .duration(750)
+        .tween("scale", function() {
+            var xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
+                yd = d3.interpolate(y.domain(), [d.y0, 1]),
+                yr = d3.interpolate(y.range(), [d.y0 ? 20 : 0, radius]);
+            return function(t) { x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); };
+        })
+        .selectAll("path")
+        .attrTween("d", function(d) { return function() { return arc(d); }; });
+}
 
 
 function transverseTree(tree, d) {
