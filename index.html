@@ -137,17 +137,7 @@ d3.csv("data/zoomable_sunburst.csv").then(function(data) {
         .sort(function(a, b) { return b.value - a.value; });
 
     root.sum(function(d) { return d.reviews; });
-    zsb_svg.selectAll("path")
-        .data(partition(root).descendants())
-        .enter().append("path")
-        .attr("d", arc)
-        .style("fill", function(d) { return zsb_color((d.children ? d : d.parent).data.name); })
-        .append("title")
-        .text(function(d) { return d.data.name + "\n" + formatNumber(d.value); })
-        .on("click", ()=>{
-          zsb_svg.transition()
-              .duration(2000)
-              .attr("r", "10");
+    
 
         });
 });
