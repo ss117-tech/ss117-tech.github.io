@@ -3,7 +3,7 @@
 
     function loadData() {
         return Promise.all([
-            d3.csv("routes.csv"),
+            d3.csv("cleanedData.csv"),
             d3.json("countries.geo.json"),
         ]).then(datasets => {
             store.routes = datasets[0];
