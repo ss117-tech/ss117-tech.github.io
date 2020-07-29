@@ -1,9 +1,9 @@
 country, source_city, source_airport, dest_country, dest_city, airlines, flights
-oxygen,tree,G1,T1, U1, V1, W1, 10
-oxygen,tree,G2,T1, U1, V1, W1, 10
-oxygen,tree,G2,T2, U1, V1, W1, 10
-water,car,G3,T1, U1, V1, W1, 10
-water,tree,GZ,T1, U1, V1, W1, 10
-water,tree,GZ,T2, U1, V1, W1, 10
-fire,car,GTD,T3, U1, V1, W1, 10
-oxygen,bomb,GYYS,T1, U1, V1, W1, 10
+oxygen,tree,G1,T1, U1, V1, 10
+oxygen,tree,G2,T1, U1, V1, 10
+oxygen,tree,G2,T2, U1, V1, 10
+water,car,G3,T1, U1, V1, 10
+water,tree,GZ,T1, U1, V1, 10
+water,tree,GZ,T2, U1, V1, 10
+fire,car,GTD,T3, U1, V1, 10
+oxygen,bomb,GYYS,T1, U1, V1, 10
