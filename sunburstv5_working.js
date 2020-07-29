@@ -1,5 +1,5 @@
-const width = window.innerWidth,
-    height = window.innerHeight,
+const width = 1024,
+    height = 768,
     maxRadius = (Math.min(width, height) / 2) - 5;
 
 const formatNumber = d3.format(',d');
