@@ -53,7 +53,7 @@ const svg = d3.select('body').append('svg')
 
 d3.json
 //('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa5529b32156aa6e71cf985263f/flare.json')
-('test_csv_json_2.json')
+('tst_json.json')
 .then(function(root)
 //(error, root) =>
 {
