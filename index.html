@@ -42,7 +42,7 @@
         const y = d3.scaleSqrt()
             .range([maxRadius*.1, maxRadius]);
 
-        const color = d3.scaleOrdinal(d3.schemeCategory20);
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
 
         const partition = d3.partition();
 
@@ -83,11 +83,11 @@
             .on('click', () => focusOn()); // Reset zoom on canvas click
 
         d3.json
-        ('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa5529b32156aa6e71cf985263f/flare.json',
-        .then(function(data)
+        ('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa5529b32156aa6e71cf985263f/flare.json')
+        .then(function(root)
         //(error, root) =>
         {
-            if (error) throw error;
+
 
             root = d3.hierarchy(root);
             root.sum(d => d.size);
