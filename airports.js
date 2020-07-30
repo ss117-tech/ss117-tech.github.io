@@ -39,7 +39,7 @@
     }
 
     function getAirlinesChartConfig() {
-      let width = 600;
+      let width = 800;
       let height = 600;
       let margin = {
         top: 10,
@@ -145,7 +145,7 @@
 
 
     function getMapConfig(){
-      let width = 600;
+      let width =800;
       let height = 600;
       let container = d3.select("#map");//TODO: select the svg with id Map
      //TODO: set the width and height of the conatiner to be equal the width and height variables.
