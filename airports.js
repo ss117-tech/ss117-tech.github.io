@@ -96,17 +96,15 @@
 
     function getAirlinesChartScales(airlines, config) {
         let { bodyWidth, bodyHeight } = config;
-        let maximunCount = d3.max(airlines, d => d.Count) //TODO: Use d3.max to get the highest Count value we have on the airlines list.
+        let maximunCount = d3.max(airlines, d => d.Count)
 
         let xScale = d3.scaleLinear()
             .range([0, bodyWidth])
             .domain([0, maximunCount])
-            //TODO: Set the range to go from 0 to the width of the body
-            //TODO: Set the domain to go from 0 to the maximun value fount for the field 'Count'
 
         let yScale = d3.scaleBand()
             .range([0, bodyHeight])
-            .domain(airlines.map(a => a.AirlineName)) //The domain is the list of ailines names
+            .domain(airlines.map(a => a.AirlineName))
             .padding(0.2)
 
         return { xScale, yScale }
@@ -228,19 +226,19 @@
     function groupByAirport(data) {
         //We use reduce to transform a list into a object where each key points to an aiport. This way makes it easy to check if is the first time we are seeing the airport.
         let result = data.reduce((result, d) => {
-            //The || sign in the line below means that in case the first option is anything that Javascript consider false (this insclude undefined, null and 0), the second option will be used. Here if result[d.DestAirportID] is false, it means that this is the first time we are seeing the airport, so we will create a new one (second part after ||)
+            //The || sign in the line below means that in case the first option is anything that Javascript consider false (this insclude undefined, null and 0), the second option will be used. Here if result[d.DestinationAirportID] is false, it means that this is the first time we are seeing the airport, so we will create a new one (second part after ||)
 
-            let currentDest = result[d.DestAirportID] || {
-                "AirportID": d.DestAirportID,
-                "Airport": d.DestAirport,
-                "Latitude": +d.DestLatitude,
-                "Longitude": +d.DestLongitude,
-                "City": d.DestCity,
-                "Country": d.DestCountry,
+            let currentDest = result[d.DestinationAirportID] || {
+                "AirportID": d.DestinationAirportID,
+                "Airport": d.DestinationAirport,
+                "Latitude": +d.DestinationLatitude,
+                "Longitude": +d.DestinationLongitude,
+                "City": d.DestinationCity,
+                "Country": d.DestinationCountry,
                 "Count": 0
             }
             currentDest.Count += 1
-            result[d.DestAirportID] = currentDest
+            result[d.DestinationAirportID] = currentDest
 
             //After doing for the destination airport, we also update the airport the airplane is departing from.
             let currentSource = result[d.SourceAirportID] || {
@@ -284,8 +282,8 @@
         bindedData.enter().append("line")
           .attr("x1", d => projection([d.SourceLongitude, d.SourceLatitude])[0])
           .attr("y1", d => projection([d.SourceLongitude, d.SourceLatitude])[1])
-          .attr("x2", d => projection([d.DestLongitude, d.DestLatitude])[0])
-          .attr("y2", d => projection([d.DestLongitude, d.DestLatitude])[1])
+          .attr("x2", d => projection([d.DestinationLongitude, d.DestinationLatitude])[0])
+          .attr("y2", d => projection([d.DestinationLongitude, d.DestinationLatitude])[1])
           .attr("stroke", "#992a2a")
           .attr("opacity", 0.1)
 
