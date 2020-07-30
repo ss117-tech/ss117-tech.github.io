@@ -33,53 +33,15 @@
     function displayChart(airlinesData) {
         //var config = getAirlinesChartConfig();
         //let scales = getAirlinesChartScales(airlines, config);
-        drawBarsAirlinesChart(airlinesData);
+        displayBars(airlinesData);
         //, scales, config);
-        drawAxesAirlinesChart(airlinesData);
+        //drawAxesAirlinesChart(airlinesData);
         //, scales, config);
-
     }
 
-    function getAirlinesChartConfig() {
-      let width = 900;
-      let height = 600;
-      let margin = {
-        top: 10,
-        bottom: 50,
-        left: 130,
-        right: 10
-      }
-      //The body is the are that will be occupied by the bars.
-      let bodyHeight = height - margin.top - margin.bottom;
-      let bodyWidth = width - margin.left - margin.right;//TODO: Compute the width of the body by subtracting the left and right margins from the width.
 
-      //The container is the SVG where we will draw the chart. In our HTML is the svg ta with the id AirlinesChart
-      let container = d3.select("#AirlinesChart"); //TODO: use d3.select to select the element with id AirlinesChart
-      container
-        .attr("width", width)
-        .attr("height", height)
-       //TODO: Set the height of the container
 
-       return { width, height, margin, bodyHeight, bodyWidth, container }
-    }
-
-    function getAirlinesChartScales(airlines, config) {
-        let { bodyWidth, bodyHeight } = config;
-        let maximunCount = d3.max(airlines, d => d.numberOfFlights)
-
-        let xScale = d3.scaleLinear()
-            .range([0, bodyWidth])
-            .domain([0, maximunCount])
-
-        let yScale = d3.scaleBand()
-            .range([0, bodyHeight])
-            .domain(airlines.map(a => a.AirlineName))
-            .padding(0.2)
-
-        return { xScale, yScale }
-    }
-
-    function drawBarsAirlinesChart(airlinesData) {
+    function displayBars(airlinesData) {
       //let {margin, container} = config; // this is equivalent to 'let margin = config.margin; let container = config.container'
 
       let width = 900;
@@ -139,7 +101,24 @@
            //TODO: Add another listener, this time for mouseleave
            //TODO: In this listener, call drawRoutes(null), this will cause the function to remove all lines in the chart since there is no airline withe AirlineID == null.
            //TODO: change the fill color of the bar back to "#2a5599"
+           let axisX = d3.axisBottom(xScale)
+                         .ticks(5)
 
+           container.append("g")
+             .style("transform",
+                 `translate(${margin.left}px,${height - margin.bottom}px)`
+             )
+             .call(axisX)
+
+           let axisY = d3.axisLeft(yScale)
+                             .ticks(5)
+           //d3.axisLeft(yScale) //TODO: Create an axis on the left for the Y scale
+           //TODO: Append a g tag to the container, translate it based on the margins and call the axisY axis to draw the left axis.
+           container.append("g")
+             .style("transform",
+                 `translate(${margin.left}px,${margin.top}px)`
+             )
+             .call(axisY)
     }
 
     function drawAxesAirlinesChart(airlinesData){
