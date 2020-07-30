@@ -16,7 +16,7 @@
             "Count": 0
         }
 
-        currentData.Count +=  1 //TODO: Increment the count (number of routes) of ariline.
+        currentData.Count +=  1 //TODO: Increment the count (number of flightpaths) of ariline.
 
         result[d.AirlineID] = currentData //TODO: Save the updated information in the dictionary using the airline id as key.
 
@@ -230,13 +230,13 @@
     }
 
     function drawRoutes(airlineID) {
-        let routes = dataSets.flightpaths//TODO: get the routes from dataSets
+        let flightpaths = dataSets.flightpaths//TODO: get the flightpaths from dataSets
         let projection = dataSets.mapProjection//TODO: get the projection from the dataSets
         let container = d3.select('#Map')//TODO: select the svg with id "Map" (our map container)
-        let selectedRoutes = routes.filter(d => d.AirlineID === airlineID)//TODO: filter the routes to keep only the routes which AirlineID is equal to the parameter airlineID received by the function
+        let selectedRoutes = flightpaths.filter(d => d.AirlineID === airlineID)//TODO: filter the flightpaths to keep only the flightpaths which AirlineID is equal to the parameter airlineID received by the function
 
         let bindedData = container.selectAll("line")
-            .data(selectedRoutes, d => d.ID) //This seconf parameter tells D3 what to use to identify the routes, this hepls D3 to correctly find which routes have been added or removed.
+            .data(selectedRoutes, d => d.ID) //This seconf parameter tells D3 what to use to identify the flightpaths, this hepls D3 to correctly find which flightpaths have been added or removed.
 
         //TODO: Use the .enter selector to append a line for each new route.
         //TODO: for each line set the start of the line (x1 and y1) to be the position of the source airport (SourceLongitude and SourceLatitude) Hint: you can use projection to convert longitude and latitude to x and y.
@@ -245,7 +245,7 @@
         //TODO: set the color of the stroke of the line to "#992a2a"
         //TODO: set the opacity to 0.1
 
-        //TODO: use exit function over bindedData to remove any routes that does not satisfy the filter.
+        //TODO: use exit function over bindedData to remove any flightpaths that does not satisfy the filter.
 
         bindedData.enter().append("line")
           .attr("x1", d => projection([d.SourceLongitude, d.SourceLatitude])[0])
@@ -263,20 +263,19 @@
             cleanedData,
             countriesJson,
         ]).then(datasets => {
-            dataSets.flightpaths = datasets[0];
-            dataSets.geo = datasets[1]
+            dataSets.flightpaths = datasets[0]; // Capture flightpaths/routes
+            dataSets.geo = datasets[1]          //Capture country data from the JSON data
             return dataSets;
         })
     }
 
     function showData() {
-      //Get the routes from our dataSets variable
-      let routes = dataSets.flightpaths
-      // Compute the number of routes per airline.
 
-      let airlines = groupByAirline(dataSets.flightpaths);
-      //console.log(airlines)
-      drawAirlinesChart(airlines)
+      var flightpaths = dataSets.flightpaths
+
+      var airlines = groupByAirline(dataSets.flightpaths); // Compute the number of flightpaths per airline.
+
+      drawAirlinesChart(airlines) // Draw the Airlines Chart
       drawMap(dataSets.geo)
 
       let airports = groupByAirport(dataSets.flightpaths);
@@ -285,4 +284,12 @@
       drawRoutes("24")
     }
 
-    loadData().then(showData);
+    //loadData().then(showData);
+    Promise.all([
+        cleanedData,
+        countriesJson,
+    ]).then(datasets => {
+        dataSets.flightpaths = datasets[0]; // Capture flightpaths/routes
+        dataSets.geo = datasets[1]          //Capture country data from the JSON data
+        return dataSets;
+    }).then(showData);
