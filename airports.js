@@ -1,26 +1,12 @@
-    // All your javascript code will go here
-    let store = {}
+    //Initialize the variables
+    var cleanedData= d3.csv("cleanedData.csv")
+    var countriesJson=d3.json("countries.geo.json"
 
-    function loadData() {
-        return Promise.all([
-            d3.csv("cleanedData.csv"),
-            d3.json("countries.geo.json"),
-        ]).then(datasets => {
-            store.routes = datasets[0];
-            store.geoJSON = datasets[1]
-            return store;
-        })
-    }
-    /*
-    function loadData() {
-    let promise = d3.csv("routes.csv")//TODO 1: Add the code to load the CSV file named "routes.csv" | 1 Line
-    return promise.then(routes => {
-        store.routes = routes //TODO 2: Save the routes into our store variable;
-        //console.log(store.routes)
-        return store;
-      })
-    }
-    */
+    // datasets having both therotes and the county information
+    var dataSets={}
+
+
+
     function groupByAirline(data) {
       //Iterate over each route, producing a dictionary where the keys is are the ailines ids and the values are the information of the airline.
       let result = data.reduce((result, d) => {
@@ -43,24 +29,6 @@
 
       return result
     }
-
-    function showData() {
-      //Get the routes from our store variable
-      let routes = store.routes
-      // Compute the number of routes per airline.
-
-      let airlines = groupByAirline(store.routes);
-      //console.log(airlines)
-      drawAirlinesChart(airlines)
-      drawMap(store.geoJSON)
-
-      let airports = groupByAirport(store.routes);
-      drawAirports(airports)
-
-      drawRoutes("24")
-    }
-
-    loadData().then(showData);
 
 
     function drawAirlinesChart(airlines) {
@@ -190,7 +158,7 @@
       let {width, height} = config;
       let projection = d3.geoMercator();//TODO: Create a projection of type Mercator.
       projection.scale(97).translate([width / 2, height / 2 + 20])
-      store.mapProjection = projection;
+      dataSets.mapProjection = projection;
       return projection;
     }
 
@@ -262,8 +230,8 @@
     }
 
     function drawRoutes(airlineID) {
-        let routes = store.routes//TODO: get the routes from store
-        let projection = store.mapProjection//TODO: get the projection from the store
+        let routes = dataSets.routes//TODO: get the routes from dataSets
+        let projection = dataSets.mapProjection//TODO: get the projection from the dataSets
         let container = d3.select('#Map')//TODO: select the svg with id "Map" (our map container)
         let selectedRoutes = routes.filter(d => d.AirlineID === airlineID)//TODO: filter the routes to keep only the routes which AirlineID is equal to the parameter airlineID received by the function
 
@@ -289,3 +257,32 @@
 
         bindedData.exit().remove()
     }
+
+    function loadData() {
+        return Promise.all([
+            cleanedData,
+            countriesJson,
+        ]).then(datasets => {
+            dataSets.routes = datasets[0];
+            dataSets.geoJSON = datasets[1]
+            return dataSets;
+        })
+    }
+
+    function showData() {
+      //Get the routes from our dataSets variable
+      let routes = dataSets.routes
+      // Compute the number of routes per airline.
+
+      let airlines = groupByAirline(dataSets.routes);
+      //console.log(airlines)
+      drawAirlinesChart(airlines)
+      drawMap(dataSets.geoJSON)
+
+      let airports = groupByAirport(dataSets.routes);
+      drawAirports(airports)
+
+      drawRoutes("24")
+    }
+
+    loadData().then(showData);
