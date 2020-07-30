@@ -1,6 +1,6 @@
     //Initialize the variables
     var cleanedData= d3.csv("cleanedData.csv")
-    var countriesJson=d3.json("countries.geo.json"
+    var countriesJson=d3.json("countries.geo.json")
 
     // datasets having both therotes and the county information
     var dataSets={}
