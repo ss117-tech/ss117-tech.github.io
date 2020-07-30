@@ -39,16 +39,16 @@
     }
 
     function getAirlinesChartConfig() {
-      var width = 1024;
-      var height = 768;
-      var margin = {
+      let width = 600;
+      let height = 600;
+      let margin = {
         top: 10,
         bottom: 50,
         left: 130,
         right: 10
       }
       //The body is the are that will be occupied by the bars.
-      var bodyHeight = height - margin.top - margin.bottom;
+      let bodyHeight = height - margin.top - margin.bottom;
       let bodyWidth = width - margin.left - margin.right;//TODO: Compute the width of the body by subtracting the left and right margins from the width.
 
       //The container is the SVG where we will draw the chart. In our HTML is the svg ta with the id AirlinesChart
@@ -145,8 +145,8 @@
 
 
     function getMapConfig(){
-      let width = 1024;
-      let height = 768;
+      let width = 600;
+      let height = 600;
       let container = d3.select("#map");//TODO: select the svg with id Map
      //TODO: set the width and height of the conatiner to be equal the width and height variables.
       container.attr("width", width).attr("height", height)
