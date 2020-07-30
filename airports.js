@@ -258,18 +258,9 @@
         bindedData.exit().remove()
     }
 
-    function loadData() {
-        return Promise.all([
-            cleanedData,
-            countriesJson,
-        ]).then(datasets => {
-            dataSets.flightpaths = datasets[0]; // Capture flightpaths/routes
-            dataSets.geo = datasets[1]          //Capture country data from the JSON data
-            return dataSets;
-        })
-    }
 
-    function showData() {
+
+    function displayAll() {
 
       var flightpaths = dataSets.flightpaths
 
@@ -284,7 +275,6 @@
       drawRoutes("24")
     }
 
-    //loadData().then(showData);
     Promise.all([
         cleanedData,
         countriesJson,
@@ -292,4 +282,4 @@
         dataSets.flightpaths = datasets[0]; // Capture flightpaths/routes
         dataSets.geo = datasets[1]          //Capture country data from the JSON data
         return dataSets;
-    }).then(showData);
+    }).then(displayAll);
