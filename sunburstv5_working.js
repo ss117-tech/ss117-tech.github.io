@@ -55,7 +55,7 @@ function focusOn(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
         transition.selectAll('path.main-arc')
             .attrTween('d', d => () => arc(d));
 
-        //transition.selectAll('path.hidden-arc').attrTween('d', d => () => midLine(d));
+       transition.selectAll('path.hidden-arc').attrTween('d', d => () => midLine(d));
 
         transition.selectAll('text').attrTween('display', d => () => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none');
 
@@ -104,7 +104,7 @@ d3.json('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa
     newSlice.append('path')
         .attr('class', 'hidden-arc')
         .attr('id', (_, i) => `hiddenArc${i}`)
-        //.attr('d', midLine);
+        .attr('d', midLine);
 
     var text = newSlice.append('text')
         .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none');
