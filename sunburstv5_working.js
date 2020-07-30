@@ -81,7 +81,7 @@ var svg = d3.select('body').append('svg')
     .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
     .on('click', () => focusOn());
 
-d3.json('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa5529b32156aa6e71cf985263f/flare.json')').then(function(root)
+d3.json('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa5529b32156aa6e71cf985263f/flare.json').then(function(root)
 {
     root = d3.hierarchy(root);
     root.sum(d => d.size);
