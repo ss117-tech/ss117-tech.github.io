@@ -24,6 +24,17 @@ var arc = d3.arc()
 
 
 
+var midLine = d => {
+    var angles = [x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2];
+
+    var middleAngle = (angles[1] + angles[0]) / 2;
+    var invertDirection = middleAngle > 0 && middleAngle < Math.PI;
+    if (invertDirection) { angles.reverse(); }
+
+    var path = d3.path();
+    path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), angles[0], angles[1], invertDirection);
+    return path.toString();
+};
 
 var putText = d => {
     var CHAR_SPACE = 6;
@@ -49,11 +60,19 @@ function focusOn(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
         transition.selectAll('path.main-arc')
             .attrTween('d', d => () => arc(d));
 
-        //transition.selectAll('path.hidden-arc').attrTween('d', d => () => midLine(d));
+        transition.selectAll('path.hidden-arc').attrTween('d', d => () => midLine(d));
 
         transition.selectAll('text').attrTween('display', d => () => putText(d) ? null : 'none');
 
+        //moveStackToFront(d);
 
+        //function moveStackToFront(elD) {
+        //    svg.selectAll('.slice').filter(d => d === elD)
+        //        .each(function(d) {
+        //            this.parentNode.appendChild(this);
+        //            if (d.parent) { moveStackToFront(d.parent); }
+        //        })
+        //}
     }
 
 var svg = d3.select('body').append('svg')
@@ -89,7 +108,8 @@ d3.json('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa
 
     newSlice.append('path')
         .attr('class', 'hidden-arc')
-        .attr('id', (_, i) => `hiddenArc${i}`);
+        .attr('id', (_, i) => `hiddenArc${i}`)
+        //.attr('d', midLine);
 
     var text = newSlice.append('text')
         .attr('display', d => putText(d) ? null : 'none');
