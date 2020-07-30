@@ -230,7 +230,7 @@
     }
 
     function drawRoutes(airlineID) {
-        let routes = dataSets.routes//TODO: get the routes from dataSets
+        let routes = dataSets.flightpaths//TODO: get the routes from dataSets
         let projection = dataSets.mapProjection//TODO: get the projection from the dataSets
         let container = d3.select('#Map')//TODO: select the svg with id "Map" (our map container)
         let selectedRoutes = routes.filter(d => d.AirlineID === airlineID)//TODO: filter the routes to keep only the routes which AirlineID is equal to the parameter airlineID received by the function
@@ -263,23 +263,23 @@
             cleanedData,
             countriesJson,
         ]).then(datasets => {
-            dataSets.routes = datasets[0];
-            dataSets.geoJSON = datasets[1]
+            dataSets.flightpaths = datasets[0];
+            dataSets.geo = datasets[1]
             return dataSets;
         })
     }
 
     function showData() {
       //Get the routes from our dataSets variable
-      let routes = dataSets.routes
+      let routes = dataSets.flightpaths
       // Compute the number of routes per airline.
 
-      let airlines = groupByAirline(dataSets.routes);
+      let airlines = groupByAirline(dataSets.flightpaths);
       //console.log(airlines)
       drawAirlinesChart(airlines)
-      drawMap(dataSets.geoJSON)
+      drawMap(dataSets.geo)
 
-      let airports = groupByAirport(dataSets.routes);
+      let airports = groupByAirport(dataSets.flightpaths);
       drawAirports(airports)
 
       drawRoutes("24")
