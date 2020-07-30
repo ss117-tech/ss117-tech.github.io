@@ -123,55 +123,9 @@
              .call(axisY)
     }
 
-    function drawAxesAirlinesChart(airlinesData){
-      let width = 900;
-      let height = 600;
-      let margin = {
-        top: 10,
-        bottom: 50,
-        left: 130,
-        right: 10
-      }
 
-      let container = d3.select("#AirlinesChart"); //TODO: use d3.select to select the element with id AirlinesChart
-      container
-        .attr("width", width)
-        .attr("height", height)
 
-      let maximunCount = d3.max(airlinesData, d => d.numberOfFlights)
-
-      let xScale = d3.scaleLinear()
-            .range([0, bodyWidth])
-            .domain([0, maximunCount])
-
-      let yScale = d3.scaleBand()
-            .range([0, bodyHeight])
-            .domain(airlinesData.map(a => a.AirlineName))
-            .padding(0.2)
-
-      //let {xScale, yScale} = scales
-      //let {container, margin, height} = config;
-      let axisX = d3.axisBottom(xScale)
-                    .ticks(5)
-
-      container.append("g")
-        .style("transform",
-            `translate(${margin.left}px,${height - margin.bottom}px)`
-        )
-        .call(axisX)
-
-      let axisY = d3.axisLeft(yScale)
-                        .ticks(5)
-      //d3.axisLeft(yScale) //TODO: Create an axis on the left for the Y scale
-      //TODO: Append a g tag to the container, translate it based on the margins and call the axisY axis to draw the left axis.
-      container.append("g")
-        .style("transform",
-            `translate(${margin.left}px,${margin.top}px)`
-        )
-        .call(axisY)
-    }
-
-    function drawMap(geoJeon) {
+    function displayMap(geoJeon) {
         let config = getMapConfig();
         let projection = getMapProjection(config);
         drawBaseMap(config.container, geoJeon.features, projection)
@@ -195,10 +149,20 @@
       return projection;
     }
 
-    function drawBaseMap(container, countries, projection){
+    function displayBaseMap(countries){
+      let width =  900;
+      let height = 600;
+      let container = d3.select("#map");//TODO: select the svg with id Map
+     //TODO: set the width and height of the conatiner to be equal the width and height variables.
+      container.attr("width", width).attr("height", height)
+
+      let projection = d3.geoMercator();//TODO: Create a projection of type Mercator.
+      projection.scale(97).translate([width / 2, height / 2 + 20])
+      dataSets.mapProjection = projection;
+
       let path = d3.geoPath().projection(projection) //TODO: create a geoPath generator and set its projection to be the projection passed as parameter.
 
-      container.selectAll("path").data(countries)
+      container.selectAll("path").data(countries.features)
       .enter().append("path")
       .attr("d",d => path(d)) //TODO: use the path generator to draw each country )
       .attr("stroke", "#ccc")
@@ -295,12 +259,12 @@
 
     function displayAll() {
 
-      var flightpaths = dataSets.flightpaths
+      //var flightpaths = dataSets.flightpaths
 
-      var airlines = airlineGrouping(dataSets.flightpaths); // Grouping flightpaths by airlines.
+      //var airlines = airlineGrouping(dataSets.flightpaths); // Grouping flightpaths by airlines.
 
-      displayChart(airlines) // Draw the Airlines Chart
-      drawMap(dataSets.geo)
+      displayBars(airlineGrouping(dataSets.flightpaths)) // Draw the Airlines Chart after grouping flightpaths by airlines.
+      displayBaseMap(dataSets.geo)
 
       let airports = groupByAirport(dataSets.flightpaths);
       drawAirports(airports)
