@@ -21,18 +21,17 @@
         return airlineDict;
       }, {})
 
-      //We use this to convert the dictionary produced by the code above, into a list,
-      //that will make it easier to create the visualization.
-      airlineKeys = Object.keys(airlineDict)
+
+      airlineKeys = Object.keys(airlineDict) // Get the keys
       airlineDict = airlineKeys.map(key => airlineDict[key])
-      airlineDict = airlineDict.sort((x,y) => d3.descending(x.numberOfFlights, y.numberOfFlights))       //Sort in descending order of number of flights.
+      airlineDict = airlineDict.sort((x,y) => d3.descending(x.numberOfFlights, y.numberOfFlights))      //Sort in descending order of number of flights.
 
       return airlineDict
     }
 
 
-    function drawAirlinesChart(airlines) {
-        let config = getAirlinesChartConfig();
+    function displayChart(airlines) {
+        var config = getAirlinesChartConfig();
         let scales = getAirlinesChartScales(airlines, config);
         drawBarsAirlinesChart(airlines, scales, config);
         drawAxesAirlinesChart(airlines, scales, config);
@@ -40,16 +39,16 @@
     }
 
     function getAirlinesChartConfig() {
-      let width = 350;
-      let height = 400;
-      let margin = {
+      var width = 1024;
+      var height = 768;
+      var margin = {
         top: 10,
         bottom: 50,
         left: 130,
         right: 10
       }
       //The body is the are that will be occupied by the bars.
-      let bodyHeight = height - margin.top - margin.bottom;
+      var bodyHeight = height - margin.top - margin.bottom;
       let bodyWidth = width - margin.left - margin.right;//TODO: Compute the width of the body by subtracting the left and right margins from the width.
 
       //The container is the SVG where we will draw the chart. In our HTML is the svg ta with the id AirlinesChart
@@ -146,8 +145,8 @@
 
 
     function getMapConfig(){
-      let width = 600;
-      let height = 400;
+      let width = 1024;
+      let height = 768;
       let container = d3.select("#map");//TODO: select the svg with id Map
      //TODO: set the width and height of the conatiner to be equal the width and height variables.
       container.attr("width", width).attr("height", height)
@@ -266,7 +265,7 @@
 
       var airlines = airlineGrouping(dataSets.flightpaths); // Grouping flightpaths by airlines.
 
-      drawAirlinesChart(airlines) // Draw the Airlines Chart
+      displayChart(airlines) // Draw the Airlines Chart
       drawMap(dataSets.geo)
 
       let airports = groupByAirport(dataSets.flightpaths);
