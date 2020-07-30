@@ -106,9 +106,31 @@ function bubbleChart() {
       .attr('width', width)
       .attr('height', height)
 
+    // bind nodes data to circle elements
+
+    //bubbles = svg.selectAll('.bubble')
+    //  .data(nodes, function (d) { return d.id; });
+
+    //var bubblesE = bubbles.enter().append('circle')
+    //    .classed('bubble', true)
+    //    .attr('r', 0)
+    //    .attr('fill', function (d) { return fillColor(d.country); })
+    //    .attr('stroke', function (d) { return d3.rgb(fillColor(d.country)).darker(); })
+    //    .attr('stroke-width', 2)
+    //    .on('mouseover', showDetail)
+    //    .on('mouseout', hideDetail);
+
+    //bubbles = bubbles.merge(bubblesE);
+
+    //bubbles.transition()
+    //  .duration(2000)
+    //  .attr('r', function (d) { return d.radius; });
 
     elements = svg.selectAll('.bubble')
+      //.data(nodes, d => d.country)
       .data(nodes, function (d) { return d.id; });
+      //.enter()
+      //.append('g')
 
       var tooltip = d3.select('body')
         .append('div')
@@ -122,11 +144,14 @@ function bubbleChart() {
         .style("padding", "5px");
 
 
-    var mouseover = function(d) {
+
+
+     var mouseover = function(d) {
             tooltip
                 .style("opacity", 1)
                 .style("visibility", "visible")
                 .html
+                //("The exact value of<br>this cell is 1 ")
                 ('<span class="name">City: </span><span class="value">' +
                                 d.city +
                                 '</span><br/>' +
@@ -144,6 +169,12 @@ function bubbleChart() {
                                   .style("opacity", 1)
           }
 
+    var mousemove = function(d) {
+          tooltip
+            .html("The exact value of<br>this cell is: " + d.flights)
+            .style("left", (d3.mouse(this)[0]+70) + "px")
+            .style("top", (d3.mouse(this)[1]) + "px")
+        }
 
     var mouseleave = function(d) {
           d3.select(this)
@@ -160,18 +191,47 @@ function bubbleChart() {
       .attr('r', d => d.radius)
       .attr('fill', d => fillColour(d.country))
       .attr('stroke-width', 2)
-      .on('mouseover',mouseover)
+      .on('mouseover',
+      /*function(d) {
+        tooltip.transition()
+          .duration(200)
+          .style("opacity", .9);
+        tooltip.html(
+          /*'<a href= "http://google.com">' + // The first <a> tag
+          formatTime(d.date) +
+          "</a>" +                          // closing </a> tag
+          "<br/>"  + d.close
+           '<p>Check</p>'})*/mouseover)
+      //.on("mousemove", mousemove)
       .on("mouseleave", mouseleave);
 
 
 
 
+    //bubbles = elements.enter().append('circle')
+    //    .classed('bubble', true)
+    //    .attr('r', d => d.radius)
+    //    .attr('fill', function (d) { return fillColor(d.country); });
+        //.attr('stroke', function (d) { return d3.rgb(fillColor(d.country)).darker(); })
+        //.attr('stroke-width', 2);
+        //.on('mouseover', showDetail)
+        //.on('mouseout', hideDetail);
 
+    //var tooltip = floatingTooltip('gates_tooltip', 240);
+
+    // labels
+    //labels = elements
+    //  .append('text')
+    //  .attr('dy', '.3em')
+    //  .style('text-anchor', 'middle')
+    //  .style('font-size', 10)
+    //  .text(d => d.country)
 
     // set simulation's nodes to our newly created nodes array
     // simulation starts running automatically once nodes are set
     simulation.nodes(nodes);
-
+      //.on('tick', ticked)
+      //.restart();
 
     groupBubbles();
   }
@@ -185,7 +245,9 @@ function bubbleChart() {
       .attr('cx', d => d.x)
       .attr('cy', d => d.y)
 
-
+    //labels
+    //  .attr('x', d => d.x)
+    //  .attr('y', d => d.y)
   }
 
   function nodeCountryPos(d) {
@@ -195,10 +257,10 @@ function bubbleChart() {
   function groupBubbles() {
     hideCountryTitles();
 
-
+    // @v4 Reset the 'x' force to draw the bubbles to the center.
     simulation.force('x', d3.forceX().strength(forceStrength).x(centre.x));
 
-
+    // @v4 We can reset the alpha value and restart the simulation
     simulation.alpha(1).restart();
   }
 
@@ -209,10 +271,10 @@ function bubbleChart() {
   function splitBubbles() {
     showCountryTitles();
 
-
+    // @v4 Reset the 'x' force to draw the bubbles to their year centers
     simulation.force('x', d3.forceX().strength(forceStrength).x(nodeCountryPos));
 
-
+    // @v4 We can reset the alpha value and restart the simulation
     simulation.alpha(1).restart();
   }
 
