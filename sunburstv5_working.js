@@ -49,7 +49,7 @@ function focusOn(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
         transition.selectAll('path.main-arc')
             .attrTween('d', d => () => arc(d));
 
-        transition.selectAll('path.hidden-arc').attrTween('d', d => () => midLine(d));
+        //transition.selectAll('path.hidden-arc').attrTween('d', d => () => midLine(d));
 
         transition.selectAll('text').attrTween('display', d => () => putText(d) ? null : 'none');
 
