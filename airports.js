@@ -7,27 +7,27 @@
 
 
 
-    function groupByAirline(data) {
-      //Iterate over each route, producing a dictionary where the keys is are the ailines ids and the values are the information of the airline.
-      let result = data.reduce((result, d) => {
-        let currentData = result[d.AirlineID] || {
-            "AirlineID": d.AirlineID,
-            "AirlineName": d.AirlineName,
-            "Count": 0
-        }
+    function airlineGrouping(data) {
 
-        currentData.Count +=  1 //TODO: Increment the count (number of flightpaths) of ariline.
+      var airlineDict = data.reduce((airlineDict, d) => {
 
-        result[d.AirlineID] = currentData //TODO: Save the updated information in the dictionary using the airline id as key.
+        //Get present values of the the airline.
+        let present = airlineDict[d.AirlineID] || {"AirlineID": d.AirlineID,"AirlineName": d.AirlineName,"numberOfFlights": 0}
 
-        return result;
+        present.numberOfFlights +=  1 //Increment the count by 1.
+
+        airlineDict[d.AirlineID] = present //TODO: Save the updated information in the dictionary using the airline id as key.
+
+        return airlineDict;
       }, {})
 
-      //We use this to convert the dictionary produced by the code above, into a list, that will make it easier to create the visualization.
-      result = Object.keys(result).map(key => result[key])
-      result = result.sort((x,y) => d3.descending(x.Count, y.Count)) //TODO: Sort the data in descending order of count.
+      //We use this to convert the dictionary produced by the code above, into a list,
+      //that will make it easier to create the visualization.
+      airlineKeys = Object.keys(airlineDict)
+      airlineDict = airlineKeys.map(key => airlineDict[key])
+      airlineDict = airlineDict.sort((x,y) => d3.descending(x.numberOfFlights, y.numberOfFlights))       //Sort in descending order of number of flights.
 
-      return result
+      return airlineDict
     }
 
 
@@ -64,7 +64,7 @@
 
     function getAirlinesChartScales(airlines, config) {
         let { bodyWidth, bodyHeight } = config;
-        let maximunCount = d3.max(airlines, d => d.Count)
+        let maximunCount = d3.max(airlines, d => d.numberOfFlights)
 
         let xScale = d3.scaleLinear()
             .range([0, bodyWidth])
@@ -94,7 +94,7 @@
       bars.enter().append("rect")
           .attr("height", yScale.bandwidth())
           .attr("y", (d) => yScale(d.AirlineName))
-          .attr("width", (d) => xScale(d.Count))
+          .attr("width", (d) => xScale(d.numberOfFlights))
           //TODO: set the width of the bar to be proportional to the airline count using the xScale
           .attr("fill", "#2a5599")
           .on("mouseenter", function(d) { // <- this is the new code
@@ -193,10 +193,10 @@
 
     function groupByAirport(data) {
         //We use reduce to transform a list into a object where each key points to an aiport. This way makes it easy to check if is the first time we are seeing the airport.
-        let result = data.reduce((result, d) => {
-            //The || sign in the line below means that in case the first option is anything that Javascript consider false (this insclude undefined, null and 0), the second option will be used. Here if result[d.DestinationAirportID] is false, it means that this is the first time we are seeing the airport, so we will create a new one (second part after ||)
+        let airlineDict = data.reduce((airlineDict, d) => {
+            //The || sign in the line below means that in case the first option is anything that Javascript consider false (this insclude undefined, null and 0), the second option will be used. Here if airlineDict[d.DestinationAirportID] is false, it means that this is the first time we are seeing the airport, so we will create a new one (second part after ||)
 
-            let currentDest = result[d.DestinationAirportID] || {
+            let currentDest = airlineDict[d.DestinationAirportID] || {
                 "AirportID": d.DestinationAirportID,
                 "Airport": d.DestinationAirport,
                 "Latitude": +d.DestinationLatitude,
@@ -205,11 +205,11 @@
                 "Country": d.DestinationCountry,
                 "Count": 0
             }
-            currentDest.Count += 1
-            result[d.DestinationAirportID] = currentDest
+            currentDest.numberOfFlights += 1
+            airlineDict[d.DestinationAirportID] = currentDest
 
             //After doing for the destination airport, we also update the airport the airplane is departing from.
-            let currentSource = result[d.SourceAirportID] || {
+            let currentSource = airlineDict[d.SourceAirportID] || {
                 "AirportID": d.SourceAirportID,
                 "Airport": d.SourceAirport,
                 "Latitude": +d.SourceLatitude,
@@ -218,15 +218,15 @@
                 "Country": d.SourceCountry,
                 "Count": 0
             }
-            currentSource.Count += 1
-            result[d.SourceAirportID] = currentSource
+            currentSource.numberOfFlights += 1
+            airlineDict[d.SourceAirportID] = currentSource
 
-            return result
+            return airlineDict
         }, {})
 
         //We map the keys to the actual ariorts, this is an way to transform the object we got in the previous step into a list.
-        result = Object.keys(result).map(key => result[key])
-        return result
+        airlineDict = Object.keys(airlineDict).map(key => airlineDict[key])
+        return airlineDict
     }
 
     function drawRoutes(airlineID) {
@@ -264,7 +264,7 @@
 
       var flightpaths = dataSets.flightpaths
 
-      var airlines = groupByAirline(dataSets.flightpaths); // Compute the number of flightpaths per airline.
+      var airlines = airlineGrouping(dataSets.flightpaths); // Grouping flightpaths by airlines.
 
       drawAirlinesChart(airlines) // Draw the Airlines Chart
       drawMap(dataSets.geo)
