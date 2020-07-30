@@ -30,16 +30,18 @@
     }
 
 
-    function displayChart(airlines) {
-        var config = getAirlinesChartConfig();
-        let scales = getAirlinesChartScales(airlines, config);
-        drawBarsAirlinesChart(airlines, scales, config);
-        drawAxesAirlinesChart(airlines, scales, config);
+    function displayChart(airlinesData) {
+        //var config = getAirlinesChartConfig();
+        //let scales = getAirlinesChartScales(airlines, config);
+        drawBarsAirlinesChart(airlinesData);
+        //, scales, config);
+        drawAxesAirlinesChart(airlinesData);
+        //, scales, config);
 
     }
 
     function getAirlinesChartConfig() {
-      let width = 800;
+      let width = 900;
       let height = 600;
       let margin = {
         top: 10,
@@ -77,16 +79,42 @@
         return { xScale, yScale }
     }
 
-    function drawBarsAirlinesChart(airlines, scales, config) {
-      let {margin, container} = config; // this is equivalent to 'let margin = config.margin; let container = config.container'
-      let {xScale, yScale} = scales
+    function drawBarsAirlinesChart(airlinesData) {
+      //let {margin, container} = config; // this is equivalent to 'let margin = config.margin; let container = config.container'
+
+      let width = 900;
+      let height = 600;
+      let margin = {
+        top: 10,
+        bottom: 50,
+        left: 130,
+        right: 10
+      }
+
+      let container = d3.select("#AirlinesChart"); //TODO: use d3.select to select the element with id AirlinesChart
+      container
+        .attr("width", width)
+        .attr("height", height)
+
+      let maximunCount = d3.max(airlinesData, d => d.numberOfFlights)
+
+      let xScale = d3.scaleLinear()
+            .range([0, bodyWidth])
+            .domain([0, maximunCount])
+
+      let yScale = d3.scaleBand()
+            .range([0, bodyHeight])
+            .domain(airlinesData.map(a => a.AirlineName))
+            .padding(0.2)
+
+      //let {xScale, yScale} = scales
       let body = container.append("g")
           .style("transform",
             `translate(${margin.left}px,${margin.top}px)`
           )
 
-      let bars = body.selectAll(".bar").data(airlines)
-          //TODO: Use the .data method to bind the airlines to the bars (elements with class bar)
+      let bars = body.selectAll(".bar").data(airlinesData)
+
 
 
       //Adding a rect tag for each airline
@@ -114,9 +142,34 @@
 
     }
 
-    function drawAxesAirlinesChart(airlines, scales, config){
-      let {xScale, yScale} = scales
-      let {container, margin, height} = config;
+    function drawAxesAirlinesChart(airlinesData){
+      let width = 900;
+      let height = 600;
+      let margin = {
+        top: 10,
+        bottom: 50,
+        left: 130,
+        right: 10
+      }
+
+      let container = d3.select("#AirlinesChart"); //TODO: use d3.select to select the element with id AirlinesChart
+      container
+        .attr("width", width)
+        .attr("height", height)
+
+      let maximunCount = d3.max(airlinesData, d => d.numberOfFlights)
+
+      let xScale = d3.scaleLinear()
+            .range([0, bodyWidth])
+            .domain([0, maximunCount])
+
+      let yScale = d3.scaleBand()
+            .range([0, bodyHeight])
+            .domain(airlinesData.map(a => a.AirlineName))
+            .padding(0.2)
+
+      //let {xScale, yScale} = scales
+      //let {container, margin, height} = config;
       let axisX = d3.axisBottom(xScale)
                     .ticks(5)
 
@@ -145,7 +198,7 @@
 
 
     function getMapConfig(){
-      let width =800;
+      let width =  900;
       let height = 600;
       let container = d3.select("#map");//TODO: select the svg with id Map
      //TODO: set the width and height of the conatiner to be equal the width and height variables.
