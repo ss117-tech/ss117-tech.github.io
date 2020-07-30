@@ -131,22 +131,6 @@
 
 
 
-
-
-    function displayMap(countries){
-
-
-
-
-      var container = d3.select("#map");
-      container.attr("width", width).attr("height", height)
-
-
-
-
-
-    }
-
     function displayAirports(airports, countries) {
 
 
@@ -213,7 +197,7 @@
     function displayAll() {
 
       displayBars(airlineGrouping(dataSets.flightpaths))
-      //displayMap(dataSets.geo)
+
 
       displayAirports(airportGrouping(dataSets.flightpaths),dataSets.geo)
 
