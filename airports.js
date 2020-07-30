@@ -52,6 +52,8 @@
         left: 130,
         right: 10
       }
+      let bodyHeight = height - margin.top - margin.bottom;
+      let bodyWidth = width - margin.left - margin.right;
 
       let container = d3.select("#AirlinesChart"); //TODO: use d3.select to select the element with id AirlinesChart
       container
