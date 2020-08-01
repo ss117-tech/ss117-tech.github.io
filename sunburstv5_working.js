@@ -64,7 +64,10 @@ function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
 
 
 
-d3.json('tst_json_latest_cleaned.json').then(function(root)
+d3.json
+('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa5529b32156aa6e71cf985263f/flare.json')
+//('tst_json_latest_cleaned.json')
+.then(function(root)
 {
     root = d3.hierarchy(root);
     root.sum(d => d.size);
