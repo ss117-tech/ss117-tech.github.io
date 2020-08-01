@@ -42,7 +42,7 @@ var putText = d => {
 };
 
 
-function focusOn(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
+function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
 
         var transition = svg.transition()
             .duration(750)
@@ -59,57 +59,53 @@ function focusOn(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
 
         transition.selectAll('text').attrTween('display', d => () => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none');
 
-        //moveStackToFront(d);
 
-        //function moveStackToFront(elD) {
-        //    svg.selectAll('.slice').filter(d => d === elD)
-        //        .each(function(d) {
-        //            this.parentNode.appendChild(this);
-        //            if (d.parent) { moveStackToFront(d.parent); }
-        //        })
-        //}
     }
 
-var svg = d3.select('body').append('svg')
-    .style('width', '100vw')
-    .style('height', '100vh')
-    .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
-    .on('click', () => focusOn());
 
-d3.json('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa5529b32156aa6e71cf985263f/flare.json').then(function(root)
+
+d3.json('tst_json_latest_cleaned.json').then(function(root)
 {
     root = d3.hierarchy(root);
     root.sum(d => d.size);
 
-    var slice = svg.selectAll('g.slice')
+    var svg = d3.select('body').append('svg')
+        .style('width', '100vw')
+        .style('height', '100vh')
+        .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
+        .on('click', () => choose());
+
+    var pie = svg.selectAll('g.slice')
         .data(partition(root).descendants());
 
-    slice.exit().remove();
+    pie.exit().remove();
 
-    var newSlice = slice.enter()
+    var fPie = pie.enter()
         .append('g').attr('class', 'slice')
         .on('click', d => {
             d3.event.stopPropagation();
-            focusOn(d);
+            choose(d);
         });
 
-    newSlice.append('title')
+    fPie.append('title')
         .text(d => d.data.name + '\n' + formatNumber(d.value));
 
-    newSlice.append('path')
+    fPie.append('path')
         .attr('class', 'main-arc')
         .style('fill', d => color((d.children ? d : d.parent).data.name))
         .attr('d', arc);
 
-    newSlice.append('path')
+    fPie.append('path')
         .attr('class', 'hidden-arc')
         .attr('id', (_, i) => `hiddenArc${i}`)
         .attr('d', midLine);
 
-    var text = newSlice.append('text')
+    var text = fPie.append('text')
         .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none');
 
-    text.append('textPath')
+    fPie.append('text')
+        .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none')
+        .append('textPath')
         .attr('startOffset','50%')
         .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
         .text(d => d.data.name)
@@ -118,7 +114,9 @@ d3.json('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa
         .style('stroke-width', 5)
         .style('stroke-linejoin', 'round');
 
-    text.append('textPath')
+    fPie.append('text')
+        .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none')
+        .append('textPath')
         .attr('startOffset','50%')
         .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
         .text(d => d.data.name);
