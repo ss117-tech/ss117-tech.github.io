@@ -42,7 +42,7 @@ function bubbleChart() {
 
   // charge is dependent on size of the bubble, so bigger towards the middle
   function charge(d) {
-    return -Math.pow(d.radius, 3.0) * forceStrength;
+    return -Math.pow(d.radius, 2.0) * forceStrength;
   }
 
   // create a force simulation and add forces to it
@@ -79,7 +79,7 @@ function bubbleChart() {
     var myNodes = rawData.map(function (d) {
       return {
         id: d.id,
-        radius: radiusScale(+d.flights/16),
+        radius: radiusScale(+d.flights/20),
         flights: +d.flights,
         city: d.city,
         country: d.country,
