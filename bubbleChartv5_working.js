@@ -1,6 +1,6 @@
 function bubbleChart() {
-  var width = 1024;
-  var height = 768;
+  var width = 1200;
+  var height = 800;
 
 
   // location to centre the bubbles
@@ -130,7 +130,7 @@ function bubbleChart() {
                 ('<span class="name">City: </span><span class="value">' +
                                 d.city +
                                 '</span><br/>' +
-                                '<span class="name">Flights: </span><span class="value">$' +
+                                '<span class="name">Flights: </span><span class="value">' +
                                 d.flights +
                                 '</span><br/>' +
                                 '<span class="name">Country: </span><span class="value">' +
