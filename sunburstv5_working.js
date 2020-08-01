@@ -73,6 +73,12 @@ d3.json
       root = d3.hierarchy(root);
       root.sum(d => d.size);
 
+      var svg = d3.select('body').append('svg')
+          .style('width', '100vw')
+          .style('height', '100vh')
+          .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
+          .on('click', () => choose());
+
       const slice = svg.selectAll('g.slice')
           .data(partition(root).descendants());
 
@@ -82,7 +88,7 @@ d3.json
           .append('g').attr('class', 'slice')
           .on('click', d => {
               d3.event.stopPropagation();
-              focusOn(d);
+              choose(d);
           });
 
       newSlice.append('title')
