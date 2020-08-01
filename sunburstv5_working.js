@@ -28,17 +28,17 @@ var midLine = d => {
     //var angles = [x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2];
     //var rev = (angles[1] + angles[0]) / 2 > 0 && (angles[1] + angles[0]) / 2 < Math.PI;
     //if (rev) { angles.reverse(); }
-    var path = d3.path();
+    //var path = d3.path();
     if  ((x(d.x0) + x(d.x1))/ 2 > 0 &&  (x(d.x0) + x(d.x1))/ 2 < Math.PI){
-        path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2, true);
+        return d3.path().arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x1) - Math.PI/2, x(d.x0) - Math.PI/2, true).toString();
     }
     else{
-        path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x1) - Math.PI/2, x(d.x0) - Math.PI/2, false);
+        return d3.path().arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2, false).toString();
     }
 
     //var path = d3.path();
     //path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), angles[0], angles[1], rev);
-    return path.toString();
+    //return path.toString();
 };
 
 
