@@ -49,7 +49,7 @@ var svg = d3.select('body').append('svg')
 
 function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
 
-        var transition = svg.transition()
+        var tr = svg.transition()
             .duration(750)
             .tween('scale', () => {
                 var xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
@@ -57,20 +57,28 @@ function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
                 return t => { x.domain(xd(t)); y.domain(yd(t)); };
             });
 
-        transition.selectAll('path.main-arc')
+        tr.selectAll('text').attrTween('display', d => () => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none');
+
+        tr.selectAll('path.main-arc')
             .attrTween('d', d => () => arc(d));
 
-       transition.selectAll('path.hidden-arc').attrTween('d', d => () => midLine(d));
-
-        transition.selectAll('text').attrTween('display', d => () => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none');
+        tr.selectAll('path.hidden-arc').attrTween('d', d => () => midLine(d));
 
 
     }
 
+function showZSBDetail(d) {
+        var content = '<span class="name">Item: </span><span class="value">' +
+                        d.data.name +
+                        '</span><br/>' +
+                        '<span class="name">Reviews: </span><span class="value">' +
+                        d.value +
+                        '</span>';
 
+        //zsb_tooltip.showTooltip(content, d3.event);
+    }
 
 d3.json
-//('https://gist.githubusercontent.com/mbostock/4348373/raw/85f18ac90409caa5529b32156aa6e71cf985263f/flare.json')
 ('tst_json_latest_cleaned.json')
 .then(function(root)
 {
@@ -88,10 +96,11 @@ d3.json
         .on('click', d => {
             d3.event.stopPropagation();
             choose(d);
-        });
+        })
+        .on('mouseover', showZSBDetail);
+        //.on('mouseout', hideZSBDetail);
 
-    fPie.append('title')
-        .text(d => d.data.name + '\n' + formatNumber(d.value));
+    //fPie.append('title').text(d => d.data.name + '\n' + formatNumber(d.value));
 
     fPie.append('path')
         .attr('class', 'main-arc')
