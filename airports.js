@@ -1,7 +1,7 @@
 // All your javascript code will go here
 let store = {}
 
-let width = 350;
+let width = 500;
 let height = 400;
 let margin = {
   top: 10,
