@@ -41,6 +41,11 @@ var putText = d => {
     return d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)));
 };
 
+var svg = d3.select('body').append('svg')
+    .style('width', '100vw')
+    .style('height', '100vh')
+    .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
+    .on('click', () => choose());
 
 function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
 
@@ -73,11 +78,6 @@ d3.json
       root = d3.hierarchy(root);
       root.sum(d => d.size);
 
-      var svg = d3.select('body').append('svg')
-          .style('width', '100vw')
-          .style('height', '100vh')
-          .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
-          .on('click', () => choose());
 
       const slice = svg.selectAll('g.slice')
           .data(partition(root).descendants());
