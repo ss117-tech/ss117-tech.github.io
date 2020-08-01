@@ -97,7 +97,13 @@ d3.json
         .style('fill', d => color((d.children ? d : d.parent).data.name))
         .attr('d', arc);
 
-        fPie.append('text')
+    fPie.append('path')
+            .attr('class', 'hidden-arc')
+            .attr('id', (_, i) => `hiddenArc${i}`)
+            .attr('d', midLine);
+
+
+    fPie.append('text')
             .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none')
             .append('textPath')
             .attr('startOffset','50%')
