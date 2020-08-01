@@ -16,10 +16,10 @@ var color = d3.scaleOrdinal(d3.schemeCategory10);
 var partition = d3.partition();
 
 var arc = d3.arc()
-    .startAngle(d => x(d.x0))
-    .endAngle(d => x(d.x1))
-    .innerRadius(d => Math.max(0, y(d.y0)))
-    .outerRadius(d => Math.max(0, y(d.y1)));*/
+    .startAngle(d => xScale(d.x0))
+    .endAngle(d => xScale(d.x1))
+    .innerRadius(d => Math.max(0, yScale(d.y0)))
+    .outerRadius(d => Math.max(0, yScale(d.y1)));
 
 
 var mid = d => {
@@ -50,14 +50,12 @@ function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
                 return t => { xScale.domain(x(t)); yScale.domain(y(t)); };
             });
 
-        tr.selectAll('text').attrTween('display', d => () => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none');
+        tr.selectAll('text').attrTween('display', d => () => d.data.name)
+        //(d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none');
 
-        tr.selectAll('path.main-arc')
-            .attrTween('d', d => () => arc(d));
+        tr.selectAll('path.main-arc').attrTween('d', d => () => arc(d));
 
         tr.selectAll('path.hidden-arc').attrTween('d', d => () => mid(d));
-
-
     }
 
 function showDetail(d) {
