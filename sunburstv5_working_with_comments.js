@@ -25,22 +25,21 @@ var arc = d3.arc()
 
 
 var midLine = d => {
-    //var angles = [x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2];
-    //var rev = (angles[1] + angles[0]) / 2 > 0 && (angles[1] + angles[0]) / 2 < Math.PI;
-    //if (rev) { angles.reverse(); }
-    var path = d3.path();
-    if  ((x(d.x0) + x(d.x1))/ 2 > 0 &&  (x(d.x0) + x(d.x1))/ 2 < Math.PI){
-        path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x1) - Math.PI/2, x(d.x0) - Math.PI/2, true);
-    }
-    else{
-        path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2, false);
-    }
+    var angles = [x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2];
 
-    //var path = d3.path();
-    //path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), angles[0], angles[1], rev);
+    var middleAngle = (angles[1] + angles[0]) / 2;
+    var invertDirection = middleAngle > 0 && middleAngle < Math.PI;
+    if (invertDirection) { angles.reverse(); }
+
+    var path = d3.path();
+    path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), angles[0], angles[1], invertDirection);
     return path.toString();
 };
 
+var putText = d => {
+
+    return d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)));
+};
 
 var svg = d3.select('body').append('svg')
     .style('width', '100vw')
@@ -105,6 +104,7 @@ d3.json
 
 
     fPie.append('text')
+            //.attr('display', d => d.data.name)//* 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none')
             .append('textPath')
             .attr('startOffset','50%')
             .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
@@ -113,4 +113,28 @@ d3.json
             .style('stroke', '#FFFFFF');
 
 
+
+    /*fPie.append('path')
+        .attr('class', 'hidden-arc')
+        .attr('id', (_, i) => `hiddenArc${i}`)
+        .attr('d', midLine);
+
+
+    fPie.append('text')
+        .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none')
+        .append('textPath')
+        .attr('startOffset','50%')
+        .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
+        .text(d => d.data.name)
+        .style('fill', 'none')
+        .style('stroke', '#fff')
+        .style('stroke-width', 5)
+        .style('stroke-linejoin', 'round');
+
+    fPie.append('text')
+        .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none')
+        .append('textPath')
+        .attr('startOffset','50%')
+        .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
+        .text(d => d.data.name);*/
 });
