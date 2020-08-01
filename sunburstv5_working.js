@@ -92,12 +92,12 @@ d3.json
 
     fPie.append('title').text(d => d.data.name + '\n' + formatNumber(d.value));
 
-    /*fPie.append('path')
+    fPie.append('path')
         .attr('class', 'main-arc')
         .style('fill', d => color((d.children ? d : d.parent).data.name))
         .attr('d', arc);
 
-    fPie.append('path')
+    /*fPie.append('path')
         .attr('class', 'hidden-arc')
         .attr('id', (_, i) => `hiddenArc${i}`)
         .attr('d', midLine);
