@@ -13,21 +13,17 @@ var y = d3.scaleSqrt()
 
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-var partition = d3.partition();
+//var partition = d3.partition();
 
-var arc = d3.arc()
+/*var arc = d3.arc()
     .startAngle(d => x(d.x0))
     .endAngle(d => x(d.x1))
     .innerRadius(d => Math.max(0, y(d.y0)))
-    .outerRadius(d => Math.max(0, y(d.y1)));
+    .outerRadius(d => Math.max(0, y(d.y1)));*/
 
 
+var mid = d => {
 
-
-var midLine = d => {
-    //var angles = [x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2];
-    //var rev = (angles[1] + angles[0]) / 2 > 0 && (angles[1] + angles[0]) / 2 < Math.PI;
-    //if (rev) { angles.reverse(); }
     var path = d3.path();
     if  ((x(d.x0) + x(d.x1) - Math.PI )/ 2 > 0 &&  (x(d.x0) + x(d.x1) - Math.PI)/ 2 < Math.PI){
         path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x1) - Math.PI/2, x(d.x0) - Math.PI/2, true);
@@ -36,8 +32,6 @@ var midLine = d => {
         path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2, false);
     }
 
-    //var path = d3.path();
-    //path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), angles[0], angles[1], rev);
     return path.toString();
 };
 
@@ -63,7 +57,7 @@ function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
         tr.selectAll('path.main-arc')
             .attrTween('d', d => () => arc(d));
 
-        tr.selectAll('path.hidden-arc').attrTween('d', d => () => midLine(d));
+        tr.selectAll('path.hidden-arc').attrTween('d', d => () => mid(d));
 
 
     }
@@ -96,12 +90,16 @@ d3.json
     fPie.append('path')
         .attr('class', 'main-arc')
         .style('fill', d => color((d.children ? d : d.parent).data.name))
-        .attr('d', arc);
+        .attr('d', d3.arc()
+            .startAngle(d => x(d.x0))
+            .endAngle(d => x(d.x1))
+            .innerRadius(d => Math.max(0, y(d.y0)))
+            .outerRadius(d => Math.max(0, y(d.y1))));
 
     fPie.append('path')
             .attr('class', 'hidden-arc')
             .attr('id', (_, i) => `hiddenArc${i}`)
-            .attr('d', midLine);
+            .attr('d', mid);
 
 
     fPie.append('text')
