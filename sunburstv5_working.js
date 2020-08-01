@@ -79,7 +79,7 @@ function showZSBDetail(d) {
     }
 
 d3.json
-('tst_json_latest_cleaned_2.json')
+('tst_json_latest_cleaned.json')
 .then(function(root)
 {
     root = d3.hierarchy(root);
