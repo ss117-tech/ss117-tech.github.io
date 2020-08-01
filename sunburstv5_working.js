@@ -4,11 +4,11 @@ var maxRadius = (Math.min(width, height) / 2) - 5
 
 var formatNumber = d3.format(',d')
 
-var x = d3.scaleLinear()
+var xScale = d3.scaleLinear()
     .range([0, 2 * Math.PI])
     .clamp(true);
 
-var y = d3.scaleSqrt()
+var yScale = d3.scaleSqrt()
     .range([maxRadius*.1, maxRadius]);
 
 var color = d3.scaleOrdinal(d3.schemeCategory10);
@@ -24,11 +24,11 @@ var arc = d3.arc()
 
 var mid = d => {
     var path = d3.path();
-    if  ((x(d.x0) + x(d.x1) - Math.PI )/ 2 > 0 &&  (x(d.x0) + x(d.x1) - Math.PI)/ 2 < Math.PI){
-        path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x1) - Math.PI/2, x(d.x0) - Math.PI/2, true);
+    if  ((xScale(d.x0) + xScale(d.x1) - Math.PI )/ 2 > 0 &&  (xScale(d.x0) + xScale(d.x1) - Math.PI)/ 2 < Math.PI){
+        path.arc(0, 0, Math.max(0, (yScale(d.y0) + yScale(d.y1)) / 2), xScale(d.x1) - Math.PI/2, xScale(d.x0) - Math.PI/2, true);
     }
     else{
-        path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2, false);
+        path.arc(0, 0, Math.max(0, (yScale(d.y0) + yScale(d.y1)) / 2), xScale(d.x0) - Math.PI/2, xScale(d.x1) - Math.PI/2, false);
     }
     return path.toString();
 };
@@ -45,9 +45,9 @@ function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
         var tr = svg.transition()
             .duration(750)
             .tween('scale', () => {
-                var xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
-                    yd = d3.interpolate(y.domain(), [d.y0, 1]);
-                return t => { x.domain(xd(t)); y.domain(yd(t)); };
+                var x = d3.interpolate(xScale.domain(), [d.x0, d.x1]);
+                var y = d3.interpolate(yScale.domain(), [d.y0, 1]);
+                return t => { xScale.domain(x(t)); yScale.domain(y(t)); };
             });
 
         tr.selectAll('text').attrTween('display', d => () => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none');
