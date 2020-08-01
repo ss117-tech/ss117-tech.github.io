@@ -67,7 +67,7 @@ function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
 
     }
 
-function showZSBDetail(d) {
+function showDetail(d) {
       d3.event.stopPropagation();
       choose(d);
     }
@@ -87,18 +87,12 @@ d3.json
 
     var fPie = pie.enter()
         .append('g').attr('class', 'slice')
-        .on('click', showZSBDetail);
+        .on('click', showDetail);
 
-        //.on('click', d => {
-        //    d3.event.stopPropagation();
-        //    choose(d);
-        //});
-        //.on('mouseover', showZSBDetail);
-        //.on('mouseout', hideZSBDetail);
 
     fPie.append('title').text(d => d.data.name + '\n' + formatNumber(d.value));
 
-    fPie.append('path')
+    /*fPie.append('path')
         .attr('class', 'main-arc')
         .style('fill', d => color((d.children ? d : d.parent).data.name))
         .attr('d', arc);
@@ -127,5 +121,5 @@ d3.json
         .append('textPath')
         .attr('startOffset','50%')
         .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
-        .text(d => d.data.name);
+        .text(d => d.data.name);*/
 });
