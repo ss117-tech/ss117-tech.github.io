@@ -83,8 +83,8 @@ function bubbleChart() {
         flights: +d.flights,
         city: d.city,
         country: d.country,
-        x: Math.random() * 900,
-        y: Math.random() * 800
+        x: Math.random() * 600,
+        y: Math.random() * 600
       };
     });
 
