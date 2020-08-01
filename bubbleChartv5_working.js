@@ -8,14 +8,14 @@ function bubbleChart() {
 
   var countryCenters = {
 
-    US: { x: width /6 , y: height / 2 },
+    US: { x: width / 9, y: height / 2 },
     UK: { x: 2*width / 9, y: height / 2 },
     China: { x: 3 * width / 9, y: height / 2 },
     France: { x: 4 * width / 9, y: height / 2 },
     Spain:{ x:5 * width / 9, y: height / 2 },
     Germany:{ x:6 * width / 9, y: height / 2 },
     Italy:{ x:7 * width / 9, y: height / 2 },
-    Others:{ x: 8 * width / 6, y: height / 2 }
+    Others:{ x: 8 * width / 9, y: height / 2 }
 
   };
 
