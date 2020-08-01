@@ -110,9 +110,7 @@ d3.json
             .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
             .text(d => d.data.name)
             .style('fill', 'none')
-            .style('stroke', '#fff')
-            .style('stroke-width', 5)
-            .style('stroke-linejoin', 'round');
+            .style('stroke', '#fff');
 
 
 
