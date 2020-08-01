@@ -1,5 +1,5 @@
-var width = 1024
-var height = 768
+var width = 600
+var height = 600
 var maxRadius = (Math.min(width, height) / 2) - 5
 
 var formatNumber = d3.format(',d')
