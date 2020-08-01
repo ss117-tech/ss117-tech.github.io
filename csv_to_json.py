@@ -34,7 +34,7 @@ def main():
     """
     tree = ctree()
     # NOTE: you need to have test.csv file as neighbor to this file
-    with open('cleanedDataLatest.csv') as csvfile:
+    with open('cleanedDataLatest2.csv') as csvfile:
         reader = csv.reader(csvfile)
         for rid, row in enumerate(reader):
 
@@ -56,7 +56,7 @@ def main():
 
     # printing results into the terminal
     import json
-    with open ('tst_json_latest.json', 'w') as f:
+    with open ('tst_json_latest_2.json', 'w') as f:
         json.dump(res, f)
 
 

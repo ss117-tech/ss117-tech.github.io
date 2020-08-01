@@ -79,7 +79,7 @@ function showZSBDetail(d) {
     }
 
 d3.json
-('tst_json_latest_cleaned.json')
+('tst_json_latest_cleaned_2.json')
 .then(function(root)
 {
     root = d3.hierarchy(root);
@@ -96,11 +96,11 @@ d3.json
         .on('click', d => {
             d3.event.stopPropagation();
             choose(d);
-        })
-        .on('mouseover', showZSBDetail);
+        });
+        //.on('mouseover', showZSBDetail);
         //.on('mouseout', hideZSBDetail);
 
-    //fPie.append('title').text(d => d.data.name + '\n' + formatNumber(d.value));
+    fPie.append('title').text(d => d.data.name + '\n' + formatNumber(d.value));
 
     fPie.append('path')
         .attr('class', 'main-arc')
