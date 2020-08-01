@@ -1,6 +1,19 @@
 // All your javascript code will go here
 let store = {}
 
+let width = 350;
+let height = 400;
+let margin = {
+  top: 10,
+  bottom: 50,
+  left: 130,
+  right: 10
+}
+//The body is the are that will be occupied by the bars.
+let bodyHeight = height - margin.top - margin.bottom;
+let bodyWidth = width - margin.left - margin.right;//TODO: Compute the width of the body by subtracting the left and right margins from the width.
+
+
 function loadData() {
     return Promise.all([
         d3.csv("cleanedData.csv"),
@@ -72,18 +85,6 @@ function drawAirlinesChart(airlines) {
 }
 
 function getAirlinesChartConfig() {
-  let width = 350;
-  let height = 400;
-  let margin = {
-    top: 10,
-    bottom: 50,
-    left: 130,
-    right: 10
-  }
-  //The body is the are that will be occupied by the bars.
-  let bodyHeight = height - margin.top - margin.bottom;
-  let bodyWidth = width - margin.left - margin.right;//TODO: Compute the width of the body by subtracting the left and right margins from the width.
-
   //The container is the SVG where we will draw the chart. In our HTML is the svg ta with the id AirlinesChart
   let container = d3.select("#AirlinesChart"); //TODO: use d3.select to select the element with id AirlinesChart
   container
@@ -178,8 +179,8 @@ function drawMap(geoJeon) {
 
 
 function getMapConfig(){
-  let width = 600;
-  let height = 400;
+  //let width = 600;
+  //let height = 400;
   let container = d3.select("#map");//TODO: select the svg with id Map
  //TODO: set the width and height of the conatiner to be equal the width and height variables.
   container.attr("width", width).attr("height", height)
