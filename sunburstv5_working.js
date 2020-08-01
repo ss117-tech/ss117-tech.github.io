@@ -97,13 +97,16 @@ d3.json
         .style('fill', d => color((d.children ? d : d.parent).data.name))
         .attr('d', arc);
 
-    fPie.append('text')
-    .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none')
-    .append('textPath')
-    .attr('startOffset','50%')
-    .text(d => d.data.name)
-    .style('fill', 'none')
-    .style('stroke', '#fff');
+        fPie.append('text')
+            .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none')
+            .append('textPath')
+            .attr('startOffset','50%')
+            .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
+            .text(d => d.data.name)
+            .style('fill', 'none')
+            .style('stroke', '#fff')
+            .style('stroke-width', 5)
+            .style('stroke-linejoin', 'round');
 
 
 
