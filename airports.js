@@ -2,7 +2,7 @@
     var cleanedData= d3.csv("cleanedData.csv")
     var countriesJson=d3.json("countries.geo.json")
 
-    var width =  900;
+    var width =  600;
     var height = 600;
 
     var margin = {
