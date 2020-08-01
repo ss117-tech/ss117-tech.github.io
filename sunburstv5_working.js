@@ -69,58 +69,50 @@ d3.json
 //('tst_json_latest_cleaned.json')
 .then(function(root)
 {
-    root = d3.hierarchy(root);
-    root.sum(d => d.size);
 
-    var svg = d3.select('body').append('svg')
-        .style('width', '100vw')
-        .style('height', '100vh')
-        .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
-        .on('click', () => choose());
+      root = d3.hierarchy(root);
+      root.sum(d => d.size);
 
-    var pie = svg.selectAll('g.slice')
-        .data(partition(root).descendants());
+      const slice = svg.selectAll('g.slice')
+          .data(partition(root).descendants());
 
-    pie.exit().remove();
+      slice.exit().remove();
 
-    var fPie = pie.enter()
-        .append('g').attr('class', 'slice')
-        .on('click', d => {
-            d3.event.stopPropagation();
-            choose(d);
-        });
+      const newSlice = slice.enter()
+          .append('g').attr('class', 'slice')
+          .on('click', d => {
+              d3.event.stopPropagation();
+              focusOn(d);
+          });
 
-    fPie.append('title')
-        .text(d => d.data.name + '\n' + formatNumber(d.value));
+      newSlice.append('title')
+          .text(d => d.data.name + '\n' + formatNumber(d.value));
 
-    fPie.append('path')
-        .attr('class', 'main-arc')
-        .style('fill', d => color((d.children ? d : d.parent).data.name))
-        .attr('d', arc);
+      newSlice.append('path')
+          .attr('class', 'main-arc')
+          .style('fill', d => color((d.children ? d : d.parent).data.name))
+          .attr('d', arc);
 
-    fPie.append('path')
-        .attr('class', 'hidden-arc')
-        .attr('id', (_, i) => `hiddenArc${i}`)
-        .attr('d', midLine);
+      newSlice.append('path')
+          .attr('class', 'hidden-arc')
+          .attr('id', (_, i) => `hiddenArc${i}`)
+          .attr('d', midLine);
 
-    var text = fPie.append('text')
-        .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none');
+      const text = newSlice.append('text')
+          .attr('display', d => putText(d) ? null : 'none');
 
-    fPie.append('text')
-        .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none')
-        .append('textPath')
-        .attr('startOffset','50%')
-        .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
-        .text(d => d.data.name)
-        .style('fill', 'none')
-        .style('stroke', '#fff')
-        .style('stroke-width', 5)
-        .style('stroke-linejoin', 'round');
+      // Add white contour
+      text.append('textPath')
+          .attr('startOffset','50%')
+          .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
+          .text(d => d.data.name)
+          .style('fill', 'none')
+          .style('stroke', '#fff')
+          .style('stroke-width', 5)
+          .style('stroke-linejoin', 'round');
 
-    fPie.append('text')
-        .attr('display', d => (d.data.name.length * 6 < (Math.max(0, (y(d.y0) + y(d.y1)) / 2)* (x(d.x1) - x(d.x0)))) ? null : 'none')
-        .append('textPath')
-        .attr('startOffset','50%')
-        .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
-        .text(d => d.data.name);
+      text.append('textPath')
+          .attr('startOffset','50%')
+          .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
+          .text(d => d.data.name);
 });
