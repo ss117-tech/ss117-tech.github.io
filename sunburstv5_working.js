@@ -30,10 +30,10 @@ var midLine = d => {
     //if (rev) { angles.reverse(); }
     var path = d3.path();
     if  ((x(d.x0) + x(d.x1))/ 2 > 0 &&  (x(d.x0) + x(d.x1))/ 2 < Math.PI){
-        path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x1) - Math.PI/2, x(d.x0) - Math.PI/2, true);
+        path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2, true);
     }
     else{
-        path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2, false);
+        path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x1) - Math.PI/2, x(d.x0) - Math.PI/2, false);
     }
 
     //var path = d3.path();
