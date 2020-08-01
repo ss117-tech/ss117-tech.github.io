@@ -68,14 +68,8 @@ function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
     }
 
 function showZSBDetail(d) {
-        var content = '<span class="name">Item: </span><span class="value">' +
-                        d.data.name +
-                        '</span><br/>' +
-                        '<span class="name">Reviews: </span><span class="value">' +
-                        d.value +
-                        '</span>';
-
-        //zsb_tooltip.showTooltip(content, d3.event);
+      d3.event.stopPropagation();
+      choose(d);
     }
 
 d3.json
@@ -93,10 +87,12 @@ d3.json
 
     var fPie = pie.enter()
         .append('g').attr('class', 'slice')
-        .on('click', d => {
-            d3.event.stopPropagation();
-            choose(d);
-        });
+        .on('click', showZSBDetail);
+
+        //.on('click', d => {
+        //    d3.event.stopPropagation();
+        //    choose(d);
+        //});
         //.on('mouseover', showZSBDetail);
         //.on('mouseout', hideZSBDetail);
 
