@@ -13,9 +13,9 @@ var y = d3.scaleSqrt()
 
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
-//var partition = d3.partition();
+var partition = d3.partition();
 
-/*var arc = d3.arc()
+var arc = d3.arc()
     .startAngle(d => x(d.x0))
     .endAngle(d => x(d.x1))
     .innerRadius(d => Math.max(0, y(d.y0)))
@@ -23,7 +23,6 @@ var color = d3.scaleOrdinal(d3.schemeCategory10);
 
 
 var mid = d => {
-
     var path = d3.path();
     if  ((x(d.x0) + x(d.x1) - Math.PI )/ 2 > 0 &&  (x(d.x0) + x(d.x1) - Math.PI)/ 2 < Math.PI){
         path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x1) - Math.PI/2, x(d.x0) - Math.PI/2, true);
@@ -31,7 +30,6 @@ var mid = d => {
     else{
         path.arc(0, 0, Math.max(0, (y(d.y0) + y(d.y1)) / 2), x(d.x0) - Math.PI/2, x(d.x1) - Math.PI/2, false);
     }
-
     return path.toString();
 };
 
@@ -74,7 +72,6 @@ d3.json
     root = d3.hierarchy(root);
     root.sum(d => d.size);
 
-
     var pie = svg.selectAll('g.slice')
         .data(partition(root).descendants());
 
@@ -84,23 +81,17 @@ d3.json
         .append('g').attr('class', 'slice')
         .on('click', showDetail);
 
-
     fPie.append('title').text(d => d.data.name + '\n' + formatNumber(d.value));
 
     fPie.append('path')
         .attr('class', 'main-arc')
         .style('fill', d => color((d.children ? d : d.parent).data.name))
-        .attr('d', d3.arc()
-            .startAngle(d => x(d.x0))
-            .endAngle(d => x(d.x1))
-            .innerRadius(d => Math.max(0, y(d.y0)))
-            .outerRadius(d => Math.max(0, y(d.y1))));
+        .attr('d', arc);
 
     fPie.append('path')
             .attr('class', 'hidden-arc')
             .attr('id', (_, i) => `hiddenArc${i}`)
             .attr('d', mid);
-
 
     fPie.append('text')
             .append('textPath')
@@ -109,6 +100,4 @@ d3.json
             .text(d => d.data.name)
             .style('fill', 'none')
             .style('stroke', '#FFFFFF');
-
-
 });
