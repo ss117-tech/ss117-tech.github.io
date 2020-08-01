@@ -75,6 +75,17 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/bubble_chart.css">
 
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        verticalCentered: false,
+        anchors: ['intro', 'datavis', 'airports', 'country', 'details'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Introduction', '​About', 'Flights', 'Country overview', 'Details']
+      });});
+  </script>
+
 </head>
 <body>
 
@@ -106,7 +117,7 @@
       </div>
     </div>
 
-    <div class="section" id="airport">
+    <div class="section" id="trips">
       <div id="content_div">
         <h1>Airport trips</h1>
         <div class="mainView">
