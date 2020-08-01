@@ -1,17 +1,17 @@
 // All your javascript code will go here
 let store = {}
 
-let width = 500;
-let height = 400;
-let margin = {
+var width = 600;
+var height = 400;
+var margin = {
   top: 10,
   bottom: 50,
   left: 130,
   right: 10
 }
 //The body is the are that will be occupied by the bars.
-let bodyHeight = height - margin.top - margin.bottom;
-let bodyWidth = width - margin.left - margin.right;//TODO: Compute the width of the body by subtracting the left and right margins from the width.
+var bodyHeight = height - margin.top - margin.bottom;
+var bodyWidth = width - margin.left - margin.right;//TODO: Compute the width of the body by subtracting the left and right margins from the width.
 
 
 function loadData() {
