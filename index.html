@@ -79,10 +79,10 @@
     $(document).ready(function() {
       $('#fullpage').fullpage({
         verticalCentered: false,
-        anchors: ['intro', 'datavis', 'airports', 'flightsbycountries', 'details'],
+        anchors: ['intro', 'airports', 'flightsbycountries', 'allflights'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Introduction', '​About', 'Flights', 'Total flights by country', 'Details']
+        navigationTooltips: ['Introduction', 'Flights', 'Total flights by country', 'Details']
       });});
   </script>
 
@@ -93,12 +93,7 @@
     <div class="section" id="title">
       <div id="title_text">
         <h1>Diving into the Airport Business</h1>
-      </div>
-    </div>
 
-    <div class="section" id="about">
-      <div id="content_div">
-        <h1>About the Visualization</h1>
         <p>This visualization is an interactive slideshow which takes the user through the Dataset of the 9th Round of the Yelp Academic
           Dataset Challenge. The dataset itself contains the Yelp reviews and aggregated check-ins over time of 144 thousand businesses
           located throughout various metropolitans across the globe. This visualization focuses on the data from the United States which
