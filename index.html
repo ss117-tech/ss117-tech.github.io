@@ -74,16 +74,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/bubble_chart.css">
 
-  <script>
-    $(document).ready(function() {
-      $('#fullpage').fullpage({
-        verticalCentered: false,
-        anchors: ['intro', 'flightsbyairline', 'flightsbycountry', 'allflightsdetails','allrefs'],
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['Introduction', 'Flights by Airline', 'Flights by country', 'Details', 'References']
-      });});
-  </script>
+
 
 </head>
 <body>
@@ -118,85 +109,6 @@
 
 
 
-    <div class="section" id="trips">
-      <div id="content_div">
-        <h1>Flights by Airlines and Flight Map</h1>
-        <p>​​We are looking at the data by Airlines for the top 32 airlines.</p>
-        <h2>Dataset</h2>
-        <p>With 3 separate raw data csvs, the dataset was cleaned using Openrefine and merged into one single csv and filtered for the top 32 airlines. </p>
-        <h2>How to use</h2>
-        <p>The user can click on any of the bars and it will show the associated flights in the map.</p>
-        <div class="mainView">
-          <div>
-              <h2>Airlines</h2>
-              <svg id="AirlinesChart"></svg>
-          </div>
-          <div>
-              <h2>Airports</h2>
-              <svg id="Map"></svg>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section" id="bub">
-      <div id="content_div">
-        <h1>Total Flights by Country</h1>
-        <p>​​We are looking at the total flights serviced by airports in different countries.</p>
-        <h2>Dataset</h2>
-        <p>The top 32 airlines csv is converted into another csv with grouping by city and country for the bubble chart. The top 7 countreis were maintained and the others were merged into the value of 'Others'. </p>
-        <h2>How to use</h2>
-  			<p>The user can toggle display between All Countries, and By Country. The toggle triggers the change of bubble’s co-ordinates
-          into their respective groupings.</p>
-        <div id="toolbar">
-          <a href="#" id="all" class="button active">All Countries</a>
-          <a href="#" id="country" class="button">By Country</a>
-        </div>
-        <div id="vis"></div>
-      </div>
-    </div>
-
-    <div class="section" id="sunburst">
-      <div id="content_div">
-        <h1>Airport trips</h1>
-        <p>​​We can deep dive into the data for each country here, looking at source city, source airport, destination country, destination city and airlines at each level.</p>
-        <h2>Dataset</h2>
-        <p>​The data was cleaned again for the sunburst diagram, with a lot of entries merged into the value of 'Others', so as to keep the sunburst diagram clean. </p>
-        <h2>How to use</h2>
-        <p>In the Sunburst Visualization, a user can click on a region, which zooms into the data into the underlying information. Clicking the centre circle will return the values for one level up in the hierarchy.
-          Clicking anywhere else in the chart will bring the user back to the topmost level.</p>
-        <div id="sunb"></div>
-      </div>
-    </div>
-
-
-    <div class="section" id="refs">
-        <div id="content_div">
-          <h1>References</h1>
-          <h2>Dataset</h2>
-          <ul>
-            <li><a href='https://openflights.org/data.html#airport' target='_blank'>Airport data</a></li>
-            <li><a href='https://openflights.org/data.html#airline' target='_blank'>Airline data</a></li>
-            <li><a href='https://openflights.org/data.html#route' target='_blank'>Route data</a></li>
-            <li><a href='https://github.com/johan/world.geo.json/blob/master/countries.geo.json  ' target='_blank'>Country data</a></li>
-          </ul>
-          <h2>Flight bar graph and map</h2>
-          <ul>
-            <li><a href='https://www.coursera.org/learn/information-visualization-programming-d3js' target='_blank'>Information Visualization: Programming with D3.js</a></li>
-            <li><a href='https://bl.ocks.org/sjengle/2e58e83685f6d854aa40c7bc546aeb24' target='_blank'>Flight edge bundling</a></li>
-          </ul>
-          <h2>Bubble Chart</h2>
-          <ul>
-            <li><a href='https://github.com/vlandham/bubble_chart_v4' target='_blank'>Animated Bubble Chart by Jim Vallandingham</a></li>
-          </ul>
-          <h2>Zoomable Sunburst</h2>
-          <ul>
-            <li><a href='https://gist.github.com/mbostock/4348373' target='_blank'>Zoomable Sunburst by Mike Bostock</a></li>
-          </ul>
-        </div>
-      </div>
-
-
 
     <!--script  src="js/d3.min.js"></script-->
     <!--div class="section" id="bubble">
@@ -211,9 +123,299 @@
     </div-->
 
   </div>
-  <script src="airports.js"></script>
-  <script src="bubbleChartv5_working.js"></script>
-  <script src="sunburstv5_working.js"></script>
+  <script>
+  //Initialize the variables
+    var cleanedData= d3.csv("cleanedData.csv")
+    var countriesJson=d3.json("countries.geo.json")
+
+    var width =  600;
+    var height = 400;
+
+    var margin = {
+      top: 10,
+      bottom: 50,
+      left: 130,
+      right: 10
+    }
+    var bodyHeight = height - margin.top - margin.bottom;
+    var bodyWidth = width - margin.left - margin.right;
+
+    var projection = d3.geoMercator().scale(97).translate([width / 2, height / 2 + 20]);
+
+    // datasets having both therotes and the county information
+    var dataSets={}
+
+
+
+
+    function airlineGrouping(data) {
+
+      var airlineDict = data.reduce((airlineDict, d) => {
+
+        //Get present values of the the airline.
+        var present = airlineDict[d.AirlineID] || {"AirlineID": d.AirlineID,"AirlineName": d.AirlineName,"numberOfFlights": 0}
+
+        present.numberOfFlights +=  1 //Increment the count by 1.
+
+        airlineDict[d.AirlineID] = present //TODO: Save the updated information in the dictionary using the airline id as key.
+
+        return airlineDict;
+      }, {})
+
+
+      airlineKeys = Object.keys(airlineDict) // Get the keys
+      airlineDict = airlineKeys.map(key => airlineDict[key])
+      airlineDict = airlineDict.sort((x,y) => d3.descending(x.numberOfFlights, y.numberOfFlights))      //Sort in descending order of number of flights.
+
+      return airlineDict
+    }
+
+
+    function flightGrouping(data){
+      var airlineDict = data.reduce((airlineDict, d) => {
+
+        //Get present values of the the airline.
+        var present = airlineDict[d.SourceCity.concat('-',d.DestinationCity)] || {"SourceCity": d.SourceCity,"DestinationCity": d.DestinationCity,"numberOfFlights": 0}
+
+        present.numberOfFlights +=  1 //Increment the count by 1.
+
+        airlineDict[d.SourceCity.concat('-',d.DestinationCity)] = present //TODO: Save the updated information in the dictionary using the airline id as key.
+
+        return airlineDict;
+      }, {})
+
+    }
+
+
+    function displayFlightPaths(airlineID) {
+        var flightpaths = dataSets.flightpaths
+        //var projection = dataSets.mapProjection
+
+        var fPaths = flightpaths.filter(d => d.AirlineID === airlineID)//Filter flight paths by Airline ID
+
+        var container = d3.select('#Map')
+        var fData = container.selectAll("line").data(fPaths, d => d.ID) //filter which flightpaths have been added or removed.
+
+        container.selectAll("line")
+                .data(fPaths, d => d.ID).enter().append("line")
+          .attr("x1", d => projection([d.SourceLongitude, d.SourceLatitude])[0])
+          .attr("y1", d => projection([d.SourceLongitude, d.SourceLatitude])[1])
+          .attr("x2", d => projection([d.DestinationLongitude, d.DestinationLatitude])[0])
+          .attr("y2", d => projection([d.DestinationLongitude, d.DestinationLatitude])[1])
+          .attr("stroke", "#2a5599")
+          //.attr("opacity", 0.1)
+
+        fData.exit().remove()
+    }
+
+
+
+    function displayBars(airlinesData) {
+
+
+      var xScale = d3.scaleLinear()
+            .range([0, bodyWidth])
+            .domain([0, d3.max(airlinesData, d => d.numberOfFlights)])
+
+      var yScale = d3.scaleBand()
+            .range([0, bodyHeight])
+            .domain(airlinesData.map(a => a.AirlineName))
+            .padding(0.2)
+
+     var xAxis = d3.axisBottom(xScale).ticks(5)
+     var yAxis = d3.axisLeft(yScale).ticks(5)
+
+
+     var container = d3.select("#AirlinesChart")
+
+     container
+       .attr("width", width)
+       .attr("height", height)
+       .append("g")
+          .style("transform",
+            `translate(${margin.left}px,${margin.top}px)`
+          )
+          .selectAll(".bar")
+          .data(airlinesData)
+          .enter()
+          .append("rect")
+          .attr("height", yScale.bandwidth())
+          .attr("y", (d) => yScale(d.SourceCity.concat('-',d.DestinationCity)))
+          .attr("width", (d) => xScale(d.numberOfFlights))
+          .attr("fill", "#2a5599")
+          .on("mouseenter", function(d) {
+            displayFlightPaths(d.SourceCity.concat('-',d.DestinationCity))
+            d3.select(this)
+              .attr("fill", "#992a2a")
+           })
+           .on("mouseleave", function(d) { // <- this is the new code
+             displayFlightPaths(null)
+             d3.select(this)
+               .attr("fill", "#2a5599")
+            })
+
+
+       container.append("g")
+             .style("transform",
+                 `translate(${margin.left}px,${height - margin.bottom}px)`
+             )
+             .call(xAxis)
+
+
+       container.append("g")
+             .style("transform",
+                 `translate(${margin.left}px,${margin.top}px)`
+             )
+             .call(yAxis)
+
+      container.append("g").append("rect").attr("x", 10)
+                                                .attr("y", 10)
+                                               .attr("width", 200)
+                                               .attr("height", 100)
+                                               .style("fill", "red")
+                                               .attr("transform",
+                                                function(d){ return "translate(350,100)";});;
+
+      container.append("g").append("text")
+          .attr("transform",
+                function(){ return "translate(370,130)";})
+          .attr("font-size", "2em")
+          .attr("color", "black")
+          .text("Ryanair has the ");
+
+     container.append("g").append("text")
+              .attr("transform",
+                    function(){ return "translate(370,150)";})
+              .attr("font-size", "2em")
+              .attr("color", "black")
+              .text("highest number ");
+
+    container.append("g").append("text")
+              .attr("transform",
+                    function(){ return "translate(370,170)";})
+              .attr("font-size", "2em")
+              .attr("color", "black")
+              .text("of flights and is ");
+
+    container.append("g").append("text")
+                        .attr("transform",
+                              function(){ return "translate(370,190)";})
+                        .attr("font-size", "2em")
+                        .attr("color", "black")
+                        .text("conc. in Europe");
+
+      container.append("g")
+      .append('line')
+      .style("stroke", "black")
+      .style("stroke-width", 5)
+      .attr("x1", 380)
+      .attr("y1", 110)
+      .attr("x2", 570)
+      .attr("y2", 20);
+
+      container.append("g")
+      .append('line')
+      .style("stroke", "black")
+      .style("stroke-width", 5)
+      .attr("x1", 550)
+      .attr("y1", 150)
+      .attr("x2", 600)
+      .attr("y2", 150);
+    //var svgContainer = container.append("svg").attr("width", 200).attr("height", 200);
+
+
+
+    //container.append("text").text("!!!").style("fill", "white");
+
+    }
+
+
+
+    function displayAirports(airports, countries) {
+
+
+      container = d3.select("#map");
+      var path = d3.geoPath().projection(projection)
+
+      container.attr("width", width).attr("height", height)
+      .selectAll("path").data(countries.features)
+      .enter().append("path")
+      .attr("d",d => path(d))
+      .attr("stroke", "#ccc")
+      .attr("fill", "#eee")
+
+
+      container.attr("width", width).attr("height", height)
+      .selectAll("circle")
+                          .data(airports)
+                          .enter().append("circle")
+                          .attr("r", 1)
+                          .attr("cx", d => projection([d.Longitude, d.Latitude])[0])
+                          .attr("cy", d => projection([d.Longitude, d.Latitude])[1])
+                          .attr("fill", "#2a5599");
+    }
+
+    function airportGrouping(data) {
+        var airlineDict = data.reduce((airlineDict, d) => {
+
+            var presentDest = airlineDict[d.DestinationAirportID] || {
+                "AirportID": d.DestinationAirportID,
+                "Airport": d.DestinationAirport,
+                "Latitude": +d.DestinationLatitude,
+                "Longitude": +d.DestinationLongitude,
+                "City": d.DestinationCity,
+                "Country": d.DestinationCountry,
+                "numberOfFlights": 0
+            }
+
+            presentDest.numberOfFlights += 1
+            airlineDict[d.DestinationAirportID] = presentDest
+
+            var presentSource = airlineDict[d.SourceAirportID] || {
+                "AirportID": d.SourceAirportID,
+                "Airport": d.SourceAirport,
+                "Latitude": +d.SourceLatitude,
+                "Longitude": +d.SourceLongitude,
+                "City": d.SourceCity,
+                "Country": d.SourceCountry,
+                "numberOfFlights": 0
+            }
+            presentSource.numberOfFlights += 1
+            airlineDict[d.SourceAirportID] = presentSource
+
+            return airlineDict
+        }, {})
+
+        airlineKeys= Object.keys(airlineDict)
+        airlineDict = airlineKeys.map(key => airlineDict[key])
+        return airlineDict
+    }
+
+
+
+
+    function displayAll() {
+
+      //displayBars(airlineGrouping(dataSets.flightpaths))
+
+      displayBars(flightGrouping(dataSets.flightpaths))
+
+      //displayAirports(airportGrouping(dataSets.flightpaths),dataSets.geo)
+
+      //displayFlightPaths("24")
+    }
+
+    Promise.all([
+        cleanedData,
+        countriesJson,
+    ]).then(datasets => {
+        dataSets.flightpaths = datasets[0]; // Capture flightpaths/routes
+        dataSets.geo = datasets[1]          //Capture country data from the JSON data
+        return dataSets;
+    }).then(displayAll);
+
+  </script>
+
   <!--script src="js/tooltip.js"></script>
   <script src="js/bubble_chart_test.js"></script-->
 

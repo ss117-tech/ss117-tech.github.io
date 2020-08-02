@@ -1,0 +1,223 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>CS498 Data Visualization Final Project - Subramanian Shankar</title>
+  <meta name="author" content="Subramanian Shankar" />
+  <meta name="description" content="fullPage full-screen backgrounds." />
+  <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+  <meta name="Resource-type" content="Document" />
+
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="jquery.fullPage.css" />
+
+  <!--script  src="js/d3.v3.js"></script-->
+  <script  src="d3.js"></script>
+  <!-- import fullPage -->
+  <script  src="js/jquery.min.js"></script>
+  <script  src="js/jquery.fullPage.js"></script>
+
+  <!-- import d3.v4 -->
+  <!--script  src="js/d3-annotation.min.js"></script-->
+
+  <style>
+      body {
+          font-family: Helvetica, Arial, sans-serif
+      }
+
+      h1 {
+          background-color: #2a5599;
+          /* TODO 1
+          change the text to white and add a padding of 5px
+          2 lines of code
+          */
+          color: white;
+          padding: 5px;
+      }
+
+      /* TODO 2
+      Add code to show a black border of 1px around all SVGs elements in the page
+      1-3 lines of code
+      */
+      svg {
+        stroke: transparent;
+      }
+
+      .slice {
+          cursor: pointer;
+      }
+
+      .slice .main-arc {
+          stroke: #FFFFFF;
+          stroke-width: 1px;
+      }
+
+      .slice .hidden-arc {
+          fill: none;
+      }
+
+      .slice text {
+          pointer-events: none;
+          dominant-baseline: middle;
+          text-anchor: middle;
+      }
+
+      /* TODO 3
+       - Use the "display flex" feature from to show the items from class `mainView` side by side
+       1-3 lines of cide*/
+
+        .mainView{
+            display: flex;
+        }
+
+  </style>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bubble_chart.css">
+
+  <script>
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        verticalCentered: false,
+        anchors: ['intro', 'flightsbyairline', 'flightsbycountry', 'allflightsdetails','allrefs'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Introduction', 'Flights by Airline', 'Flights by country', 'Details', 'References']
+      });});
+  </script>
+
+</head>
+<body>
+
+  <div id="fullpage">
+    <div class="section" id="title">
+      <div id="title_text">
+        <h1>Analysis of Flights </h1>
+        <p>This visualization is a narrative visualization for the user to explore the dataset of OpenFlights. The dataset contains separate csvs of Airport data, Airline data and Route data, and a json providing countries details for map. </p>
+              <h2>Dataset</h2>
+              <ul>
+                <li><a href='https://openflights.org/data.html#airport' target='_blank'>Airport data</a></li>
+                <li><a href='https://openflights.org/data.html#airline' target='_blank'>Airline data</a></li>
+                <li><a href='https://openflights.org/data.html#route' target='_blank'>Route data</a></li>
+                <li><a href='https://github.com/johan/world.geo.json/blob/master/countries.geo.json  ' target='_blank'>Country data</a></li>
+              </ul>
+              <h2>Flight bar graph and map reference</h2>
+              <ul>
+                <li><a href='https://www.coursera.org/learn/information-visualization-programming-d3js' target='_blank'>Information Visualization: Programming with D3.js</a></li>
+                <li><a href='https://bl.ocks.org/sjengle/2e58e83685f6d854aa40c7bc546aeb24' target='_blank'>Flight edge bundling</a></li>
+              </ul>
+              <h2>Bubble Chart reference</h2>
+              <ul>
+                <li><a href='https://github.com/vlandham/bubble_chart_v4' target='_blank'>Animated Bubble Chart by Jim Vallandingham</a></li>
+              </ul>
+              <h2>Zoomable Sunburst reference</h2>
+              <ul>
+                <li><a href='https://gist.github.com/mbostock/4348373' target='_blank'>Zoomable Sunburst by Mike Bostock</a></li>
+              </ul>
+        </div>
+    </div>
+
+
+
+    <div class="section" id="trips">
+      <div id="content_div">
+        <h1>Flights by Airlines and Flight Map</h1>
+        <p>​​We are looking at the data by Airlines for the top 32 airlines.</p>
+        <h2>Dataset</h2>
+        <p>With 3 separate raw data csvs, the dataset was cleaned using Openrefine and merged into one single csv and filtered for the top 32 airlines. </p>
+        <h2>How to use</h2>
+        <p>The user can click on any of the bars and it will show the associated flights in the map.</p>
+        <div class="mainView">
+          <div>
+              <h2>Airlines</h2>
+              <svg id="AirlinesChart"></svg>
+          </div>
+          <div>
+              <h2>Airports</h2>
+              <svg id="Map"></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="bub">
+      <div id="content_div">
+        <h1>Total Flights by Country</h1>
+        <p>​​We are looking at the total flights serviced by airports in different countries.</p>
+        <h2>Dataset</h2>
+        <p>The top 32 airlines csv is converted into another csv with grouping by city and country for the bubble chart. The top 7 countreis were maintained and the others were merged into the value of 'Others'. </p>
+        <h2>How to use</h2>
+  			<p>The user can toggle display between All Countries, and By Country. The toggle triggers the change of bubble’s co-ordinates
+          into their respective groupings.</p>
+        <div id="toolbar">
+          <a href="#" id="all" class="button active">All Countries</a>
+          <a href="#" id="country" class="button">By Country</a>
+        </div>
+        <div id="vis"></div>
+      </div>
+    </div>
+
+    <div class="section" id="sunburst">
+      <div id="content_div">
+        <h1>Airport trips</h1>
+        <p>​​We can deep dive into the data for each country here, looking at source city, source airport, destination country, destination city and airlines at each level.</p>
+        <h2>Dataset</h2>
+        <p>​The data was cleaned again for the sunburst diagram, with a lot of entries merged into the value of 'Others', so as to keep the sunburst diagram clean. </p>
+        <h2>How to use</h2>
+        <p>In the Sunburst Visualization, a user can click on a region, which zooms into the data into the underlying information. Clicking the centre circle will return the values for one level up in the hierarchy.
+          Clicking anywhere else in the chart will bring the user back to the topmost level.</p>
+        <div id="sunb"></div>
+      </div>
+    </div>
+
+
+    <div class="section" id="refs">
+        <div id="content_div">
+          <h1>References</h1>
+          <h2>Dataset</h2>
+          <ul>
+            <li><a href='https://openflights.org/data.html#airport' target='_blank'>Airport data</a></li>
+            <li><a href='https://openflights.org/data.html#airline' target='_blank'>Airline data</a></li>
+            <li><a href='https://openflights.org/data.html#route' target='_blank'>Route data</a></li>
+            <li><a href='https://github.com/johan/world.geo.json/blob/master/countries.geo.json  ' target='_blank'>Country data</a></li>
+          </ul>
+          <h2>Flight bar graph and map</h2>
+          <ul>
+            <li><a href='https://www.coursera.org/learn/information-visualization-programming-d3js' target='_blank'>Information Visualization: Programming with D3.js</a></li>
+            <li><a href='https://bl.ocks.org/sjengle/2e58e83685f6d854aa40c7bc546aeb24' target='_blank'>Flight edge bundling</a></li>
+          </ul>
+          <h2>Bubble Chart</h2>
+          <ul>
+            <li><a href='https://github.com/vlandham/bubble_chart_v4' target='_blank'>Animated Bubble Chart by Jim Vallandingham</a></li>
+          </ul>
+          <h2>Zoomable Sunburst</h2>
+          <ul>
+            <li><a href='https://gist.github.com/mbostock/4348373' target='_blank'>Zoomable Sunburst by Mike Bostock</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+    <!--script  src="js/d3.min.js"></script-->
+    <!--div class="section" id="bubble">
+      <div class="container">
+        <h1>Gates Foundation Educational Spending</h1>
+        <div id="toolbar">
+          <a href="#" id="all" class="button active">All Grants</a>
+          <a href="#" id="country" class="button">Grants By Year</a>
+        </div>
+        <div id="vis"></div>
+      </div>
+    </div-->
+
+  </div>
+  <script src="airports.js"></script>
+  <script src="bubbleChartv5_working.js"></script>
+  <script src="sunburstv5_working.js"></script>
+  <!--script src="js/tooltip.js"></script>
+  <script src="js/bubble_chart_test.js"></script-->
+
+
+
+</body>
+</html>
