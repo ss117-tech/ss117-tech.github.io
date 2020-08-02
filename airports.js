@@ -130,10 +130,14 @@ function displayBars(airlinesData) {
 
 var svgContainer = container.append("svg").attr("width", 200).attr("height", 200);
 
- var rectangle = svgContainer.append("rect")
-                             .attr("x", 10)                            .attr("y", 10)
+svgContainer.append("rect")
+                             .attr("x", 10)
+                             .attr("y", 10)
                             .attr("width", 50)
                             .attr("height", 100);
+
+svgContainer.append("text").text("!!!").style("fill", "white");
+
 }
 
 
