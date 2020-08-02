@@ -91,29 +91,19 @@
   <div id="fullpage">
     <div class="section" id="title">
       <div id="title_text">
-        <h1>Diving into the Airport Business</h1>
-
-        <p>This visualization is an interactive slideshow which takes the user through the Dataset of the 9th Round of the Yelp Academic
-          Dataset Challenge. The dataset itself contains the Yelp reviews and aggregated check-ins over time of 144 thousand businesses
-          located throughout various metropolitans across the globe. This visualization focuses on the data from the United States which
-          includes the following cities: Pittsburgh, Charlotte, Urbana-Champaign, Phoenix, Las Vegas, Madison, Cleveland.</p>
-        <h2>Managing the Dataset</h2>
-        <p>With such a large dataset, creating a visualization with the raw data turned out to be very difficult. The first step for created
-          this visualization was to process the dataset and focus on the data pertaining restaurants in the United States only.</p>
-        <h2>Parameters and Triggers</h2>
-        <p>Both parameters and triggers are used in all of the three visualizations. For the Bubble Chart Visualization, parameters for the
-          x,y co-ordinates of each bubble are set to an initial central position for the All Reviews Visualization. As a user selects menu
-          items to chose between All Reviews, Reviews by State and Reviews by Stars, it triggers the change of bubble’s x,y co-ordinates
-          parameter to their respective groupings.</p><br />
-        <p>In Zoomable Sunburst Visualization, each mouse click on a region is a trigger for the path and arc parameters. By clicking within
-          a region, you can zoom into the data to take a look at the information underneath. Clicking the centre circle will trigger the
-          parameters to return to its values one up in the hierarchy.</p><br />
-      </div>
+        <h1>Analysis of Flights </h1>
+        <p>This visualization is a narrative visualization for the user to explore the dataset of OpenFlights. The dataset contains separate csvs of Airport data, Airline data and Route data, and a json providing countries details for map. </p>
+        </div>
     </div>
 
     <div class="section" id="trips">
       <div id="content_div">
-        <h1>Airport trips</h1>
+        <h1>Flights by Airlines and Flight Map</h1>
+        <p>​​We are looking at the data by Airlines for the top 32 airlines.</p>
+        <h2>Dataset</h2>
+        <p>With 3 separate raw data csvs, the dataset was cleaned using Openrefine and merged into one single csv and filtered for the top 32 airlines. </p>
+        <h2>How to use</h2>
+        <p>The user can click on any of the bars and it will show the associated flights in the map.</p>
         <div class="mainView">
           <div>
               <h2>Airlines</h2>
@@ -129,18 +119,16 @@
 
     <div class="section" id="bubble">
       <div id="content_div">
-        <h1>Gates Foundation Educational Spending</h1>
-        <p>​​The restaurant business is an enormous industry where understanding your clients and their behavioural patterns may give prospective
-  				new restaurant owners a much needed head start. This interactive slideshow dives into the publicly available Yelp Academic Dataset
-  				which includes a large set of reviews client interactions across multiple industries and regions. We will focus on restaurants within
-  				the United States in order to better understand client interactions.</p><br />
-  			<p>Assumptions are made in the positive correlation between the number of reviews and the popularity of a business. This is then tied with
-  				the assumption of the positive correlation between number of check-ins and the popularity of a business. By focusing on restaurants
-  				which have large number of reviews, check-ins and high star rating, we will be able to understand the type of restaurant to invest
-  				into.</p>
+        <h1>Total Flights by Country</h1>
+        <p>​​We are looking at the total flights serviced by airports in different countries.</p>
+        <h2>Dataset</h2>
+        <p>The top 32 airlines csv is converted into another csv with grouping by city and country for the bubble chart. The top 7 countreis were maintained and the others were merged into the value of 'Others'. </p>
+        <h2>How to use</h2>
+  			<p>The user can toggle display between All Countries, and By Country. The toggle triggers the change of bubble’s co-ordinates
+          into their respective groupings.</p>
         <div id="toolbar">
           <a href="#" id="all" class="button active">All Countries</a>
-          <a href="#" id="country" class="button">Total Number of Flights by Country</a>
+          <a href="#" id="country" class="button">By Country</a>
         </div>
         <div id="vis"></div>
       </div>
@@ -149,8 +137,13 @@
     <div class="section" id="sunburst">
       <div id="content_div">
         <h1>Airport trips</h1>
-        <p>​When the categories are consolidated into the Top 24 + Others, we can see that American New is the most reviewed restaurant
-					category. The spread between states do not seem to affect the ranking of restaurant categories either.</p>
+        <p>​​We can deep dive into the data for each country here, looking at source city, source airport, destination country, destination city and airlines at each level.</p>
+        <h2>Dataset</h2>
+        <p>​The data was cleaned again for the sunburst diagram, with a lot of entries merged into the value of 'Others', so as to keep the sunburst diagram clean. </p>
+        <h2>How to use</h2>
+        <p>In the Sunburst Visualization, a user can click on a region, which zooms into the data into the underlying information. Clicking the centre circle will return the values for one level up in the hierarchy.
+          Clicking anywhere else in the chart will bring the user back to the topmost level.</p><br />
+
         <!--div class="mainView">
 
         </div-->
