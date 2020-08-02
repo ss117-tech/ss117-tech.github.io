@@ -72,6 +72,55 @@ function showDetail(d) {
       choose(d);
     }
 
+
+function sunburstCreation(root)   {
+        root = d3.hierarchy(root);
+        root.sum(d => d.size);
+
+        var pie = svg.selectAll('g.slice')
+            .data(partition(root).descendants());
+
+        pie.exit().remove();
+
+        var fPie = pie.enter()
+            .append('g').attr('class', 'slice')
+            .on('click', showDetail);
+
+        fPie.append('title').text(d => d.data.name + '\n' + formatNumber(d.value));
+
+        fPie.append('path')
+            .attr('class', 'main-arc')
+            .style('fill', d => color((d.children ? d : d.parent).data.name))
+            .attr('d', arc);
+
+        fPie.append('path')
+                .attr('class', 'hidden-arc')
+                .attr('id', (_, i) => `hiddenArc${i}`)
+                .attr('d', mid);
+
+        fPie.append('text')
+                .append('textPath')
+                .attr('startOffset','50%')
+                .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
+                .text(d => d.data.name)
+                .style('fill', 'none')
+                .style('stroke', '#FFFFFF');
+    }
+
+
+function display(data) {
+
+      sunburstCreation('#sunb', data);
+    }
+
+
+
+
+// load data
+d3.json
+('tst_json_latest_cleaned_2.json').then(display);
+
+/*
 d3.json
 ('tst_json_latest_cleaned_2.json')
 .then(function(root)
@@ -108,3 +157,4 @@ d3.json
             .style('fill', 'none')
             .style('stroke', '#FFFFFF');
 });
+*/
