@@ -39,22 +39,22 @@ var container = d3.select('body').append('svg').style('width', 1200)
 .style('height', 100)
 
 container.append("g").append("rect").attr("x", 10).attr("y", 10)
-                                                       .attr("width", 600)
+                                                       .attr("width", 800)
                                                        .attr("height",100)
                                                        .style("fill", "red")
                                                        .attr("transform",
-                                                        function(d){ return "translate(300,0)";});;
+                                                        function(d){ return "translate(200,0)";});;
 
-container.append("g").append("text").attr("transform",function(){ return "translate(320,20)";})
+container.append("g").append("text").attr("transform",function(){ return "translate(220,30)";})
                                                             .attr("font-size", "2em")
                                                             .attr("color", "black")
                                                             .text("For US, New York is the city having the higest number of flights originating.");
 
-container.append("g").append("text").attr("transform",function(){ return "translate(320,40)";}).attr("font-size", "2em").attr("color", "black")
+container.append("g").append("text").attr("transform",function(){ return "translate(220,50)";}).attr("font-size", "2em").attr("color", "black")
                                                             .text("For New York, JFK is the airport having the higest number of flights originating.");
 
-container.append("g").append("text").attr("transform",function(){ return "translate(320,60)";}).attr("font-size", "2em").attr("color", "black")
-                                                            .text("For JFK, US and Atlanta are the most common destination country and city, with 6 flights.");     
+container.append("g").append("text").attr("transform",function(){ return "translate(220,70)";}).attr("font-size", "2em").attr("color", "black")
+                                                            .text("For JFK, US and Atlanta are the most common destination country and city, with 6 flights.");
 
 
 
