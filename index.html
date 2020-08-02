@@ -78,10 +78,10 @@
     $(document).ready(function() {
       $('#fullpage').fullpage({
         verticalCentered: false,
-        anchors: ['intro', 'flightsbyairline', 'flightsbycountry', 'allflightsdetails'],
+        anchors: ['intro', 'flightsbyairline', 'flightsbycountry', 'allflightsdetails','references'],
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Introduction', 'Flights by Airline', 'Flights by country', 'Details']
+        navigationTooltips: ['Introduction', 'Flights by Airline', 'Flights by country', 'Details', 'References']
       });});
   </script>
 
@@ -169,6 +169,31 @@
       </div>
     </div>
 
+    <div class="section" id="refs">
+        <div id="content_div">
+          <h1>References</h1>
+          <h2>Dataset</h2>
+          <ul>
+            <li><a href='https://openflights.org/data.html#airport' target='_blank'>Airport data</a></li>
+            <li><a href='https://openflights.org/data.html#airline' target='_blank'>Airline data</a></li>
+            <li><a href='https://openflights.org/data.html#route' target='_blank'>Route data</a></li>
+            <li><a href='https://github.com/johan/world.geo.json/blob/master/countries.geo.json  ' target='_blank'>Country data</a></li>
+          </ul>
+          <h2>Flight bar graph and map</h2>
+          <ul>
+            <li><a href='https://www.coursera.org/learn/information-visualization-programming-d3js' target='_blank'>Information Visualization: Programming with D3.js</a></li>
+            <li><a href='https://bl.ocks.org/sjengle/2e58e83685f6d854aa40c7bc546aeb24' target='_blank'>Flight edge bundling</a></li>
+          </ul>
+          <h2>Bubble Chart</h2>
+          <ul>
+            <li><a href='https://github.com/vlandham/bubble_chart_v4' target='_blank'>Animated Bubble Chart by Jim Vallandingham</a></li>
+          </ul>
+          <h2>Zoomable Sunburst</h2>
+          <ul>
+            <li><a href='https://gist.github.com/mbostock/4348373' target='_blank'>Zoomable Sunburst by Mike Bostock</a></li>
+          </ul>
+        </div>
+      </div>
 
 
 
