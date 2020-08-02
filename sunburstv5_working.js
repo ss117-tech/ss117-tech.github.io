@@ -39,7 +39,7 @@ var container = d3.select('body').append('svg').style('width', 1200)
 .style('height', 100)
 
 container.append("g").append("rect").attr("x", 10).attr("y", 10)
-                                                       .attr("width", 1100)
+                                                       .attr("width", 1200)
                                                        .attr("height",100)
                                                        .style("fill", "red")
                                                        .attr("transform",
