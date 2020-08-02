@@ -35,7 +35,7 @@ var mid = d => {
 
 
 
-var container = d3.select('body').append('svg').style('width', 1200)
+var container = d3.select('#sunb').append('svg').style('width', 1200)
 .style('height', 100)
 
 container.append("g").append("rect").attr("x", 10).attr("y", 10)
@@ -58,7 +58,7 @@ container.append("g").append("text").attr("transform",function(){ return "transl
 
 
 
-var svg = d3.select('body').append('svg')
+var svg = d3.select('#sunb').append('svg')
     .style('width', '100vw')
     .style('height', '100vh')
     .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
