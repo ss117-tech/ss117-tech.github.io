@@ -35,17 +35,17 @@ var mid = d => {
 
 
 
-var container = d3.select('body').append('svg')
+var container = d3.select('body')
 
 container.append("g").append("rect").attr("x", 10).attr("y", 10)
                                                        .attr("width", 600)
                                                        .attr("height",30)
                                                        .style("fill", "red")
                                                        .attr("transform",
-                                                        function(d){ return "translate(300,100)";});;
+                                                        function(d){ return "translate(1,1)";});;
 
 
-container.append("g").append("text").attr("transform",function(){ return "translate(330,130)";})
+container.append("g").append("text").attr("transform",function(){ return "translate(2,2)";})
                                                               .attr("font-size", "2em")
                                                               .attr("color", "black")
                                                               .text("US and Others have the highest number of flights ");
