@@ -326,14 +326,21 @@
                                              .attr("height", 100)
                                              .style("fill", "red")
                                              .attr("transform",
-                                              function(d){ return "translate( 400,100)";});;
+                                              function(d){ return "translate(350,100)";});;
 
     container.append("g").append("text")
         .attr("transform",
-              function(){ return "translate(420,130)";})
+              function(){ return "translate(370,130)";})
         .attr("font-size", "2em")
         .attr("color", "black")
-        .text("We can see that");
+        .text("Ryanair has the highest number of");
+
+  container.append("g").append("text")
+            .attr("transform",
+                  function(){ return "translate(370,150)";})
+            .attr("font-size", "2em")
+            .attr("color", "black")
+            .text("flights and is conc. in Europe");
   //var svgContainer = container.append("svg").attr("width", 200).attr("height", 200);
 
 
