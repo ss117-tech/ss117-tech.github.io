@@ -110,9 +110,11 @@ function showDetail(d) {
     }
 
 
+var mySunburstCreation = sunburstCreation(root);
+
 function display(data) {
 
-      sunburstCreation('#sunb', data);
+      mySunburstCreation('#sunb', data);
     }
 
 
