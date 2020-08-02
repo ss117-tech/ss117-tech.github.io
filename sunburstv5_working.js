@@ -1,4 +1,4 @@
-function sunburstCreation(root)   {
+function sunburstCreation()   {
 
 var width = 600
 var height = 600
@@ -76,7 +76,7 @@ function showDetail(d) {
 
 
 
-        root = d3.hierarchy(root);
+        root = d3.hierarchy(d);
         root.sum(d => d.size);
 
         var pie = svg.selectAll('g.slice')
@@ -110,7 +110,7 @@ function showDetail(d) {
     }
 
 
-var mySunburstCreation = sunburstCreation(root);
+var mySunburstCreation = sunburstCreation();
 
 function display(data) {
 
