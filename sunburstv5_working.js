@@ -35,7 +35,7 @@ var mid = d => {
 
 
 
-var container = d3.select('body')
+var container = d3.select('body').select('svg')
 
 container.append("g").append("rect").attr("x", 10).attr("y", 10)
                                                        .attr("width", 600)
