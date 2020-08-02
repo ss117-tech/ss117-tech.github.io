@@ -183,7 +183,7 @@
       airlineDict = airlineKeys.map(key => airlineDict[key])
       airlineDict = airlineDict.sort((x,y) => d3.descending(x.numberOfFlights, y.numberOfFlights))      //Sort in descending order of number of flights.
 
-      return airlineDict
+      return airlineDict.slice(0,30)
 
     }
 
