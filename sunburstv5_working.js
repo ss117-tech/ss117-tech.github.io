@@ -41,20 +41,6 @@ var svg = d3.select('body').append('svg')
     .on('click', () => choose());
 
 
-svg.append("g").append("rect").attr("x", 10)
-                                                .attr("y", 10)
-                                               .attr("width", 600)
-                                               .attr("height",30)
-                                               .style("fill", "red")
-                                               .attr("transform",
-                                                function(d){ return "translate(10,2)";});;
-
-
-
-svg.append("g").append("text")  .attr("transform",function(){ return "translate(10,2)";})
-                                                      .attr("font-size", "2em")
-                                                      .attr("color", "black")
-                                                      .text("US and Others have the highest number of flights ");
 
 function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
 
@@ -88,6 +74,22 @@ d3.json
 
     var pie = svg.selectAll('g.slice')
         .data(partition(root).descendants());
+
+    var container = d3.select('body').append('svg')
+    container.append("g").append("rect").attr("x", 10)
+                                                        .attr("y", 10)
+                                                       .attr("width", 600)
+                                                       .attr("height",30)
+                                                       .style("fill", "red")
+                                                       .attr("transform",
+                                                        function(d){ return "translate(10,2)";});;
+
+
+
+    container.append("g").append("text")  .attr("transform",function(){ return "translate(10,2)";})
+                                                              .attr("font-size", "2em")
+                                                              .attr("color", "black")
+                                                              .text("US and Others have the highest number of flights ");
 
     pie.exit().remove();
 
