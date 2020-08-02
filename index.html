@@ -170,11 +170,13 @@
       var airlineDict = data.reduce((airlineDict, d) => {
 
         //Get present values of the the airline.
-        var present = airlineDict[d.SourceCity.concat('-',d.DestinationCity)] || {"SourceCity": d.SourceCity,"DestinationCity": d.DestinationCity,"numberOfFlights": 0}
+        var present = airlineDict[Array.from(new Set([d.SourceCity.concat('-',d.DestinationCity), d.DestinationCity.concat('-',d.SourceCity)].join('-').split('-'))).join('-');
+] || {"SourceCity": d.SourceCity,"DestinationCity": d.DestinationCity,"numberOfFlights": 0}
 
         present.numberOfFlights +=  1 //Increment the count by 1.
 
-        airlineDict[d.SourceCity.concat('-',d.DestinationCity)] = present //TODO: Save the updated information in the dictionary using the airline id as key.
+        airlineDict[Array.from(new Set([d.SourceCity.concat('-',d.DestinationCity), d.DestinationCity.concat('-',d.SourceCity)].join('-').split('-'))).join('-');
+] = present //TODO: Save the updated information in the dictionary using the airline id as key.
 
         return airlineDict;
       }, {})
