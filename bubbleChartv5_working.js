@@ -111,14 +111,14 @@ function bubbleChart() {
     svg.append("g").append("rect").attr("x", 10)
                                                 .attr("y", 10)
                                                .attr("width", 600)
-                                               .attr("height",20)
+                                               .attr("height", 30)
                                                .style("fill", "red")
                                                .attr("transform",
-                                                function(d){ return "translate(500,100)";});;
+                                                function(d){ return "translate(450,100)";});;
 
     svg.append("g").append("text")
           .attr("transform",
-                function(){ return "translate(520,130)";})
+                function(){ return "translate(470,130)";})
           .attr("font-size", "2em")
           .attr("color", "black")
           .text("US and Others have the highest number of flights ");
