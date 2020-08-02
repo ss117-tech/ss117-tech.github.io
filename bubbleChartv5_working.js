@@ -108,42 +108,23 @@ function bubbleChart() {
     elements = svg.selectAll('.bubble')
       .data(nodes, function (d) { return d.id; });
 
+    svg.append("g").append("rect").attr("x", 10)
+                                                .attr("y", 10)
+                                               .attr("width", 400)
+                                               .attr("height", 100)
+                                               .style("fill", "red")
+                                               .attr("transform",
+                                                function(d){ return "translate(300,100)";});;
+
     svg.append("g").append("text")
           .attr("transform",
-                function(){ return "translate(370,130)";})
+                function(){ return "translate(320,130)";})
           .attr("font-size", "2em")
           .attr("color", "black")
-          .text("Ryanair has the ");
+          .text("US and Others have the highest number of flights ");
 
-     svg.append("g").append("text")
-              .attr("transform",
-                    function(){ return "translate(370,150)";})
-              .attr("font-size", "2em")
-              .attr("color", "black")
-              .text("highest number ");
 
-    svg.append("g").append("text")
-              .attr("transform",
-                    function(){ return "translate(370,170)";})
-              .attr("font-size", "2em")
-              .attr("color", "black")
-              .text("of flights and is ");
 
-    svg.append("g").append("text")
-                        .attr("transform",
-                              function(){ return "translate(370,190)";})
-                        .attr("font-size", "2em")
-                        .attr("color", "black")
-                        .text("conc. in Europe");
-
-      svg.append("g")
-      .append('line')
-      .style("stroke", "black")
-      .style("stroke-width", 5)
-      .attr("x1", 380)
-      .attr("y1", 130)
-      .attr("x2", 570)
-      .attr("y2", 20);
 
       var tooltip = d3.select('body')
         .append('div')
