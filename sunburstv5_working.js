@@ -21,6 +21,20 @@ var arc = d3.arc()
     .innerRadius(d => Math.max(0, yScale(d.y0)))
     .outerRadius(d => Math.max(0, yScale(d.y1)));
 
+
+var mid = d => {
+    var path = d3.path();
+    if  ((xScale(d.x0) + xScale(d.x1) - Math.PI )/ 2 > 0 &&  (xScale(d.x0) + xScale(d.x1) - Math.PI)/ 2 < Math.PI){
+        path.arc(0, 0, Math.max(0, (yScale(d.y0) + yScale(d.y1)) / 2), xScale(d.x1) - Math.PI/2, xScale(d.x0) - Math.PI/2, true);
+    }
+    else{
+        path.arc(0, 0, Math.max(0, (yScale(d.y0) + yScale(d.y1)) / 2), xScale(d.x0) - Math.PI/2, xScale(d.x1) - Math.PI/2, false);
+    }
+    return path.toString();
+};
+
+
+
 var container = d3.select('body').append('svg')
 
 container.append("g").append("rect").attr("x", 10).attr("y", 10)
@@ -37,19 +51,7 @@ container.append("g").append("text").attr("transform",function(){ return "transl
                                                               .text("US and Others have the highest number of flights ");
 
 
-var mid = d => {
-    var path = d3.path();
-    if  ((xScale(d.x0) + xScale(d.x1) - Math.PI )/ 2 > 0 &&  (xScale(d.x0) + xScale(d.x1) - Math.PI)/ 2 < Math.PI){
-        path.arc(0, 0, Math.max(0, (yScale(d.y0) + yScale(d.y1)) / 2), xScale(d.x1) - Math.PI/2, xScale(d.x0) - Math.PI/2, true);
-    }
-    else{
-        path.arc(0, 0, Math.max(0, (yScale(d.y0) + yScale(d.y1)) / 2), xScale(d.x0) - Math.PI/2, xScale(d.x1) - Math.PI/2, false);
-    }
-    return path.toString();
-};
-
-
-var svg = d3.select('body').append('svg')
+var svg = container
     .style('width', '100vw')
     .style('height', '100vh')
     .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
