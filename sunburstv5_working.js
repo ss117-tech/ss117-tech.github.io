@@ -21,6 +21,21 @@ var arc = d3.arc()
     .innerRadius(d => Math.max(0, yScale(d.y0)))
     .outerRadius(d => Math.max(0, yScale(d.y1)));
 
+var container = d3.select('body').append('svg')
+
+container.append("g").append("rect").attr("x", 10).attr("y", 10)
+                                                       .attr("width", 600)
+                                                       .attr("height",30)
+                                                       .style("fill", "red")
+                                                       .attr("transform",
+                                                        function(d){ return "translate(10,2)";});;
+
+
+container.append("g").append("text").attr("transform",function(){ return "translate(10,2)";})
+                                                              .attr("font-size", "2em")
+                                                              .attr("color", "black")
+                                                              .text("US and Others have the highest number of flights ");
+
 
 var mid = d => {
     var path = d3.path();
@@ -72,24 +87,9 @@ d3.json
     root = d3.hierarchy(root);
     root.sum(d => d.size);
 
-    var container = d3.select('body')
-    container.append("g").append("rect").attr("x", 10)
-                                                        .attr("y", 10)
-                                                       .attr("width", 600)
-                                                       .attr("height",30)
-                                                       .style("fill", "red")
-                                                       .attr("transform",
-                                                        function(d){ return "translate(10,2)";});;
-
-
-
-    container.append("g").append("text")  .attr("transform",function(){ return "translate(10,2)";})
-                                                              .attr("font-size", "2em")
-                                                              .attr("color", "black")
-                                                              .text("US and Others have the highest number of flights ");
-
     var pie = svg.selectAll('g.slice')
         .data(partition(root).descendants());
+
 
 
     pie.exit().remove();
