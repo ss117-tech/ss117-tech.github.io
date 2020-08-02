@@ -58,9 +58,7 @@ function bubbleChart() {
   simulation.stop();
 
 
-  const fillColour = d3
-
-  .scaleOrdinal(d3.schemeCategory10)
+  const fillColour = d3.scaleOrdinal(d3.schemeCategory10)
   .domain(['US','UK','China','France','Spain','Germany', 'Italy','Others']);
 
 
@@ -109,6 +107,43 @@ function bubbleChart() {
 
     elements = svg.selectAll('.bubble')
       .data(nodes, function (d) { return d.id; });
+
+    svg.append("g").append("text")
+          .attr("transform",
+                function(){ return "translate(370,130)";})
+          .attr("font-size", "2em")
+          .attr("color", "black")
+          .text("Ryanair has the ");
+
+     svg.append("g").append("text")
+              .attr("transform",
+                    function(){ return "translate(370,150)";})
+              .attr("font-size", "2em")
+              .attr("color", "black")
+              .text("highest number ");
+
+    svg.append("g").append("text")
+              .attr("transform",
+                    function(){ return "translate(370,170)";})
+              .attr("font-size", "2em")
+              .attr("color", "black")
+              .text("of flights and is ");
+
+    svg.append("g").append("text")
+                        .attr("transform",
+                              function(){ return "translate(370,190)";})
+                        .attr("font-size", "2em")
+                        .attr("color", "black")
+                        .text("conc. in Europe");
+
+      svg.append("g")
+      .append('line')
+      .style("stroke", "black")
+      .style("stroke-width", 5)
+      .attr("x1", 380)
+      .attr("y1", 130)
+      .attr("x2", 570)
+      .attr("y2", 20);
 
       var tooltip = d3.select('body')
         .append('div')
@@ -230,6 +265,8 @@ function bubbleChart() {
       .attr('text-anchor', 'middle')
       .text(function (d) { return d; });
   }
+
+
 
 
   chart.toggleDisplay = function (displayName) {
