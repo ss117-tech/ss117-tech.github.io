@@ -1,5 +1,5 @@
 var width = 600
-var height = 800
+var height = 600
 var maxRadius = (Math.min(width, height) / 2) - 5
 
 var formatNumber = d3.format(',d')
@@ -60,7 +60,7 @@ container.append("g").append("text").attr("transform",function(){ return "transl
 
 var svg = d3.select('#sunb').append('svg')
     .style('width', '100vw')
-    .style('height', '100vh')
+    .style('height', '50vh')
     .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
     .on('click', () => choose());
 
