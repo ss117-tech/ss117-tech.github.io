@@ -1,3 +1,5 @@
+function sunburstCreation()   {
+
 var width = 600
 var height = 600
 var maxRadius = (Math.min(width, height) / 2) - 5
@@ -73,7 +75,7 @@ function showDetail(d) {
     }
 
 
-function sunburstCreation(root)   {
+
         root = d3.hierarchy(root);
         root.sum(d => d.size);
 
