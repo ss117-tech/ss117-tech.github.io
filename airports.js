@@ -128,7 +128,7 @@
            )
            .call(yAxis)
 
-
+/*
     container.append("g").append("rect").attr("x", 10)
                                               .attr("y", 10)
                                              .attr("width", 200)
@@ -181,7 +181,7 @@
     .attr("x1", 550)
     .attr("y1", 150)
     .attr("x2", 600)
-    .attr("y2", 150);
+    .attr("y2", 150);*/
   //var svgContainer = container.append("svg").attr("width", 200).attr("height", 200);
 
 

@@ -49,7 +49,7 @@ container.append("g").append("text").attr("transform",function(){ return "transl
                                                               .text("US and Others have the highest number of flights ");
 
 
-var svg = d3.select('body').append('svg').
+var svg = d3.select('body').append('svg')
     .style('width', '100vw')
     .style('height', '100vh')
     .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
