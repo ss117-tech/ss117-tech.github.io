@@ -48,13 +48,13 @@ container.append("g").append("rect").attr("x", 10).attr("y", 10)
 container.append("g").append("text").attr("transform",function(){ return "translate(120,30)";})
                                                             .attr("font-size", "2em")
                                                             .attr("color", "black")
-                                                            .text("For US, New York is the city having the higest number of flights originating.");
+                                                            .text("For UK, London is the city having the higest number of flights originating.");
 
 container.append("g").append("text").attr("transform",function(){ return "translate(120,50)";}).attr("font-size", "2em").attr("color", "black")
-                                                            .text("For New York, JFK is the airport having the higest number of flights originating.");
+                                                            .text("For London, Heathrow is the airport having the higest number of flights originating.");
 
 container.append("g").append("text").attr("transform",function(){ return "translate(120,70)";}).attr("font-size", "2em").attr("color", "black")
-                                                            .text("For JFK, US and Atlanta are the most common destination country and city, with 6 flights.");
+                                                            .text("For Heathrow, US, New York and JFK  are the most common destination country, city and airport.");
 
 
 
