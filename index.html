@@ -319,15 +319,21 @@
            )
            .call(yAxis)
 
+
     container.append("g").append("rect").attr("x", 10)
                                               .attr("y", 10)
                                              .attr("width", 50)
                                              .attr("height", 100)
                                              .style("fill", "red")
                                              .attr("transform",
-                                              function(d){ return "translate( 200,200)";});;
+                                              function(d){ return "translate( 500,50)";});;
 
-
+    container.append("g").append("text")
+        .attr("transform",
+              function(){ return "translate(500,50)";})
+        .attr("font-size", "2em")
+        .attr("color", "black")
+        .text("!!!");
   //var svgContainer = container.append("svg").attr("width", 200).attr("height", 200);
 
 
