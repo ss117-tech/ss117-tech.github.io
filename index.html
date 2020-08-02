@@ -319,12 +319,14 @@
            )
            .call(yAxis)
 
-    container.append("svg").attr("width", 400)
-    .attr("height", 300).append("rect").attr("x", 10)
+    container.append("g").append("rect").attr("x", 10)
                                               .attr("y", 10)
                                              .attr("width", 50)
                                              .attr("height", 100)
-                                             .style("fill", "white");
+                                             .style("fill", "red")
+                                             .attr("transform",
+                                              function(d){ return "translate( 200,200)";});;
+
 
   //var svgContainer = container.append("svg").attr("width", 200).attr("height", 200);
 
