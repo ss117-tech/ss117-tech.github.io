@@ -322,15 +322,15 @@
 
     container.append("g").append("rect").attr("x", 10)
                                               .attr("y", 10)
-                                             .attr("width", 100)
+                                             .attr("width", 200)
                                              .attr("height", 100)
                                              .style("fill", "red")
                                              .attr("transform",
-                                              function(d){ return "translate( 500,50)";});;
+                                              function(d){ return "translate( 400,100)";});;
 
     container.append("g").append("text")
         .attr("transform",
-              function(){ return "translate(500,80)";})
+              function(){ return "translate(420,130)";})
         .attr("font-size", "2em")
         .attr("color", "black")
         .text("We can see that");
