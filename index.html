@@ -80,32 +80,27 @@
 <body>
 
   <div id="fullpage">
-    <div class="section" id="title">
-      <div id="title_text">
-        <h1>Analysis of Flights </h1>
-        <p>This visualization is a narrative visualization for the user to explore the dataset of OpenFlights. The dataset contains separate csvs of Airport data, Airline data and Route data, and a json providing countries details for map. </p>
-              <h2>Dataset</h2>
-              <ul>
-                <li><a href='https://openflights.org/data.html#airport' target='_blank'>Airport data</a></li>
-                <li><a href='https://openflights.org/data.html#airline' target='_blank'>Airline data</a></li>
-                <li><a href='https://openflights.org/data.html#route' target='_blank'>Route data</a></li>
-                <li><a href='https://github.com/johan/world.geo.json/blob/master/countries.geo.json  ' target='_blank'>Country data</a></li>
-              </ul>
-              <h2>Flight bar graph and map reference</h2>
-              <ul>
-                <li><a href='https://www.coursera.org/learn/information-visualization-programming-d3js' target='_blank'>Information Visualization: Programming with D3.js</a></li>
-                <li><a href='https://bl.ocks.org/sjengle/2e58e83685f6d854aa40c7bc546aeb24' target='_blank'>Flight edge bundling</a></li>
-              </ul>
-              <h2>Bubble Chart reference</h2>
-              <ul>
-                <li><a href='https://github.com/vlandham/bubble_chart_v4' target='_blank'>Animated Bubble Chart by Jim Vallandingham</a></li>
-              </ul>
-              <h2>Zoomable Sunburst reference</h2>
-              <ul>
-                <li><a href='https://gist.github.com/mbostock/4348373' target='_blank'>Zoomable Sunburst by Mike Bostock</a></li>
-              </ul>
+    <div class="section" id="trips">
+      <div id="content_div">
+        <h1>Flights by Airlines and Flight Map</h1>
+        <p>​​We are looking at the data by Airlines for the top 32 airlines.</p>
+        <h2>Dataset</h2>
+        <p>With 3 separate raw data csvs, the dataset was cleaned using Openrefine and merged into one single csv and filtered for the top 32 airlines. </p>
+        <h2>How to use</h2>
+        <p>The user can click on any of the bars and it will show the associated flights in the map.</p>
+        <div class="mainView">
+          <div>
+              <h2>Airlines</h2>
+              <svg id="AirlinesChart"></svg>
+          </div>
+          <div>
+              <h2>Airports</h2>
+              <svg id="Map"></svg>
+          </div>
         </div>
+      </div>
     </div>
+
 
 
 
