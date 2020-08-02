@@ -128,15 +128,15 @@ function displayBars(airlinesData) {
          )
          .call(yAxis)
 
-var svgContainer = container.append("svg").attr("width", 200).attr("height", 200);
+//var svgContainer = container.append("svg").attr("width", 200).attr("height", 200);
 
-svgContainer.append("rect")
+container.append("rect")
                              .attr("x", 10)
                              .attr("y", 10)
                             .attr("width", 50)
                             .attr("height", 100);
 
-svgContainer.append("text").text("!!!").style("fill", "white");
+container.append("text").text("!!!").style("fill", "white");
 
 }
 
