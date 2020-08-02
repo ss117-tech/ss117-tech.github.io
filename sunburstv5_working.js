@@ -40,6 +40,15 @@ var svg = d3.select('body').append('svg')
     .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
     .on('click', () => choose());
 
+
+svg.append("g").append("rect").attr("x", 10)
+                                                .attr("y", 10)
+                                               .attr("width", 600)
+                                               .attr("height",30)
+                                               .style("fill", "red")
+                                               .attr("transform",
+                                                function(d){ return "translate(300,100)";});;
+
 function choose(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
 
         var tr = svg.transition()

@@ -110,8 +110,8 @@ function bubbleChart() {
 
     svg.append("g").append("rect").attr("x", 10)
                                                 .attr("y", 10)
-                                               .attr("width", 500)
-                                               .attr("height",20)
+                                               .attr("width", 600)
+                                               .attr("height",30)
                                                .style("fill", "red")
                                                .attr("transform",
                                                 function(d){ return "translate(300,100)";});;
