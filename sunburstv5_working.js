@@ -54,7 +54,7 @@ container.append("g").append("text").attr("transform",function(){ return "transl
                                                             .text("For London, Heathrow is the airport having the higest number of flights originating.");
 
 container.append("g").append("text").attr("transform",function(){ return "translate(120,70)";}).attr("font-size", "2em").attr("color", "black")
-                                                            .text("For Heathrow, US, New York and JFK  are the most common destination country, city and airport.");
+                                                            .text("For Heathrow, US, New York and JFK  are the most common dest country, city and airport.");
 
 
 
