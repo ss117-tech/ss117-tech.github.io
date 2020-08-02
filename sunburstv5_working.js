@@ -47,11 +47,11 @@ svg.append("g").append("rect").attr("x", 10)
                                                .attr("height",30)
                                                .style("fill", "red")
                                                .attr("transform",
-                                                function(d){ return "translate(100,100)";});;
+                                                function(d){ return "translate(70,10)";});;
 
 
 
-svg.append("g").append("text")  .attr("transform",function(){ return "translate(120,130)";})
+svg.append("g").append("text")  .attr("transform",function(){ return "translate(70,10)";})
                                                       .attr("font-size", "2em")
                                                       .attr("color", "black")
                                                       .text("US and Others have the highest number of flights ");
