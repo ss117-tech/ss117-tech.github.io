@@ -43,7 +43,18 @@ container.append("g").append("rect").attr("x", 10).attr("y", 10)
                                                        .attr("height",100)
                                                        .style("fill", "red")
                                                        .attr("transform",
-                                                        function(d){ return "translate(300,10)";});;
+                                                        function(d){ return "translate(300,0)";});;
+
+container.append("g").append("text").attr("transform",function(){ return "translate(320,20)";})
+                                                            .attr("font-size", "2em")
+                                                            .attr("color", "black")
+                                                            .text("For US, New York is the city having the higest number of flights originating.");
+
+container.append("g").append("text").attr("transform",function(){ return "translate(320,40)";}).attr("font-size", "2em").attr("color", "black")
+                                                            .text("For New York, JFK is the airport having the higest number of flights originating.");
+
+container.append("g").append("text").attr("transform",function(){ return "translate(320,60)";}).attr("font-size", "2em").attr("color", "black")
+                                                            .text("For JFK, US and Atlanta are the most common destination country and city, with 6 flights.");     
 
 
 
