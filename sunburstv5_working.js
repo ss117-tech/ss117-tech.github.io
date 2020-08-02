@@ -40,9 +40,7 @@ var container = d3.select('body').append('svg')
 container.append("g").append("rect").attr("x", 10).attr("y", 10)
                                                        .attr("width", 600)
                                                        .attr("height",30)
-                                                       .style("fill", "red")
-                                                       .attr("transform",
-                                                        function(d){ return "translate(1,1)";});;
+                                                       .style("fill", "red");
 
 
 container.append("g").append("text").attr("transform",function(){ return "translate(1,1)";})
@@ -51,7 +49,7 @@ container.append("g").append("text").attr("transform",function(){ return "transl
                                                               .text("US and Others have the highest number of flights ");
 
 
-var svg = container
+var svg = d3.select('body').append('svg').
     .style('width', '100vw')
     .style('height', '100vh')
     .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
