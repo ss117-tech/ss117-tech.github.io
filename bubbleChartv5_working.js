@@ -77,7 +77,7 @@ function bubbleChart() {
     var myNodes = rawData.map(function (d) {
       return {
         id: d.id,
-        radius: radiusScale(+d.flights/20),
+        radius: radiusScale(+d.flights/32),
         flights: +d.flights,
         city: d.city,
         country: d.country,
